@@ -1,0 +1,24 @@
+{
+  "version": "custom-v1",
+  "rows": 120,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16
+  },
+  "splits": {
+    "validation": 27,
+    "train": 69,
+    "challenge": 24
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "draft_sha256": "7a0850822b879c39c4c2fcf7ffcd4b549fbf93d1f3e723df28d17168b9ac686c"
+}

@@ -1,0 +1,8 @@
+{
+  "file": "models/stanford__tfidf_logreg.joblib",
+  "model": "tfidf_logreg",
+  "oof_tuned_f1": 0.7082063438311321,
+  "selection_rule": "Stanford source training OOF F1 only",
+  "source": "stanford",
+  "threshold": 0.5886726433816505
+}

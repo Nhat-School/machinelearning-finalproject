@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "offline": true,
+  "empty_hf_cache": true,
+  "examples": [
+    {
+      "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+      "score": 0.858587384223938,
+      "threshold": 0.6701767444610596,
+      "urgent": true,
+      "label": "URGENT"
+    },
+    {
+      "text": "Thank you for the helpful explanation. I understand now.",
+      "score": 0.21284246444702148,
+      "threshold": 0.6701767444610596,
+      "urgent": false,
+      "label": "NOT_URGENT"
+    }
+  ]
+}

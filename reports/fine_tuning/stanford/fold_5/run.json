@@ -1,0 +1,52 @@
+{
+  "augmented_posts": 0,
+  "batch_size": 64,
+  "best_epoch": 3,
+  "config": {
+    "augmentation": false,
+    "lr": 2e-05,
+    "weighted": false
+  },
+  "device": "mps",
+  "epochs_run": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "seconds": 32.26861995784566,
+      "threshold": 0.3437822461128235,
+      "train_loss": 0.3485990356098289,
+      "val_ap": 0.8612643349444544,
+      "val_f1_default": 0.7749287749287749,
+      "val_f1_tuned": 0.7828810020876825
+    },
+    {
+      "epoch": 2,
+      "seconds": 31.85739850020036,
+      "threshold": 0.2429233193397522,
+      "train_loss": 0.19142927638595703,
+      "val_ap": 0.8721638563714771,
+      "val_f1_default": 0.7854630715123095,
+      "val_f1_tuned": 0.7937823834196891
+    },
+    {
+      "epoch": 3,
+      "seconds": 31.901943249627948,
+      "threshold": 0.34997692704200745,
+      "train_loss": 0.16519982392382346,
+      "val_ap": 0.8733008919095765,
+      "val_f1_default": 0.7864406779661017,
+      "val_f1_tuned": 0.7976633032395115
+    }
+  ],
+  "max_length": 256,
+  "name": "fold_5",
+  "original_training_posts": 18605,
+  "seconds": 101.85768291726708,
+  "seed": 42,
+  "source": "stanford",
+  "training_rows": 18605,
+  "validation_ap": 0.8733008919095765,
+  "validation_f1_tuned": 0.7976633032395115,
+  "validation_rows": 4651,
+  "validation_threshold": 0.34997692704200745
+}

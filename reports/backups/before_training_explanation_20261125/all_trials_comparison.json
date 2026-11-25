@@ -1,0 +1,3359 @@
+[
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + LR",
+    "accuracy": 0.9204052098408104,
+    "average_precision": 0.6595937758457739,
+    "confusion_matrix": [
+      [
+        605,
+        25
+      ],
+      [
+        30,
+        31
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.9319826338639653,
+      "average_precision": 0.6595937758457739,
+      "confusion_matrix": [
+        [
+          616,
+          14
+        ],
+        [
+          33,
+          28
+        ]
+      ],
+      "f1": 0.5436893203883495,
+      "macro_f1": 0.7534709307180215,
+      "positive_count": 61,
+      "precision": 0.6666666666666666,
+      "precision_at_20": 0.95,
+      "recall": 0.45901639344262296,
+      "recall_at_20": 0.3114754098360656,
+      "roc_auc": 0.9043195420244601,
+      "test_size": 691,
+      "top20_found": 19
+    },
+    "f1": 0.5299145299145299,
+    "inference_seconds": 0.030501333065330982,
+    "macro_f1": 0.7432181345224824,
+    "model": "tfidf_logreg",
+    "positive_count": 61,
+    "precision": 0.5535714285714286,
+    "precision_at_20": 0.95,
+    "recall": 0.5081967213114754,
+    "recall_at_20": 0.3114754098360656,
+    "roc_auc": 0.9043195420244601,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.4225475624901568,
+    "top20_found": 19,
+    "train_source": "upenn",
+    "training_seconds": 2.5021156668663025
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + LR",
+    "accuracy": 0.8348813209494325,
+    "average_precision": 0.5323111973045145,
+    "confusion_matrix": [
+      [
+        4517,
+        192
+      ],
+      [
+        768,
+        337
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8314413484692122,
+      "average_precision": 0.5323111973045145,
+      "confusion_matrix": [
+        [
+          4599,
+          110
+        ],
+        [
+          870,
+          235
+        ]
+      ],
+      "f1": 0.32413793103448274,
+      "macro_f1": 0.6139259118721245,
+      "positive_count": 1105,
+      "precision": 0.6811594202898551,
+      "precision_at_20": 0.7,
+      "recall": 0.21266968325791855,
+      "recall_at_20": 0.012669683257918552,
+      "roc_auc": 0.8202325574691383,
+      "test_size": 5814,
+      "top20_found": 14
+    },
+    "f1": 0.412484700122399,
+    "inference_seconds": 0.1567400828935206,
+    "macro_f1": 0.6582135327708253,
+    "model": "tfidf_logreg",
+    "positive_count": 1105,
+    "precision": 0.6370510396975425,
+    "precision_at_20": 0.7,
+    "recall": 0.3049773755656109,
+    "recall_at_20": 0.012669683257918552,
+    "roc_auc": 0.8202325574691383,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.4225475624901568,
+    "top20_found": 14,
+    "train_source": "upenn",
+    "training_seconds": 2.5021156668663025
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + SVM",
+    "accuracy": 0.914616497829233,
+    "average_precision": 0.6557883130313705,
+    "confusion_matrix": [
+      [
+        598,
+        32
+      ],
+      [
+        27,
+        34
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.9319826338639653,
+      "average_precision": 0.6557883130313705,
+      "confusion_matrix": [
+        [
+          617,
+          13
+        ],
+        [
+          34,
+          27
+        ]
+      ],
+      "f1": 0.5346534653465347,
+      "macro_f1": 0.7489816897380605,
+      "positive_count": 61,
+      "precision": 0.675,
+      "precision_at_20": 0.95,
+      "recall": 0.4426229508196721,
+      "recall_at_20": 0.3114754098360656,
+      "roc_auc": 0.900416341399948,
+      "test_size": 691,
+      "top20_found": 19
+    },
+    "f1": 0.5354330708661418,
+    "inference_seconds": 0.035409582778811455,
+    "macro_f1": 0.7442105593374533,
+    "model": "tfidf_svm",
+    "positive_count": 61,
+    "precision": 0.5151515151515151,
+    "precision_at_20": 0.95,
+    "recall": 0.5573770491803278,
+    "recall_at_20": 0.3114754098360656,
+    "roc_auc": 0.900416341399948,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": -0.1646198683014054,
+    "top20_found": 19,
+    "train_source": "upenn",
+    "training_seconds": 3.032327917404473
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + SVM",
+    "accuracy": 0.8362573099415205,
+    "average_precision": 0.5323729667045595,
+    "confusion_matrix": [
+      [
+        4485,
+        224
+      ],
+      [
+        728,
+        377
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8305813553491572,
+      "average_precision": 0.5323729667045595,
+      "confusion_matrix": [
+        [
+          4608,
+          101
+        ],
+        [
+          884,
+          221
+        ]
+      ],
+      "f1": 0.3097407147862649,
+      "macro_f1": 0.6065907769598416,
+      "positive_count": 1105,
+      "precision": 0.6863354037267081,
+      "precision_at_20": 0.75,
+      "recall": 0.2,
+      "recall_at_20": 0.013574660633484163,
+      "roc_auc": 0.8179686726774281,
+      "test_size": 5814,
+      "top20_found": 15
+    },
+    "f1": 0.44196951934349354,
+    "inference_seconds": 0.160993583034724,
+    "macro_f1": 0.6730105609214948,
+    "model": "tfidf_svm",
+    "positive_count": 1105,
+    "precision": 0.627287853577371,
+    "precision_at_20": 0.75,
+    "recall": 0.3411764705882353,
+    "recall_at_20": 0.013574660633484163,
+    "roc_auc": 0.8179686726774281,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": -0.1646198683014054,
+    "top20_found": 15,
+    "train_source": "upenn",
+    "training_seconds": 3.032327917404473
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + NB",
+    "accuracy": 0.8683068017366136,
+    "average_precision": 0.45168597377353814,
+    "confusion_matrix": [
+      [
+        569,
+        61
+      ],
+      [
+        30,
+        31
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.918958031837916,
+      "average_precision": 0.45168597377353814,
+      "confusion_matrix": [
+        [
+          628,
+          2
+        ],
+        [
+          54,
+          7
+        ]
+      ],
+      "f1": 0.2,
+      "macro_f1": 0.5786585365853658,
+      "positive_count": 61,
+      "precision": 0.7777777777777778,
+      "precision_at_20": 0.75,
+      "recall": 0.11475409836065574,
+      "recall_at_20": 0.2459016393442623,
+      "roc_auc": 0.8421545667447308,
+      "test_size": 691,
+      "top20_found": 15
+    },
+    "f1": 0.40522875816993464,
+    "inference_seconds": 0.02948762523010373,
+    "macro_f1": 0.665592410004414,
+    "model": "tfidf_nb",
+    "positive_count": 61,
+    "precision": 0.33695652173913043,
+    "precision_at_20": 0.75,
+    "recall": 0.5081967213114754,
+    "recall_at_20": 0.2459016393442623,
+    "roc_auc": 0.8421545667447308,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.0479195042686865,
+    "top20_found": 15,
+    "train_source": "upenn",
+    "training_seconds": 2.6864963746629655
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + NB",
+    "accuracy": 0.7865497076023392,
+    "average_precision": 0.39371463491078784,
+    "confusion_matrix": [
+      [
+        4170,
+        539
+      ],
+      [
+        702,
+        403
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8114895080839353,
+      "average_precision": 0.39371463491078784,
+      "confusion_matrix": [
+        [
+          4701,
+          8
+        ],
+        [
+          1088,
+          17
+        ]
+      ],
+      "f1": 0.03008849557522124,
+      "macro_f1": 0.4628438286601578,
+      "positive_count": 1105,
+      "precision": 0.68,
+      "precision_at_20": 0.8,
+      "recall": 0.015384615384615385,
+      "recall_at_20": 0.014479638009049774,
+      "roc_auc": 0.7253998072430861,
+      "test_size": 5814,
+      "top20_found": 16
+    },
+    "f1": 0.3937469467513434,
+    "inference_seconds": 0.14640133315697312,
+    "macro_f1": 0.6321098787613308,
+    "model": "tfidf_nb",
+    "positive_count": 1105,
+    "precision": 0.4278131634819533,
+    "precision_at_20": 0.8,
+    "recall": 0.36470588235294116,
+    "recall_at_20": 0.014479638009049774,
+    "roc_auc": 0.7253998072430861,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.0479195042686865,
+    "top20_found": 16,
+    "train_source": "upenn",
+    "training_seconds": 2.6864963746629655
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "Đa số",
+    "accuracy": 0.9117221418234442,
+    "average_precision": 0.08827785817655572,
+    "confusion_matrix": [
+      [
+        630,
+        0
+      ],
+      [
+        61,
+        0
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.9117221418234442,
+      "average_precision": 0.08827785817655572,
+      "confusion_matrix": [
+        [
+          630,
+          0
+        ],
+        [
+          61,
+          0
+        ]
+      ],
+      "f1": 0.0,
+      "macro_f1": 0.4769114307342922,
+      "positive_count": 61,
+      "precision": 0.0,
+      "precision_at_20": 0.0,
+      "recall": 0.0,
+      "recall_at_20": 0.0,
+      "roc_auc": 0.5,
+      "test_size": 691,
+      "top20_found": 0
+    },
+    "f1": 0.0,
+    "inference_seconds": 0.02927629230543971,
+    "macro_f1": 0.4769114307342922,
+    "model": "tfidf_dummy",
+    "positive_count": 61,
+    "precision": 0.0,
+    "precision_at_20": 0.0,
+    "recall": 0.0,
+    "recall_at_20": 0.0,
+    "roc_auc": 0.5,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.5,
+    "top20_found": 0,
+    "train_source": "upenn",
+    "training_seconds": 1.3289369158446789
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "Đa số",
+    "accuracy": 0.8099415204678363,
+    "average_precision": 0.19005847953216373,
+    "confusion_matrix": [
+      [
+        4709,
+        0
+      ],
+      [
+        1105,
+        0
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8099415204678363,
+      "average_precision": 0.19005847953216373,
+      "confusion_matrix": [
+        [
+          4709,
+          0
+        ],
+        [
+          1105,
+          0
+        ]
+      ],
+      "f1": 0.0,
+      "macro_f1": 0.44749596122778673,
+      "positive_count": 1105,
+      "precision": 0.0,
+      "precision_at_20": 0.1,
+      "recall": 0.0,
+      "recall_at_20": 0.0018099547511312218,
+      "roc_auc": 0.5,
+      "test_size": 5814,
+      "top20_found": 2
+    },
+    "f1": 0.0,
+    "inference_seconds": 0.14476962480694056,
+    "macro_f1": 0.44749596122778673,
+    "model": "tfidf_dummy",
+    "positive_count": 1105,
+    "precision": 0.0,
+    "precision_at_20": 0.1,
+    "recall": 0.0,
+    "recall_at_20": 0.0018099547511312218,
+    "roc_auc": 0.5,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.5,
+    "top20_found": 2,
+    "train_source": "upenn",
+    "training_seconds": 1.3289369158446789
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + LR",
+    "accuracy": 0.8031837916063675,
+    "average_precision": 0.38028528614395307,
+    "confusion_matrix": [
+      [
+        511,
+        119
+      ],
+      [
+        17,
+        44
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.7800289435600579,
+      "average_precision": 0.38028528614395307,
+      "confusion_matrix": [
+        [
+          492,
+          138
+        ],
+        [
+          14,
+          47
+        ]
+      ],
+      "f1": 0.3821138211382114,
+      "macro_f1": 0.6241555021184014,
+      "positive_count": 61,
+      "precision": 0.25405405405405407,
+      "precision_at_20": 0.45,
+      "recall": 0.7704918032786885,
+      "recall_at_20": 0.14754098360655737,
+      "roc_auc": 0.8719229768410096,
+      "test_size": 691,
+      "top20_found": 9
+    },
+    "f1": 0.39285714285714285,
+    "inference_seconds": 0.031366124749183655,
+    "macro_f1": 0.6377066370589687,
+    "model": "tfidf_logreg",
+    "positive_count": 61,
+    "precision": 0.26993865030674846,
+    "precision_at_20": 0.45,
+    "recall": 0.7213114754098361,
+    "recall_at_20": 0.14754098360655737,
+    "roc_auc": 0.8719229768410096,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.5886726433816505,
+    "top20_found": 9,
+    "train_source": "stanford",
+    "training_seconds": 13.989018082618713
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + LR",
+    "accuracy": 0.890264877880977,
+    "average_precision": 0.7817367526767178,
+    "confusion_matrix": [
+      [
+        4357,
+        352
+      ],
+      [
+        286,
+        819
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8796009631922944,
+      "average_precision": 0.7817367526767178,
+      "confusion_matrix": [
+        [
+          4223,
+          486
+        ],
+        [
+          214,
+          891
+        ]
+      ],
+      "f1": 0.717969379532635,
+      "macro_f1": 0.8207165944240914,
+      "positive_count": 1105,
+      "precision": 0.6470588235294118,
+      "precision_at_20": 1.0,
+      "recall": 0.8063348416289593,
+      "recall_at_20": 0.01809954751131222,
+      "roc_auc": 0.9332177048090256,
+      "test_size": 5814,
+      "top20_found": 20
+    },
+    "f1": 0.7196836555360281,
+    "inference_seconds": 0.15985354175791144,
+    "macro_f1": 0.8257314770408968,
+    "model": "tfidf_logreg",
+    "positive_count": 1105,
+    "precision": 0.6994022203245089,
+    "precision_at_20": 1.0,
+    "recall": 0.7411764705882353,
+    "recall_at_20": 0.01809954751131222,
+    "roc_auc": 0.9332177048090256,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.5886726433816505,
+    "top20_found": 20,
+    "train_source": "stanford",
+    "training_seconds": 13.989018082618713
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + SVM",
+    "accuracy": 0.7930535455861071,
+    "average_precision": 0.39095408191644326,
+    "confusion_matrix": [
+      [
+        503,
+        127
+      ],
+      [
+        16,
+        45
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.7814761215629522,
+      "average_precision": 0.39095408191644326,
+      "confusion_matrix": [
+        [
+          494,
+          136
+        ],
+        [
+          15,
+          46
+        ]
+      ],
+      "f1": 0.3786008230452675,
+      "macro_f1": 0.6230141955437049,
+      "positive_count": 61,
+      "precision": 0.25274725274725274,
+      "precision_at_20": 0.55,
+      "recall": 0.7540983606557377,
+      "recall_at_20": 0.18032786885245902,
+      "roc_auc": 0.8712464220660943,
+      "test_size": 691,
+      "top20_found": 11
+    },
+    "f1": 0.38626609442060084,
+    "inference_seconds": 0.03101641684770584,
+    "macro_f1": 0.6309050228412839,
+    "model": "tfidf_svm",
+    "positive_count": 61,
+    "precision": 0.2616279069767442,
+    "precision_at_20": 0.55,
+    "recall": 0.7377049180327869,
+    "recall_at_20": 0.18032786885245902,
+    "roc_auc": 0.8712464220660943,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.08191062228048629,
+    "top20_found": 11,
+    "train_source": "stanford",
+    "training_seconds": 14.41557375015691
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + SVM",
+    "accuracy": 0.8857929136566908,
+    "average_precision": 0.7799705791071292,
+    "confusion_matrix": [
+      [
+        4303,
+        406
+      ],
+      [
+        258,
+        847
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8783969728242174,
+      "average_precision": 0.7799705791071292,
+      "confusion_matrix": [
+        [
+          4222,
+          487
+        ],
+        [
+          220,
+          885
+        ]
+      ],
+      "f1": 0.7145740815502624,
+      "macro_f1": 0.8186573828142526,
+      "positive_count": 1105,
+      "precision": 0.6450437317784257,
+      "precision_at_20": 1.0,
+      "recall": 0.8009049773755657,
+      "recall_at_20": 0.01809954751131222,
+      "roc_auc": 0.9324042052909177,
+      "test_size": 5814,
+      "top20_found": 20
+    },
+    "f1": 0.7184054283290925,
+    "inference_seconds": 0.15573679190129042,
+    "macro_f1": 0.8233882589326154,
+    "model": "tfidf_svm",
+    "positive_count": 1105,
+    "precision": 0.6759776536312849,
+    "precision_at_20": 1.0,
+    "recall": 0.7665158371040725,
+    "recall_at_20": 0.01809954751131222,
+    "roc_auc": 0.9324042052909177,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.08191062228048629,
+    "top20_found": 20,
+    "train_source": "stanford",
+    "training_seconds": 14.41557375015691
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + NB",
+    "accuracy": 0.8726483357452967,
+    "average_precision": 0.5479794354501208,
+    "confusion_matrix": [
+      [
+        559,
+        71
+      ],
+      [
+        17,
+        44
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8856729377713459,
+      "average_precision": 0.5479794354501208,
+      "confusion_matrix": [
+        [
+          573,
+          57
+        ],
+        [
+          22,
+          39
+        ]
+      ],
+      "f1": 0.4968152866242038,
+      "macro_f1": 0.7161627453529182,
+      "positive_count": 61,
+      "precision": 0.40625,
+      "precision_at_20": 0.7,
+      "recall": 0.639344262295082,
+      "recall_at_20": 0.22950819672131148,
+      "roc_auc": 0.8869112672391362,
+      "test_size": 691,
+      "top20_found": 14
+    },
+    "f1": 0.5,
+    "inference_seconds": 0.03124174987897277,
+    "macro_f1": 0.7135157545605306,
+    "model": "tfidf_nb",
+    "positive_count": 61,
+    "precision": 0.3826086956521739,
+    "precision_at_20": 0.7,
+    "recall": 0.7213114754098361,
+    "recall_at_20": 0.22950819672131148,
+    "roc_auc": 0.8869112672391362,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.41970412783704825,
+    "top20_found": 14,
+    "train_source": "stanford",
+    "training_seconds": 13.195452958811074
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "TF-IDF + NB",
+    "accuracy": 0.848469212246302,
+    "average_precision": 0.7154647529052545,
+    "confusion_matrix": [
+      [
+        4139,
+        570
+      ],
+      [
+        311,
+        794
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8613691090471276,
+      "average_precision": 0.7154647529052545,
+      "confusion_matrix": [
+        [
+          4270,
+          439
+        ],
+        [
+          367,
+          738
+        ]
+      ],
+      "f1": 0.6468010517090271,
+      "macro_f1": 0.7802804744956435,
+      "positive_count": 1105,
+      "precision": 0.627017841971113,
+      "precision_at_20": 1.0,
+      "recall": 0.6678733031674208,
+      "recall_at_20": 0.01809954751131222,
+      "roc_auc": 0.8965506505786071,
+      "test_size": 5814,
+      "top20_found": 20
+    },
+    "f1": 0.6431753746456055,
+    "inference_seconds": 0.1588643747381866,
+    "macro_f1": 0.7734929171513867,
+    "model": "tfidf_nb",
+    "positive_count": 1105,
+    "precision": 0.5821114369501467,
+    "precision_at_20": 1.0,
+    "recall": 0.718552036199095,
+    "recall_at_20": 0.01809954751131222,
+    "roc_auc": 0.8965506505786071,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.41970412783704825,
+    "top20_found": 20,
+    "train_source": "stanford",
+    "training_seconds": 13.195452958811074
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "Đa số",
+    "accuracy": 0.9117221418234442,
+    "average_precision": 0.08827785817655572,
+    "confusion_matrix": [
+      [
+        630,
+        0
+      ],
+      [
+        61,
+        0
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.9117221418234442,
+      "average_precision": 0.08827785817655572,
+      "confusion_matrix": [
+        [
+          630,
+          0
+        ],
+        [
+          61,
+          0
+        ]
+      ],
+      "f1": 0.0,
+      "macro_f1": 0.4769114307342922,
+      "positive_count": 61,
+      "precision": 0.0,
+      "precision_at_20": 0.0,
+      "recall": 0.0,
+      "recall_at_20": 0.0,
+      "roc_auc": 0.5,
+      "test_size": 691,
+      "top20_found": 0
+    },
+    "f1": 0.0,
+    "inference_seconds": 0.03465550020337105,
+    "macro_f1": 0.4769114307342922,
+    "model": "tfidf_dummy",
+    "positive_count": 61,
+    "precision": 0.0,
+    "precision_at_20": 0.0,
+    "recall": 0.0,
+    "recall_at_20": 0.0,
+    "roc_auc": 0.5,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.5,
+    "top20_found": 0,
+    "train_source": "stanford",
+    "training_seconds": 7.809000458102673
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "Đa số",
+    "accuracy": 0.8099415204678363,
+    "average_precision": 0.19005847953216373,
+    "confusion_matrix": [
+      [
+        4709,
+        0
+      ],
+      [
+        1105,
+        0
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8099415204678363,
+      "average_precision": 0.19005847953216373,
+      "confusion_matrix": [
+        [
+          4709,
+          0
+        ],
+        [
+          1105,
+          0
+        ]
+      ],
+      "f1": 0.0,
+      "macro_f1": 0.44749596122778673,
+      "positive_count": 1105,
+      "precision": 0.0,
+      "precision_at_20": 0.1,
+      "recall": 0.0,
+      "recall_at_20": 0.0018099547511312218,
+      "roc_auc": 0.5,
+      "test_size": 5814,
+      "top20_found": 2
+    },
+    "f1": 0.0,
+    "inference_seconds": 0.18033399991691113,
+    "macro_f1": 0.44749596122778673,
+    "model": "tfidf_dummy",
+    "positive_count": 1105,
+    "precision": 0.0,
+    "precision_at_20": 0.1,
+    "recall": 0.0,
+    "recall_at_20": 0.0018099547511312218,
+    "roc_auc": 0.5,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.5,
+    "top20_found": 2,
+    "train_source": "stanford",
+    "training_seconds": 7.809000458102673
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "MiniLM frozen + LR",
+    "accuracy": 0.9117221418234442,
+    "average_precision": 0.5775959949997739,
+    "confusion_matrix": [
+      [
+        594,
+        36
+      ],
+      [
+        25,
+        36
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.8639652677279306,
+      "average_precision": 0.5775959949997739,
+      "confusion_matrix": [
+        [
+          550,
+          80
+        ],
+        [
+          14,
+          47
+        ]
+      ],
+      "f1": 0.5,
+      "macro_f1": 0.7106365159128978,
+      "positive_count": 61,
+      "precision": 0.3700787401574803,
+      "precision_at_20": 0.75,
+      "recall": 0.7704918032786885,
+      "recall_at_20": 0.2459016393442623,
+      "roc_auc": 0.9056206088992974,
+      "test_size": 691,
+      "top20_found": 15
+    },
+    "f1": 0.5413533834586466,
+    "inference_seconds": 0.00019999966025352478,
+    "macro_f1": 0.7462571561008204,
+    "model": "minilm_logreg",
+    "positive_count": 61,
+    "precision": 0.5,
+    "precision_at_20": 0.75,
+    "recall": 0.5901639344262295,
+    "recall_at_20": 0.2459016393442623,
+    "roc_auc": 0.9056206088992974,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.6789393463677474,
+    "top20_found": 15,
+    "train_source": "upenn",
+    "training_seconds": 0.5758349997922778
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "MiniLM frozen + LR",
+    "accuracy": 0.8214654282765738,
+    "average_precision": 0.46232501525570285,
+    "confusion_matrix": [
+      [
+        4428,
+        281
+      ],
+      [
+        757,
+        348
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.803061575507396,
+      "average_precision": 0.46232501525570285,
+      "confusion_matrix": [
+        [
+          4161,
+          548
+        ],
+        [
+          597,
+          508
+        ]
+      ],
+      "f1": 0.4701527070800555,
+      "macro_f1": 0.6746031307661817,
+      "positive_count": 1105,
+      "precision": 0.4810606060606061,
+      "precision_at_20": 0.75,
+      "recall": 0.4597285067873303,
+      "recall_at_20": 0.013574660633484163,
+      "roc_auc": 0.7852935891510335,
+      "test_size": 5814,
+      "top20_found": 15
+    },
+    "f1": 0.4013840830449827,
+    "inference_seconds": 0.0008151670917868614,
+    "macro_f1": 0.6482360075625156,
+    "model": "minilm_logreg",
+    "positive_count": 1105,
+    "precision": 0.5532591414944356,
+    "precision_at_20": 0.75,
+    "recall": 0.31493212669683257,
+    "recall_at_20": 0.013574660633484163,
+    "roc_auc": 0.7852935891510335,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.6789393463677474,
+    "top20_found": 15,
+    "train_source": "upenn",
+    "training_seconds": 0.5758349997922778
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "MiniLM frozen + LR",
+    "accuracy": 0.7800289435600579,
+    "average_precision": 0.38983703359634786,
+    "confusion_matrix": [
+      [
+        490,
+        140
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.6903039073806078,
+      "average_precision": 0.38983703359634786,
+      "confusion_matrix": [
+        [
+          422,
+          208
+        ],
+        [
+          6,
+          55
+        ]
+      ],
+      "f1": 0.3395061728395062,
+      "macro_f1": 0.5686188709188079,
+      "positive_count": 61,
+      "precision": 0.20912547528517111,
+      "precision_at_20": 0.35,
+      "recall": 0.9016393442622951,
+      "recall_at_20": 0.11475409836065574,
+      "roc_auc": 0.8605776736924278,
+      "test_size": 691,
+      "top20_found": 7
+    },
+    "f1": 0.392,
+    "inference_seconds": 0.0002754577435553074,
+    "macro_f1": 0.6288621908127209,
+    "model": "minilm_logreg",
+    "positive_count": 61,
+    "precision": 0.25925925925925924,
+    "precision_at_20": 0.35,
+    "recall": 0.8032786885245902,
+    "recall_at_20": 0.11475409836065574,
+    "roc_auc": 0.8605776736924278,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.6411202738271031,
+    "top20_found": 7,
+    "train_source": "stanford",
+    "training_seconds": 10.183370791841298
+  },
+  {
+    "environment": "Mac / original",
+    "trial_label": "MiniLM frozen + LR",
+    "accuracy": 0.8314413484692122,
+    "average_precision": 0.6370477376765308,
+    "confusion_matrix": [
+      [
+        4031,
+        678
+      ],
+      [
+        302,
+        803
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.7865497076023392,
+      "average_precision": 0.6370477376765308,
+      "confusion_matrix": [
+        [
+          3645,
+          1064
+        ],
+        [
+          177,
+          928
+        ]
+      ],
+      "f1": 0.5992896351307717,
+      "macro_f1": 0.7269100854120627,
+      "positive_count": 1105,
+      "precision": 0.46586345381526106,
+      "precision_at_20": 0.75,
+      "recall": 0.8398190045248869,
+      "recall_at_20": 0.013574660633484163,
+      "roc_auc": 0.8896882738262825,
+      "test_size": 5814,
+      "top20_found": 15
+    },
+    "f1": 0.6210363495746326,
+    "inference_seconds": 0.0007849996909499168,
+    "macro_f1": 0.7563266242454008,
+    "model": "minilm_logreg",
+    "positive_count": 1105,
+    "precision": 0.5422012153950033,
+    "precision_at_20": 0.75,
+    "recall": 0.7266968325791855,
+    "recall_at_20": 0.013574660633484163,
+    "roc_auc": 0.8896882738262825,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.6411202738271031,
+    "top20_found": 15,
+    "train_source": "stanford",
+    "training_seconds": 10.183370791841298
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "MiniLM fine tuned",
+    "accuracy": 0.9261939218523878,
+    "average_precision": 0.7059076755021558,
+    "confusion_matrix": [
+      [
+        598,
+        32
+      ],
+      [
+        19,
+        42
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.9001447178002895,
+      "average_precision": 0.7059076755021558,
+      "confusion_matrix": [
+        [
+          571,
+          59
+        ],
+        [
+          10,
+          51
+        ]
+      ],
+      "f1": 0.5964912280701754,
+      "macro_f1": 0.7697567618468135,
+      "positive_count": 61,
+      "precision": 0.4636363636363636,
+      "precision_at_20": 0.9,
+      "recall": 0.8360655737704918,
+      "recall_at_20": 0.29508196721311475,
+      "roc_auc": 0.911904761904762,
+      "test_size": 691,
+      "top20_found": 18
+    },
+    "f1": 0.6222222222222222,
+    "macro_f1": 0.7906620333244231,
+    "model": "finetuned_minilm",
+    "positive_count": 61,
+    "precision": 0.5675675675675675,
+    "precision_at_20": 0.9,
+    "recall": 0.6885245901639344,
+    "recall_at_20": 0.29508196721311475,
+    "roc_auc": 0.911904761904762,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.6701767444610596,
+    "top20_found": 18,
+    "train_source": "upenn"
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "MiniLM fine tuned",
+    "accuracy": 0.8794289645682835,
+    "average_precision": 0.703558913949917,
+    "confusion_matrix": [
+      [
+        4516,
+        193
+      ],
+      [
+        508,
+        597
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.869281045751634,
+      "average_precision": 0.703558913949917,
+      "confusion_matrix": [
+        [
+          4309,
+          400
+        ],
+        [
+          360,
+          745
+        ]
+      ],
+      "f1": 0.6622222222222223,
+      "macro_f1": 0.790590744295159,
+      "positive_count": 1105,
+      "precision": 0.6506550218340611,
+      "precision_at_20": 0.95,
+      "recall": 0.6742081447963801,
+      "recall_at_20": 0.017194570135746608,
+      "roc_auc": 0.8812357005791356,
+      "test_size": 5814,
+      "top20_found": 19
+    },
+    "f1": 0.6300791556728232,
+    "macro_f1": 0.7790280705930128,
+    "model": "finetuned_minilm",
+    "positive_count": 1105,
+    "precision": 0.7556962025316456,
+    "precision_at_20": 0.95,
+    "recall": 0.5402714932126697,
+    "recall_at_20": 0.017194570135746608,
+    "roc_auc": 0.8812357005791356,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.6701767444610596,
+    "top20_found": 19,
+    "train_source": "upenn"
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "MiniLM fine tuned",
+    "accuracy": 0.7814761215629522,
+    "average_precision": 0.48728471743461627,
+    "confusion_matrix": [
+      [
+        487,
+        143
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.804630969609262,
+      "average_precision": 0.48728471743461627,
+      "confusion_matrix": [
+        [
+          508,
+          122
+        ],
+        [
+          13,
+          48
+        ]
+      ],
+      "f1": 0.4155844155844156,
+      "macro_f1": 0.6491475509720515,
+      "positive_count": 61,
+      "precision": 0.2823529411764706,
+      "precision_at_20": 0.55,
+      "recall": 0.7868852459016393,
+      "recall_at_20": 0.18032786885245902,
+      "roc_auc": 0.9036429872495446,
+      "test_size": 691,
+      "top20_found": 11
+    },
+    "f1": 0.41245136186770426,
+    "macro_f1": 0.639114569822741,
+    "model": "finetuned_minilm",
+    "positive_count": 61,
+    "precision": 0.27040816326530615,
+    "precision_at_20": 0.55,
+    "recall": 0.8688524590163934,
+    "recall_at_20": 0.18032786885245902,
+    "roc_auc": 0.9036429872495446,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.34997692704200745,
+    "top20_found": 11,
+    "train_source": "stanford"
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "MiniLM fine tuned",
+    "accuracy": 0.9203646370829034,
+    "average_precision": 0.8808811911888398,
+    "confusion_matrix": [
+      [
+        4404,
+        305
+      ],
+      [
+        158,
+        947
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.9248366013071896,
+      "average_precision": 0.8808811911888398,
+      "confusion_matrix": [
+        [
+          4482,
+          227
+        ],
+        [
+          210,
+          895
+        ]
+      ],
+      "f1": 0.8037718904355635,
+      "macro_f1": 0.8786437369420664,
+      "positive_count": 1105,
+      "precision": 0.7976827094474154,
+      "precision_at_20": 1.0,
+      "recall": 0.8099547511312217,
+      "recall_at_20": 0.01809954751131222,
+      "roc_auc": 0.9639264948510072,
+      "test_size": 5814,
+      "top20_found": 20
+    },
+    "f1": 0.8035638523546882,
+    "macro_f1": 0.876811588565436,
+    "model": "finetuned_minilm",
+    "positive_count": 1105,
+    "precision": 0.7563897763578274,
+    "precision_at_20": 1.0,
+    "recall": 0.8570135746606334,
+    "recall_at_20": 0.01809954751131222,
+    "roc_auc": 0.9639264948510072,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.34997692704200745,
+    "top20_found": 20,
+    "train_source": "stanford"
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "MiniLM + TF-IDF",
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "minilm_tfidf_blend",
+    "threshold": 0.5731890967671966,
+    "minilm_weight": 0.75,
+    "precision": 0.5915492957746479,
+    "recall": 0.6885245901639344,
+    "f1": 0.6363636363636364,
+    "macro_f1": 0.7989818181818182,
+    "accuracy": 0.9305354558610709,
+    "average_precision": 0.7224185895670262,
+    "roc_auc": 0.9234192037470728,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        601,
+        29
+      ],
+      [
+        19,
+        42
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "MiniLM + TF-IDF",
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "minilm_tfidf_blend",
+    "threshold": 0.5731890967671966,
+    "minilm_weight": 0.75,
+    "precision": 0.7447073474470735,
+    "recall": 0.5411764705882353,
+    "f1": 0.6268343815513627,
+    "macro_f1": 0.7767916763723892,
+    "accuracy": 0.8775369797041623,
+    "average_precision": 0.6952677450955922,
+    "roc_auc": 0.8869775696677874,
+    "precision_at_20": 0.9,
+    "recall_at_20": 0.016289592760180997,
+    "top20_found": 18,
+    "confusion_matrix": [
+      [
+        4504,
+        205
+      ],
+      [
+        507,
+        598
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "MiniLM + TF-IDF",
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "minilm_tfidf_blend",
+    "threshold": 0.3931987027552757,
+    "minilm_weight": 0.8,
+    "precision": 0.2717948717948718,
+    "recall": 0.8688524590163934,
+    "f1": 0.4140625,
+    "macro_f1": 0.640423789964476,
+    "accuracy": 0.7829232995658466,
+    "average_precision": 0.46387293469993557,
+    "roc_auc": 0.904735883424408,
+    "precision_at_20": 0.65,
+    "recall_at_20": 0.21311475409836064,
+    "top20_found": 13,
+    "confusion_matrix": [
+      [
+        488,
+        142
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "MiniLM + TF-IDF",
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "minilm_tfidf_blend",
+    "threshold": 0.3931987027552757,
+    "minilm_weight": 0.8,
+    "precision": 0.7642799678197908,
+    "recall": 0.8597285067873304,
+    "f1": 0.8091993185689949,
+    "macro_f1": 0.8804617282500147,
+    "accuracy": 0.9229446164430685,
+    "average_precision": 0.8810931623919017,
+    "roc_auc": 0.9636608054855965,
+    "precision_at_20": 1.0,
+    "recall_at_20": 0.01809954751131222,
+    "top20_found": 20,
+    "confusion_matrix": [
+      [
+        4416,
+        293
+      ],
+      [
+        155,
+        950
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "DeBERTa joint / upenn",
+    "model": "joint_deberta",
+    "train_source": "upenn+stanford",
+    "test_source": "upenn",
+    "policy": "upenn",
+    "threshold": 0.07091147311897518,
+    "precision": 0.3584905660377358,
+    "recall": 0.9344262295081968,
+    "f1": 0.5181818181818182,
+    "macro_f1": 0.7134798936003756,
+    "accuracy": 0.8465991316931982,
+    "average_precision": 0.7152710629783572,
+    "roc_auc": 0.9466042154566745,
+    "precision_at_20": 0.85,
+    "recall_at_20": 0.2786885245901639,
+    "top20_found": 17,
+    "confusion_matrix": [
+      [
+        528,
+        102
+      ],
+      [
+        4,
+        57
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "brier_score": 0.04623580148028404,
+    "automatic_coverage": 0.7698986975397974,
+    "review_count": 159,
+    "automatic_accuracy": 0.9924812030075187,
+    "urgent_sent_to_review": 57
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "DeBERTa joint / mixed",
+    "model": "joint_deberta",
+    "train_source": "upenn+stanford",
+    "test_source": "upenn",
+    "policy": "mixed",
+    "threshold": 0.07,
+    "precision": 0.3584905660377358,
+    "recall": 0.9344262295081968,
+    "f1": 0.5181818181818182,
+    "macro_f1": 0.7134798936003756,
+    "accuracy": 0.8465991316931982,
+    "average_precision": 0.7152710629783572,
+    "roc_auc": 0.9466042154566745,
+    "precision_at_20": 0.85,
+    "recall_at_20": 0.2786885245901639,
+    "top20_found": 17,
+    "confusion_matrix": [
+      [
+        528,
+        102
+      ],
+      [
+        4,
+        57
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "brier_score": 0.05036982546165963,
+    "automatic_coverage": 0.784370477568741,
+    "review_count": 149,
+    "automatic_accuracy": 0.992619926199262,
+    "urgent_sent_to_review": 47
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "DeBERTa joint / stanford",
+    "model": "joint_deberta",
+    "train_source": "upenn+stanford",
+    "test_source": "stanford",
+    "policy": "stanford",
+    "threshold": 0.07,
+    "precision": 0.594563986409966,
+    "recall": 0.9502262443438914,
+    "f1": 0.7314524555903866,
+    "macro_f1": 0.821704302478304,
+    "accuracy": 0.8673890608875129,
+    "average_precision": 0.8689890961792827,
+    "roc_auc": 0.9640471841251326,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        3993,
+        716
+      ],
+      [
+        55,
+        1050
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "brier_score": 0.05479330739566275,
+    "automatic_coverage": 0.8006535947712419,
+    "review_count": 1159,
+    "automatic_accuracy": 0.9759398496240601,
+    "urgent_sent_to_review": 500
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "DeBERTa joint / mixed",
+    "model": "joint_deberta",
+    "train_source": "upenn+stanford",
+    "test_source": "stanford",
+    "policy": "mixed",
+    "threshold": 0.07,
+    "precision": 0.5837028824833703,
+    "recall": 0.9529411764705882,
+    "f1": 0.7239601237538673,
+    "macro_f1": 0.8159312030628495,
+    "accuracy": 0.8618851049191606,
+    "average_precision": 0.8689890961792827,
+    "roc_auc": 0.9640471841251326,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        3958,
+        751
+      ],
+      [
+        52,
+        1053
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "brier_score": 0.05590159869592615,
+    "automatic_coverage": 0.7108703130374957,
+    "review_count": 1681,
+    "automatic_accuracy": 0.9869344301959836,
+    "urgent_sent_to_review": 932
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "DeBERTa joint / fixed 0.5",
+    "source": "upenn",
+    "threshold": 0.5,
+    "precision": 0.5616438356164384,
+    "recall": 0.6721311475409836,
+    "f1": 0.6119402985074627,
+    "accuracy": 0.9247467438494935,
+    "confusion_matrix": [
+      [
+        598,
+        32
+      ],
+      [
+        20,
+        41
+      ]
+    ],
+    "interpretation": "Fixed 0.5 diagnostic only; not selected by test and not the deployed review policy.",
+    "train_source": "joint",
+    "test_source": "upenn",
+    "model": "joint_deberta",
+    "policy": "fixed 0.5"
+  },
+  {
+    "environment": "Mac / extensions",
+    "trial_label": "DeBERTa joint / fixed 0.5",
+    "source": "stanford",
+    "threshold": 0.5,
+    "precision": 0.8246124031007752,
+    "recall": 0.7701357466063349,
+    "f1": 0.7964436125409452,
+    "accuracy": 0.9251805985552115,
+    "confusion_matrix": [
+      [
+        4528,
+        181
+      ],
+      [
+        254,
+        851
+      ]
+    ],
+    "interpretation": "Fixed 0.5 diagnostic only; not selected by test and not the deployed review policy.",
+    "train_source": "joint",
+    "test_source": "stanford",
+    "model": "joint_deberta",
+    "policy": "fixed 0.5"
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + LR",
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "tfidf_logreg",
+    "confusion_matrix": [
+      [
+        600,
+        30
+      ],
+      [
+        24,
+        37
+      ]
+    ],
+    "precision": 0.5522388059701493,
+    "recall": 0.6065573770491803,
+    "f1": 0.578125,
+    "accuracy": 0.9218523878437048,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + SVM",
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "tfidf_svm",
+    "confusion_matrix": [
+      [
+        602,
+        28
+      ],
+      [
+        29,
+        32
+      ]
+    ],
+    "precision": 0.5333333333333333,
+    "recall": 0.5245901639344263,
+    "f1": 0.5289256198347108,
+    "accuracy": 0.9175108538350217,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + NB",
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "tfidf_nb",
+    "confusion_matrix": [
+      [
+        572,
+        58
+      ],
+      [
+        32,
+        29
+      ]
+    ],
+    "precision": 0.3333333333333333,
+    "recall": 0.47540983606557374,
+    "f1": 0.3918918918918919,
+    "accuracy": 0.869753979739508,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "Đa số",
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "tfidf_dummy",
+    "confusion_matrix": [
+      [
+        630,
+        0
+      ],
+      [
+        61,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.9117221418234442,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "MiniLM frozen + LR",
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "minilm_logreg",
+    "confusion_matrix": [
+      [
+        580,
+        50
+      ],
+      [
+        20,
+        41
+      ]
+    ],
+    "precision": 0.45054945054945056,
+    "recall": 0.6721311475409836,
+    "f1": 0.5394736842105263,
+    "accuracy": 0.8986975397973951,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + LR",
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "tfidf_logreg",
+    "confusion_matrix": [
+      [
+        4352,
+        357
+      ],
+      [
+        280,
+        825
+      ]
+    ],
+    "precision": 0.6979695431472082,
+    "recall": 0.746606334841629,
+    "f1": 0.7214691735898557,
+    "accuracy": 0.8904368765049879,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + SVM",
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "tfidf_svm",
+    "confusion_matrix": [
+      [
+        4257,
+        452
+      ],
+      [
+        232,
+        873
+      ]
+    ],
+    "precision": 0.6588679245283019,
+    "recall": 0.7900452488687782,
+    "f1": 0.7185185185185186,
+    "accuracy": 0.8823529411764706,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + NB",
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "tfidf_nb",
+    "confusion_matrix": [
+      [
+        4126,
+        583
+      ],
+      [
+        301,
+        804
+      ]
+    ],
+    "precision": 0.5796683489545782,
+    "recall": 0.7276018099547511,
+    "f1": 0.6452648475120385,
+    "accuracy": 0.847953216374269,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "Đa số",
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "tfidf_dummy",
+    "confusion_matrix": [
+      [
+        4709,
+        0
+      ],
+      [
+        1105,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.8099415204678363,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "MiniLM frozen + LR",
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "minilm_logreg",
+    "confusion_matrix": [
+      [
+        4031,
+        678
+      ],
+      [
+        302,
+        803
+      ]
+    ],
+    "precision": 0.5422012153950033,
+    "recall": 0.7266968325791855,
+    "f1": 0.6210363495746326,
+    "accuracy": 0.8314413484692122,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + LR",
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "tfidf_logreg",
+    "confusion_matrix": [
+      [
+        4425,
+        284
+      ],
+      [
+        698,
+        407
+      ]
+    ],
+    "precision": 0.5890014471780028,
+    "recall": 0.36832579185520364,
+    "f1": 0.4532293986636971,
+    "accuracy": 0.8310973512211902,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + SVM",
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "tfidf_svm",
+    "confusion_matrix": [
+      [
+        4502,
+        207
+      ],
+      [
+        750,
+        355
+      ]
+    ],
+    "precision": 0.6316725978647687,
+    "recall": 0.3212669683257919,
+    "f1": 0.4259148170365927,
+    "accuracy": 0.8353973168214655,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + NB",
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "tfidf_nb",
+    "confusion_matrix": [
+      [
+        4215,
+        494
+      ],
+      [
+        728,
+        377
+      ]
+    ],
+    "precision": 0.43283582089552236,
+    "recall": 0.3411764705882353,
+    "f1": 0.3815789473684211,
+    "accuracy": 0.7898176814585484,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "Đa số",
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "tfidf_dummy",
+    "confusion_matrix": [
+      [
+        4709,
+        0
+      ],
+      [
+        1105,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.8099415204678363,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "MiniLM frozen + LR",
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "minilm_logreg",
+    "confusion_matrix": [
+      [
+        4357,
+        352
+      ],
+      [
+        700,
+        405
+      ]
+    ],
+    "precision": 0.535006605019815,
+    "recall": 0.3665158371040724,
+    "f1": 0.43501611170784105,
+    "accuracy": 0.8190574475404196,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + LR",
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "tfidf_logreg",
+    "confusion_matrix": [
+      [
+        510,
+        120
+      ],
+      [
+        17,
+        44
+      ]
+    ],
+    "precision": 0.2682926829268293,
+    "recall": 0.7213114754098361,
+    "f1": 0.39111111111111113,
+    "accuracy": 0.8017366136034733,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + SVM",
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "tfidf_svm",
+    "confusion_matrix": [
+      [
+        500,
+        130
+      ],
+      [
+        15,
+        46
+      ]
+    ],
+    "precision": 0.26136363636363635,
+    "recall": 0.7540983606557377,
+    "f1": 0.3881856540084388,
+    "accuracy": 0.7901591895803184,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "TF-IDF + NB",
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "tfidf_nb",
+    "confusion_matrix": [
+      [
+        558,
+        72
+      ],
+      [
+        16,
+        45
+      ]
+    ],
+    "precision": 0.38461538461538464,
+    "recall": 0.7377049180327869,
+    "f1": 0.5056179775280899,
+    "accuracy": 0.8726483357452967,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "Đa số",
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "tfidf_dummy",
+    "confusion_matrix": [
+      [
+        630,
+        0
+      ],
+      [
+        61,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.9117221418234442,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied confusion counts",
+    "trial_label": "MiniLM frozen + LR",
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "minilm_logreg",
+    "confusion_matrix": [
+      [
+        490,
+        140
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "precision": 0.25925925925925924,
+    "recall": 0.8032786885245902,
+    "f1": 0.392,
+    "accuracy": 0.7800289435600579,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "environment": "Kaggle / supplied FINAL TEST",
+    "trial_label": "MiniLM / selected",
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "finetuned_minilm",
+    "threshold": 0.6821227073669434,
+    "precision": 0.5454545454545454,
+    "recall": 0.6885245901639344,
+    "f1": 0.6086956521739131,
+    "macro_f1": 0.7826436460226478,
+    "accuracy": 0.9218523878437048,
+    "average_precision": 0.7139106071656729,
+    "roc_auc": 0.9131667967733541,
+    "precision_at_20": 0.9,
+    "recall_at_20": 0.29508196721311475,
+    "top20_found": 18,
+    "confusion_matrix": [
+      [
+        595,
+        35
+      ],
+      [
+        19,
+        42
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "default_threshold_metrics": {
+      "precision": 0.46296296296296297,
+      "recall": 0.819672131147541,
+      "f1": 0.591715976331361,
+      "macro_f1": 0.7674161085284175,
+      "accuracy": 0.9001447178002895,
+      "average_precision": 0.7139106071656729,
+      "roc_auc": 0.9131667967733541,
+      "precision_at_20": 0.9,
+      "recall_at_20": 0.29508196721311475,
+      "top20_found": 18,
+      "confusion_matrix": [
+        [
+          572,
+          58
+        ],
+        [
+          11,
+          50
+        ]
+      ],
+      "test_size": 691,
+      "positive_count": 61
+    },
+    "policy": "selected"
+  },
+  {
+    "environment": "Kaggle / supplied FINAL TEST",
+    "trial_label": "MiniLM / fixed 0.5",
+    "precision": 0.46296296296296297,
+    "recall": 0.819672131147541,
+    "f1": 0.591715976331361,
+    "macro_f1": 0.7674161085284175,
+    "accuracy": 0.9001447178002895,
+    "average_precision": 0.7139106071656729,
+    "roc_auc": 0.9131667967733541,
+    "precision_at_20": 0.9,
+    "recall_at_20": 0.29508196721311475,
+    "top20_found": 18,
+    "confusion_matrix": [
+      [
+        572,
+        58
+      ],
+      [
+        11,
+        50
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "finetuned_minilm",
+    "threshold": 0.5,
+    "policy": "fixed 0.5"
+  },
+  {
+    "environment": "Kaggle / supplied FINAL TEST",
+    "trial_label": "MiniLM / selected",
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "finetuned_minilm",
+    "threshold": 0.6821227073669434,
+    "precision": 0.7577639751552795,
+    "recall": 0.5520361990950227,
+    "f1": 0.6387434554973822,
+    "macro_f1": 0.7838705958285429,
+    "accuracy": 0.8813209494324046,
+    "average_precision": 0.7074680086291809,
+    "roc_auc": 0.8826790712691304,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        4514,
+        195
+      ],
+      [
+        495,
+        610
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "default_threshold_metrics": {
+      "precision": 0.6414777497900923,
+      "recall": 0.6914027149321267,
+      "f1": 0.6655052264808362,
+      "macro_f1": 0.7916038777067704,
+      "accuracy": 0.8679050567595459,
+      "average_precision": 0.7074680086291809,
+      "roc_auc": 0.8826790712691304,
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.017194570135746608,
+      "top20_found": 19,
+      "confusion_matrix": [
+        [
+          4282,
+          427
+        ],
+        [
+          341,
+          764
+        ]
+      ],
+      "test_size": 5814,
+      "positive_count": 1105
+    },
+    "policy": "selected"
+  },
+  {
+    "environment": "Kaggle / supplied FINAL TEST",
+    "trial_label": "MiniLM / fixed 0.5",
+    "precision": 0.6414777497900923,
+    "recall": 0.6914027149321267,
+    "f1": 0.6655052264808362,
+    "macro_f1": 0.7916038777067704,
+    "accuracy": 0.8679050567595459,
+    "average_precision": 0.7074680086291809,
+    "roc_auc": 0.8826790712691304,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        4282,
+        427
+      ],
+      [
+        341,
+        764
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "finetuned_minilm",
+    "threshold": 0.5,
+    "policy": "fixed 0.5"
+  },
+  {
+    "environment": "Kaggle / supplied FINAL TEST",
+    "trial_label": "MiniLM / selected",
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "finetuned_minilm",
+    "threshold": 0.71408611536026,
+    "precision": 0.265625,
+    "recall": 0.8360655737704918,
+    "f1": 0.4031620553359684,
+    "macro_f1": 0.6347076884297203,
+    "accuracy": 0.7814761215629522,
+    "average_precision": 0.49115845591004786,
+    "roc_auc": 0.899895914650013,
+    "precision_at_20": 0.5,
+    "recall_at_20": 0.16393442622950818,
+    "top20_found": 10,
+    "confusion_matrix": [
+      [
+        489,
+        141
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "default_threshold_metrics": {
+      "precision": 0.25,
+      "recall": 0.8688524590163934,
+      "f1": 0.3882783882783883,
+      "macro_f1": 0.618846137331259,
+      "accuracy": 0.7583212735166426,
+      "average_precision": 0.49115845591004786,
+      "roc_auc": 0.899895914650013,
+      "precision_at_20": 0.5,
+      "recall_at_20": 0.16393442622950818,
+      "top20_found": 10,
+      "confusion_matrix": [
+        [
+          471,
+          159
+        ],
+        [
+          8,
+          53
+        ]
+      ],
+      "test_size": 691,
+      "positive_count": 61
+    },
+    "policy": "selected"
+  },
+  {
+    "environment": "Kaggle / supplied FINAL TEST",
+    "trial_label": "MiniLM / fixed 0.5",
+    "precision": 0.25,
+    "recall": 0.8688524590163934,
+    "f1": 0.3882783882783883,
+    "macro_f1": 0.618846137331259,
+    "accuracy": 0.7583212735166426,
+    "average_precision": 0.49115845591004786,
+    "roc_auc": 0.899895914650013,
+    "precision_at_20": 0.5,
+    "recall_at_20": 0.16393442622950818,
+    "top20_found": 10,
+    "confusion_matrix": [
+      [
+        471,
+        159
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "finetuned_minilm",
+    "threshold": 0.5,
+    "policy": "fixed 0.5"
+  },
+  {
+    "environment": "Kaggle / supplied FINAL TEST",
+    "trial_label": "MiniLM / selected",
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "finetuned_minilm",
+    "threshold": 0.71408611536026,
+    "precision": 0.7558420628525383,
+    "recall": 0.848868778280543,
+    "f1": 0.7996589940323956,
+    "macro_f1": 0.8745116775807313,
+    "accuracy": 0.9191606467148263,
+    "average_precision": 0.8777149063242144,
+    "roc_auc": 0.9640957096692672,
+    "precision_at_20": 1.0,
+    "recall_at_20": 0.01809954751131222,
+    "top20_found": 20,
+    "confusion_matrix": [
+      [
+        4406,
+        303
+      ],
+      [
+        167,
+        938
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "default_threshold_metrics": {
+      "precision": 0.7052023121387283,
+      "recall": 0.8832579185520362,
+      "f1": 0.7842507030936119,
+      "macro_f1": 0.862745769535645,
+      "accuracy": 0.9076367389060888,
+      "average_precision": 0.8777149063242144,
+      "roc_auc": 0.9640957096692672,
+      "precision_at_20": 1.0,
+      "recall_at_20": 0.01809954751131222,
+      "top20_found": 20,
+      "confusion_matrix": [
+        [
+          4301,
+          408
+        ],
+        [
+          129,
+          976
+        ]
+      ],
+      "test_size": 5814,
+      "positive_count": 1105
+    },
+    "policy": "selected"
+  },
+  {
+    "environment": "Kaggle / supplied FINAL TEST",
+    "trial_label": "MiniLM / fixed 0.5",
+    "precision": 0.7052023121387283,
+    "recall": 0.8832579185520362,
+    "f1": 0.7842507030936119,
+    "macro_f1": 0.862745769535645,
+    "accuracy": 0.9076367389060888,
+    "average_precision": 0.8777149063242144,
+    "roc_auc": 0.9640957096692672,
+    "precision_at_20": 1.0,
+    "recall_at_20": 0.01809954751131222,
+    "top20_found": 20,
+    "confusion_matrix": [
+      [
+        4301,
+        408
+      ],
+      [
+        129,
+        976
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "finetuned_minilm",
+    "threshold": 0.5,
+    "policy": "fixed 0.5"
+  },
+  {
+    "environment": "Kaggle / supplied joint MiniLM log 2026-11-17",
+    "trial_label": "Joint MiniLM / s42",
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "train_source": "joint",
+    "test_source": "upenn",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.6507936507936508,
+    "recall": 0.6721311475409836,
+    "f1": 0.6612903225806451,
+    "macro_f1": 0.8139519975383354,
+    "accuracy": 0.9392185238784371,
+    "confusion_matrix": [
+      [
+        608,
+        22
+      ],
+      [
+        20,
+        41
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "average_precision": 0.697783382060938,
+    "roc_auc": 0.936247723132969,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "brier_score": 0.049237521025866725,
+    "automatic_coverage": 0.8986975397973951,
+    "review_count": 70,
+    "automatic_accuracy": 0.9677938808373591,
+    "automatic_errors": 20,
+    "urgent_automatically_found": 26,
+    "urgent_automatically_missed": 12,
+    "urgent_requiring_review": 23,
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 425
+  },
+  {
+    "environment": "Kaggle / supplied joint MiniLM log 2026-11-17",
+    "trial_label": "Joint MiniLM / s42",
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "train_source": "joint",
+    "test_source": "stanford",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.8237113402061855,
+    "recall": 0.7230769230769231,
+    "f1": 0.7701204819277109,
+    "macro_f1": 0.8600942616903289,
+    "accuracy": 0.9179566563467493,
+    "confusion_matrix": [
+      [
+        4538,
+        171
+      ],
+      [
+        306,
+        799
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "average_precision": 0.8506134022041771,
+    "roc_auc": 0.9567657580698942,
+    "precision_at_20": 1.0,
+    "recall_at_20": 0.01809954751131222,
+    "top20_found": 20,
+    "brier_score": 0.060838059813975554,
+    "automatic_coverage": 0.8558651530787754,
+    "review_count": 838,
+    "automatic_accuracy": 0.9628215434083601,
+    "automatic_errors": 185,
+    "urgent_automatically_found": 505,
+    "urgent_automatically_missed": 136,
+    "urgent_requiring_review": 464,
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 427
+  },
+  {
+    "environment": "Kaggle / supplied joint MiniLM log 2026-11-17",
+    "trial_label": "Joint MiniLM / s43",
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "train_source": "joint",
+    "test_source": "upenn",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.5857142857142857,
+    "recall": 0.6721311475409836,
+    "f1": 0.6259541984732825,
+    "macro_f1": 0.7933927667026683,
+    "accuracy": 0.9290882778581766,
+    "confusion_matrix": [
+      [
+        601,
+        29
+      ],
+      [
+        20,
+        41
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "average_precision": 0.6872809551022474,
+    "roc_auc": 0.9320062451209993,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "brier_score": 0.05216424915262062,
+    "automatic_coverage": 0.8798842257597684,
+    "review_count": 83,
+    "automatic_accuracy": 0.9703947368421053,
+    "automatic_errors": 18,
+    "urgent_automatically_found": 27,
+    "urgent_automatically_missed": 12,
+    "urgent_requiring_review": 22,
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 433
+  },
+  {
+    "environment": "Kaggle / supplied joint MiniLM log 2026-11-17",
+    "trial_label": "Joint MiniLM / s43",
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "train_source": "joint",
+    "test_source": "stanford",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.817047817047817,
+    "recall": 0.7113122171945702,
+    "f1": 0.760522496371553,
+    "macro_f1": 0.854374834630709,
+    "accuracy": 0.9148606811145511,
+    "confusion_matrix": [
+      [
+        4533,
+        176
+      ],
+      [
+        319,
+        786
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "average_precision": 0.8475725351000832,
+    "roc_auc": 0.9566733193105722,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "brier_score": 0.06068972307892164,
+    "automatic_coverage": 0.8565531475748194,
+    "review_count": 834,
+    "automatic_accuracy": 0.9630522088353414,
+    "automatic_errors": 184,
+    "urgent_automatically_found": 506,
+    "urgent_automatically_missed": 130,
+    "urgent_requiring_review": 469,
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 435
+  },
+  {
+    "environment": "Kaggle / supplied joint MiniLM log 2026-11-17",
+    "trial_label": "Joint MiniLM / s42",
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "train_source": "joint",
+    "test_source": "custom_challenge",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "macro_f1": 0.6307692307692307,
+    "accuracy": 0.7083333333333334,
+    "confusion_matrix": [
+      [
+        3,
+        7
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "average_precision": 0.6759427814187876,
+    "roc_auc": 0.6571428571428571,
+    "precision_at_20": 0.65,
+    "recall_at_20": 0.9285714285714286,
+    "top20_found": 13,
+    "balanced_accuracy": 0.65,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 0,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 575
+  },
+  {
+    "environment": "Kaggle / supplied joint MiniLM log 2026-11-17",
+    "trial_label": "Joint MiniLM / s43",
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "train_source": "joint",
+    "test_source": "custom_challenge",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "macro_f1": 0.6307692307692307,
+    "accuracy": 0.7083333333333334,
+    "confusion_matrix": [
+      [
+        3,
+        7
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "average_precision": 0.7617176682966156,
+    "roc_auc": 0.7214285714285714,
+    "precision_at_20": 0.7,
+    "recall_at_20": 1.0,
+    "top20_found": 14,
+    "balanced_accuracy": 0.65,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 0,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 684
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "B real-only / 42",
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "test_source": "upenn",
+    "threshold": 0.5,
+    "precision": 0.6461538461538462,
+    "recall": 0.6885245901639344,
+    "f1": 0.6666666666666666,
+    "macro_f1": 0.8166135881104033,
+    "accuracy": 0.9392185238784371,
+    "average_precision": 0.6928627650538788,
+    "roc_auc": 0.94087952120739,
+    "precision_at_20": 0.9,
+    "recall_at_20": 0.29508196721311475,
+    "top20_found": 18,
+    "confusion_matrix": [
+      [
+        607,
+        23
+      ],
+      [
+        19,
+        42
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "brier_score": 0.04748837762313097,
+    "automatic_coverage": 0.8986975397973951,
+    "review_count": 70,
+    "automatic_accuracy": 0.9629629629629629,
+    "automatic_errors": 23,
+    "urgent_automatically_found": 25,
+    "urgent_automatically_missed": 13,
+    "urgent_requiring_review": 23,
+    "train_source": "joint",
+    "model": "real_only"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "B real-only / 42",
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "test_source": "stanford",
+    "threshold": 0.5,
+    "precision": 0.8271604938271605,
+    "recall": 0.7276018099547511,
+    "f1": 0.7741935483870968,
+    "macro_f1": 0.8625443713037986,
+    "accuracy": 0.9193326453388373,
+    "average_precision": 0.849237074705687,
+    "roc_auc": 0.9572677332036756,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        4541,
+        168
+      ],
+      [
+        301,
+        804
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "brier_score": 0.06062203818324679,
+    "automatic_coverage": 0.8598211214310285,
+    "review_count": 815,
+    "automatic_accuracy": 0.9621924384876975,
+    "automatic_errors": 189,
+    "urgent_automatically_found": 503,
+    "urgent_automatically_missed": 144,
+    "urgent_requiring_review": 458,
+    "train_source": "joint",
+    "model": "real_only"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "C custom CE / 42",
+    "run": "custom_ce_seed42",
+    "arm": "custom_ce",
+    "seed": 42,
+    "test_source": "upenn",
+    "threshold": 0.5,
+    "precision": 0.6779661016949152,
+    "recall": 0.6557377049180327,
+    "f1": 0.6666666666666666,
+    "macro_f1": 0.817485472794506,
+    "accuracy": 0.9421128798842258,
+    "average_precision": 0.6380588312986369,
+    "roc_auc": 0.9369763205828779,
+    "precision_at_20": 0.8,
+    "recall_at_20": 0.26229508196721313,
+    "top20_found": 16,
+    "confusion_matrix": [
+      [
+        611,
+        19
+      ],
+      [
+        21,
+        40
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "brier_score": 0.04918899814603047,
+    "automatic_coverage": 0.894356005788712,
+    "review_count": 73,
+    "automatic_accuracy": 0.9660194174757282,
+    "automatic_errors": 21,
+    "urgent_automatically_found": 24,
+    "urgent_automatically_missed": 15,
+    "urgent_requiring_review": 22,
+    "train_source": "joint",
+    "model": "custom_ce"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "C custom CE / 42",
+    "run": "custom_ce_seed42",
+    "arm": "custom_ce",
+    "seed": 42,
+    "test_source": "stanford",
+    "threshold": 0.5,
+    "precision": 0.8288770053475936,
+    "recall": 0.7013574660633484,
+    "f1": 0.7598039215686274,
+    "macro_f1": 0.8543491864831039,
+    "accuracy": 0.9157206742346061,
+    "average_precision": 0.8496586633277959,
+    "roc_auc": 0.9571968186461084,
+    "precision_at_20": 1.0,
+    "recall_at_20": 0.01809954751131222,
+    "top20_found": 20,
+    "confusion_matrix": [
+      [
+        4549,
+        160
+      ],
+      [
+        330,
+        775
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "brier_score": 0.061160004583760114,
+    "automatic_coverage": 0.8596491228070176,
+    "review_count": 816,
+    "automatic_accuracy": 0.9605842336934773,
+    "automatic_errors": 197,
+    "urgent_automatically_found": 471,
+    "urgent_automatically_missed": 152,
+    "urgent_requiring_review": 482,
+    "train_source": "joint",
+    "model": "custom_ce"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "C custom pair / 42",
+    "run": "custom_pairwise_seed42",
+    "arm": "custom_pairwise",
+    "seed": 42,
+    "test_source": "upenn",
+    "threshold": 0.5,
+    "precision": 0.6666666666666666,
+    "recall": 0.6557377049180327,
+    "f1": 0.6611570247933884,
+    "macro_f1": 0.814321573459343,
+    "accuracy": 0.9406657018813314,
+    "average_precision": 0.6773297374687065,
+    "roc_auc": 0.9378090033827738,
+    "precision_at_20": 0.8,
+    "recall_at_20": 0.26229508196721313,
+    "top20_found": 16,
+    "confusion_matrix": [
+      [
+        610,
+        20
+      ],
+      [
+        21,
+        40
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "brier_score": 0.048800132881756136,
+    "automatic_coverage": 0.894356005788712,
+    "review_count": 73,
+    "automatic_accuracy": 0.9611650485436893,
+    "automatic_errors": 24,
+    "urgent_automatically_found": 25,
+    "urgent_automatically_missed": 15,
+    "urgent_requiring_review": 21,
+    "train_source": "joint",
+    "model": "custom_pairwise"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "C custom pair / 42",
+    "run": "custom_pairwise_seed42",
+    "arm": "custom_pairwise",
+    "seed": 42,
+    "test_source": "stanford",
+    "threshold": 0.5,
+    "precision": 0.8185610010427529,
+    "recall": 0.7104072398190046,
+    "f1": 0.7606589147286822,
+    "macro_f1": 0.8545034431443495,
+    "accuracy": 0.9150326797385621,
+    "average_precision": 0.845067416089319,
+    "roc_auc": 0.9560018410879717,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        4535,
+        174
+      ],
+      [
+        320,
+        785
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "brier_score": 0.06169190416769915,
+    "automatic_coverage": 0.8565531475748194,
+    "review_count": 834,
+    "automatic_accuracy": 0.9612449799196787,
+    "automatic_errors": 193,
+    "urgent_automatically_found": 467,
+    "urgent_automatically_missed": 150,
+    "urgent_requiring_review": 488,
+    "train_source": "joint",
+    "model": "custom_pairwise"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "B real-only / 43",
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "test_source": "upenn",
+    "threshold": 0.5,
+    "precision": 0.6176470588235294,
+    "recall": 0.6885245901639344,
+    "f1": 0.6511627906976745,
+    "macro_f1": 0.8076244919170734,
+    "accuracy": 0.934876989869754,
+    "average_precision": 0.6940033589895114,
+    "roc_auc": 0.9331251626333593,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        604,
+        26
+      ],
+      [
+        19,
+        42
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "brier_score": 0.05092080920816306,
+    "automatic_coverage": 0.8871201157742402,
+    "review_count": 78,
+    "automatic_accuracy": 0.9706362153344209,
+    "automatic_errors": 18,
+    "urgent_automatically_found": 27,
+    "urgent_automatically_missed": 11,
+    "urgent_requiring_review": 23,
+    "train_source": "joint",
+    "model": "real_only"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "B real-only / 43",
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "test_source": "stanford",
+    "threshold": 0.5,
+    "precision": 0.8180883864337102,
+    "recall": 0.7203619909502262,
+    "f1": 0.766121270452358,
+    "macro_f1": 0.8576156090481686,
+    "accuracy": 0.9164086687306502,
+    "average_precision": 0.8461302571543589,
+    "roc_auc": 0.9565095816329373,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        4532,
+        177
+      ],
+      [
+        309,
+        796
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "brier_score": 0.060607153760001406,
+    "automatic_coverage": 0.8584451324389405,
+    "review_count": 823,
+    "automatic_accuracy": 0.9629332799038269,
+    "automatic_errors": 185,
+    "urgent_automatically_found": 510,
+    "urgent_automatically_missed": 133,
+    "urgent_requiring_review": 462,
+    "train_source": "joint",
+    "model": "real_only"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "C custom pair / 43",
+    "run": "custom_pairwise_seed43",
+    "arm": "custom_pairwise",
+    "seed": 43,
+    "test_source": "upenn",
+    "threshold": 0.5,
+    "precision": 0.6129032258064516,
+    "recall": 0.6229508196721312,
+    "f1": 0.6178861788617886,
+    "macro_f1": 0.790277481805795,
+    "accuracy": 0.9319826338639653,
+    "average_precision": 0.7048647237820834,
+    "roc_auc": 0.9381472807702316,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        606,
+        24
+      ],
+      [
+        23,
+        38
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "brier_score": 0.04919691926038603,
+    "automatic_coverage": 0.8827785817655571,
+    "review_count": 81,
+    "automatic_accuracy": 0.9704918032786886,
+    "automatic_errors": 18,
+    "urgent_automatically_found": 26,
+    "urgent_automatically_missed": 12,
+    "urgent_requiring_review": 23,
+    "train_source": "joint",
+    "model": "custom_pairwise"
+  },
+  {
+    "environment": "Mac / final joint",
+    "trial_label": "C custom pair / 43",
+    "run": "custom_pairwise_seed43",
+    "arm": "custom_pairwise",
+    "seed": 43,
+    "test_source": "stanford",
+    "threshold": 0.5,
+    "precision": 0.8313767342582711,
+    "recall": 0.7049773755656109,
+    "f1": 0.7629774730656219,
+    "macro_f1": 0.8562435873569294,
+    "accuracy": 0.9167526659786722,
+    "average_precision": 0.849331505098406,
+    "roc_auc": 0.9569386243152372,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        4551,
+        158
+      ],
+      [
+        326,
+        779
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "brier_score": 0.06098139342971956,
+    "automatic_coverage": 0.8455452356381149,
+    "review_count": 898,
+    "automatic_accuracy": 0.9637917005695688,
+    "automatic_errors": 178,
+    "urgent_automatically_found": 456,
+    "urgent_automatically_missed": 138,
+    "urgent_requiring_review": 511,
+    "train_source": "joint",
+    "model": "custom_pairwise"
+  },
+  {
+    "environment": "Mac / synthetic diagnostic",
+    "trial_label": "B real-only / 42",
+    "model": "real_only",
+    "train_source": "joint",
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "test_source": "custom_challenge",
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "macro_f1": 0.6307692307692307,
+    "accuracy": 0.7083333333333334,
+    "average_precision": 0.7458882596100642,
+    "roc_auc": 0.7000000000000001,
+    "precision_at_20": 0.65,
+    "recall_at_20": 0.9285714285714286,
+    "top20_found": 13,
+    "confusion_matrix": [
+      [
+        3,
+        7
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "balanced_accuracy": 0.65,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 0,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+  },
+  {
+    "environment": "Mac / synthetic diagnostic",
+    "trial_label": "C custom CE / 42",
+    "model": "custom_ce",
+    "train_source": "joint",
+    "run": "custom_ce_seed42",
+    "arm": "custom_ce",
+    "seed": 42,
+    "test_source": "custom_challenge",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "average_precision": 1.0,
+    "roc_auc": 1.0,
+    "precision_at_20": 0.7,
+    "recall_at_20": 1.0,
+    "top20_found": 14,
+    "confusion_matrix": [
+      [
+        10,
+        0
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "balanced_accuracy": 1.0,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 7,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+  },
+  {
+    "environment": "Mac / synthetic diagnostic",
+    "trial_label": "C custom pair / 42",
+    "model": "custom_pairwise",
+    "train_source": "joint",
+    "run": "custom_pairwise_seed42",
+    "arm": "custom_pairwise",
+    "seed": 42,
+    "test_source": "custom_challenge",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "average_precision": 1.0,
+    "roc_auc": 1.0,
+    "precision_at_20": 0.7,
+    "recall_at_20": 1.0,
+    "top20_found": 14,
+    "confusion_matrix": [
+      [
+        10,
+        0
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "balanced_accuracy": 1.0,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 7,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+  },
+  {
+    "environment": "Mac / synthetic diagnostic",
+    "trial_label": "B real-only / 43",
+    "model": "real_only",
+    "train_source": "joint",
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "test_source": "custom_challenge",
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "macro_f1": 0.6307692307692307,
+    "accuracy": 0.7083333333333334,
+    "average_precision": 0.7422732238521712,
+    "roc_auc": 0.7285714285714285,
+    "precision_at_20": 0.7,
+    "recall_at_20": 1.0,
+    "top20_found": 14,
+    "confusion_matrix": [
+      [
+        3,
+        7
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "balanced_accuracy": 0.65,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 0,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+  },
+  {
+    "environment": "Mac / synthetic diagnostic",
+    "trial_label": "C custom pair / 43",
+    "model": "custom_pairwise",
+    "train_source": "joint",
+    "run": "custom_pairwise_seed43",
+    "arm": "custom_pairwise",
+    "seed": 43,
+    "test_source": "custom_challenge",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "average_precision": 1.0,
+    "roc_auc": 1.0,
+    "precision_at_20": 0.7,
+    "recall_at_20": 1.0,
+    "top20_found": 14,
+    "confusion_matrix": [
+      [
+        10,
+        0
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "balanced_accuracy": 1.0,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 7,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+  }
+]

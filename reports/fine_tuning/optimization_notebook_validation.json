@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "executed_code_cells": 8,
+  "mode": "Optimization only: reused trained models, selected OOF blend and evaluated it. No encoder training.",
+  "seconds": 22.220025415997952,
+  "kaggle_gpu_execution_verified": false
+}

@@ -1,0 +1,40 @@
+{
+  "augmented_posts": 939,
+  "batch_size": 64,
+  "best_epoch": 3,
+  "config": {
+    "augmentation": true,
+    "lr": 2e-05,
+    "weighted": true
+  },
+  "device": "mps",
+  "epochs_run": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "seconds": 10.257552042137831,
+      "train_loss": 0.66752750141931
+    },
+    {
+      "epoch": 2,
+      "seconds": 9.191786000039428,
+      "train_loss": 0.47865194012952406
+    },
+    {
+      "epoch": 3,
+      "seconds": 9.229912417009473,
+      "train_loss": 0.32917599976301765
+    }
+  ],
+  "max_length": 256,
+  "name": "final_fit",
+  "original_training_posts": 2802,
+  "seconds": 28.68083345796913,
+  "seed": 42,
+  "source": "upenn",
+  "training_rows": 3741,
+  "validation_ap": null,
+  "validation_f1_tuned": null,
+  "validation_rows": 0,
+  "validation_threshold": 0.5
+}

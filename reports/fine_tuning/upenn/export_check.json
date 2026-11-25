@@ -1,0 +1,16 @@
+{
+  "examples": [
+    {
+      "predicted": 1,
+      "score": 0.8587185740470886,
+      "text": "I cannot submit my assignment and the deadline is tonight. Please help!"
+    },
+    {
+      "predicted": 0,
+      "score": 0.2330075353384018,
+      "text": "Thank you for the helpful explanation."
+    }
+  ],
+  "max_score_difference": 0.0,
+  "passed": true
+}

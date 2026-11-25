@@ -1,0 +1,20 @@
+{
+  "train_source": "upenn",
+  "minilm_weight": 0.75,
+  "tfidf_weight": 0.25,
+  "threshold": 0.5731890967671966,
+  "oof_f1": 0.6003616636528029,
+  "oof_ap": 0.6416072726358286,
+  "selection": "source OOF F1; tie AP, then higher MiniLM weight",
+  "validation_status": "Development diagnostics: base OOF predictions also participated in model/checkpoint selection; not nested CV.",
+  "input_sha256": {
+    "reports/fine_tuning/upenn/oof.csv": "699617a618ea1efb1ade0516f2959b96bffbcdb1cd21127cbf2d68d91b57e505",
+    "reports/experiments/oof_upenn_tfidf_logreg.csv": "8db31c08df89821f5729bdec80292ebf335633ef0fe29d0cd64aa71d7f8bc44d"
+  },
+  "max_length": 256,
+  "model": "minilm_tfidf_blend",
+  "labels": {
+    "0": "NOT_URGENT",
+    "1": "URGENT"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "device": "mps",
+  "dimension": 384,
+  "max_seq_length": 256,
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "snapshot": ".cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "sources": {
+    "stanford": {
+      "cache_used": false,
+      "encoding_seconds": 24.108489458914846,
+      "tokens_max": 1925,
+      "tokens_p95": 237.0,
+      "total": 29070,
+      "truncated_posts": 1195
+    },
+    "upenn": {
+      "cache_used": false,
+      "encoding_seconds": 4.475985707715154,
+      "tokens_max": 4524,
+      "tokens_p95": 559.3999999999996,
+      "total": 3493,
+      "truncated_posts": 443
+    }
+  }
+}

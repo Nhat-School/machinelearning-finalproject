@@ -1,0 +1,34 @@
+{
+  "model_id": "microsoft/deberta-v3-base",
+  "revision": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+  "max_length": 512,
+  "policies": {
+    "upenn": {
+      "coefficient": 0.454453397555388,
+      "intercept": -0.5002537418588691,
+      "review_low": 0.15,
+      "review_high": 0.85,
+      "validation_balanced_accuracy": 0.8972892096461891,
+      "threshold": 0.07091147311897518
+    },
+    "stanford": {
+      "coefficient": 0.680610549492706,
+      "intercept": 0.37214774743195944,
+      "review_low": 0.15,
+      "review_high": 0.85,
+      "validation_balanced_accuracy": 0.9048536857173051,
+      "threshold": 0.07
+    },
+    "mixed": {
+      "coefficient": 0.5746233163120387,
+      "intercept": 0.016406079988033253,
+      "review_low": 0.15,
+      "review_high": 0.85,
+      "validation_balanced_accuracy": 0.9010568476025653,
+      "threshold": 0.07
+    }
+  },
+  "default_domain": "mixed",
+  "scope": "English student forum posts; no validated semantic out-of-domain detector",
+  "default_review_note": "REVIEW is a model decision-support policy, not a correctness guarantee."
+}

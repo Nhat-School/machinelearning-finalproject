@@ -1,0 +1,18 @@
+{
+  "status": "training smoke test only; discarded weights; no classifier evaluation",
+  "device": "mps",
+  "batch_size": 8,
+  "sequence_length": 156,
+  "step_seconds": [
+    2.342475458048284,
+    0.4355821660719812,
+    0.3420052910223603
+  ],
+  "loss": [
+    0.6484289765357971,
+    0.6163244843482971,
+    0.5846216082572937
+  ],
+  "parameters": 184423682,
+  "elapsed_seconds": 5.2802509581670165
+}

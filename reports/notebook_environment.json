@@ -1,0 +1,12 @@
+{
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "torch": "2.15.0",
+  "transformers": "4.57.6",
+  "sklearn": "1.9.1",
+  "numpy": "2.5.4",
+  "device": "mps",
+  "bf16": true,
+  "cuda_devices_visible": 0,
+  "cuda_device_used": null,
+  "training_gpu_count": 0
+}

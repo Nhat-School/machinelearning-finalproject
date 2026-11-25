@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "executed_code_cells": 23,
+  "mode": "Local execution reused completed actual training artifacts. Kaggle default trains models.",
+  "seconds": 30.11239920789376,
+  "kaggle_gpu_execution_verified": false
+}

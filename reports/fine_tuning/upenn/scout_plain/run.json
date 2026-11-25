@@ -1,0 +1,52 @@
+{
+  "augmented_posts": 0,
+  "batch_size": 64,
+  "best_epoch": 3,
+  "config": {
+    "augmentation": false,
+    "lr": 2e-05,
+    "weighted": false
+  },
+  "device": "mps",
+  "epochs_run": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "seconds": 7.126501082908362,
+      "threshold": 0.24508501589298248,
+      "train_loss": 0.56825598448621,
+      "val_ap": 0.07275832876892312,
+      "val_f1_default": 0.0,
+      "val_f1_tuned": 0.16519174041297935
+    },
+    {
+      "epoch": 2,
+      "seconds": 5.337628624867648,
+      "threshold": 0.09877260029315948,
+      "train_loss": 0.318194080502113,
+      "val_ap": 0.09034750782019704,
+      "val_f1_default": 0.0,
+      "val_f1_tuned": 0.1841269841269841
+    },
+    {
+      "epoch": 3,
+      "seconds": 5.363802415784448,
+      "threshold": 0.10087861865758896,
+      "train_loss": 0.2841162630671708,
+      "val_ap": 0.12993634069120752,
+      "val_f1_default": 0.0,
+      "val_f1_tuned": 0.2109704641350211
+    }
+  ],
+  "max_length": 256,
+  "name": "scout_plain",
+  "original_training_posts": 2248,
+  "seconds": 19.404438790865242,
+  "seed": 42,
+  "source": "upenn",
+  "training_rows": 2248,
+  "validation_ap": 0.12993634069120752,
+  "validation_f1_tuned": 0.2109704641350211,
+  "validation_rows": 554,
+  "validation_threshold": 0.10087861865758896
+}

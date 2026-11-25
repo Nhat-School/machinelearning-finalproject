@@ -1,0 +1,9 @@
+﻿text,priority,action,score,threshold
+"The quiz page is broken and I am unable to complete the final exam. Can the instructor fix this urgently?","1","PRIORITY","0.8529865145683289","0.07"
+"My assignment grade is missing even though I submitted it before the deadline. Could you please check?","1","PRIORITY","0.8518732786178589","0.07"
+"I cannot submit my assignment because the submit button is not working. The deadline is tonight. Please help!","1","REVIEW","0.8467113375663757","0.07"
+"I am confused about this problem and cannot understand the solution. Could someone explain the steps?","1","REVIEW","0.7963154911994934","0.07"
+"Could someone explain the difference between conditional probability and independence?","1","REVIEW","0.5741959810256958","0.07"
+"I enjoyed the lecture on probability this week.","0","NORMAL","0.01613672450184822","0.07"
+"Here is an interesting article related to our discussion.","0","NORMAL","0.01519391406327486","0.07"
+"Thank you for the helpful explanation. I understand the lesson now.","0","NORMAL","0.01395172718912363","0.07"

@@ -1,0 +1,125 @@
+{
+  "checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "datasets": {
+    "stanford": {
+      "columns": [
+        "post_text",
+        "Urgency Practice",
+        "Urgency_1_7",
+        "CourseType"
+      ],
+      "counts": {
+        "after_within_source_dedup": 29081,
+        "conflicting_binary_labels": 15,
+        "conflicting_groups": 5,
+        "cross_source_duplicates": 11,
+        "duplicate_within_source": 508,
+        "final_rows": 29070,
+        "raw_rows": 29604,
+        "valid_rows": 29604
+      },
+      "label_counts": {
+        "0": 23546,
+        "1": 5524
+      },
+      "length_histogram": {
+        "101–200": 3637,
+        "1–25": 9446,
+        "201–400": 1004,
+        "26–50": 7668,
+        "51–100": 7188,
+        ">400": 127
+      },
+      "processed_file": "data/processed/stanford.csv",
+      "processed_sha256": "69f99d396d00ed52731fd83d36a2e208adc1b794a411c218ce1fcc8459ac1a59",
+      "raw_bytes": 10844051,
+      "raw_file": "data/raw/Stanford.csv",
+      "raw_sha256": "31e8885939604a20cd0a903d1e5ebca811b850530b8e9ed5169e1936628142f2",
+      "urgency_counts": {
+        "1.0": 3259,
+        "1.5": 3791,
+        "2.0": 6411,
+        "2.5": 4610,
+        "3.0": 3290,
+        "3.5": 1376,
+        "4.0": 809,
+        "4.5": 859,
+        "5.0": 2190,
+        "5.5": 1981,
+        "6.0": 414,
+        "6.5": 66,
+        "7.0": 14
+      },
+      "url": "https://raw.githubusercontent.com/pcla-code/forum-posts-urgency/ebf3695f01d2dec197253eb89499f4835bb7d0fa/Stanford.csv",
+      "word_lengths": {
+        "max": 497,
+        "mean": 60.03,
+        "median": 41.0,
+        "min": 1,
+        "p95": 180.0
+      }
+    },
+    "upenn": {
+      "columns": [
+        "id",
+        "post_time",
+        "post_text",
+        "Urgency_1_7"
+      ],
+      "counts": {
+        "after_within_source_dedup": 3493,
+        "conflicting_binary_labels": 2,
+        "conflicting_groups": 1,
+        "cross_source_duplicates": 0,
+        "duplicate_within_source": 8,
+        "final_rows": 3493,
+        "malformed_or_missing_fields": 1,
+        "raw_rows": 3504,
+        "valid_rows": 3503
+      },
+      "label_counts": {
+        "0": 3195,
+        "1": 298
+      },
+      "length_histogram": {
+        "101–200": 461,
+        "1–25": 962,
+        "201–400": 201,
+        "26–50": 834,
+        "51–100": 843,
+        ">400": 192
+      },
+      "processed_file": "data/processed/upenn.csv",
+      "processed_sha256": "3268954bb851d7bfed7daf76366314ceb85e24e9392e001fa7a30c79996f8442",
+      "raw_bytes": 2096551,
+      "raw_file": "data/raw/All_Courses_REDACTED_CODED.csv",
+      "raw_sha256": "403301d079abcea1acc318b7a63f766658350dbc0e85eead79f7befc65aa48c3",
+      "urgency_counts": {
+        "1.0": 1271,
+        "2.0": 1218,
+        "3.0": 334,
+        "4.0": 372,
+        "5.0": 248,
+        "6.0": 48,
+        "7.0": 2
+      },
+      "url": "https://raw.githubusercontent.com/pcla-code/forum-posts-urgency/ebf3695f01d2dec197253eb89499f4835bb7d0fa/All_Courses_REDACTED_CODED.csv",
+      "word_lengths": {
+        "max": 1739,
+        "mean": 96.38,
+        "median": 49.0,
+        "min": 1,
+        "p95": 417.4
+      }
+    }
+  },
+  "label_rule": "priority = int(urgency > 4)",
+  "source_revision": "ebf3695f01d2dec197253eb89499f4835bb7d0fa"
+}

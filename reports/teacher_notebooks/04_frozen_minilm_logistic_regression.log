@@ -1,0 +1,719 @@
+Cell 1: Project: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/04_frozen_minilm_logistic_regression
+Mode: LOCAL QA: saved completed training; no fitting
+
+Cell 3: {
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "requirements": [
+    "numpy>=2,<3",
+    "scikit-learn==1.9.1",
+    "matplotlib>=3.10,<4",
+    "joblib>=1.4,<2",
+    "packaging>=24",
+    "torch>=2.8",
+    "transformers==4.57.6",
+    "sentencepiece==0.2.1",
+    "sentence-transformers==5.7.0"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "packaging": "26.3",
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "sentencepiece": "0.2.1",
+    "sentence-transformers": "5.7.0"
+  },
+  "device": "mps",
+  "visible_gpus": 0,
+  "training_gpu_count": 0,
+  "validation_reuse": true,
+  "fresh_training_requested": false
+}
+
+Cell 22: {
+  "prepare_data.py": "f23b27400fd1166272d6a2bce787eedb608063e07433b774ec6bc4464793e42f",
+  "train.py": "cb94a335c4205e4ceff9d99297a9253ec77a25ed96689b1a65075289c13741d0",
+  "organize_datasets.py": "a5aaa7df87679d029601e5142c2cc1365b3c517e3667dbc19fce1ed5cb6f9b51",
+  "build_custom_dataset.py": "a92cc3d1fa764a13a5785d24b50c8fcfcd61a0f4e42126e95f650e71c26f91ca",
+  "prepare_reliability_data.py": "df5132d1f5ceaa35af63058b6b9f46235946c4e870cf5e89aa0fcbd04b2ec57a",
+  "audit_custom_labels_ai.py": "e400ca17a4c7551e2f14794b75b0ef99ccd0b4330da725edc7408f008ab576b9",
+  "teacher_notebook_tools.py": "c1f9bacc5808ed2267a2aee5028d9bbd51a98357dbca6007c5962f68e6c1a603",
+  "teacher_predict_baseline.py": "269e4b3fb5c35c1aa18bfa86c2968f04fdc2aa9b9c6a2a76409de56542f39002"
+}
+
+Cell 24: upenn: raw=3504, final=3493, priority=298
+
+Cell 24: stanford: raw=29604, final=29070, priority=5524
+Canonical dataset folder: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/04_frozen_minilm_logistic_regression/Datasets
+Original file hashes verified; legacy training paths remain usable.
+
+Cell 24: {
+  "version": "custom-v2",
+  "rows": 160,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16,
+    "still_blocked_update": 40
+  },
+  "splits": {
+    "validation": 36,
+    "train": 93,
+    "challenge": 31
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "development_history": "40 still-blocked updates added after observing poor resolution handling; not an independent benchmark",
+  "draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991"
+}
+
+Cell 24: {
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 24: {
+  "passed": true,
+  "hashes_and_cleaning_checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "historical_test_membership_preserved": true,
+  "upenn_student_roles_disjoint": true,
+  "custom_scenario_groups_disjoint": true,
+  "rows": 32563,
+  "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}
+{
+  "both_binary_classes_present": true,
+  "labels_in_range": true,
+  "no_exact_duplicates_between_sources": true,
+  "no_exact_duplicates_within_sources": true,
+  "nonempty_text": true,
+  "rows_accounted_for": true
+}
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 27: [
+  {
+    "best_params": {
+      "C": 1.0
+    },
+    "cv_mean_f1": 0.45165062304796705,
+    "cv_std_f1": 0.002666877588955938,
+    "default_threshold": 0.5,
+    "encoder": {
+      "device": "mps",
+      "dimension": 384,
+      "max_seq_length": 256,
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "snapshot": ".cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "sources": {
+        "stanford": {
+          "cache_used": false,
+          "encoding_seconds": 24.108489458914846,
+          "tokens_max": 1925,
+          "tokens_p95": 237.0,
+          "total": 29070,
+          "truncated_posts": 1195
+        },
+        "upenn": {
+          "cache_used": false,
+          "encoding_seconds": 4.475985707715154,
+          "tokens_max": 4524,
+          "tokens_p95": 559.3999999999996,
+          "total": 3493,
+          "truncated_posts": 443
+        }
+      }
+    },
+    "model": "minilm_logreg",
+    "name": "logreg",
+    "oof_tuned_f1": 0.49462365591397844,
+    "representation": "minilm",
+    "source": "upenn",
+    "threshold": 0.6789393463677474,
+    "training_seconds": 0.5758349997922778
+  },
+  {
+    "best_params": {
+      "C": 10.0
+    },
+    "cv_mean_f1": 0.5911873019112139,
+    "cv_std_f1": 0.005751692219641601,
+    "default_threshold": 0.5,
+    "encoder": {
+      "device": "mps",
+      "dimension": 384,
+      "max_seq_length": 256,
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "snapshot": ".cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "sources": {
+        "stanford": {
+          "cache_used": false,
+          "encoding_seconds": 24.108489458914846,
+          "tokens_max": 1925,
+          "tokens_p95": 237.0,
+          "total": 29070,
+          "truncated_posts": 1195
+        },
+        "upenn": {
+          "cache_used": false,
+          "encoding_seconds": 4.475985707715154,
+          "tokens_max": 4524,
+          "tokens_p95": 559.3999999999996,
+          "total": 3493,
+          "truncated_posts": 443
+        }
+      }
+    },
+    "model": "minilm_logreg",
+    "name": "logreg",
+    "oof_tuned_f1": 0.6010695187165775,
+    "representation": "minilm",
+    "source": "stanford",
+    "threshold": 0.6411202738271031,
+    "training_seconds": 10.183370791841298
+  }
+]
+
+Cell 29: Matplotlib is building the font cache; this may take a moment.
+
+Cell 29: {
+  "profile": "baseline",
+  "rows": 4,
+  "figures": [
+    "reports/teacher/metrics_01.png",
+    "reports/teacher/confusions_01.png",
+    "reports/teacher/precision_recall_threshold_01.png"
+  ],
+  "mode": "SAVED-TRAINING VALIDATION",
+  "checks": "All reported count metrics recomputed; per-post scores checked when available."
+}
+
+Cell 29: {
+  "accuracy": 0.9117221418234442,
+  "average_precision": 0.5775959949997739,
+  "confusion_matrix": [
+    [
+      594,
+      36
+    ],
+    [
+      25,
+      36
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.8639652677279306,
+    "average_precision": 0.5775959949997739,
+    "confusion_matrix": [
+      [
+        550,
+        80
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "f1": 0.5,
+    "macro_f1": 0.7106365159128978,
+    "positive_count": 61,
+    "precision": 0.3700787401574803,
+    "precision_at_20": 0.75,
+    "recall": 0.7704918032786885,
+    "recall_at_20": 0.2459016393442623,
+    "roc_auc": 0.9056206088992974,
+    "test_size": 691,
+    "top20_found": 15
+  },
+  "f1": 0.5413533834586466,
+  "inference_seconds": 0.00019999966025352478,
+  "macro_f1": 0.7462571561008204,
+  "model": "minilm_logreg",
+  "positive_count": 61,
+  "precision": 0.5,
+  "precision_at_20": 0.75,
+  "recall": 0.5901639344262295,
+  "recall_at_20": 0.2459016393442623,
+  "roc_auc": 0.9056206088992974,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.6789393463677474,
+  "top20_found": 15,
+  "train_source": "upenn",
+  "training_seconds": 0.5758349997922778
+}
+{
+  "accuracy": 0.8214654282765738,
+  "average_precision": 0.46232501525570285,
+  "confusion_matrix": [
+    [
+      4428,
+      281
+    ],
+    [
+      757,
+      348
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.803061575507396,
+    "average_precision": 0.46232501525570285,
+    "confusion_matrix": [
+      [
+        4161,
+        548
+      ],
+      [
+        597,
+        508
+      ]
+    ],
+    "f1": 0.4701527070800555,
+    "macro_f1": 0.6746031307661817,
+    "positive_count": 1105,
+    "precision": 0.4810606060606061,
+    "precision_at_20": 0.75,
+    "recall": 0.4597285067873303,
+    "recall_at_20": 0.013574660633484163,
+    "roc_auc": 0.7852935891510335,
+    "test_size": 5814,
+    "top20_found": 15
+  },
+  "f1": 0.4013840830449827,
+  "inference_seconds": 0.0008151670917868614,
+  "macro_f1": 0.6482360075625156,
+  "model": "minilm_logreg",
+  "positive_count": 1105,
+  "precision": 0.5532591414944356,
+  "precision_at_20": 0.75,
+  "recall": 0.31493212669683257,
+  "recall_at_20": 0.013574660633484163,
+  "roc_auc": 0.7852935891510335,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.6789393463677474,
+  "top20_found": 15,
+  "train_source": "upenn",
+  "training_seconds": 0.5758349997922778
+}
+{
+  "accuracy": 0.7800289435600579,
+  "average_precision": 0.38983703359634786,
+  "confusion_matrix": [
+    [
+      490,
+      140
+    ],
+    [
+      12,
+      49
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.6903039073806078,
+    "average_precision": 0.38983703359634786,
+    "confusion_matrix": [
+      [
+        422,
+        208
+      ],
+      [
+        6,
+        55
+      ]
+    ],
+    "f1": 0.3395061728395062,
+    "macro_f1": 0.5686188709188079,
+    "positive_count": 61,
+    "precision": 0.20912547528517111,
+    "precision_at_20": 0.35,
+    "recall": 0.9016393442622951,
+    "recall_at_20": 0.11475409836065574,
+    "roc_auc": 0.8605776736924278,
+    "test_size": 691,
+    "top20_found": 7
+  },
+  "f1": 0.392,
+  "inference_seconds": 0.0002754577435553074,
+  "macro_f1": 0.6288621908127209,
+  "model": "minilm_logreg",
+  "positive_count": 61,
+  "precision": 0.25925925925925924,
+  "precision_at_20": 0.35,
+  "recall": 0.8032786885245902,
+  "recall_at_20": 0.11475409836065574,
+  "roc_auc": 0.8605776736924278,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.6411202738271031,
+  "top20_found": 7,
+  "train_source": "stanford",
+  "training_seconds": 10.183370791841298
+}
+{
+  "accuracy": 0.8314413484692122,
+  "average_precision": 0.6370477376765308,
+  "confusion_matrix": [
+    [
+      4031,
+      678
+    ],
+    [
+      302,
+      803
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.7865497076023392,
+    "average_precision": 0.6370477376765308,
+    "confusion_matrix": [
+      [
+        3645,
+        1064
+      ],
+      [
+        177,
+        928
+      ]
+    ],
+    "f1": 0.5992896351307717,
+    "macro_f1": 0.7269100854120627,
+    "positive_count": 1105,
+    "precision": 0.46586345381526106,
+    "precision_at_20": 0.75,
+    "recall": 0.8398190045248869,
+    "recall_at_20": 0.013574660633484163,
+    "roc_auc": 0.8896882738262825,
+    "test_size": 5814,
+    "top20_found": 15
+  },
+  "f1": 0.6210363495746326,
+  "inference_seconds": 0.0007849996909499168,
+  "macro_f1": 0.7563266242454008,
+  "model": "minilm_logreg",
+  "positive_count": 1105,
+  "precision": 0.5422012153950033,
+  "precision_at_20": 0.75,
+  "recall": 0.7266968325791855,
+  "recall_at_20": 0.013574660633484163,
+  "roc_auc": 0.8896882738262825,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.6411202738271031,
+  "top20_found": 15,
+  "train_source": "stanford",
+  "training_seconds": 10.183370791841298
+}
+
+Cell 29: Checks: [
+  {
+    "experiment": "minilm_logreg upenn \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "minilm_logreg upenn \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "minilm_logreg stanford \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "minilm_logreg stanford \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  }
+]
+Actual error examples: [
+  {
+    "experiment": "minilm_logreg upenn \u2192 upenn",
+    "all_error_count": 61,
+    "examples": [
+      {
+        "post_id": "upenn_000852",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.06514769789568778,
+        "threshold": 0.6789393463677474,
+        "error": "FN",
+        "text": "would we need to redo all of week one and two and three if we do decide to change? mine emptying the AC is not the most interesting one I picked and think I would have had more fun with something I could be more creative with. I am thinking of just sticking it on a table. Also I do not own wood working tools, can afford to buy the wood required or if I decided on metal nor have the skill to build one. which is why I was thinking of sticking it on an existing one"
+      },
+      {
+        "post_id": "upenn_002208",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.10691494711198654,
+        "threshold": 0.6789393463677474,
+        "error": "FN",
+        "text": "I've tried to find it for a decent price. it's very expensive online. And it's not at my library. do you know anyone who might sell a copy at a normal used book rate or loan me their book? Yes I know loaning is funny thing to say."
+      },
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.11206260978395892,
+        "threshold": 0.6789393463677474,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_003162",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.18981835251229887,
+        "threshold": 0.6789393463677474,
+        "error": "FN",
+        "text": "\"Professor [Redacted], you suggest that antibody titre testing is expensive (more than $100), and expertscontend thereno downside to a second shot.?5\"I feel you just answered your own question - or at least the answer you require is in the question that you ask. Making children take blood tests is expensive and just not needed as there are no downsides to a second shot. Just my experience but I can also envisage that it is time consuming and invasive to ask children to get pathology collections compared to a vaccination. By the way .. I don't think lecturers are allowed to contribute in forms from my experience with Coursera, so don't be disappointed or go on the attack if you don't get a direct answer here."
+      }
+    ]
+  },
+  {
+    "experiment": "minilm_logreg upenn \u2192 stanford",
+    "all_error_count": 1038,
+    "examples": [
+      {
+        "post_id": "stanford_028245",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.011350552205703258,
+        "threshold": 0.6789393463677474,
+        "error": "FN",
+        "text": "yes it would work, other strategies. other strategies are tracheotomy. But in this patient what exactly can i do?"
+      },
+      {
+        "post_id": "stanford_018935",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.013951076881875562,
+        "threshold": 0.6789393463677474,
+        "error": "FN",
+        "text": "Are there any other kinds of economies too?"
+      },
+      {
+        "post_id": "stanford_016746",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.019208188353726334,
+        "threshold": 0.6789393463677474,
+        "error": "FN",
+        "text": "Hello,\u0007As I understand, there are two tricks in the random forest method to reduce variance and ultimately to make better predictions on previously unseen data (compared to plain trees): bagging and random selection of features for each tree in the forest. \u0007\u0007Can these 2 ideas be applied to other classifiers than trees ? Could it be transposed to logistic regression or even neural networks (assuming large computational power available) ???\u0007If yes, would the gain in accuracy be comparable to the gain when going from plain tree to Random Forest ?\u0007For Random Forest, it is said in the lecture that the trees should not be pruned, because thanks to the averaging, the low bias does not necessarily result in high variance. If we transposed the idea to logistic regression, would that mean we would carry out (hundreds of) logistic regressions **without penalization / regularization** on random features and then average them?\u0007\u0007Thanks,\u0007\u0007GL"
+      },
+      {
+        "post_id": "stanford_010674",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.02022362358776514,
+        "threshold": 0.6789393463677474,
+        "error": "FN",
+        "text": "I am not sure that I understand what the benefit of increasing BAT would be for a normal performance. As you said, energy pathways are less efficient and not good for exercise, so what would be the purpose to try to increase BAT performance wise. Would it to just be able to tolerate the cold better and not become hypothermic as soon?"
+      }
+    ]
+  },
+  {
+    "experiment": "minilm_logreg stanford \u2192 upenn",
+    "all_error_count": 152,
+    "examples": [
+      {
+        "post_id": "upenn_002868",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.18620955983277745,
+        "threshold": 0.6411202738271031,
+        "error": "FN",
+        "text": "hold on! \u00c2 I may have cracked it...can you give me a clue? \u00c2 Is this statement correct: the basic Poisson identity stated in the lectures [ k.p(k;lamda) = lamda(k-1;lamda)] has to be altered slightly?M"
+      },
+      {
+        "post_id": "upenn_000504",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9694560491948547,
+        "threshold": 0.6411202738271031,
+        "error": "FP",
+        "text": "I'm blanking on how to do this problem. I know I have to work from the inside out. and the Taylor series of ln(1+x) = x - x^2/2 + x^3/3 etc. Then I use that as my input for the Taylor series of sin(x) = (1 - (x - x^2/2 + x^3/3 + O(x^4))^3/3! - (x - x^2/2 + x^3/3 + O(x^4))^5/5!. Then I have to cube all of it? I know that the coefficient of the x^3 term will be 1/3! * d^3 f/df^3. Can someone give a tip? :)"
+      },
+      {
+        "post_id": "upenn_001973",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.959135834849827,
+        "threshold": 0.6411202738271031,
+        "error": "FP",
+        "text": "Here is a guide for assessing and commenting on essay #1 (close reading of Dickinson\u00e2\u20ac\u2122s \u00e2\u20ac\u0153I taste a liquor never brewed\u00e2\u20ac\uf19d). Please answer, at least briefly, all five sets of questions. Does the essay do more than paraphrase the poem? In other words, does the essay quote and/or in other ways account for the actual words used by poet? We say in ModPo that \"how a poem says what it says is more important than what it says.\" Does the essay convey the \"how\" of the poem as much as - or more than - the \"what\"? Once you\u00e2\u20ac\u2122ve noted and remarked on whether the essay discusses these things, comment on how effectively, significantly and/or interestingly the essay does so.Does the paper say something about how Dickinson\u00e2\u20ac\u2122s dashes works? If yes, then please remark on how effectively, significantly and/or interestingly the essay deals with the dashes? Does the paper account in some way for the stanzaic form? If yes, then please remark on how effectively, significantly and/or interestingly it discusses how the poem\u00e2\u20ac\u2122s form interacts with its content. For most essays that deal with this topic, the discussion will describe the way in which the speaker\u00e2\u20ac\u2122s figurative drunkenness makes the poem itself reel or lurch forward or wander or wobble.Does the way the poem is written account for \u00e2\u20ac\u201c or befit \u00e2\u20ac\u201c the \u00e2\u20ac\u0153story\u00e2\u20ac\uf19d being told about the speaker? If yes, then please remark on how effectively, significantly and/or interestingly the essay handles this issue.Does the paper in some way follow the shifts in metaphor or conceit? Does it somehow explain why Dickinson decides not to stick with the metaphor of the tavern or pub at the beginning of the poem? Does the paper account for the way the poem's language progresses/moves/shifts from beginning to end? To the extent that the essay deals with these matters, how effectively, significantly and/or interestingly does it do so? The \"How\" of the Poem: This essay writer did, in my view, an excellent job in paraphrasing the poem and seems very comfortable in doing it. He/she provides rich detail that illuminate the sparse verse, and tells the story that Dickinson may be attempting to tell. She does relate the poem to Dickinson's own life (biographical fallacy?), but does not explain why such a prim and proper Amherst woman would be reeling in drunkenness. This is unanswered, except to perhaps suggest that she is feeling intoxicated, but only in her imagination. I wonder if Dickinson ever really personally experienced drunkenness; else, how could she describe it? Dashes: The essay-writer mentions \"the only non-dash punctuation in the whole piece\" - the exclamation point. She does not attribute any significance to that beyond pointing it out. Form: The essay writer does mention meter, syllables and stanzas but, again, does not assign significance to them. Story: The essay writer handles the story in a very entertaining way; I found the essay just as enjoyable as the poem, and perhaps even more so. I didn't have to dig as hard! He/she seems content not to pull all of the pieces together--bees, inns, seraphims, etc.--and perhaps that is how it should be. Shift in Metaphor/Conceit: The essay writer seems to observe that the second stanza \"establishes the metaphor of the liquor of life,\" but does not explain that relationship very fully. There is perhaps a tiny leap of faith made by the essay writer in equating form with literary meaning. But I thouroughly enjoyed being a witness as he/she explored it. A wonderful essay. (Posted via the peer assessment system)"
+      },
+      {
+        "post_id": "upenn_001983",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.959135834849827,
+        "threshold": 0.6411202738271031,
+        "error": "FP",
+        "text": "Here is a guide for assessing and commenting on essay #1 (close reading of Dickinson\u00e2\u20ac\u2122s \u00e2\u20ac\u0153I taste a liquor never brewed\u00e2\u20ac\uf19d). Please answer, at least briefly, all five sets of questions. Does the essay do more than paraphrase the poem? In other words, does the essay quote and/or in other ways account for the actual words used by poet? We say in ModPo that \"how a poem says what it says is more important than what it says.\" Does the essay convey the \"how\" of the poem as much as - or more than - the \"what\"? Once you\u00e2\u20ac\u2122ve noted and remarked on whether the essay discusses these things, comment on how effectively, significantly and/or interestingly the essay does so.Does the paper say something about how Dickinson\u00e2\u20ac\u2122s dashes works? If yes, then please remark on how effectively, significantly and/or interestingly the essay deals with the dashes? Does the paper account in some way for the stanzaic form? If yes, then please remark on how effectively, significantly and/or interestingly it discusses how the poem\u00e2\u20ac\u2122s form interacts with its content. For most essays that deal with this topic, the discussion will describe the way in which the speaker\u00e2\u20ac\u2122s figurative drunkenness makes the poem itself reel or lurch forward or wander or wobble.Does the way the poem is written account for \u00e2\u20ac\u201c or befit \u00e2\u20ac\u201c the \u00e2\u20ac\u0153story\u00e2\u20ac\uf19d being told about the speaker? If yes, then please remark on how effectively, significantly and/or interestingly the essay handles this issue.Does the paper in some way follow the shifts in metaphor or conceit? Does it somehow explain why Dickinson decides not to stick with the metaphor of the tavern or pub at the beginning of the poem? Does the paper account for the way the poem's language progresses/moves/shifts from beginning to end? To the extent that the essay deals with these matters, how effectively, significantly and/or interestingly does it do so? You did a great job of job explaining how the poem was written, you must be an English major. I am sorry I could not totally follow the technical parts, since I don't have the background to comment on that part of your evaluation. I assume it was great from all I could understand. Landlords could be nature or God bringing the change of seasons. I just enjoyed reading her love of nature and anticipating the change of seasons. I thought the foxglove plant whose flower is in the shape of a cup or tankard was filled with dew, and the dew was sweeter than wine when she sipped it. I also wondered if she knew dried foxglove leaves were used medicinally back the for heart problems. I found that our reading Wikipedia. Altogether, I loved your scholarly evaluation and give you a ten! (Posted via the peer assessment system)"
+      }
+    ]
+  },
+  {
+    "experiment": "minilm_logreg stanford \u2192 stanford",
+    "all_error_count": 980,
+    "examples": [
+      {
+        "post_id": "stanford_022349",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.03484046996814367,
+        "threshold": 0.6411202738271031,
+        "error": "FN",
+        "text": "Any thoughts, teaching team?"
+      },
+      {
+        "post_id": "stanford_014565",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.03689132822549336,
+        "threshold": 0.6411202738271031,
+        "error": "FN",
+        "text": "Which goals relate directly to girls\u2019 education?\u0007The goals are 2 and 3.\u0007Which goals are dependent on educating girls for their fulfillment?\u0007On educating girls for their fulfillment, ALL the goals are dependent on each other"
+      },
+      {
+        "post_id": "stanford_012142",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.04045394894376954,
+        "threshold": 0.6411202738271031,
+        "error": "FN",
+        "text": "CEDAW is something I am aware of and absolutely support - but as an Australian, how you do you think I can conribute in this area and support what CEDAW stands for?"
+      },
+      {
+        "post_id": "stanford_013732",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.04382358915956411,
+        "threshold": 0.6411202738271031,
+        "error": "FN",
+        "text": "I liked the infographic but reading New Lessons, The Power of Educating Adolescent Girls was not enjoyable for me. I felt that there were many great pieces in that whole document but overall it I think it needed to be condensed. I loved the photos and felt I got more from them than from the pages and pages of statistics in visual graph form. I found myself rooting for the \\non-formal\\\" schools the article talks about. A rouge in the study. Not quite as trackable. Could they be some fantastic setting where girls ARE learning those marketable skills that the author says are missing from traditional school curricula? Let us not forget that school can totally SUCK! Look at public schooling in the USA. Plenty of healthy, wealthy, white girls think their school days are a drag and would much rather spend their school hours learning a hands on skill than memorizing historical events. A rich, seductive curricula for these adolescent girls is what the key is. Something brilliant that keeps them captivated and clawing through any obstacles to come back for more each day, each year.\""
+      }
+    ]
+  }
+]
+
+Cell 31: {
+  "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+  "model": "minilm_logreg",
+  "source": "stanford",
+  "score": 0.9648715629820782,
+  "score_type": "model_probability_estimate",
+  "threshold": 0.6411202738271031,
+  "binary_priority": 1,
+  "note": "English student forum posts; a model estimate can be wrong."
+}
+
+Cell 33: Download from Kaggle Output: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/04_frozen_minilm_logistic_regression/04_frozen_minilm_logistic_regression_output.zip MB: 24.3

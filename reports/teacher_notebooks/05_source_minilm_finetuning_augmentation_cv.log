@@ -1,0 +1,1843 @@
+Cell 1: Project: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/05_source_minilm_finetuning_augmentation_cv
+Mode: LOCAL QA: saved completed training; no fitting
+
+Cell 3: {
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "requirements": [
+    "numpy>=2,<3",
+    "scikit-learn==1.9.1",
+    "matplotlib>=3.10,<4",
+    "joblib>=1.4,<2",
+    "packaging>=24",
+    "torch>=2.8",
+    "transformers==4.57.6",
+    "sentencepiece==0.2.1"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "packaging": "26.3",
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "sentencepiece": "0.2.1"
+  },
+  "device": "mps",
+  "visible_gpus": 0,
+  "training_gpu_count": 0,
+  "validation_reuse": true,
+  "fresh_training_requested": false
+}
+
+Cell 26: {
+  "prepare_data.py": "f23b27400fd1166272d6a2bce787eedb608063e07433b774ec6bc4464793e42f",
+  "train.py": "cb94a335c4205e4ceff9d99297a9253ec77a25ed96689b1a65075289c13741d0",
+  "organize_datasets.py": "a5aaa7df87679d029601e5142c2cc1365b3c517e3667dbc19fce1ed5cb6f9b51",
+  "build_custom_dataset.py": "a92cc3d1fa764a13a5785d24b50c8fcfcd61a0f4e42126e95f650e71c26f91ca",
+  "prepare_reliability_data.py": "df5132d1f5ceaa35af63058b6b9f46235946c4e870cf5e89aa0fcbd04b2ec57a",
+  "audit_custom_labels_ai.py": "e400ca17a4c7551e2f14794b75b0ef99ccd0b4330da725edc7408f008ab576b9",
+  "teacher_notebook_tools.py": "c1f9bacc5808ed2267a2aee5028d9bbd51a98357dbca6007c5962f68e6c1a603",
+  "finetune_minilm.py": "0a17a11595dc85673bf55bcdcf52dae158145a4174d5ac24bd4f33b6b13f7042",
+  "standalone_inference.py": "73822c7e5296474bfe17a63120639a4cfe93cc6e4a5fd08716b11507ffe39c09",
+  "package_finetuned_models.py": "4bf697156500a858201b08fc2ed835711a837b1b8c7ed93d6c9a8b41495f6e28"
+}
+
+Cell 28: upenn: raw=3504, final=3493, priority=298
+
+Cell 28: stanford: raw=29604, final=29070, priority=5524
+Canonical dataset folder: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/05_source_minilm_finetuning_augmentation_cv/Datasets
+Original file hashes verified; legacy training paths remain usable.
+
+Cell 28: {
+  "version": "custom-v2",
+  "rows": 160,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16,
+    "still_blocked_update": 40
+  },
+  "splits": {
+    "validation": 36,
+    "train": 93,
+    "challenge": 31
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "development_history": "40 still-blocked updates added after observing poor resolution handling; not an independent benchmark",
+  "draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991"
+}
+
+Cell 28: {
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 28: {
+  "passed": true,
+  "hashes_and_cleaning_checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "historical_test_membership_preserved": true,
+  "upenn_student_roles_disjoint": true,
+  "custom_scenario_groups_disjoint": true,
+  "rows": 32563,
+  "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}
+{
+  "both_binary_classes_present": true,
+  "labels_in_range": true,
+  "no_exact_duplicates_between_sources": true,
+  "no_exact_duplicates_within_sources": true,
+  "nonempty_text": true,
+  "rows_accounted_for": true
+}
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 30: upenn scouts and selection {
+  "scout_runs": [
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.126501082908362,
+          "threshold": 0.24508501589298248,
+          "train_loss": 0.56825598448621,
+          "val_ap": 0.07275832876892312,
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.16519174041297935
+        },
+        {
+          "epoch": 2,
+          "seconds": 5.337628624867648,
+          "threshold": 0.09877260029315948,
+          "train_loss": 0.318194080502113,
+          "val_ap": 0.09034750782019704,
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.1841269841269841
+        },
+        {
+          "epoch": 3,
+          "seconds": 5.363802415784448,
+          "threshold": 0.10087861865758896,
+          "train_loss": 0.2841162630671708,
+          "val_ap": 0.12993634069120752,
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.2109704641350211
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_plain",
+      "original_training_posts": 2248,
+      "seconds": 19.404438790865242,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2248,
+      "validation_ap": 0.12993634069120752,
+      "validation_f1_tuned": 0.2109704641350211,
+      "validation_rows": 554,
+      "validation_threshold": 0.10087861865758896
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 5.411545374896377,
+          "threshold": 0.5063873529434204,
+          "train_loss": 0.6830037240456007,
+          "val_ap": 0.3890771296695562,
+          "val_f1_default": 0.3116883116883117,
+          "val_f1_tuned": 0.4
+        },
+        {
+          "epoch": 2,
+          "seconds": 5.339879582636058,
+          "threshold": 0.5622966289520264,
+          "train_loss": 0.6229891180992126,
+          "val_ap": 0.47039698753149156,
+          "val_f1_default": 0.3375,
+          "val_f1_tuned": 0.4675324675324675
+        },
+        {
+          "epoch": 3,
+          "seconds": 5.277043915819377,
+          "threshold": 0.5791624188423157,
+          "train_loss": 0.5287649469231371,
+          "val_ap": 0.47843079520639636,
+          "val_f1_default": 0.3783783783783784,
+          "val_f1_tuned": 0.4878048780487805
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted",
+      "original_training_posts": 2248,
+      "seconds": 17.442103082779795,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2248,
+      "validation_ap": 0.47843079520639636,
+      "validation_f1_tuned": 0.4878048780487805,
+      "validation_rows": 554,
+      "validation_threshold": 0.5791624188423157
+    },
+    {
+      "augmented_posts": 749,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.584870208054781,
+          "threshold": 0.5136684775352478,
+          "train_loss": 0.6784979490029402,
+          "val_ap": 0.4020917958748665,
+          "val_f1_default": 0.3010752688172043,
+          "val_f1_tuned": 0.3934426229508197
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.391652999911457,
+          "threshold": 0.6125414371490479,
+          "train_loss": 0.5675107852832691,
+          "val_ap": 0.4652445667654411,
+          "val_f1_default": 0.37142857142857144,
+          "val_f1_tuned": 0.4657534246575343
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.401061333250254,
+          "threshold": 0.6905590891838074,
+          "train_loss": 0.4135030487357755,
+          "val_ap": 0.4916941765948169,
+          "val_f1_default": 0.3916083916083916,
+          "val_f1_tuned": 0.5263157894736842
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted_aug",
+      "original_training_posts": 2248,
+      "seconds": 23.733835958410054,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2997,
+      "validation_ap": 0.4916941765948169,
+      "validation_f1_tuned": 0.5263157894736842,
+      "validation_rows": 554,
+      "validation_threshold": 0.6905590891838074
+    }
+  ],
+  "selected": "weighted_aug"
+}
+upenn five-fold development {
+  "epochs_for_final": 3,
+  "fold_f1_mean": 0.6168590793907109,
+  "fold_f1_std": 0.02492383548630587,
+  "folds": [
+    {
+      "augmented_posts": 759,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.550015749875456,
+          "threshold": 0.5023193359375,
+          "train_loss": 0.678552526031006,
+          "val_ap": 0.4310243583626608,
+          "val_f1_default": 0.49411764705882355,
+          "val_f1_tuned": 0.5
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.3989643338136375,
+          "threshold": 0.5884161591529846,
+          "train_loss": 0.5771816285480383,
+          "val_ap": 0.6216763172432833,
+          "val_f1_default": 0.5135135135135135,
+          "val_f1_tuned": 0.5833333333333334
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.539640541188419,
+          "threshold": 0.6293190717697144,
+          "train_loss": 0.4321790210448357,
+          "val_ap": 0.6649980827604093,
+          "val_f1_default": 0.5170068027210885,
+          "val_f1_tuned": 0.6126126126126127
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_1",
+      "original_training_posts": 2242,
+      "seconds": 23.89437179081142,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 3001,
+      "validation_ap": 0.6649980827604093,
+      "validation_f1_tuned": 0.6126126126126127,
+      "validation_rows": 560,
+      "validation_threshold": 0.6293190717697144
+    },
+    {
+      "augmented_posts": 747,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.985703167039901,
+          "threshold": 0.5055540204048157,
+          "train_loss": 0.6789771249814525,
+          "val_ap": 0.47701052181541526,
+          "val_f1_default": 0.49230769230769234,
+          "val_f1_tuned": 0.5132743362831858
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.4813989168033,
+          "threshold": 0.61555016040802,
+          "train_loss": 0.5735584068170673,
+          "val_ap": 0.6018355240506925,
+          "val_f1_default": 0.4444444444444444,
+          "val_f1_tuned": 0.5945945945945946
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.469816917087883,
+          "threshold": 0.7272012233734131,
+          "train_loss": 0.4226716325544768,
+          "val_ap": 0.6092039244306514,
+          "val_f1_default": 0.4692737430167598,
+          "val_f1_tuned": 0.625
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_2",
+      "original_training_posts": 2241,
+      "seconds": 24.300077416934073,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2988,
+      "validation_ap": 0.6092039244306514,
+      "validation_f1_tuned": 0.625,
+      "validation_rows": 561,
+      "validation_threshold": 0.7272012233734131
+    },
+    {
+      "augmented_posts": 746,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.907791459001601,
+          "threshold": 0.4976806640625,
+          "train_loss": 0.6806587213890426,
+          "val_ap": 0.4879036217816986,
+          "val_f1_default": 0.43010752688172044,
+          "val_f1_tuned": 0.4897959183673469
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.321851209271699,
+          "threshold": 0.5286551117897034,
+          "train_loss": 0.5740680069798884,
+          "val_ap": 0.591168249821565,
+          "val_f1_default": 0.543046357615894,
+          "val_f1_tuned": 0.5714285714285714
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.304095791652799,
+          "threshold": 0.5655387043952942,
+          "train_loss": 0.42651304089787573,
+          "val_ap": 0.6135409433242901,
+          "val_f1_default": 0.5375,
+          "val_f1_tuned": 0.5970149253731343
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_3",
+      "original_training_posts": 2241,
+      "seconds": 23.948655874934047,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2987,
+      "validation_ap": 0.6135409433242901,
+      "validation_f1_tuned": 0.5970149253731343,
+      "validation_rows": 561,
+      "validation_threshold": 0.5655387043952942
+    },
+    {
+      "augmented_posts": 755,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.540051084011793,
+          "threshold": 0.5031127333641052,
+          "train_loss": 0.6791544597203009,
+          "val_ap": 0.4835436491394647,
+          "val_f1_default": 0.45544554455445546,
+          "val_f1_tuned": 0.4835164835164835
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.373095040675253,
+          "threshold": 0.6315943002700806,
+          "train_loss": 0.5665899319387724,
+          "val_ap": 0.5939477704347061,
+          "val_f1_default": 0.422360248447205,
+          "val_f1_tuned": 0.5609756097560975
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.33840037509799,
+          "threshold": 0.685528576374054,
+          "train_loss": 0.41923407110098365,
+          "val_ap": 0.6124929565652255,
+          "val_f1_default": 0.46540880503144655,
+          "val_f1_tuned": 0.5894736842105263
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_4",
+      "original_training_posts": 2241,
+      "seconds": 23.6880990001373,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2996,
+      "validation_ap": 0.6124929565652255,
+      "validation_f1_tuned": 0.5894736842105263,
+      "validation_rows": 561,
+      "validation_threshold": 0.685528576374054
+    },
+    {
+      "augmented_posts": 749,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.550632500089705,
+          "threshold": 0.5264645218849182,
+          "train_loss": 0.6792267137032779,
+          "val_ap": 0.46229605606258617,
+          "val_f1_default": 0.445859872611465,
+          "val_f1_tuned": 0.5217391304347825
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.489804374985397,
+          "threshold": 0.6081287264823914,
+          "train_loss": 0.5649164774838615,
+          "val_ap": 0.5983173614197602,
+          "val_f1_default": 0.4293785310734463,
+          "val_f1_tuned": 0.6296296296296297
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.445281708147377,
+          "threshold": 0.672331690788269,
+          "train_loss": 0.41279877825854294,
+          "val_ap": 0.6252373157064582,
+          "val_f1_default": 0.44970414201183434,
+          "val_f1_tuned": 0.6601941747572816
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_5",
+      "original_training_posts": 2243,
+      "seconds": 23.844002166762948,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2992,
+      "validation_ap": 0.6252373157064582,
+      "validation_f1_tuned": 0.6601941747572816,
+      "validation_rows": 559,
+      "validation_threshold": 0.672331690788269
+    }
+  ],
+  "oof_metrics": {
+    "accuracy": 0.9271948608137045,
+    "average_precision": 0.6134610193534104,
+    "confusion_matrix": [
+      [
+        2446,
+        119
+      ],
+      [
+        85,
+        152
+      ]
+    ],
+    "f1": 0.5984251968503937,
+    "macro_f1": 0.7791968998380697,
+    "positive_count": 237,
+    "precision": 0.5608856088560885,
+    "precision_at_20": 0.85,
+    "recall": 0.6413502109704642,
+    "recall_at_20": 0.07172995780590717,
+    "roc_auc": 0.9179337231968812,
+    "test_size": 2802,
+    "top20_found": 17
+  },
+  "selected": "weighted_aug",
+  "source": "upenn",
+  "threshold": 0.6701767444610596
+}
+stanford scouts and selection {
+  "scout_runs": [
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 2,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 37.59227512497455,
+          "threshold": 0.3849121630191803,
+          "train_loss": 0.3430372778309877,
+          "val_ap": 0.855569235457869,
+          "val_f1_default": 0.782675947409126,
+          "val_f1_tuned": 0.8028880866425994
+        },
+        {
+          "epoch": 2,
+          "seconds": 33.67421824997291,
+          "threshold": 0.5985468626022339,
+          "train_loss": 0.18663363705161684,
+          "val_ap": 0.8652522632307337,
+          "val_f1_default": 0.7962154294032023,
+          "val_f1_tuned": 0.8021472392638036
+        },
+        {
+          "epoch": 3,
+          "seconds": 33.82083670794964,
+          "threshold": 0.5648187398910522,
+          "train_loss": 0.1637757996617074,
+          "val_ap": 0.8636872595262441,
+          "val_f1_default": 0.7979351032448377,
+          "val_f1_tuned": 0.8048595292331056
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_plain",
+      "original_training_posts": 19767,
+      "seconds": 109.7535795411095,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 19767,
+      "validation_ap": 0.8652522632307337,
+      "validation_f1_tuned": 0.8021472392638036,
+      "validation_rows": 3489,
+      "validation_threshold": 0.5985468626022339
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 34.077947416808456,
+          "threshold": 0.7260372638702393,
+          "train_loss": 0.42224049959268617,
+          "val_ap": 0.8611717441185802,
+          "val_f1_default": 0.7790019442644199,
+          "val_f1_tuned": 0.7956363636363636
+        },
+        {
+          "epoch": 2,
+          "seconds": 33.76860475027934,
+          "threshold": 0.8832359910011292,
+          "train_loss": 0.2431226354611567,
+          "val_ap": 0.8638164936683767,
+          "val_f1_default": 0.7734177215189874,
+          "val_f1_tuned": 0.7972560975609756
+        },
+        {
+          "epoch": 3,
+          "seconds": 33.65528491605073,
+          "threshold": 0.6649755239486694,
+          "train_loss": 0.21310165121932007,
+          "val_ap": 0.8682011202830632,
+          "val_f1_default": 0.7833441769681198,
+          "val_f1_tuned": 0.7980835044490076
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted",
+      "original_training_posts": 19767,
+      "seconds": 106.1686183330603,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 19767,
+      "validation_ap": 0.8682011202830632,
+      "validation_f1_tuned": 0.7980835044490076,
+      "validation_rows": 3489,
+      "validation_threshold": 0.6649755239486694
+    },
+    {
+      "augmented_posts": 5303,
+      "batch_size": 64,
+      "best_epoch": 2,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 46.738699375186116,
+          "threshold": 0.5846269726753235,
+          "train_loss": 0.3938583458354381,
+          "val_ap": 0.8597563517832135,
+          "val_f1_default": 0.7909527073337903,
+          "val_f1_tuned": 0.7946741415557113
+        },
+        {
+          "epoch": 2,
+          "seconds": 46.12954429117963,
+          "threshold": 0.8311430811882019,
+          "train_loss": 0.23194099960690434,
+          "val_ap": 0.8636732122986649,
+          "val_f1_default": 0.7677664974619289,
+          "val_f1_tuned": 0.7973273942093543
+        },
+        {
+          "epoch": 3,
+          "seconds": 46.13395804120228,
+          "threshold": 0.7512834072113037,
+          "train_loss": 0.19797954040549406,
+          "val_ap": 0.8584950763051659,
+          "val_f1_default": 0.7735728030788968,
+          "val_f1_tuned": 0.7991660875608061
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted_aug",
+      "original_training_posts": 19767,
+      "seconds": 143.59535091696307,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 25070,
+      "validation_ap": 0.8636732122986649,
+      "validation_f1_tuned": 0.7973273942093543,
+      "validation_rows": 3489,
+      "validation_threshold": 0.8311430811882019
+    }
+  ],
+  "selected": "plain"
+}
+stanford five-fold development {
+  "epochs_for_final": 3,
+  "fold_f1_mean": 0.7984740996034911,
+  "fold_f1_std": 0.009046216801145503,
+  "folds": [
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 2,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.51511637493968,
+          "threshold": 0.3670433759689331,
+          "train_loss": 0.3489003613274012,
+          "val_ap": 0.8348549557464184,
+          "val_f1_default": 0.7635327635327636,
+          "val_f1_tuned": 0.7766578249336871
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.85510391695425,
+          "threshold": 0.2950267791748047,
+          "train_loss": 0.19002540502156579,
+          "val_ap": 0.8452035349956398,
+          "val_f1_default": 0.7697756788665879,
+          "val_f1_tuned": 0.7834497581945191
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.908855125308037,
+          "threshold": 0.37433314323425293,
+          "train_loss": 0.163747030832362,
+          "val_ap": 0.842526492494979,
+          "val_f1_default": 0.7770773638968481,
+          "val_f1_tuned": 0.7899891186071817
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_1",
+      "original_training_posts": 18604,
+      "seconds": 102.12339241569862,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18604,
+      "validation_ap": 0.8452035349956398,
+      "validation_f1_tuned": 0.7834497581945191,
+      "validation_rows": 4652,
+      "validation_threshold": 0.2950267791748047
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.119102500379086,
+          "threshold": 0.5297499895095825,
+          "train_loss": 0.3583274260671893,
+          "val_ap": 0.8394644805356111,
+          "val_f1_default": 0.7930062041737168,
+          "val_f1_tuned": 0.7963594994311718
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.763093165587634,
+          "threshold": 0.31111282110214233,
+          "train_loss": 0.19339823343842877,
+          "val_ap": 0.8615425360926985,
+          "val_f1_default": 0.7836538461538461,
+          "val_f1_tuned": 0.8093907210732253
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.700842040590942,
+          "threshold": 0.43170398473739624,
+          "train_loss": 0.1684143607349237,
+          "val_ap": 0.8630652796374119,
+          "val_f1_default": 0.8022727272727272,
+          "val_f1_tuned": 0.8111420612813369
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_2",
+      "original_training_posts": 18605,
+      "seconds": 101.84025083296001,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18605,
+      "validation_ap": 0.8630652796374119,
+      "validation_f1_tuned": 0.8111420612813369,
+      "validation_rows": 4651,
+      "validation_threshold": 0.43170398473739624
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.289849374908954,
+          "threshold": 0.41063806414604187,
+          "train_loss": 0.35586226524380193,
+          "val_ap": 0.8668138542553834,
+          "val_f1_default": 0.7776456599286563,
+          "val_f1_tuned": 0.7926008968609866
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.846837041899562,
+          "threshold": 0.3897787630558014,
+          "train_loss": 0.19095014633430135,
+          "val_ap": 0.8737623623814923,
+          "val_f1_default": 0.7915194346289752,
+          "val_f1_tuned": 0.7952488687782805
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.91948370821774,
+          "threshold": 0.43758314847946167,
+          "train_loss": 0.165680486091969,
+          "val_ap": 0.874549267462053,
+          "val_f1_default": 0.7922814982973894,
+          "val_f1_tuned": 0.7971175166297118
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_3",
+      "original_training_posts": 18605,
+      "seconds": 101.97956258431077,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18605,
+      "validation_ap": 0.874549267462053,
+      "validation_f1_tuned": 0.7971175166297118,
+      "validation_rows": 4651,
+      "validation_threshold": 0.43758314847946167
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.183594124857336,
+          "threshold": 0.43650195002555847,
+          "train_loss": 0.35593014691696795,
+          "val_ap": 0.8481310165803206,
+          "val_f1_default": 0.7836644591611479,
+          "val_f1_tuned": 0.7906976744186046
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.736542250029743,
+          "threshold": 0.2986958920955658,
+          "train_loss": 0.19110372817923196,
+          "val_ap": 0.8580789176671624,
+          "val_f1_default": 0.7818396226415094,
+          "val_f1_tuned": 0.8023822414726585
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.911869790870696,
+          "threshold": 0.408040851354599,
+          "train_loss": 0.1683108306450089,
+          "val_ap": 0.8584829448079235,
+          "val_f1_default": 0.8006662965019433,
+          "val_f1_tuned": 0.8029978586723767
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_4",
+      "original_training_posts": 18605,
+      "seconds": 101.82714758301154,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18605,
+      "validation_ap": 0.8584829448079235,
+      "validation_f1_tuned": 0.8029978586723767,
+      "validation_rows": 4651,
+      "validation_threshold": 0.408040851354599
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.26861995784566,
+          "threshold": 0.3437822461128235,
+          "train_loss": 0.3485990356098289,
+          "val_ap": 0.8612643349444544,
+          "val_f1_default": 0.7749287749287749,
+          "val_f1_tuned": 0.7828810020876825
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.85739850020036,
+          "threshold": 0.2429233193397522,
+          "train_loss": 0.19142927638595703,
+          "val_ap": 0.8721638563714771,
+          "val_f1_default": 0.7854630715123095,
+          "val_f1_tuned": 0.7937823834196891
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.901943249627948,
+          "threshold": 0.34997692704200745,
+          "train_loss": 0.16519982392382346,
+          "val_ap": 0.8733008919095765,
+          "val_f1_default": 0.7864406779661017,
+          "val_f1_tuned": 0.7976633032395115
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_5",
+      "original_training_posts": 18605,
+      "seconds": 101.85768291726708,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18605,
+      "validation_ap": 0.8733008919095765,
+      "validation_f1_tuned": 0.7976633032395115,
+      "validation_rows": 4651,
+      "validation_threshold": 0.34997692704200745
+    }
+  ],
+  "oof_metrics": {
+    "accuracy": 0.91765565875473,
+    "average_precision": 0.8595962419497389,
+    "confusion_matrix": [
+      [
+        17639,
+        1198
+      ],
+      [
+        717,
+        3702
+      ]
+    ],
+    "f1": 0.7945058482669815,
+    "macro_f1": 0.8715088325033453,
+    "positive_count": 4419,
+    "precision": 0.7555102040816326,
+    "precision_at_20": 1.0,
+    "recall": 0.8377460964019009,
+    "recall_at_20": 0.004525910839556461,
+    "roc_auc": 0.9618895397844008,
+    "test_size": 23256,
+    "top20_found": 20
+  },
+  "selected": "plain",
+  "source": "stanford",
+  "threshold": 0.34997692704200745
+}
+
+Cell 32: Matplotlib is building the font cache; this may take a moment.
+
+Cell 32: {
+  "profile": "source_minilm",
+  "rows": 8,
+  "figures": [
+    "reports/teacher/metrics_01.png",
+    "reports/teacher/confusions_01.png",
+    "reports/teacher/precision_recall_threshold_01.png",
+    "reports/teacher/learning_curves.png"
+  ],
+  "mode": "SAVED-TRAINING VALIDATION",
+  "checks": "All reported count metrics recomputed; per-post scores checked when available."
+}
+
+Cell 32: {
+  "accuracy": 0.9261939218523878,
+  "average_precision": 0.7059076755021558,
+  "confusion_matrix": [
+    [
+      598,
+      32
+    ],
+    [
+      19,
+      42
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.9001447178002895,
+    "average_precision": 0.7059076755021558,
+    "confusion_matrix": [
+      [
+        571,
+        59
+      ],
+      [
+        10,
+        51
+      ]
+    ],
+    "f1": 0.5964912280701754,
+    "macro_f1": 0.7697567618468135,
+    "positive_count": 61,
+    "precision": 0.4636363636363636,
+    "precision_at_20": 0.9,
+    "recall": 0.8360655737704918,
+    "recall_at_20": 0.29508196721311475,
+    "roc_auc": 0.911904761904762,
+    "test_size": 691,
+    "top20_found": 18
+  },
+  "f1": 0.6222222222222222,
+  "macro_f1": 0.7906620333244231,
+  "model": "finetuned_minilm",
+  "positive_count": 61,
+  "precision": 0.5675675675675675,
+  "precision_at_20": 0.9,
+  "recall": 0.6885245901639344,
+  "recall_at_20": 0.29508196721311475,
+  "roc_auc": 0.911904761904762,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.6701767444610596,
+  "top20_found": 18,
+  "train_source": "upenn",
+  "policy": "selected threshold"
+}
+{
+  "accuracy": 0.9001447178002895,
+  "average_precision": 0.7059076755021558,
+  "confusion_matrix": [
+    [
+      571,
+      59
+    ],
+    [
+      10,
+      51
+    ]
+  ],
+  "f1": 0.5964912280701754,
+  "macro_f1": 0.7697567618468135,
+  "positive_count": 61,
+  "precision": 0.4636363636363636,
+  "precision_at_20": 0.9,
+  "recall": 0.8360655737704918,
+  "recall_at_20": 0.29508196721311475,
+  "roc_auc": 0.911904761904762,
+  "test_size": 691,
+  "top20_found": 18,
+  "train_source": "upenn",
+  "test_source": "upenn",
+  "model": "finetuned_minilm",
+  "threshold": 0.5,
+  "policy": "fixed 0.5 diagnostic"
+}
+{
+  "accuracy": 0.8794289645682835,
+  "average_precision": 0.703558913949917,
+  "confusion_matrix": [
+    [
+      4516,
+      193
+    ],
+    [
+      508,
+      597
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.869281045751634,
+    "average_precision": 0.703558913949917,
+    "confusion_matrix": [
+      [
+        4309,
+        400
+      ],
+      [
+        360,
+        745
+      ]
+    ],
+    "f1": 0.6622222222222223,
+    "macro_f1": 0.790590744295159,
+    "positive_count": 1105,
+    "precision": 0.6506550218340611,
+    "precision_at_20": 0.95,
+    "recall": 0.6742081447963801,
+    "recall_at_20": 0.017194570135746608,
+    "roc_auc": 0.8812357005791356,
+    "test_size": 5814,
+    "top20_found": 19
+  },
+  "f1": 0.6300791556728232,
+  "macro_f1": 0.7790280705930128,
+  "model": "finetuned_minilm",
+  "positive_count": 1105,
+  "precision": 0.7556962025316456,
+  "precision_at_20": 0.95,
+  "recall": 0.5402714932126697,
+  "recall_at_20": 0.017194570135746608,
+  "roc_auc": 0.8812357005791356,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.6701767444610596,
+  "top20_found": 19,
+  "train_source": "upenn",
+  "policy": "selected threshold"
+}
+{
+  "accuracy": 0.869281045751634,
+  "average_precision": 0.703558913949917,
+  "confusion_matrix": [
+    [
+      4309,
+      400
+    ],
+    [
+      360,
+      745
+    ]
+  ],
+  "f1": 0.6622222222222223,
+  "macro_f1": 0.790590744295159,
+  "positive_count": 1105,
+  "precision": 0.6506550218340611,
+  "precision_at_20": 0.95,
+  "recall": 0.6742081447963801,
+  "recall_at_20": 0.017194570135746608,
+  "roc_auc": 0.8812357005791356,
+  "test_size": 5814,
+  "top20_found": 19,
+  "train_source": "upenn",
+  "test_source": "stanford",
+  "model": "finetuned_minilm",
+  "threshold": 0.5,
+  "policy": "fixed 0.5 diagnostic"
+}
+{
+  "accuracy": 0.7814761215629522,
+  "average_precision": 0.48728471743461627,
+  "confusion_matrix": [
+    [
+      487,
+      143
+    ],
+    [
+      8,
+      53
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.804630969609262,
+    "average_precision": 0.48728471743461627,
+    "confusion_matrix": [
+      [
+        508,
+        122
+      ],
+      [
+        13,
+        48
+      ]
+    ],
+    "f1": 0.4155844155844156,
+    "macro_f1": 0.6491475509720515,
+    "positive_count": 61,
+    "precision": 0.2823529411764706,
+    "precision_at_20": 0.55,
+    "recall": 0.7868852459016393,
+    "recall_at_20": 0.18032786885245902,
+    "roc_auc": 0.9036429872495446,
+    "test_size": 691,
+    "top20_found": 11
+  },
+  "f1": 0.41245136186770426,
+  "macro_f1": 0.639114569822741,
+  "model": "finetuned_minilm",
+  "positive_count": 61,
+  "precision": 0.27040816326530615,
+  "precision_at_20": 0.55,
+  "recall": 0.8688524590163934,
+  "recall_at_20": 0.18032786885245902,
+  "roc_auc": 0.9036429872495446,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.34997692704200745,
+  "top20_found": 11,
+  "train_source": "stanford",
+  "policy": "selected threshold"
+}
+{
+  "accuracy": 0.804630969609262,
+  "average_precision": 0.48728471743461627,
+  "confusion_matrix": [
+    [
+      508,
+      122
+    ],
+    [
+      13,
+      48
+    ]
+  ],
+  "f1": 0.4155844155844156,
+  "macro_f1": 0.6491475509720515,
+  "positive_count": 61,
+  "precision": 0.2823529411764706,
+  "precision_at_20": 0.55,
+  "recall": 0.7868852459016393,
+  "recall_at_20": 0.18032786885245902,
+  "roc_auc": 0.9036429872495446,
+  "test_size": 691,
+  "top20_found": 11,
+  "train_source": "stanford",
+  "test_source": "upenn",
+  "model": "finetuned_minilm",
+  "threshold": 0.5,
+  "policy": "fixed 0.5 diagnostic"
+}
+{
+  "accuracy": 0.9203646370829034,
+  "average_precision": 0.8808811911888398,
+  "confusion_matrix": [
+    [
+      4404,
+      305
+    ],
+    [
+      158,
+      947
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.9248366013071896,
+    "average_precision": 0.8808811911888398,
+    "confusion_matrix": [
+      [
+        4482,
+        227
+      ],
+      [
+        210,
+        895
+      ]
+    ],
+    "f1": 0.8037718904355635,
+    "macro_f1": 0.8786437369420664,
+    "positive_count": 1105,
+    "precision": 0.7976827094474154,
+    "precision_at_20": 1.0,
+    "recall": 0.8099547511312217,
+    "recall_at_20": 0.01809954751131222,
+    "roc_auc": 0.9639264948510072,
+    "test_size": 5814,
+    "top20_found": 20
+  },
+  "f1": 0.8035638523546882,
+  "macro_f1": 0.876811588565436,
+  "model": "finetuned_minilm",
+  "positive_count": 1105,
+  "precision": 0.7563897763578274,
+  "precision_at_20": 1.0,
+  "recall": 0.8570135746606334,
+  "recall_at_20": 0.01809954751131222,
+  "roc_auc": 0.9639264948510072,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.34997692704200745,
+  "top20_found": 20,
+  "train_source": "stanford",
+  "policy": "selected threshold"
+}
+{
+  "accuracy": 0.9248366013071896,
+  "average_precision": 0.8808811911888398,
+  "confusion_matrix": [
+    [
+      4482,
+      227
+    ],
+    [
+      210,
+      895
+    ]
+  ],
+  "f1": 0.8037718904355635,
+  "macro_f1": 0.8786437369420664,
+  "positive_count": 1105,
+  "precision": 0.7976827094474154,
+  "precision_at_20": 1.0,
+  "recall": 0.8099547511312217,
+  "recall_at_20": 0.01809954751131222,
+  "roc_auc": 0.9639264948510072,
+  "test_size": 5814,
+  "top20_found": 20,
+  "train_source": "stanford",
+  "test_source": "stanford",
+  "model": "finetuned_minilm",
+  "threshold": 0.5,
+  "policy": "fixed 0.5 diagnostic"
+}
+
+Cell 32: Checks: [
+  {
+    "experiment": "finetuned_minilm upenn \u2192 upenn / selected threshold",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "finetuned_minilm upenn \u2192 upenn / fixed 0.5 diagnostic",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "finetuned_minilm upenn \u2192 stanford / selected threshold",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "finetuned_minilm upenn \u2192 stanford / fixed 0.5 diagnostic",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "finetuned_minilm stanford \u2192 upenn / selected threshold",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "finetuned_minilm stanford \u2192 upenn / fixed 0.5 diagnostic",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "finetuned_minilm stanford \u2192 stanford / selected threshold",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "finetuned_minilm stanford \u2192 stanford / fixed 0.5 diagnostic",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  }
+]
+Actual error examples: [
+  {
+    "experiment": "finetuned_minilm upenn \u2192 upenn / selected threshold",
+    "all_error_count": 51,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09334687888622284,
+        "threshold": 0.6701767444610596,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_003317",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09670579433441162,
+        "threshold": 0.6701767444610596,
+        "error": "FN",
+        "text": "Being in the medical/pharmaceutical industry, it is easy to understand that Dr. [REDACTED] would lean towards drug-based care, but I didn't know that he was against non-drug approaches to health care. However, I don't see why you have chosen this course to promote a book that is completely off-topic. I think it is completely inappropriate to place an ad in a classroom for a two-year old book that will result in book sales and revenue. I would suggest that either you or Coursera consider removing it as it amounts to nothing more than spam."
+      },
+      {
+        "post_id": "upenn_000917",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09807932376861572,
+        "threshold": 0.6701767444610596,
+        "error": "FN",
+        "text": "Thanks [REDACTED], I imagine there are more people who feel like we do. I hope the instructors will be understanding in our cases. I really want to work on something good, for my own ease and pleasure and I feel if there is a too strict deadline on it, I'll end up disappointed.Of course, I wouldn't restart by week 7. That would be just plain silly."
+      },
+      {
+        "post_id": "upenn_003162",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.10447732359170914,
+        "threshold": 0.6701767444610596,
+        "error": "FN",
+        "text": "\"Professor [Redacted], you suggest that antibody titre testing is expensive (more than $100), and expertscontend thereno downside to a second shot.?5\"I feel you just answered your own question - or at least the answer you require is in the question that you ask. Making children take blood tests is expensive and just not needed as there are no downsides to a second shot. Just my experience but I can also envisage that it is time consuming and invasive to ask children to get pathology collections compared to a vaccination. By the way .. I don't think lecturers are allowed to contribute in forms from my experience with Coursera, so don't be disappointed or go on the attack if you don't get a direct answer here."
+      }
+    ]
+  },
+  {
+    "experiment": "finetuned_minilm upenn \u2192 upenn / fixed 0.5 diagnostic",
+    "all_error_count": 69,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09334687888622284,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_003317",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09670579433441162,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Being in the medical/pharmaceutical industry, it is easy to understand that Dr. [REDACTED] would lean towards drug-based care, but I didn't know that he was against non-drug approaches to health care. However, I don't see why you have chosen this course to promote a book that is completely off-topic. I think it is completely inappropriate to place an ad in a classroom for a two-year old book that will result in book sales and revenue. I would suggest that either you or Coursera consider removing it as it amounts to nothing more than spam."
+      },
+      {
+        "post_id": "upenn_000917",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09807932376861572,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Thanks [REDACTED], I imagine there are more people who feel like we do. I hope the instructors will be understanding in our cases. I really want to work on something good, for my own ease and pleasure and I feel if there is a too strict deadline on it, I'll end up disappointed.Of course, I wouldn't restart by week 7. That would be just plain silly."
+      },
+      {
+        "post_id": "upenn_002648",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.896975576877594,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "I just signed up for the course (a month late), and haven't even ordered any of the books yet, so obviously I'm going to be behind. I'm just planning to enjoy the course (no quizzes, etc.), but since I'll be way behind, I'm wondering how long I can access the lectures after the course officially ends. I suspect I won't ever catch up officially, as I plan to do all the readings. I'm hoping that I'll have at least a few extra months to access the course. Thanks."
+      }
+    ]
+  },
+  {
+    "experiment": "finetuned_minilm upenn \u2192 stanford / selected threshold",
+    "all_error_count": 701,
+    "examples": [
+      {
+        "post_id": "stanford_013348",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09401018917560577,
+        "threshold": 0.6701767444610596,
+        "error": "FN",
+        "text": "I've enjoyed each week of lectures. But I have to say, this week is the best yet. The amount of information in these lectures is fantastic and very accurate in disasters.\u0007\u0007I live in one of the Colorado communities that was hit with the horrible flooding. I, my family and my neighbors wee buried in a mudslide, after witnessing horrible events for about 24 hours. \u0007\u0007We made very bad decisions throughout the stress of the situation and some that almost lead to my death and that of my neighbor's. \u0007\u0007We had all of the things you are mentioning happen to us. Bad decisions and then moments later decisions that saved lives.(quick thinking). Other things like being able to see in the pitch dark while digging ourselves out of the debris. It's one thing to be involved with the physiological changes but another to understand the science of it all.\u0007\u0007I would really like you to consider to teach this to emergency personnel or to bring it to communities that are likely in danger zones. This could help save people's lives.\u0007Thank you for a great lecture series.\u0007<nameRedac_<anon_screen_name_redacted>> G"
+      },
+      {
+        "post_id": "stanford_012898",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09670579433441162,
+        "threshold": 0.6701767444610596,
+        "error": "FN",
+        "text": "Hi!\u0007\u0007It would be interesting to know how Corey's opinion about aging changed after his experience in the \\Agnes suit\\\" and all the information we've learned from the section. \u0007\u0007And also - Did he change his habits or something in life in order to be our healthiest Superhero as he ages? :)\u0007\u0007Please, share with us your outcomes and results, Corey!\u0007\u0007<nameRedac_<anon_screen_name_redacted>>\""
+      },
+      {
+        "post_id": "stanford_022767",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09670579433441162,
+        "threshold": 0.6701767444610596,
+        "error": "FN",
+        "text": "thanks a lot, Dr. <redacted>! I know these answers won't increase my final result significantly, but I wondered if I answered right :)"
+      },
+      {
+        "post_id": "stanford_012620",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09739039838314056,
+        "threshold": 0.6701767444610596,
+        "error": "FN",
+        "text": "Hi all, I'm <nameRedac_<anon_screen_name_redacted>> writing from Washington, DC. I work for an organization that advocates for better family planning/reproductive health policies and supplies in developing nations. I enrolled in this course to deepen my understanding of our programmatic work and become a more compelling communicator of our goals. My background is in feminist and anti-racist \u0007\u0007I've been thinking about Professor Firth Murray's assertion that we must consider the justice of empowering women as central to our discourse instead of the well-documented economic benefits of doing so. I strongly agree with this statement, but I find the most compelling case to make to a large part of the international aid audience is the one of economic benefit. Is it possible to put rights and justice first in our current international development and economic structure? I am doubtful, as it seems impossible for women and girls to ever climb over that bottom line."
+      }
+    ]
+  },
+  {
+    "experiment": "finetuned_minilm upenn \u2192 stanford / fixed 0.5 diagnostic",
+    "all_error_count": 760,
+    "examples": [
+      {
+        "post_id": "stanford_013348",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09401018917560577,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I've enjoyed each week of lectures. But I have to say, this week is the best yet. The amount of information in these lectures is fantastic and very accurate in disasters.\u0007\u0007I live in one of the Colorado communities that was hit with the horrible flooding. I, my family and my neighbors wee buried in a mudslide, after witnessing horrible events for about 24 hours. \u0007\u0007We made very bad decisions throughout the stress of the situation and some that almost lead to my death and that of my neighbor's. \u0007\u0007We had all of the things you are mentioning happen to us. Bad decisions and then moments later decisions that saved lives.(quick thinking). Other things like being able to see in the pitch dark while digging ourselves out of the debris. It's one thing to be involved with the physiological changes but another to understand the science of it all.\u0007\u0007I would really like you to consider to teach this to emergency personnel or to bring it to communities that are likely in danger zones. This could help save people's lives.\u0007Thank you for a great lecture series.\u0007<nameRedac_<anon_screen_name_redacted>> G"
+      },
+      {
+        "post_id": "stanford_012898",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09670579433441162,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hi!\u0007\u0007It would be interesting to know how Corey's opinion about aging changed after his experience in the \\Agnes suit\\\" and all the information we've learned from the section. \u0007\u0007And also - Did he change his habits or something in life in order to be our healthiest Superhero as he ages? :)\u0007\u0007Please, share with us your outcomes and results, Corey!\u0007\u0007<nameRedac_<anon_screen_name_redacted>>\""
+      },
+      {
+        "post_id": "stanford_022767",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09670579433441162,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "thanks a lot, Dr. <redacted>! I know these answers won't increase my final result significantly, but I wondered if I answered right :)"
+      },
+      {
+        "post_id": "stanford_012620",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09739039838314056,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hi all, I'm <nameRedac_<anon_screen_name_redacted>> writing from Washington, DC. I work for an organization that advocates for better family planning/reproductive health policies and supplies in developing nations. I enrolled in this course to deepen my understanding of our programmatic work and become a more compelling communicator of our goals. My background is in feminist and anti-racist \u0007\u0007I've been thinking about Professor Firth Murray's assertion that we must consider the justice of empowering women as central to our discourse instead of the well-documented economic benefits of doing so. I strongly agree with this statement, but I find the most compelling case to make to a large part of the international aid audience is the one of economic benefit. Is it possible to put rights and justice first in our current international development and economic structure? I am doubtful, as it seems impossible for women and girls to ever climb over that bottom line."
+      }
+    ]
+  },
+  {
+    "experiment": "finetuned_minilm stanford \u2192 upenn / selected threshold",
+    "all_error_count": 151,
+    "examples": [
+      {
+        "post_id": "upenn_000703",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9824230670928955,
+        "threshold": 0.34997692704200745,
+        "error": "FP",
+        "text": "Hello,Can someone please explain how to get the equation in part 2 in the first place? What is the s-factor in the \"food\"-equation?Thanks and kind regards, [REDACTED]."
+      },
+      {
+        "post_id": "upenn_003138",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9790357351303101,
+        "threshold": 0.34997692704200745,
+        "error": "FP",
+        "text": "Dear guys,I am curious about the rabies story in the video,it said that rabbit spinal cord can attenuate the rabies virus, so it can induce immune response in human.That means what Pasteur injected in human body was not an antibody, its an antigen.What confused me is: is it safe or perhaps effective to inject antigen when you already have infected by so-called the wild antigen? I thought that vaccine as an active innate immunization should be given prior to pathogen exposure.Please correct me if I'm wrong"
+      },
+      {
+        "post_id": "upenn_000761",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9785493016242981,
+        "threshold": 0.34997692704200745,
+        "error": "FP",
+        "text": "At the beginning of the catenary example in Lecture 35, I do not understand where the sqrt (1 + u^2) comes from...What am I missing?"
+      },
+      {
+        "post_id": "upenn_000508",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9777138829231262,
+        "threshold": 0.34997692704200745,
+        "error": "FP",
+        "text": "I'm happy to say I had no difficulty with the diagnostic exam. However, I'm a bit bemused by one question:Evaluate cos2\u00c3\uf18f\u00e2\u201a\u00ac/3\u00c3\u00a2\u00cb\u2020\u00e2\u20ac\u2122arctan1. Be careful and look at all the optionsfor two reasons. Why were we asked to be careful? and Is 5\u00c3\uf18f\u00e2\u201a\u00ac/4 not a second solution to arctan1 for which no option is provided?Thanks for any clarification."
+      }
+    ]
+  },
+  {
+    "experiment": "finetuned_minilm stanford \u2192 upenn / fixed 0.5 diagnostic",
+    "all_error_count": 135,
+    "examples": [
+      {
+        "post_id": "upenn_000703",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9824230670928955,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "Hello,Can someone please explain how to get the equation in part 2 in the first place? What is the s-factor in the \"food\"-equation?Thanks and kind regards, [REDACTED]."
+      },
+      {
+        "post_id": "upenn_003138",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9790357351303101,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "Dear guys,I am curious about the rabies story in the video,it said that rabbit spinal cord can attenuate the rabies virus, so it can induce immune response in human.That means what Pasteur injected in human body was not an antibody, its an antigen.What confused me is: is it safe or perhaps effective to inject antigen when you already have infected by so-called the wild antigen? I thought that vaccine as an active innate immunization should be given prior to pathogen exposure.Please correct me if I'm wrong"
+      },
+      {
+        "post_id": "upenn_000761",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9785493016242981,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "At the beginning of the catenary example in Lecture 35, I do not understand where the sqrt (1 + u^2) comes from...What am I missing?"
+      },
+      {
+        "post_id": "upenn_000508",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9777138829231262,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "I'm happy to say I had no difficulty with the diagnostic exam. However, I'm a bit bemused by one question:Evaluate cos2\u00c3\uf18f\u00e2\u201a\u00ac/3\u00c3\u00a2\u00cb\u2020\u00e2\u20ac\u2122arctan1. Be careful and look at all the optionsfor two reasons. Why were we asked to be careful? and Is 5\u00c3\uf18f\u00e2\u201a\u00ac/4 not a second solution to arctan1 for which no option is provided?Thanks for any clarification."
+      }
+    ]
+  },
+  {
+    "experiment": "finetuned_minilm stanford \u2192 stanford / selected threshold",
+    "all_error_count": 463,
+    "examples": [
+      {
+        "post_id": "stanford_019954",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9820137619972229,
+        "threshold": 0.34997692704200745,
+        "error": "FP",
+        "text": "Hi Everyone,\u0007\u0007In the answers to the Homework should we round the answers to the given decimal or rather just give the answer to the given decimal?\u0007\u0007Thank you,\u0007<nameRedac_<anon_screen_name_redacted>>"
+      },
+      {
+        "post_id": "stanford_024779",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9815951585769653,
+        "threshold": 0.34997692704200745,
+        "error": "FP",
+        "text": "In the second paragraph, first sentence; could I avoid repeating the word \\epidemiology\\\"? Is there a specific reason to position them so close? Add some particular emphasis?\u0007\u0007This is what I have: \\\"Despite methodological similarities, classic and clinical epidemiology differ in aim.\\\"\""
+      },
+      {
+        "post_id": "stanford_005974",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9795114994049072,
+        "threshold": 0.34997692704200745,
+        "error": "FP",
+        "text": "The course is not tracking. Please make sure we are able to enter our responses because we can't now. Progress is not tracking on sessions 5 on. If the course was prematurely turned off,can you put it back on? If not, please extend this course so those of us who are still working (in the allotted time) will get the credit. Thanks."
+      },
+      {
+        "post_id": "stanford_000168",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9785493016242981,
+        "threshold": 0.34997692704200745,
+        "error": "FP",
+        "text": "how do i take the survey?"
+      }
+    ]
+  },
+  {
+    "experiment": "finetuned_minilm stanford \u2192 stanford / fixed 0.5 diagnostic",
+    "all_error_count": 437,
+    "examples": [
+      {
+        "post_id": "stanford_003056",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.0037654137704521418,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "In my current school we have a \u00beGifted and talented\u00ae cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most \u00beable\u00ae are filtered and \u00beextracted\u00ae into another class (called \u00beExtraction\u00ae) during the time at which they would be having a \u00benormal\u00ae maths lesson.\u0007 - This \u00beextraction\u00ae lesson is done twice a fortnight and the students are \u00beexpected\u00ae to catch up with the normal curriculum in their own time; if they don\u00aet they can be removed.\u0007 - There are two \u00beextraction\u00ae classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the \u00beExtraction\u00ae class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the \u00beExtraction\u00ae class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the \u00beExtraction\u00ae class.\u0007 - Reinstating students to the \u00beExtraction\u00ae class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in \u00beExtraction\u00ae\u0007 - Labeling of \u00beGifted and Talented\u00ae and \u00beExtraction\u00ae; the latter sounding quite painful!\u0007 - Students who are borderline between \u00benormal\u00ae class and \u00beextraction\u00ae.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+      },
+      {
+        "post_id": "stanford_019708",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.004133968614041805,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hey, don't forget to divide by (n-1) so that you're kind of getting an average."
+      },
+      {
+        "post_id": "stanford_019743",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.004198795184493065,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "The median value being in the exact middle of your ranked observations, you have to rank your data, and then find the median value.\u0007As you have 20 values here, the median is the mean between the 10th and the 11th value. If you had 21 values, the median would be the 11th (which would exactly separate data in two groups of 10 observations : 10 lower, 10 higher)"
+      },
+      {
+        "post_id": "stanford_019670",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.0042646341025829315,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "if I asked you how old you are and you give me your age at your last birthday then you aren't telling me how old you ARE\u0007\u0007you're telling me how old you WERE\u0007\u0007how old you ARE is ALWAYS changing, it is CONTINUALLY changing"
+      }
+    ]
+  }
+]
+
+Cell 34: {
+  "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+  "score": 0.9745758175849915,
+  "threshold": 0.34997692704200745,
+  "urgent": true,
+  "label": "URGENT"
+}
+
+Cell 36: Download from Kaggle Output: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/05_source_minilm_finetuning_augmentation_cv/05_source_minilm_finetuning_augmentation_cv_output.zip MB: 18.3

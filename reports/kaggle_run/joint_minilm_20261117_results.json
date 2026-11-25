@@ -1,0 +1,244 @@
+[
+  {
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "train_source": "joint",
+    "test_source": "upenn",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.6507936507936508,
+    "recall": 0.6721311475409836,
+    "f1": 0.6612903225806451,
+    "macro_f1": 0.8139519975383354,
+    "accuracy": 0.9392185238784371,
+    "confusion_matrix": [
+      [
+        608,
+        22
+      ],
+      [
+        20,
+        41
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "average_precision": 0.697783382060938,
+    "roc_auc": 0.936247723132969,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "brier_score": 0.049237521025866725,
+    "automatic_coverage": 0.8986975397973951,
+    "review_count": 70,
+    "automatic_accuracy": 0.9677938808373591,
+    "automatic_errors": 20,
+    "urgent_automatically_found": 26,
+    "urgent_automatically_missed": 12,
+    "urgent_requiring_review": 23,
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 425
+  },
+  {
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "train_source": "joint",
+    "test_source": "stanford",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.8237113402061855,
+    "recall": 0.7230769230769231,
+    "f1": 0.7701204819277109,
+    "macro_f1": 0.8600942616903289,
+    "accuracy": 0.9179566563467493,
+    "confusion_matrix": [
+      [
+        4538,
+        171
+      ],
+      [
+        306,
+        799
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "average_precision": 0.8506134022041771,
+    "roc_auc": 0.9567657580698942,
+    "precision_at_20": 1.0,
+    "recall_at_20": 0.01809954751131222,
+    "top20_found": 20,
+    "brier_score": 0.060838059813975554,
+    "automatic_coverage": 0.8558651530787754,
+    "review_count": 838,
+    "automatic_accuracy": 0.9628215434083601,
+    "automatic_errors": 185,
+    "urgent_automatically_found": 505,
+    "urgent_automatically_missed": 136,
+    "urgent_requiring_review": 464,
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 427
+  },
+  {
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "train_source": "joint",
+    "test_source": "upenn",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.5857142857142857,
+    "recall": 0.6721311475409836,
+    "f1": 0.6259541984732825,
+    "macro_f1": 0.7933927667026683,
+    "accuracy": 0.9290882778581766,
+    "confusion_matrix": [
+      [
+        601,
+        29
+      ],
+      [
+        20,
+        41
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "average_precision": 0.6872809551022474,
+    "roc_auc": 0.9320062451209993,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "brier_score": 0.05216424915262062,
+    "automatic_coverage": 0.8798842257597684,
+    "review_count": 83,
+    "automatic_accuracy": 0.9703947368421053,
+    "automatic_errors": 18,
+    "urgent_automatically_found": 27,
+    "urgent_automatically_missed": 12,
+    "urgent_requiring_review": 22,
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 433
+  },
+  {
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "train_source": "joint",
+    "test_source": "stanford",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.817047817047817,
+    "recall": 0.7113122171945702,
+    "f1": 0.760522496371553,
+    "macro_f1": 0.854374834630709,
+    "accuracy": 0.9148606811145511,
+    "confusion_matrix": [
+      [
+        4533,
+        176
+      ],
+      [
+        319,
+        786
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "average_precision": 0.8475725351000832,
+    "roc_auc": 0.9566733193105722,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "brier_score": 0.06068972307892164,
+    "automatic_coverage": 0.8565531475748194,
+    "review_count": 834,
+    "automatic_accuracy": 0.9630522088353414,
+    "automatic_errors": 184,
+    "urgent_automatically_found": 506,
+    "urgent_automatically_missed": 130,
+    "urgent_requiring_review": 469,
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 435
+  },
+  {
+    "run": "real_only_seed42",
+    "arm": "real_only",
+    "seed": 42,
+    "train_source": "joint",
+    "test_source": "custom_challenge",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "macro_f1": 0.6307692307692307,
+    "accuracy": 0.7083333333333334,
+    "confusion_matrix": [
+      [
+        3,
+        7
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "average_precision": 0.6759427814187876,
+    "roc_auc": 0.6571428571428571,
+    "precision_at_20": 0.65,
+    "recall_at_20": 0.9285714285714286,
+    "top20_found": 13,
+    "balanced_accuracy": 0.65,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 0,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 575
+  },
+  {
+    "run": "real_only_seed43",
+    "arm": "real_only",
+    "seed": 43,
+    "train_source": "joint",
+    "test_source": "custom_challenge",
+    "model": "joint_minilm",
+    "threshold": 0.5,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "macro_f1": 0.6307692307692307,
+    "accuracy": 0.7083333333333334,
+    "confusion_matrix": [
+      [
+        3,
+        7
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "average_precision": 0.7617176682966156,
+    "roc_auc": 0.7214285714285714,
+    "precision_at_20": 0.7,
+    "recall_at_20": 1.0,
+    "top20_found": 14,
+    "balanced_accuracy": 0.65,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 0,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "provenance": "Transcribed from the user-supplied Kaggle log on 2026-11-17",
+    "first_log_line": 684
+  }
+]

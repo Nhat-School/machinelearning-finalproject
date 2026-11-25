@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "offline": true,
+  "examples": [
+    {
+      "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+      "score": 0.936092940346683,
+      "raw_score": 0.9714268445968628,
+      "threshold": 0.5,
+      "binary_priority": 1,
+      "action": "PRIORITY",
+      "domain": "mixed",
+      "scope": "English student forum posts",
+      "note": "An estimate, not a guarantee of correctness."
+    },
+    {
+      "text": "The submit button works now and my assignment has a receipt. No further help is needed.",
+      "score": 0.7852273004601203,
+      "raw_score": 0.8538074493408203,
+      "threshold": 0.5,
+      "binary_priority": 1,
+      "action": "REVIEW",
+      "domain": "mixed",
+      "scope": "English student forum posts",
+      "note": "An estimate, not a guarantee of correctness."
+    }
+  ]
+}

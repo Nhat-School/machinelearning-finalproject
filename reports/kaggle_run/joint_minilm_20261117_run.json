@@ -1,0 +1,44 @@
+{
+  "source": "User-supplied complete Kaggle log; not local training or imported model weights",
+  "notebook_url": "https://www.kaggle.com/code/tmhiutv/minilm-confusion-final/notebook?scriptVersionId=370343895",
+  "script_version_id": 370343895,
+  "mode": "TRAIN",
+  "synthetic_training": false,
+  "versions": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.20.2",
+    "sklearn": "1.6.1",
+    "sentencepiece": "0.2.2"
+  },
+  "device": "cuda",
+  "visible_gpus": 2,
+  "training_gpu_count": 1,
+  "total_log_seconds": 1008.5,
+  "archive_mb_decimal": 182.7,
+  "data_checks_passed_in_log": true,
+  "count_metrics_independently_recomputed": true,
+  "per_post_kaggle_csv_imported": false,
+  "kaggle_model_weights_imported": false,
+  "best_epoch_by_seed": {
+    "42": 3,
+    "43": 3
+  },
+  "mean_validation_ap_by_epoch": {
+    "42": [
+      0.6261234155523688,
+      0.701094181935056,
+      0.7270369449441203,
+      0.723499352022895
+    ],
+    "43": [
+      0.6530186177023434,
+      0.7196721123913901,
+      0.7391745900583915,
+      0.7346162421569571
+    ]
+  },
+  "ten_epoch_trial_performed": false,
+  "environment_limitation": "The uploaded setup installed exact requested versions only when modules were absent; Transformers 5.20.2 remained installed despite a requested 4.57.6 pin.",
+  "reproduction": "Run this script to regenerate the transcribed records and count/probe checks; run the Kaggle notebook for actual fresh training, which may vary by environment."
+}

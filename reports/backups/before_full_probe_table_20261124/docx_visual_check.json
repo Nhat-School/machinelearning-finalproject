@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "page_count": 18,
+  "document_sha256": "68e637ba8b2c6525358feccd757176aea7ce893db44d6c12a0c7d915f044df8b",
+  "method": "Rendered the rebuilt report with the packaged document renderer and visually inspected all 18 page PNGs. Compared all 83 experiment records against the saved pre-edit records; values and provenance unchanged.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 8,
+  "comparison_rows": 83,
+  "wording_update": "Natural Vietnamese conclusions and experiment headings; removed repeated Mac references from visible text. Kaggle results remain separate.",
+  "page_png_sha256": {
+    "page-1.png": "6ceb073fd9191d067c8fcfa26189394e5ee7131cd8ce15f4cffa18e2c99e080f",
+    "page-2.png": "8f4a47fa3942ec1d3b56dd9a1e5e91e3b304341d97fa55f298cde41c71d2a514",
+    "page-3.png": "3c7279b213a45d81c83a1cb358c20e823ef96fff5305db11b12327cc5772a8fb",
+    "page-4.png": "aa4ef9e340ac3d0be9761d9e3f00b5b0bbc54acccc6bc4ec84c7e373b4023b51",
+    "page-5.png": "919f972303071aae2ba9a91757dd85daed1141d3bbf5e1ce300feb818978b36f",
+    "page-6.png": "c12f6fff12b61d08d2b31d240137c8d0189832159c98dafd1bd0851ac9a55750",
+    "page-7.png": "4e111f8397c2345e7e10858bc6e02222a4d23a4850764308c165cce91c7c893e",
+    "page-8.png": "1eda0dd5aec3542d34bc1c36dd5fb70ac28dc9a11e0455e79c3f0123749f24c9",
+    "page-9.png": "103950b61195d728b1eb542f3c9f95389aed323da0ef41b96b73f2bc3d08c2b8",
+    "page-10.png": "88457a217962ad8c4363965e6c2e7c978282974b5a03e9f523abd2d4c5666fcf",
+    "page-11.png": "ff710b117b9ea8e3136f10ae825b19c348be535079ad98c163a4347db9229ce7",
+    "page-12.png": "a0885a2199b16f1687ada0742531fb61990a6cf6179de61852adb47849338e47",
+    "page-13.png": "dc04992117cfeba31be604a409ee164cfce3a738aa4df80600045f2e26d663df",
+    "page-14.png": "bc836ebc5d03824e0ca60dc0ddf8bdc3434ac45a49cb8883f2bfd30a697d5cba",
+    "page-15.png": "260609fe64705479c644270089db77fc173e72427a5885c328e6821c488b3d67",
+    "page-16.png": "227418559a0f5d3aa96138b67e30fdd9b0763fb4eb7ca649dfbac99572f7103d",
+    "page-17.png": "25c77f278282f3c886a46585232a0e9af8d20386047c1a222293dc3a8da003aa",
+    "page-18.png": "5cbcf4e4325e9620ae6ea044ac02e94a3ed498b47d1c35b99b4a4953b05e8033"
+  },
+  "web_guide_pages": [
+    16,
+    17
+  ]
+}

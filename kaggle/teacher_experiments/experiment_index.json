@@ -1,0 +1,305 @@
+[
+  {
+    "slug": "00_data_preparation_and_label_audit",
+    "profile": "data",
+    "title": "Data preparation and the explicit AI label audit",
+    "pages": "5–6, 16",
+    "purpose": "Download the pinned UPenn/Stanford sources, clean and organize all three datasets, recreate the historical partitions, and regenerate the recorded AI audit. No classifier is trained.",
+    "gpu": "CPU",
+    "models": [],
+    "extra": [],
+    "finding": "The real sources contain 3,493 UPenn and 29,070 Stanford posts after cleaning. CustomForum has 160 synthetic drafts, 0 human-approved rows, and 82 binary training examples. AI inspection does not create human approval.",
+    "file": "00_data_preparation_and_label_audit.ipynb",
+    "code_cells": 15,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24"
+    ],
+    "sha256": "2d98296babe2a119ff08830eaa3b55f601c85b55ecb9669defa5eaed1bae6d0e"
+  },
+  {
+    "slug": "01_tfidf_logistic_regression_and_dummy",
+    "profile": "baseline",
+    "title": "TF-IDF Logistic Regression and majority baseline",
+    "pages": "7, 10",
+    "purpose": "Train TF-IDF Logistic Regression and the majority baseline on each source. Evaluate same-source and cross-source test sets, including OOF threshold selection.",
+    "gpu": "CPU",
+    "models": [
+      "tfidf_logreg",
+      "tfidf_dummy"
+    ],
+    "extra": [
+      "teacher_predict_baseline.py"
+    ],
+    "finding": "Logistic Regression was a strong lexical baseline. The majority classifier has urgent-class F1 of zero despite high overall accuracy. Earlier Kaggle same-source LR F1 was 0.5781 / 0.7215 (UPenn / Stanford).",
+    "file": "01_tfidf_logistic_regression_and_dummy.ipynb",
+    "code_cells": 18,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24"
+    ],
+    "sha256": "cf8d4b5800c393a10732b15c677e6aafcae853cbb6953569b06215dd566019ec"
+  },
+  {
+    "slug": "02_tfidf_svm",
+    "profile": "baseline",
+    "title": "TF-IDF linear SVM",
+    "pages": "7, 10",
+    "purpose": "Train only the existing linear SVM experiment, with 3-fold development tuning, source OOF threshold selection, and four train-to-test directions.",
+    "gpu": "CPU",
+    "models": [
+      "tfidf_svm"
+    ],
+    "extra": [
+      "teacher_predict_baseline.py"
+    ],
+    "finding": "The earlier Kaggle same-source SVM F1 was 0.5289 / 0.7185. The method remained useful for comparison, but did not beat fine-tuned MiniLM on those same-source benchmarks. SVM scores are decision margins, not probabilities.",
+    "file": "02_tfidf_svm.ipynb",
+    "code_cells": 18,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24"
+    ],
+    "sha256": "12bfafe9f2eff546ae5e21436d59c1a2d5a4bfd9cd73bed40c4c808b24ba138e"
+  },
+  {
+    "slug": "03_tfidf_naive_bayes",
+    "profile": "baseline",
+    "title": "TF-IDF Multinomial Naive Bayes",
+    "pages": "7, 10",
+    "purpose": "Train only Multinomial Naive Bayes, tune smoothing inside training data, choose source OOF thresholds, and evaluate four transfer directions.",
+    "gpu": "CPU",
+    "models": [
+      "tfidf_nb"
+    ],
+    "extra": [
+      "teacher_predict_baseline.py"
+    ],
+    "finding": "Earlier Kaggle same-source F1 was 0.3919 / 0.6453. The recorded false positives and false negatives explain the lower score; conditional-independence assumptions are a possible mechanism, not an isolated proven cause.",
+    "file": "03_tfidf_naive_bayes.ipynb",
+    "code_cells": 18,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24"
+    ],
+    "sha256": "431aea0ddf17281552d9860918c8c592eec6a0b768801fdf22b1673ad2c8a424"
+  },
+  {
+    "slug": "04_frozen_minilm_logistic_regression",
+    "profile": "baseline",
+    "title": "Frozen MiniLM embeddings with Logistic Regression",
+    "pages": "7, 10",
+    "purpose": "Extract normalized embeddings with the pinned pretrained MiniLM, keep the encoder frozen, and fit Logistic Regression using source-only development data.",
+    "gpu": "GPU recommended",
+    "models": [
+      "minilm_logreg"
+    ],
+    "extra": [
+      "teacher_predict_baseline.py"
+    ],
+    "finding": "Earlier Kaggle same-source F1 was 0.5395 / 0.6210. General pretrained embeddings did not match supervised fine-tuning here. This notebook downloads the pinned encoder but does not update its weights.",
+    "file": "04_frozen_minilm_logistic_regression.ipynb",
+    "code_cells": 18,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24",
+      "torch>=2.8",
+      "transformers==4.57.6",
+      "sentencepiece==0.2.1",
+      "sentence-transformers==5.7.0"
+    ],
+    "sha256": "59c7889598409dde550353a89edabd50935633cbdb208a54b659984b07f7e04f"
+  },
+  {
+    "slug": "05_source_minilm_finetuning_augmentation_cv",
+    "profile": "source_minilm",
+    "title": "Source-specific MiniLM fine-tuning augmentation and five-fold CV",
+    "pages": "8–9, 11",
+    "purpose": "Run all three original scouts (plain, weighted, weighted plus contraction augmentation), select by validation, run five folds, fit source models, and evaluate same-source and transfer tests.",
+    "gpu": "GPU required",
+    "models": [],
+    "extra": [
+      "finetune_minilm.py",
+      "standalone_inference.py",
+      "package_finetuned_models.py"
+    ],
+    "finding": "Augmentation helped the UPenn scout; Stanford selected plain training. Historical Mac selected-model F1 was 0.6222 / 0.8036. CV supplied development OOF scores and thresholds; it was not an independent nested-CV evaluation.",
+    "file": "05_source_minilm_finetuning_augmentation_cv.ipynb",
+    "code_cells": 19,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24",
+      "torch>=2.8",
+      "transformers==4.57.6",
+      "sentencepiece==0.2.1"
+    ],
+    "sha256": "d600008057e5eb10318ef43bedb5e3b06db32afbfea7f625bdb5b61ef654dfe3"
+  },
+  {
+    "slug": "06_minilm_tfidf_blending",
+    "profile": "blend",
+    "title": "MiniLM and TF-IDF Logistic Regression blending",
+    "pages": "8, 17",
+    "purpose": "From a fresh session, train TF-IDF LR and source MiniLM prerequisites, then select one of 21 blend weights and a threshold from aligned OOF predictions before reading test predictions.",
+    "gpu": "GPU required",
+    "models": [
+      "tfidf_logreg"
+    ],
+    "extra": [
+      "finetune_minilm.py",
+      "standalone_inference.py",
+      "package_finetuned_models.py",
+      "blend_trained_models.py",
+      "standalone_blend.py",
+      "package_blended_models.py"
+    ],
+    "finding": "The historical Mac blend reached F1 0.6364 / 0.8092. It improved same-source benchmarks but did not improve every transfer direction. No previous notebook output is required: this file trains its prerequisites when run fresh.",
+    "file": "06_minilm_tfidf_blending.ipynb",
+    "code_cells": 23,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24",
+      "torch>=2.8",
+      "transformers==4.57.6",
+      "sentencepiece==0.2.1"
+    ],
+    "sha256": "7355fbb100aaede9f3dbbee69931a553fc43a1074822866ab60924fd6614f9f8"
+  },
+  {
+    "slug": "07_joint_deberta_calibration_review",
+    "profile": "deberta",
+    "title": "Joint DeBERTa calibration thresholds and review coverage",
+    "pages": "8, 12, 18",
+    "purpose": "Train the completed real-only DeBERTa protocol, calibrate on separate rows, choose validation policies, and display mixed/source policies plus the fixed-0.5 diagnostic and Review coverage.",
+    "gpu": "GPU required",
+    "models": [],
+    "extra": [
+      "finetune_minilm.py",
+      "train_reliable_deberta.py",
+      "predict_reliable_deberta.py",
+      "summarize_reliability.py",
+      "audit_custom_scenarios.py"
+    ],
+    "finding": "Historical Mac fixed-0.5 F1 was 0.6119 / 0.7964. The selected mixed policy emphasized Recall and had more false alarms. The interrupted Mac FP32 attempt had no classifier-quality result and is archived in notebook 10, not presented as a successful training run.",
+    "file": "07_joint_deberta_calibration_review.ipynb",
+    "code_cells": 21,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24",
+      "torch>=2.8",
+      "transformers==4.57.6",
+      "sentencepiece==0.2.1",
+      "protobuf==6.33.6"
+    ],
+    "sha256": "0442519015719df281d0bef9ca58a7ba955425140c2f45b3ca87deb93479138a"
+  },
+  {
+    "slug": "08_joint_minilm_two_datasets_selected",
+    "profile": "joint_real",
+    "title": "Selected joint MiniLM on the two real datasets",
+    "pages": "11, 13–18",
+    "purpose": "Train only the selected two-source MiniLM method with seeds 42 and 43, separate fit/calibration/validation roles, fixed 0.5 binary threshold, and 0.2/0.8 Review bounds.",
+    "gpu": "GPU required",
+    "models": [],
+    "extra": [
+      "finetune_minilm.py",
+      "predict_reliable_deberta.py",
+      "final_minilm_trial.py",
+      "evaluate_final_minilm_trial.py",
+      "summarize_final_minilm_trial.py",
+      "run_final_minilm_trial.py",
+      "check_final_behavior.py"
+    ],
+    "finding": "This is the selected shared prototype, equivalent to final_best_model.ipynb. Historical Mac seed-42 F1 was 0.6667 / 0.7742; the supplied Kaggle run was 0.6613 / 0.7701 and 12/16 draft probes. It is not universally highest-F1; the Stanford blend remains higher on that benchmark.",
+    "file": "08_joint_minilm_two_datasets_selected.ipynb",
+    "code_cells": 24,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24",
+      "torch>=2.8",
+      "transformers==4.57.6",
+      "sentencepiece==0.2.1"
+    ],
+    "sha256": "8b8abe2d6c1ec508eee60117469a68ea358ed9a582742b3ee78ccc8291f10256"
+  },
+  {
+    "slug": "09_joint_minilm_three_dataset_comparison",
+    "profile": "joint_custom",
+    "title": "Three-dataset MiniLM weak-supervision comparison",
+    "pages": "13–18",
+    "purpose": "Run the completed five-run comparison: two-source control (42,43), custom cross-entropy (42), and the validation-selected custom variant confirmed with seed 43. Synthetic draft labels remain explicitly weak supervision.",
+    "gpu": "GPU required",
+    "models": [],
+    "extra": [
+      "finetune_minilm.py",
+      "predict_reliable_deberta.py",
+      "final_minilm_trial.py",
+      "evaluate_final_minilm_trial.py",
+      "summarize_final_minilm_trial.py",
+      "run_final_minilm_trial.py",
+      "check_final_behavior.py"
+    ],
+    "finding": "Custom pairwise supervision lowered real-test F1 versus the matched control on both sources and both seeds. It scored 24/24 templated synthetic challenge examples, but 13/16 new-phrasing probes versus control 14/16 in the Mac run. Those are synthetic diagnostics, not independent human gold.",
+    "file": "09_joint_minilm_three_dataset_comparison.ipynb",
+    "code_cells": 24,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24",
+      "torch>=2.8",
+      "transformers==4.57.6",
+      "sentencepiece==0.2.1"
+    ],
+    "sha256": "8d88cd7c6ae60bf926cb94396e45ba8e708223c00e63600e07833b7ed87de1f2"
+  },
+  {
+    "slug": "10_archived_logs_and_interrupted_attempt",
+    "profile": "archive",
+    "title": "Archived measured results and the interrupted FP32 attempt",
+    "pages": "10–12; full comparison",
+    "purpose": "Recompute all count-derived metrics from the 83 archived comparison records, plot their confusion matrices, and display the supplied Kaggle environments/probes and the incomplete Mac FP32 attempt. No model is trained.",
+    "gpu": "CPU",
+    "models": [],
+    "extra": [],
+    "finding": "This is an evidence replay. AP/AUC/Brier values without imported Kaggle per-post predictions remain transcribed log values. A memory-pressure failure on a Mac cannot be promised to recur on a different Kaggle GPU. Fresh training is provided by the other notebooks.",
+    "file": "10_archived_logs_and_interrupted_attempt.ipynb",
+    "code_cells": 8,
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24"
+    ],
+    "sha256": "c1b93bd81a39e76b5471b7b4de4b52d8171b2b192d3ff56338675e0ac63b5177"
+  }
+]

@@ -1,0 +1,3 @@
+# Use Project/.venv locally. The notebook installs these in its Kaggle environment.
+sentencepiece==0.2.1
+protobuf==6.33.6

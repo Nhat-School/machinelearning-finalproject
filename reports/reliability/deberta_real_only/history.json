@@ -1,0 +1,32 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.29940047721023094,
+    "validation_ap_by_source": {
+      "upenn": 0.6243417345763189,
+      "stanford": 0.8273237862818954
+    },
+    "mean_validation_ap": 0.7258327604291072,
+    "epoch_seconds": 862.5204884172417
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.17501433961360666,
+    "validation_ap_by_source": {
+      "upenn": 0.6424651606544816,
+      "stanford": 0.8466571996469932
+    },
+    "mean_validation_ap": 0.7445611801507374,
+    "epoch_seconds": 869.7706157499924
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.13995515512777687,
+    "validation_ap_by_source": {
+      "upenn": 0.6321493913621524,
+      "stanford": 0.8452536556116693
+    },
+    "mean_validation_ap": 0.7387015234869109,
+    "epoch_seconds": 860.3159343325533
+  }
+]

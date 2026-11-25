@@ -1,0 +1,4 @@
+[
+  "Phân tích Stanford: stanford_022577 chỉ có ba từ “translated by google?” nên thiếu ngữ cảnh để suy ra nhãn urgency 5. Ngược lại stanford_021480 có “still stuck” và “help me”, rất gần ngôn ngữ yêu cầu hỗ trợ nhưng nhãn gốc chỉ là 3. Hai ví dụ cho thấy nhiệm vụ là khẩn cấp theo nhãn, không đồng nhất với phát hiện câu hỏi hay lời xin trợ giúp.",
+  "Phân tích chuyển nguồn UPenn: upenn_003275 là một tranh luận căng thẳng cần chú ý của người quản lý diễn đàn, nhưng không giống yêu cầu hỗ trợ bài tập điển hình. upenn_002353 chỉ hỏi “Is it possible technical persons?” mà có điểm rất cao. Đây là dấu hiệu điểm xác suất của pipeline Stanford có thể quá tự tin ở câu ngắn ngoài phân phối; cần xem đặc trưng và hiệu chuẩn thay vì coi điểm gần 1 là chắc chắn đúng."
+]

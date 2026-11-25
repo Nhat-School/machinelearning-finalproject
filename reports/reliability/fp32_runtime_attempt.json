@@ -1,0 +1,35 @@
+{
+  "model_id": "microsoft/deberta-v3-base",
+  "revision": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+  "configuration": {
+    "epochs": 3,
+    "patience": 2,
+    "batch_size": 8,
+    "accumulation": 4,
+    "max_length": 512,
+    "lr": 1e-05,
+    "seed": 42,
+    "include_approved_custom": false,
+    "smoke_steps": 0
+  },
+  "device": "mps",
+  "precision": "float32",
+  "source_fit_counts": {
+    "stanford": 18604,
+    "upenn": 2257
+  },
+  "source_balancing": "loss weights inverse source sample count; natural class ratios retained",
+  "checkpoint_selection": "mean per-source validation AP; no F1/test-driven selection",
+  "calibration": "per-source and source-balanced pooled Platt scaling on calibration role only",
+  "decision_threshold": "validation balanced accuracy; pooled policy averages source balanced accuracy",
+  "review_policy": "calibrated p <= 0.15 NORMAL or >= 0.85 PRIORITY, consistent with binary threshold; otherwise REVIEW",
+  "custom_rows_used": 0,
+  "historical_test_status": "previously inspected; exploratory comparison",
+  "weights_status": "stopped before first validation checkpoint; not evaluated or exported",
+  "stop_reason": "Full FP32 512-token attempt caused substantial system memory pressure on the Mac. No quality metrics obtained.",
+  "observed_progress": {
+    "fit_rows_seen": 6400,
+    "optimizer_updates": 200,
+    "epoch_seconds": 588.3180016656406
+  }
+}

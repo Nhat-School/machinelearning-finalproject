@@ -1,0 +1,118 @@
+[
+  {
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "minilm_tfidf_blend",
+    "threshold": 0.5731890967671966,
+    "minilm_weight": 0.75,
+    "precision": 0.5915492957746479,
+    "recall": 0.6885245901639344,
+    "f1": 0.6363636363636364,
+    "macro_f1": 0.7989818181818182,
+    "accuracy": 0.9305354558610709,
+    "average_precision": 0.7224185895670262,
+    "roc_auc": 0.9234192037470728,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        601,
+        29
+      ],
+      [
+        19,
+        42
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "minilm_tfidf_blend",
+    "threshold": 0.5731890967671966,
+    "minilm_weight": 0.75,
+    "precision": 0.7447073474470735,
+    "recall": 0.5411764705882353,
+    "f1": 0.6268343815513627,
+    "macro_f1": 0.7767916763723892,
+    "accuracy": 0.8775369797041623,
+    "average_precision": 0.6952677450955922,
+    "roc_auc": 0.8869775696677874,
+    "precision_at_20": 0.9,
+    "recall_at_20": 0.016289592760180997,
+    "top20_found": 18,
+    "confusion_matrix": [
+      [
+        4504,
+        205
+      ],
+      [
+        507,
+        598
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "minilm_tfidf_blend",
+    "threshold": 0.3931987027552757,
+    "minilm_weight": 0.8,
+    "precision": 0.2717948717948718,
+    "recall": 0.8688524590163934,
+    "f1": 0.4140625,
+    "macro_f1": 0.640423789964476,
+    "accuracy": 0.7829232995658466,
+    "average_precision": 0.46387293469993557,
+    "roc_auc": 0.904735883424408,
+    "precision_at_20": 0.65,
+    "recall_at_20": 0.21311475409836064,
+    "top20_found": 13,
+    "confusion_matrix": [
+      [
+        488,
+        142
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "minilm_tfidf_blend",
+    "threshold": 0.3931987027552757,
+    "minilm_weight": 0.8,
+    "precision": 0.7642799678197908,
+    "recall": 0.8597285067873304,
+    "f1": 0.8091993185689949,
+    "macro_f1": 0.8804617282500147,
+    "accuracy": 0.9229446164430685,
+    "average_precision": 0.8810931623919017,
+    "roc_auc": 0.9636608054855965,
+    "precision_at_20": 1.0,
+    "recall_at_20": 0.01809954751131222,
+    "top20_found": 20,
+    "confusion_matrix": [
+      [
+        4416,
+        293
+      ],
+      [
+        155,
+        950
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "deberta": {
+    "paired_scenarios": 40,
+    "score_decreases_after_resolution": 29,
+    "interpretation": "Directional behaviour on drafted scenarios, not accuracy or a fresh benchmark."
+  },
+  "minilm": {
+    "paired_scenarios": 40,
+    "score_decreases_after_resolution": 34,
+    "interpretation": "Directional behaviour on drafted scenarios, not accuracy or a fresh benchmark."
+  }
+}

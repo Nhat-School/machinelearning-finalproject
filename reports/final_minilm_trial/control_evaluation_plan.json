@@ -1,0 +1,15 @@
+{
+  "runs": [
+    "real_only_seed42",
+    "real_only_seed43"
+  ],
+  "binary_threshold": 0.5,
+  "review_bounds": [
+    0.2,
+    0.8
+  ],
+  "selection": "seed 42 fixed in advance; seed 43 reports initialization variation",
+  "custom_training_rows": 0,
+  "custom_metrics": "synthetic draft diagnostics only; no custom gradient updates authorized",
+  "historical_test_status": "previously inspected; exploratory"
+}

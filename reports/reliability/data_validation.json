@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "original_source_hashes_match": true,
+  "historical_test_membership_preserved": true,
+  "upenn_students_disjoint_across_all_roles": true,
+  "custom_scenario_groups_disjoint": true,
+  "custom_training_rows_require_human_review": true,
+  "approved_custom_training_rows": 0,
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "sklearn": "1.9.1",
+    "sentencepiece": "0.2.1"
+  }
+}

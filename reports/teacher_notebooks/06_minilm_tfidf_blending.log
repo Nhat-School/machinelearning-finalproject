@@ -1,0 +1,1784 @@
+Cell 1: Project: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/06_minilm_tfidf_blending
+Mode: LOCAL QA: saved completed training; no fitting
+
+Cell 3: {
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "requirements": [
+    "numpy>=2,<3",
+    "scikit-learn==1.9.1",
+    "matplotlib>=3.10,<4",
+    "joblib>=1.4,<2",
+    "packaging>=24",
+    "torch>=2.8",
+    "transformers==4.57.6",
+    "sentencepiece==0.2.1"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "packaging": "26.3",
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "sentencepiece": "0.2.1"
+  },
+  "device": "mps",
+  "visible_gpus": 0,
+  "training_gpu_count": 0,
+  "validation_reuse": true,
+  "fresh_training_requested": false
+}
+
+Cell 32: {
+  "prepare_data.py": "f23b27400fd1166272d6a2bce787eedb608063e07433b774ec6bc4464793e42f",
+  "train.py": "cb94a335c4205e4ceff9d99297a9253ec77a25ed96689b1a65075289c13741d0",
+  "organize_datasets.py": "a5aaa7df87679d029601e5142c2cc1365b3c517e3667dbc19fce1ed5cb6f9b51",
+  "build_custom_dataset.py": "a92cc3d1fa764a13a5785d24b50c8fcfcd61a0f4e42126e95f650e71c26f91ca",
+  "prepare_reliability_data.py": "df5132d1f5ceaa35af63058b6b9f46235946c4e870cf5e89aa0fcbd04b2ec57a",
+  "audit_custom_labels_ai.py": "e400ca17a4c7551e2f14794b75b0ef99ccd0b4330da725edc7408f008ab576b9",
+  "teacher_notebook_tools.py": "c1f9bacc5808ed2267a2aee5028d9bbd51a98357dbca6007c5962f68e6c1a603",
+  "finetune_minilm.py": "0a17a11595dc85673bf55bcdcf52dae158145a4174d5ac24bd4f33b6b13f7042",
+  "standalone_inference.py": "73822c7e5296474bfe17a63120639a4cfe93cc6e4a5fd08716b11507ffe39c09",
+  "package_finetuned_models.py": "4bf697156500a858201b08fc2ed835711a837b1b8c7ed93d6c9a8b41495f6e28",
+  "blend_trained_models.py": "a264689ddc3b4a8aba4e96e744ecefc629da8645f0fb4fc424d48dadec9dc5a6",
+  "standalone_blend.py": "50100006495b4c55b00e7eaafd4a481e39c0540879d31cbd9b1da59d3f971a4c",
+  "package_blended_models.py": "22a6e2c9061f2ac68bc5005b532c5d5646dea0caf92e2519bd50cb41506064be"
+}
+
+Cell 34: upenn: raw=3504, final=3493, priority=298
+
+Cell 34: stanford: raw=29604, final=29070, priority=5524
+Canonical dataset folder: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/06_minilm_tfidf_blending/Datasets
+Original file hashes verified; legacy training paths remain usable.
+
+Cell 34: {
+  "version": "custom-v2",
+  "rows": 160,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16,
+    "still_blocked_update": 40
+  },
+  "splits": {
+    "validation": 36,
+    "train": 93,
+    "challenge": 31
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "development_history": "40 still-blocked updates added after observing poor resolution handling; not an independent benchmark",
+  "draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991"
+}
+
+Cell 34: {
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 34: {
+  "passed": true,
+  "hashes_and_cleaning_checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "historical_test_membership_preserved": true,
+  "upenn_student_roles_disjoint": true,
+  "custom_scenario_groups_disjoint": true,
+  "rows": 32563,
+  "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}
+{
+  "both_binary_classes_present": true,
+  "labels_in_range": true,
+  "no_exact_duplicates_between_sources": true,
+  "no_exact_duplicates_within_sources": true,
+  "nonempty_text": true,
+  "rows_accounted_for": true
+}
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 36: upenn scouts and selection {
+  "scout_runs": [
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.126501082908362,
+          "threshold": 0.24508501589298248,
+          "train_loss": 0.56825598448621,
+          "val_ap": 0.07275832876892312,
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.16519174041297935
+        },
+        {
+          "epoch": 2,
+          "seconds": 5.337628624867648,
+          "threshold": 0.09877260029315948,
+          "train_loss": 0.318194080502113,
+          "val_ap": 0.09034750782019704,
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.1841269841269841
+        },
+        {
+          "epoch": 3,
+          "seconds": 5.363802415784448,
+          "threshold": 0.10087861865758896,
+          "train_loss": 0.2841162630671708,
+          "val_ap": 0.12993634069120752,
+          "val_f1_default": 0.0,
+          "val_f1_tuned": 0.2109704641350211
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_plain",
+      "original_training_posts": 2248,
+      "seconds": 19.404438790865242,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2248,
+      "validation_ap": 0.12993634069120752,
+      "validation_f1_tuned": 0.2109704641350211,
+      "validation_rows": 554,
+      "validation_threshold": 0.10087861865758896
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 5.411545374896377,
+          "threshold": 0.5063873529434204,
+          "train_loss": 0.6830037240456007,
+          "val_ap": 0.3890771296695562,
+          "val_f1_default": 0.3116883116883117,
+          "val_f1_tuned": 0.4
+        },
+        {
+          "epoch": 2,
+          "seconds": 5.339879582636058,
+          "threshold": 0.5622966289520264,
+          "train_loss": 0.6229891180992126,
+          "val_ap": 0.47039698753149156,
+          "val_f1_default": 0.3375,
+          "val_f1_tuned": 0.4675324675324675
+        },
+        {
+          "epoch": 3,
+          "seconds": 5.277043915819377,
+          "threshold": 0.5791624188423157,
+          "train_loss": 0.5287649469231371,
+          "val_ap": 0.47843079520639636,
+          "val_f1_default": 0.3783783783783784,
+          "val_f1_tuned": 0.4878048780487805
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted",
+      "original_training_posts": 2248,
+      "seconds": 17.442103082779795,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2248,
+      "validation_ap": 0.47843079520639636,
+      "validation_f1_tuned": 0.4878048780487805,
+      "validation_rows": 554,
+      "validation_threshold": 0.5791624188423157
+    },
+    {
+      "augmented_posts": 749,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.584870208054781,
+          "threshold": 0.5136684775352478,
+          "train_loss": 0.6784979490029402,
+          "val_ap": 0.4020917958748665,
+          "val_f1_default": 0.3010752688172043,
+          "val_f1_tuned": 0.3934426229508197
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.391652999911457,
+          "threshold": 0.6125414371490479,
+          "train_loss": 0.5675107852832691,
+          "val_ap": 0.4652445667654411,
+          "val_f1_default": 0.37142857142857144,
+          "val_f1_tuned": 0.4657534246575343
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.401061333250254,
+          "threshold": 0.6905590891838074,
+          "train_loss": 0.4135030487357755,
+          "val_ap": 0.4916941765948169,
+          "val_f1_default": 0.3916083916083916,
+          "val_f1_tuned": 0.5263157894736842
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted_aug",
+      "original_training_posts": 2248,
+      "seconds": 23.733835958410054,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2997,
+      "validation_ap": 0.4916941765948169,
+      "validation_f1_tuned": 0.5263157894736842,
+      "validation_rows": 554,
+      "validation_threshold": 0.6905590891838074
+    }
+  ],
+  "selected": "weighted_aug"
+}
+upenn five-fold development {
+  "epochs_for_final": 3,
+  "fold_f1_mean": 0.6168590793907109,
+  "fold_f1_std": 0.02492383548630587,
+  "folds": [
+    {
+      "augmented_posts": 759,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.550015749875456,
+          "threshold": 0.5023193359375,
+          "train_loss": 0.678552526031006,
+          "val_ap": 0.4310243583626608,
+          "val_f1_default": 0.49411764705882355,
+          "val_f1_tuned": 0.5
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.3989643338136375,
+          "threshold": 0.5884161591529846,
+          "train_loss": 0.5771816285480383,
+          "val_ap": 0.6216763172432833,
+          "val_f1_default": 0.5135135135135135,
+          "val_f1_tuned": 0.5833333333333334
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.539640541188419,
+          "threshold": 0.6293190717697144,
+          "train_loss": 0.4321790210448357,
+          "val_ap": 0.6649980827604093,
+          "val_f1_default": 0.5170068027210885,
+          "val_f1_tuned": 0.6126126126126127
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_1",
+      "original_training_posts": 2242,
+      "seconds": 23.89437179081142,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 3001,
+      "validation_ap": 0.6649980827604093,
+      "validation_f1_tuned": 0.6126126126126127,
+      "validation_rows": 560,
+      "validation_threshold": 0.6293190717697144
+    },
+    {
+      "augmented_posts": 747,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.985703167039901,
+          "threshold": 0.5055540204048157,
+          "train_loss": 0.6789771249814525,
+          "val_ap": 0.47701052181541526,
+          "val_f1_default": 0.49230769230769234,
+          "val_f1_tuned": 0.5132743362831858
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.4813989168033,
+          "threshold": 0.61555016040802,
+          "train_loss": 0.5735584068170673,
+          "val_ap": 0.6018355240506925,
+          "val_f1_default": 0.4444444444444444,
+          "val_f1_tuned": 0.5945945945945946
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.469816917087883,
+          "threshold": 0.7272012233734131,
+          "train_loss": 0.4226716325544768,
+          "val_ap": 0.6092039244306514,
+          "val_f1_default": 0.4692737430167598,
+          "val_f1_tuned": 0.625
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_2",
+      "original_training_posts": 2241,
+      "seconds": 24.300077416934073,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2988,
+      "validation_ap": 0.6092039244306514,
+      "validation_f1_tuned": 0.625,
+      "validation_rows": 561,
+      "validation_threshold": 0.7272012233734131
+    },
+    {
+      "augmented_posts": 746,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.907791459001601,
+          "threshold": 0.4976806640625,
+          "train_loss": 0.6806587213890426,
+          "val_ap": 0.4879036217816986,
+          "val_f1_default": 0.43010752688172044,
+          "val_f1_tuned": 0.4897959183673469
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.321851209271699,
+          "threshold": 0.5286551117897034,
+          "train_loss": 0.5740680069798884,
+          "val_ap": 0.591168249821565,
+          "val_f1_default": 0.543046357615894,
+          "val_f1_tuned": 0.5714285714285714
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.304095791652799,
+          "threshold": 0.5655387043952942,
+          "train_loss": 0.42651304089787573,
+          "val_ap": 0.6135409433242901,
+          "val_f1_default": 0.5375,
+          "val_f1_tuned": 0.5970149253731343
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_3",
+      "original_training_posts": 2241,
+      "seconds": 23.948655874934047,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2987,
+      "validation_ap": 0.6135409433242901,
+      "validation_f1_tuned": 0.5970149253731343,
+      "validation_rows": 561,
+      "validation_threshold": 0.5655387043952942
+    },
+    {
+      "augmented_posts": 755,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.540051084011793,
+          "threshold": 0.5031127333641052,
+          "train_loss": 0.6791544597203009,
+          "val_ap": 0.4835436491394647,
+          "val_f1_default": 0.45544554455445546,
+          "val_f1_tuned": 0.4835164835164835
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.373095040675253,
+          "threshold": 0.6315943002700806,
+          "train_loss": 0.5665899319387724,
+          "val_ap": 0.5939477704347061,
+          "val_f1_default": 0.422360248447205,
+          "val_f1_tuned": 0.5609756097560975
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.33840037509799,
+          "threshold": 0.685528576374054,
+          "train_loss": 0.41923407110098365,
+          "val_ap": 0.6124929565652255,
+          "val_f1_default": 0.46540880503144655,
+          "val_f1_tuned": 0.5894736842105263
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_4",
+      "original_training_posts": 2241,
+      "seconds": 23.6880990001373,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2996,
+      "validation_ap": 0.6124929565652255,
+      "validation_f1_tuned": 0.5894736842105263,
+      "validation_rows": 561,
+      "validation_threshold": 0.685528576374054
+    },
+    {
+      "augmented_posts": 749,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 7.550632500089705,
+          "threshold": 0.5264645218849182,
+          "train_loss": 0.6792267137032779,
+          "val_ap": 0.46229605606258617,
+          "val_f1_default": 0.445859872611465,
+          "val_f1_tuned": 0.5217391304347825
+        },
+        {
+          "epoch": 2,
+          "seconds": 7.489804374985397,
+          "threshold": 0.6081287264823914,
+          "train_loss": 0.5649164774838615,
+          "val_ap": 0.5983173614197602,
+          "val_f1_default": 0.4293785310734463,
+          "val_f1_tuned": 0.6296296296296297
+        },
+        {
+          "epoch": 3,
+          "seconds": 7.445281708147377,
+          "threshold": 0.672331690788269,
+          "train_loss": 0.41279877825854294,
+          "val_ap": 0.6252373157064582,
+          "val_f1_default": 0.44970414201183434,
+          "val_f1_tuned": 0.6601941747572816
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_5",
+      "original_training_posts": 2243,
+      "seconds": 23.844002166762948,
+      "seed": 42,
+      "source": "upenn",
+      "training_rows": 2992,
+      "validation_ap": 0.6252373157064582,
+      "validation_f1_tuned": 0.6601941747572816,
+      "validation_rows": 559,
+      "validation_threshold": 0.672331690788269
+    }
+  ],
+  "oof_metrics": {
+    "accuracy": 0.9271948608137045,
+    "average_precision": 0.6134610193534104,
+    "confusion_matrix": [
+      [
+        2446,
+        119
+      ],
+      [
+        85,
+        152
+      ]
+    ],
+    "f1": 0.5984251968503937,
+    "macro_f1": 0.7791968998380697,
+    "positive_count": 237,
+    "precision": 0.5608856088560885,
+    "precision_at_20": 0.85,
+    "recall": 0.6413502109704642,
+    "recall_at_20": 0.07172995780590717,
+    "roc_auc": 0.9179337231968812,
+    "test_size": 2802,
+    "top20_found": 17
+  },
+  "selected": "weighted_aug",
+  "source": "upenn",
+  "threshold": 0.6701767444610596
+}
+stanford scouts and selection {
+  "scout_runs": [
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 2,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 37.59227512497455,
+          "threshold": 0.3849121630191803,
+          "train_loss": 0.3430372778309877,
+          "val_ap": 0.855569235457869,
+          "val_f1_default": 0.782675947409126,
+          "val_f1_tuned": 0.8028880866425994
+        },
+        {
+          "epoch": 2,
+          "seconds": 33.67421824997291,
+          "threshold": 0.5985468626022339,
+          "train_loss": 0.18663363705161684,
+          "val_ap": 0.8652522632307337,
+          "val_f1_default": 0.7962154294032023,
+          "val_f1_tuned": 0.8021472392638036
+        },
+        {
+          "epoch": 3,
+          "seconds": 33.82083670794964,
+          "threshold": 0.5648187398910522,
+          "train_loss": 0.1637757996617074,
+          "val_ap": 0.8636872595262441,
+          "val_f1_default": 0.7979351032448377,
+          "val_f1_tuned": 0.8048595292331056
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_plain",
+      "original_training_posts": 19767,
+      "seconds": 109.7535795411095,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 19767,
+      "validation_ap": 0.8652522632307337,
+      "validation_f1_tuned": 0.8021472392638036,
+      "validation_rows": 3489,
+      "validation_threshold": 0.5985468626022339
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 34.077947416808456,
+          "threshold": 0.7260372638702393,
+          "train_loss": 0.42224049959268617,
+          "val_ap": 0.8611717441185802,
+          "val_f1_default": 0.7790019442644199,
+          "val_f1_tuned": 0.7956363636363636
+        },
+        {
+          "epoch": 2,
+          "seconds": 33.76860475027934,
+          "threshold": 0.8832359910011292,
+          "train_loss": 0.2431226354611567,
+          "val_ap": 0.8638164936683767,
+          "val_f1_default": 0.7734177215189874,
+          "val_f1_tuned": 0.7972560975609756
+        },
+        {
+          "epoch": 3,
+          "seconds": 33.65528491605073,
+          "threshold": 0.6649755239486694,
+          "train_loss": 0.21310165121932007,
+          "val_ap": 0.8682011202830632,
+          "val_f1_default": 0.7833441769681198,
+          "val_f1_tuned": 0.7980835044490076
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted",
+      "original_training_posts": 19767,
+      "seconds": 106.1686183330603,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 19767,
+      "validation_ap": 0.8682011202830632,
+      "validation_f1_tuned": 0.7980835044490076,
+      "validation_rows": 3489,
+      "validation_threshold": 0.6649755239486694
+    },
+    {
+      "augmented_posts": 5303,
+      "batch_size": 64,
+      "best_epoch": 2,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 46.738699375186116,
+          "threshold": 0.5846269726753235,
+          "train_loss": 0.3938583458354381,
+          "val_ap": 0.8597563517832135,
+          "val_f1_default": 0.7909527073337903,
+          "val_f1_tuned": 0.7946741415557113
+        },
+        {
+          "epoch": 2,
+          "seconds": 46.12954429117963,
+          "threshold": 0.8311430811882019,
+          "train_loss": 0.23194099960690434,
+          "val_ap": 0.8636732122986649,
+          "val_f1_default": 0.7677664974619289,
+          "val_f1_tuned": 0.7973273942093543
+        },
+        {
+          "epoch": 3,
+          "seconds": 46.13395804120228,
+          "threshold": 0.7512834072113037,
+          "train_loss": 0.19797954040549406,
+          "val_ap": 0.8584950763051659,
+          "val_f1_default": 0.7735728030788968,
+          "val_f1_tuned": 0.7991660875608061
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted_aug",
+      "original_training_posts": 19767,
+      "seconds": 143.59535091696307,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 25070,
+      "validation_ap": 0.8636732122986649,
+      "validation_f1_tuned": 0.7973273942093543,
+      "validation_rows": 3489,
+      "validation_threshold": 0.8311430811882019
+    }
+  ],
+  "selected": "plain"
+}
+stanford five-fold development {
+  "epochs_for_final": 3,
+  "fold_f1_mean": 0.7984740996034911,
+  "fold_f1_std": 0.009046216801145503,
+  "folds": [
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 2,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.51511637493968,
+          "threshold": 0.3670433759689331,
+          "train_loss": 0.3489003613274012,
+          "val_ap": 0.8348549557464184,
+          "val_f1_default": 0.7635327635327636,
+          "val_f1_tuned": 0.7766578249336871
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.85510391695425,
+          "threshold": 0.2950267791748047,
+          "train_loss": 0.19002540502156579,
+          "val_ap": 0.8452035349956398,
+          "val_f1_default": 0.7697756788665879,
+          "val_f1_tuned": 0.7834497581945191
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.908855125308037,
+          "threshold": 0.37433314323425293,
+          "train_loss": 0.163747030832362,
+          "val_ap": 0.842526492494979,
+          "val_f1_default": 0.7770773638968481,
+          "val_f1_tuned": 0.7899891186071817
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_1",
+      "original_training_posts": 18604,
+      "seconds": 102.12339241569862,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18604,
+      "validation_ap": 0.8452035349956398,
+      "validation_f1_tuned": 0.7834497581945191,
+      "validation_rows": 4652,
+      "validation_threshold": 0.2950267791748047
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.119102500379086,
+          "threshold": 0.5297499895095825,
+          "train_loss": 0.3583274260671893,
+          "val_ap": 0.8394644805356111,
+          "val_f1_default": 0.7930062041737168,
+          "val_f1_tuned": 0.7963594994311718
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.763093165587634,
+          "threshold": 0.31111282110214233,
+          "train_loss": 0.19339823343842877,
+          "val_ap": 0.8615425360926985,
+          "val_f1_default": 0.7836538461538461,
+          "val_f1_tuned": 0.8093907210732253
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.700842040590942,
+          "threshold": 0.43170398473739624,
+          "train_loss": 0.1684143607349237,
+          "val_ap": 0.8630652796374119,
+          "val_f1_default": 0.8022727272727272,
+          "val_f1_tuned": 0.8111420612813369
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_2",
+      "original_training_posts": 18605,
+      "seconds": 101.84025083296001,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18605,
+      "validation_ap": 0.8630652796374119,
+      "validation_f1_tuned": 0.8111420612813369,
+      "validation_rows": 4651,
+      "validation_threshold": 0.43170398473739624
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.289849374908954,
+          "threshold": 0.41063806414604187,
+          "train_loss": 0.35586226524380193,
+          "val_ap": 0.8668138542553834,
+          "val_f1_default": 0.7776456599286563,
+          "val_f1_tuned": 0.7926008968609866
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.846837041899562,
+          "threshold": 0.3897787630558014,
+          "train_loss": 0.19095014633430135,
+          "val_ap": 0.8737623623814923,
+          "val_f1_default": 0.7915194346289752,
+          "val_f1_tuned": 0.7952488687782805
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.91948370821774,
+          "threshold": 0.43758314847946167,
+          "train_loss": 0.165680486091969,
+          "val_ap": 0.874549267462053,
+          "val_f1_default": 0.7922814982973894,
+          "val_f1_tuned": 0.7971175166297118
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_3",
+      "original_training_posts": 18605,
+      "seconds": 101.97956258431077,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18605,
+      "validation_ap": 0.874549267462053,
+      "validation_f1_tuned": 0.7971175166297118,
+      "validation_rows": 4651,
+      "validation_threshold": 0.43758314847946167
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.183594124857336,
+          "threshold": 0.43650195002555847,
+          "train_loss": 0.35593014691696795,
+          "val_ap": 0.8481310165803206,
+          "val_f1_default": 0.7836644591611479,
+          "val_f1_tuned": 0.7906976744186046
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.736542250029743,
+          "threshold": 0.2986958920955658,
+          "train_loss": 0.19110372817923196,
+          "val_ap": 0.8580789176671624,
+          "val_f1_default": 0.7818396226415094,
+          "val_f1_tuned": 0.8023822414726585
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.911869790870696,
+          "threshold": 0.408040851354599,
+          "train_loss": 0.1683108306450089,
+          "val_ap": 0.8584829448079235,
+          "val_f1_default": 0.8006662965019433,
+          "val_f1_tuned": 0.8029978586723767
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_4",
+      "original_training_posts": 18605,
+      "seconds": 101.82714758301154,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18605,
+      "validation_ap": 0.8584829448079235,
+      "validation_f1_tuned": 0.8029978586723767,
+      "validation_rows": 4651,
+      "validation_threshold": 0.408040851354599
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 32.26861995784566,
+          "threshold": 0.3437822461128235,
+          "train_loss": 0.3485990356098289,
+          "val_ap": 0.8612643349444544,
+          "val_f1_default": 0.7749287749287749,
+          "val_f1_tuned": 0.7828810020876825
+        },
+        {
+          "epoch": 2,
+          "seconds": 31.85739850020036,
+          "threshold": 0.2429233193397522,
+          "train_loss": 0.19142927638595703,
+          "val_ap": 0.8721638563714771,
+          "val_f1_default": 0.7854630715123095,
+          "val_f1_tuned": 0.7937823834196891
+        },
+        {
+          "epoch": 3,
+          "seconds": 31.901943249627948,
+          "threshold": 0.34997692704200745,
+          "train_loss": 0.16519982392382346,
+          "val_ap": 0.8733008919095765,
+          "val_f1_default": 0.7864406779661017,
+          "val_f1_tuned": 0.7976633032395115
+        }
+      ],
+      "max_length": 256,
+      "name": "fold_5",
+      "original_training_posts": 18605,
+      "seconds": 101.85768291726708,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 18605,
+      "validation_ap": 0.8733008919095765,
+      "validation_f1_tuned": 0.7976633032395115,
+      "validation_rows": 4651,
+      "validation_threshold": 0.34997692704200745
+    }
+  ],
+  "oof_metrics": {
+    "accuracy": 0.91765565875473,
+    "average_precision": 0.8595962419497389,
+    "confusion_matrix": [
+      [
+        17639,
+        1198
+      ],
+      [
+        717,
+        3702
+      ]
+    ],
+    "f1": 0.7945058482669815,
+    "macro_f1": 0.8715088325033453,
+    "positive_count": 4419,
+    "precision": 0.7555102040816326,
+    "precision_at_20": 1.0,
+    "recall": 0.8377460964019009,
+    "recall_at_20": 0.004525910839556461,
+    "roc_auc": 0.9618895397844008,
+    "test_size": 23256,
+    "top20_found": 20
+  },
+  "selected": "plain",
+  "source": "stanford",
+  "threshold": 0.34997692704200745
+}
+
+Cell 38: BLEND TEST {"train_source": "upenn", "test_source": "upenn", "model": "minilm_tfidf_blend", "threshold": 0.5731890967671966, "minilm_weight": 0.75, "precision": 0.5915492957746479, "recall": 0.6885245901639344, "f1": 0.6363636363636364, "macro_f1": 0.7989818181818182, "accuracy": 0.9305354558610709, "average_precision": 0.7224185895670262, "roc_auc": 0.9234192037470728, "precision_at_20": 0.95, "recall_at_20": 0.3114754098360656, "top20_found": 19, "confusion_matrix": [[601, 29], [19, 42]], "test_size": 691, "positive_count": 61}
+BLEND TEST {"train_source": "upenn", "test_source": "stanford", "model": "minilm_tfidf_blend", "threshold": 0.5731890967671966, "minilm_weight": 0.75, "precision": 0.7447073474470735, "recall": 0.5411764705882353, "f1": 0.6268343815513627, "macro_f1": 0.7767916763723892, "accuracy": 0.8775369797041623, "average_precision": 0.6952677450955922, "roc_auc": 0.8869775696677874, "precision_at_20": 0.9, "recall_at_20": 0.016289592760180997, "top20_found": 18, "confusion_matrix": [[4504, 205], [507, 598]], "test_size": 5814, "positive_count": 1105}
+
+Cell 38: BLEND TEST {"train_source": "stanford", "test_source": "upenn", "model": "minilm_tfidf_blend", "threshold": 0.3931987027552757, "minilm_weight": 0.8, "precision": 0.2717948717948718, "recall": 0.8688524590163934, "f1": 0.4140625, "macro_f1": 0.640423789964476, "accuracy": 0.7829232995658466, "average_precision": 0.46387293469993557, "roc_auc": 0.904735883424408, "precision_at_20": 0.65, "recall_at_20": 0.21311475409836064, "top20_found": 13, "confusion_matrix": [[488, 142], [8, 53]], "test_size": 691, "positive_count": 61}
+BLEND TEST {"train_source": "stanford", "test_source": "stanford", "model": "minilm_tfidf_blend", "threshold": 0.3931987027552757, "minilm_weight": 0.8, "precision": 0.7642799678197908, "recall": 0.8597285067873304, "f1": 0.8091993185689949, "macro_f1": 0.8804617282500147, "accuracy": 0.9229446164430685, "average_precision": 0.8810931623919017, "roc_auc": 0.9636608054855965, "precision_at_20": 1.0, "recall_at_20": 0.01809954751131222, "top20_found": 20, "confusion_matrix": [[4416, 293], [155, 950]], "test_size": 5814, "positive_count": 1105}
+
+Cell 38: Matplotlib is building the font cache; this may take a moment.
+
+Cell 38: upenn {
+  "selected": {
+    "train_source": "upenn",
+    "minilm_weight": 0.75,
+    "tfidf_weight": 0.25,
+    "threshold": 0.5731890967671966,
+    "oof_f1": 0.6003616636528029,
+    "oof_ap": 0.6416072726358286,
+    "selection": "source OOF F1; tie AP, then higher MiniLM weight",
+    "validation_status": "Development diagnostics: base OOF predictions also participated in model/checkpoint selection; not nested CV.",
+    "input_sha256": {
+      "reports/fine_tuning/upenn/oof.csv": "699617a618ea1efb1ade0516f2959b96bffbcdb1cd21127cbf2d68d91b57e505",
+      "reports/experiments/oof_upenn_tfidf_logreg.csv": "8db31c08df89821f5729bdec80292ebf335633ef0fe29d0cd64aa71d7f8bc44d"
+    }
+  },
+  "candidates": [
+    {
+      "minilm_weight": 0.0,
+      "tfidf_weight": 1.0,
+      "threshold": 0.4225475624901568,
+      "oof_f1": 0.5275590551181103,
+      "oof_ap": 0.5563071227084243
+    },
+    {
+      "minilm_weight": 0.05,
+      "tfidf_weight": 0.95,
+      "threshold": 0.38632768077308605,
+      "oof_f1": 0.5340136054421769,
+      "oof_ap": 0.566575633584684
+    },
+    {
+      "minilm_weight": 0.1,
+      "tfidf_weight": 0.9,
+      "threshold": 0.3995088507613038,
+      "oof_f1": 0.5410122164048865,
+      "oof_ap": 0.5759395248127064
+    },
+    {
+      "minilm_weight": 0.15000000000000002,
+      "tfidf_weight": 0.85,
+      "threshold": 0.42836342117579884,
+      "oof_f1": 0.5559701492537313,
+      "oof_ap": 0.5832971834416903
+    },
+    {
+      "minilm_weight": 0.2,
+      "tfidf_weight": 0.8,
+      "threshold": 0.4160978579324979,
+      "oof_f1": 0.56,
+      "oof_ap": 0.5917079728517699
+    },
+    {
+      "minilm_weight": 0.25,
+      "tfidf_weight": 0.75,
+      "threshold": 0.43528565497161964,
+      "oof_f1": 0.5693950177935942,
+      "oof_ap": 0.599230786708017
+    },
+    {
+      "minilm_weight": 0.30000000000000004,
+      "tfidf_weight": 0.7,
+      "threshold": 0.42140428807596303,
+      "oof_f1": 0.5742251223491028,
+      "oof_ap": 0.6061328906260457
+    },
+    {
+      "minilm_weight": 0.35000000000000003,
+      "tfidf_weight": 0.6499999999999999,
+      "threshold": 0.4314065957721718,
+      "oof_f1": 0.5793780687397709,
+      "oof_ap": 0.6115969129155445
+    },
+    {
+      "minilm_weight": 0.4,
+      "tfidf_weight": 0.6,
+      "threshold": 0.45485945044587345,
+      "oof_f1": 0.5834738617200674,
+      "oof_ap": 0.6176605266916085
+    },
+    {
+      "minilm_weight": 0.45,
+      "tfidf_weight": 0.55,
+      "threshold": 0.4640780690032664,
+      "oof_f1": 0.5838926174496644,
+      "oof_ap": 0.6222069985640013
+    },
+    {
+      "minilm_weight": 0.5,
+      "tfidf_weight": 0.5,
+      "threshold": 0.535919158315475,
+      "oof_f1": 0.5910931174089069,
+      "oof_ap": 0.627171297253994
+    },
+    {
+      "minilm_weight": 0.55,
+      "tfidf_weight": 0.44999999999999996,
+      "threshold": 0.5039732435820985,
+      "oof_f1": 0.5892547660311958,
+      "oof_ap": 0.631298354719513
+    },
+    {
+      "minilm_weight": 0.6000000000000001,
+      "tfidf_weight": 0.3999999999999999,
+      "threshold": 0.5320371224784851,
+      "oof_f1": 0.5952813067150636,
+      "oof_ap": 0.6349484736817974
+    },
+    {
+      "minilm_weight": 0.65,
+      "tfidf_weight": 0.35,
+      "threshold": 0.5336001415855789,
+      "oof_f1": 0.5985915492957746,
+      "oof_ap": 0.6377065127395143
+    },
+    {
+      "minilm_weight": 0.7000000000000001,
+      "tfidf_weight": 0.29999999999999993,
+      "threshold": 0.5489836946915407,
+      "oof_f1": 0.5971731448763251,
+      "oof_ap": 0.6401057735585297
+    },
+    {
+      "minilm_weight": 0.75,
+      "tfidf_weight": 0.25,
+      "threshold": 0.5731890967671966,
+      "oof_f1": 0.6003616636528029,
+      "oof_ap": 0.6416072726358286
+    },
+    {
+      "minilm_weight": 0.8,
+      "tfidf_weight": 0.19999999999999996,
+      "threshold": 0.5870528095949024,
+      "oof_f1": 0.5981981981981982,
+      "oof_ap": 0.6426972905510765
+    },
+    {
+      "minilm_weight": 0.8500000000000001,
+      "tfidf_weight": 0.1499999999999999,
+      "threshold": 0.601318329068956,
+      "oof_f1": 0.5939177101967799,
+      "oof_ap": 0.6423527805427655
+    },
+    {
+      "minilm_weight": 0.9,
+      "tfidf_weight": 0.09999999999999998,
+      "threshold": 0.6232918554933584,
+      "oof_f1": 0.5923217550274222,
+      "oof_ap": 0.6397776046518324
+    },
+    {
+      "minilm_weight": 0.9500000000000001,
+      "tfidf_weight": 0.04999999999999993,
+      "threshold": 0.6683772397198272,
+      "oof_f1": 0.5947046843177191,
+      "oof_ap": 0.6314776573864337
+    },
+    {
+      "minilm_weight": 1.0,
+      "tfidf_weight": 0.0,
+      "threshold": 0.6701767444610596,
+      "oof_f1": 0.5984251968503936,
+      "oof_ap": 0.6134610193534104
+    }
+  ]
+}
+stanford {
+  "selected": {
+    "train_source": "stanford",
+    "minilm_weight": 0.8,
+    "tfidf_weight": 0.19999999999999996,
+    "threshold": 0.3931987027552757,
+    "oof_f1": 0.7971014492753623,
+    "oof_ap": 0.8613545448539878,
+    "selection": "source OOF F1; tie AP, then higher MiniLM weight",
+    "validation_status": "Development diagnostics: base OOF predictions also participated in model/checkpoint selection; not nested CV.",
+    "input_sha256": {
+      "reports/fine_tuning/stanford/oof.csv": "d9836721ecbbc16ac2c050d10d5c8feb0517bde4ed10fbc85f5baa5679cf34a7",
+      "reports/experiments/oof_stanford_tfidf_logreg.csv": "55e559f5023a879d7fb836a6d5f2a7e9351a195c09ffc7de9bb3a19059e54f04"
+    }
+  },
+  "candidates": [
+    {
+      "minilm_weight": 0.0,
+      "tfidf_weight": 1.0,
+      "threshold": 0.5886726433816505,
+      "oof_f1": 0.7082063438311321,
+      "oof_ap": 0.7673794403936639
+    },
+    {
+      "minilm_weight": 0.05,
+      "tfidf_weight": 0.95,
+      "threshold": 0.5500724561410105,
+      "oof_f1": 0.7184998355082793,
+      "oof_ap": 0.7841161389261275
+    },
+    {
+      "minilm_weight": 0.1,
+      "tfidf_weight": 0.9,
+      "threshold": 0.552511715214363,
+      "oof_f1": 0.7299334811529933,
+      "oof_ap": 0.7971294141678552
+    },
+    {
+      "minilm_weight": 0.15000000000000002,
+      "tfidf_weight": 0.85,
+      "threshold": 0.5418537253585419,
+      "oof_f1": 0.7412742382271469,
+      "oof_ap": 0.8081157063082989
+    },
+    {
+      "minilm_weight": 0.2,
+      "tfidf_weight": 0.8,
+      "threshold": 0.5497194219540712,
+      "oof_f1": 0.751186440677966,
+      "oof_ap": 0.8175642103014406
+    },
+    {
+      "minilm_weight": 0.25,
+      "tfidf_weight": 0.75,
+      "threshold": 0.5362585831566116,
+      "oof_f1": 0.7613892647722146,
+      "oof_ap": 0.8256735717185025
+    },
+    {
+      "minilm_weight": 0.30000000000000004,
+      "tfidf_weight": 0.7,
+      "threshold": 0.5135736473236626,
+      "oof_f1": 0.7702387562465297,
+      "oof_ap": 0.8326170711139963
+    },
+    {
+      "minilm_weight": 0.35000000000000003,
+      "tfidf_weight": 0.6499999999999999,
+      "threshold": 0.5055740768389996,
+      "oof_f1": 0.7788376220053239,
+      "oof_ap": 0.8384990481258091
+    },
+    {
+      "minilm_weight": 0.4,
+      "tfidf_weight": 0.6,
+      "threshold": 0.5023206691643338,
+      "oof_f1": 0.7858017135862913,
+      "oof_ap": 0.8433793266795343
+    },
+    {
+      "minilm_weight": 0.45,
+      "tfidf_weight": 0.55,
+      "threshold": 0.5015284294789959,
+      "oof_f1": 0.7898388540734109,
+      "oof_ap": 0.8473790415477813
+    },
+    {
+      "minilm_weight": 0.5,
+      "tfidf_weight": 0.5,
+      "threshold": 0.48469639869758363,
+      "oof_f1": 0.7936930934932267,
+      "oof_ap": 0.8506423566541663
+    },
+    {
+      "minilm_weight": 0.55,
+      "tfidf_weight": 0.44999999999999996,
+      "threshold": 0.48321773816841485,
+      "oof_f1": 0.7958546913305103,
+      "oof_ap": 0.8533043471083769
+    },
+    {
+      "minilm_weight": 0.6000000000000001,
+      "tfidf_weight": 0.3999999999999999,
+      "threshold": 0.46172930700608456,
+      "oof_f1": 0.7964718853362734,
+      "oof_ap": 0.8556384565027765
+    },
+    {
+      "minilm_weight": 0.65,
+      "tfidf_weight": 0.35,
+      "threshold": 0.4274821867519105,
+      "oof_f1": 0.7962580224083542,
+      "oof_ap": 0.857539092684258
+    },
+    {
+      "minilm_weight": 0.7000000000000001,
+      "tfidf_weight": 0.29999999999999993,
+      "threshold": 0.4085031480836483,
+      "oof_f1": 0.7968851395197925,
+      "oof_ap": 0.859055354049321
+    },
+    {
+      "minilm_weight": 0.75,
+      "tfidf_weight": 0.25,
+      "threshold": 0.36926243185318564,
+      "oof_f1": 0.7965469466055632,
+      "oof_ap": 0.8603899749860591
+    },
+    {
+      "minilm_weight": 0.8,
+      "tfidf_weight": 0.19999999999999996,
+      "threshold": 0.3931987027552757,
+      "oof_f1": 0.7971014492753623,
+      "oof_ap": 0.8613545448539878
+    },
+    {
+      "minilm_weight": 0.8500000000000001,
+      "tfidf_weight": 0.1499999999999999,
+      "threshold": 0.3880601470118659,
+      "oof_f1": 0.7968834541716264,
+      "oof_ap": 0.8621088280504152
+    },
+    {
+      "minilm_weight": 0.9,
+      "tfidf_weight": 0.09999999999999998,
+      "threshold": 0.3689439799767852,
+      "oof_f1": 0.7958634062264355,
+      "oof_ap": 0.8626564092839604
+    },
+    {
+      "minilm_weight": 0.9500000000000001,
+      "tfidf_weight": 0.04999999999999993,
+      "threshold": 0.36155777588049864,
+      "oof_f1": 0.7953103151554266,
+      "oof_ap": 0.8623715056832727
+    },
+    {
+      "minilm_weight": 1.0,
+      "tfidf_weight": 0.0,
+      "threshold": 0.34997692704200745,
+      "oof_f1": 0.7945058482669815,
+      "oof_ap": 0.8595962419497389
+    }
+  ]
+}
+
+Cell 40: {
+  "profile": "blend",
+  "rows": 4,
+  "figures": [
+    "reports/teacher/metrics_01.png",
+    "reports/teacher/confusions_01.png",
+    "reports/teacher/precision_recall_threshold_01.png"
+  ],
+  "mode": "SAVED-TRAINING VALIDATION",
+  "checks": "All reported count metrics recomputed; per-post scores checked when available."
+}
+
+Cell 40: {
+  "train_source": "upenn",
+  "test_source": "upenn",
+  "model": "minilm_tfidf_blend",
+  "threshold": 0.5731890967671966,
+  "minilm_weight": 0.75,
+  "precision": 0.5915492957746479,
+  "recall": 0.6885245901639344,
+  "f1": 0.6363636363636364,
+  "macro_f1": 0.7989818181818182,
+  "accuracy": 0.9305354558610709,
+  "average_precision": 0.7224185895670262,
+  "roc_auc": 0.9234192037470728,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.3114754098360656,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      601,
+      29
+    ],
+    [
+      19,
+      42
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61
+}
+{
+  "train_source": "upenn",
+  "test_source": "stanford",
+  "model": "minilm_tfidf_blend",
+  "threshold": 0.5731890967671966,
+  "minilm_weight": 0.75,
+  "precision": 0.7447073474470735,
+  "recall": 0.5411764705882353,
+  "f1": 0.6268343815513627,
+  "macro_f1": 0.7767916763723892,
+  "accuracy": 0.8775369797041623,
+  "average_precision": 0.6952677450955922,
+  "roc_auc": 0.8869775696677874,
+  "precision_at_20": 0.9,
+  "recall_at_20": 0.016289592760180997,
+  "top20_found": 18,
+  "confusion_matrix": [
+    [
+      4504,
+      205
+    ],
+    [
+      507,
+      598
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105
+}
+{
+  "train_source": "stanford",
+  "test_source": "upenn",
+  "model": "minilm_tfidf_blend",
+  "threshold": 0.3931987027552757,
+  "minilm_weight": 0.8,
+  "precision": 0.2717948717948718,
+  "recall": 0.8688524590163934,
+  "f1": 0.4140625,
+  "macro_f1": 0.640423789964476,
+  "accuracy": 0.7829232995658466,
+  "average_precision": 0.46387293469993557,
+  "roc_auc": 0.904735883424408,
+  "precision_at_20": 0.65,
+  "recall_at_20": 0.21311475409836064,
+  "top20_found": 13,
+  "confusion_matrix": [
+    [
+      488,
+      142
+    ],
+    [
+      8,
+      53
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61
+}
+{
+  "train_source": "stanford",
+  "test_source": "stanford",
+  "model": "minilm_tfidf_blend",
+  "threshold": 0.3931987027552757,
+  "minilm_weight": 0.8,
+  "precision": 0.7642799678197908,
+  "recall": 0.8597285067873304,
+  "f1": 0.8091993185689949,
+  "macro_f1": 0.8804617282500147,
+  "accuracy": 0.9229446164430685,
+  "average_precision": 0.8810931623919017,
+  "roc_auc": 0.9636608054855965,
+  "precision_at_20": 1.0,
+  "recall_at_20": 0.01809954751131222,
+  "top20_found": 20,
+  "confusion_matrix": [
+    [
+      4416,
+      293
+    ],
+    [
+      155,
+      950
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105
+}
+
+Cell 40: Checks: [
+  {
+    "experiment": "minilm_tfidf_blend upenn \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "minilm_tfidf_blend upenn \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "minilm_tfidf_blend stanford \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "minilm_tfidf_blend stanford \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  }
+]
+Actual error examples: [
+  {
+    "experiment": "minilm_tfidf_blend upenn \u2192 upenn",
+    "all_error_count": 48,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08055339253743235,
+        "threshold": 0.5731890967671966,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_003317",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09736811864900141,
+        "threshold": 0.5731890967671966,
+        "error": "FN",
+        "text": "Being in the medical/pharmaceutical industry, it is easy to understand that Dr. [REDACTED] would lean towards drug-based care, but I didn't know that he was against non-drug approaches to health care. However, I don't see why you have chosen this course to promote a book that is completely off-topic. I think it is completely inappropriate to place an ad in a classroom for a two-year old book that will result in book sales and revenue. I would suggest that either you or Coursera consider removing it as it amounts to nothing more than spam."
+      },
+      {
+        "post_id": "upenn_000917",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.1112114286444538,
+        "threshold": 0.5731890967671966,
+        "error": "FN",
+        "text": "Thanks [REDACTED], I imagine there are more people who feel like we do. I hope the instructors will be understanding in our cases. I really want to work on something good, for my own ease and pleasure and I feel if there is a too strict deadline on it, I'll end up disappointed.Of course, I wouldn't restart by week 7. That would be just plain silly."
+      },
+      {
+        "post_id": "upenn_003162",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.1449481976050368,
+        "threshold": 0.5731890967671966,
+        "error": "FN",
+        "text": "\"Professor [Redacted], you suggest that antibody titre testing is expensive (more than $100), and expertscontend thereno downside to a second shot.?5\"I feel you just answered your own question - or at least the answer you require is in the question that you ask. Making children take blood tests is expensive and just not needed as there are no downsides to a second shot. Just my experience but I can also envisage that it is time consuming and invasive to ask children to get pathology collections compared to a vaccination. By the way .. I don't think lecturers are allowed to contribute in forms from my experience with Coursera, so don't be disappointed or go on the attack if you don't get a direct answer here."
+      }
+    ]
+  },
+  {
+    "experiment": "minilm_tfidf_blend upenn \u2192 stanford",
+    "all_error_count": 712,
+    "examples": [
+      {
+        "post_id": "stanford_014092",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08760029855018424,
+        "threshold": 0.5731890967671966,
+        "error": "FN",
+        "text": "For years academics have been telling researchers that there is a problem of generalization with regard to all of the \\stress management\\\" or \\\"coping skills training\\\" literature (see below). Unfortunately, assistant professors need publications, and doctoral students need dissertation topics--to manage their own stress. So, what shows up are hundreds of one-time studies with crummy control groups, no data on effect size, no reports of \\\"intention to treat\\\" drop-out rates and, most concerning of all, follow-up data that rarely or never exceeds 30, 60 or 90 days. The QR response (Stroebel's offshoot of Benson's work), TM (multitudes of teachers), mindfulness meditation (in any of its forms), prayer (choose your object), and dozens of other \\\"tools\\\" have a physiological effect: when practiced assiduously and if applied consistently; an \\\"if\\\" that eliminates the majority of would-be practitioners. \u0007\u0007Most people don't bother with those techniques. They just muddle through. And, muddling through is probably about as effective a technique for most people as spending a bunch of time/money learning one of the \\\"tools\\\" suggested in the module. Certainly, that's what Dr. Friedlander did for both her speech and her sky-dive. That is, muddling works best unless you're going to use a specific \\\"tool\\\" to tolerate a very delimited stressor, and you are willing to put in as much time as necessary to get to a point where you can use that \\\"tool\\\" one time for that one event. After that, you might just as well just try repeating the event, and seeing how you do the 2nd time. It probably will go better the next time without a lot of extra \\\"tools.\\\"\u0007\u0007So, I again suggest sticking with understanding the physiology, practicing the situation that you need to become competent at, and ignoring the benedictions of stress-management \\\"tool\\\" promoters. Once you understand the physiology you can devise your own way of getting by. That will almost certainly be far more effective than anything someone gives you to try. \u0007\u0007----\u0007\u0007Generalization effects in coping skills training.\u0007Smith, Ronald E.\u0007Journal of Sport & Exercise Psychology, Vol 21(3), Sep 1999, 189-204.\u0007\u0007Abstract\u0007\u0007An important consideration in coping skills training is the extent to which acquired skills generalize to other life domains. For example, sport-oriented performance enhancement skills are often regarded as life skills that can also facilitate adaptation in other areas of life. Moreover, task-specific increases in self-efficacy pr\""
+      },
+      {
+        "post_id": "stanford_026854",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08847323216486519,
+        "threshold": 0.5731890967671966,
+        "error": "FN",
+        "text": "Dr. Efron truly understands good writing. Thank you for sharing these tips. I enjoyed your interview. \u0007\u0007I've worked in energy industry for about 20 years. My colleagues,scientists and engineers, struggle with concise, clear, and interesting writing. I remember writing a group paper with industry professionals who had more experience and published papers than me. I learned early in my career (actually my first technical writing course in college) to practice good writing - clear, concise, and correct. When editing our paper, I explained to a senior colleague why we should avoid passive voice when possible. He didn't agree. He commented that he didn't believe in that - active voice. Very old school attitude. And he wasn't the only one with attitude. \u0007\u0007Now, more papers in our industry are interesting and easy-to-read. Industry style guides, like Society of Petroleum Engineers (SPE) and American Petroleum Industry (API), encourage the active voice, as well as most of the good writing techniques discussed in this course."
+      },
+      {
+        "post_id": "stanford_023597",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.0955121369706658,
+        "threshold": 0.5731890967671966,
+        "error": "FN",
+        "text": "This interesting debate causes in me a power insight... Dr Kristin and partners thanks to open my eyes (and mind)!!!\u0007\u00071. If we keep **OPENMIND** and **FLEXIBLE** (adaptative) will be better.\u0007I percive too much language programming, prejudge, paradigm and dogmatism (in others forum\u00b4s threads too). Just isn\u00b4t contradict to **open** and **skeptical** actitude, own of science?\u0007\u00072. The key point is that active and pasive voices, **CO-EXIST**. There are not exclude. We have to use both, with criteria... Unfortunately nobody (even editors) can measure it.\u0007I think that principal problem is OVERusing that using either.\u0007\u00073. In other hand, if editors by principal currents medicine journals (Science, Nature, PLoS, BJM , AMA, etc) and many styles recomendations, promotes active voice; you only have to follow or write a (disgust) letter to editorial commite :) Remember publish or perish...\u0007\u00074. KISS (keep it short and simple) is brilliant guide. If active voice don\u00b4t loose precision and rigorous; what\u00b4s the problem? isn\u00b4t seem \\academic\\\"?, isn\u00b4t seem crytic and complicate? People speak in pasive voice in all cultures, isn\u00b4t. Natural speak is in active voice and it\u00b4s simple and understandable. \u0007\u00075. What\u00b4s it say neurolinguistics (evidence) about? What\u00b4s say Chomsky about? What\u00b4s say the EVIDENCE?\u0007\u00076. For many years I feel ridiculous overuse of pasive voice in sciwrite but was the \\\"rules\\\" or style (old fashion?). I think that is analogous to slang of rappers, militaries... Need the sciencist built own jerom, or scientist only have to use technical terms when/where it\u00b4s necesary puting at key point his audience...? \u0007\u0007Happy weekend and enjoy it the course!!!\u0007\u0007Best regards for all\u0007\u0007JP, from Chile\""
+      },
+      {
+        "post_id": "stanford_012898",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09759074739240818,
+        "threshold": 0.5731890967671966,
+        "error": "FN",
+        "text": "Hi!\u0007\u0007It would be interesting to know how Corey's opinion about aging changed after his experience in the \\Agnes suit\\\" and all the information we've learned from the section. \u0007\u0007And also - Did he change his habits or something in life in order to be our healthiest Superhero as he ages? :)\u0007\u0007Please, share with us your outcomes and results, Corey!\u0007\u0007<nameRedac_<anon_screen_name_redacted>>\""
+      }
+    ]
+  },
+  {
+    "experiment": "minilm_tfidf_blend stanford \u2192 upenn",
+    "all_error_count": 150,
+    "examples": [
+      {
+        "post_id": "upenn_000703",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9785918403420848,
+        "threshold": 0.3931987027552757,
+        "error": "FP",
+        "text": "Hello,Can someone please explain how to get the equation in part 2 in the first place? What is the s-factor in the \"food\"-equation?Thanks and kind regards, [REDACTED]."
+      },
+      {
+        "post_id": "upenn_003138",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9747873521664995,
+        "threshold": 0.3931987027552757,
+        "error": "FP",
+        "text": "Dear guys,I am curious about the rabies story in the video,it said that rabbit spinal cord can attenuate the rabies virus, so it can induce immune response in human.That means what Pasteur injected in human body was not an antibody, its an antigen.What confused me is: is it safe or perhaps effective to inject antigen when you already have infected by so-called the wild antigen? I thought that vaccine as an active innate immunization should be given prior to pathogen exposure.Please correct me if I'm wrong"
+      },
+      {
+        "post_id": "upenn_003080",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9708876279477463,
+        "threshold": 0.3931987027552757,
+        "error": "FP",
+        "text": "How do we delete a thread?"
+      },
+      {
+        "post_id": "upenn_000188",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9692629500423227,
+        "threshold": 0.3931987027552757,
+        "error": "FP",
+        "text": "Can someone explain this to me? If I complete the course without paying the $49 will I not get a certificate of completion? If you have to buy this to get a signature does it carry over to different courses as well, or do you have to buy one for each course in order to get the certificate? Thanks."
+      }
+    ]
+  },
+  {
+    "experiment": "minilm_tfidf_blend stanford \u2192 stanford",
+    "all_error_count": 448,
+    "examples": [
+      {
+        "post_id": "stanford_021448",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9749780113984221,
+        "threshold": 0.3931987027552757,
+        "error": "FP",
+        "text": "When computer does the repetition, can the same person be selected more than one time during different sampling?\u0007Please advise"
+      },
+      {
+        "post_id": "stanford_027290",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9735810280783185,
+        "threshold": 0.3931987027552757,
+        "error": "FP",
+        "text": "I thought I could improve my essay 2 so resubmitted it (around the 9th or 10th); however, the only peer reviews I see are those for my first attempt at this essay and not the second revised one. Is this because new reviews have not been done, or that the first reviews were better so the others were not even shown? My revised essay shows up in the essay box and time to submit has passed, but all reviews show comments on my first attempt. My score was not bad but I was hoping to get it higher.\u0007Thank you for your help with this matter.\u0007-D"
+      },
+      {
+        "post_id": "stanford_000168",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.970138137712582,
+        "threshold": 0.3931987027552757,
+        "error": "FP",
+        "text": "how do i take the survey?"
+      },
+      {
+        "post_id": "stanford_021446",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9674699969198215,
+        "threshold": 0.3931987027552757,
+        "error": "FP",
+        "text": "When computer simulation does the sampling, can it pick up the same people in different samples?\u0007For example, we select 100 persons to measure the vitamin D level. After these 100 person being selected, can they be selected again for the next sampling?\u0007Please advise"
+      }
+    ]
+  }
+]
+
+Cell 42: {
+  "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+  "score": 0.9736286113963777,
+  "threshold": 0.3931987027552757,
+  "urgent": true,
+  "label": "URGENT",
+  "minilm_score": 0.9745758175849915,
+  "tfidf_score": 0.9698397866419225
+}
+
+Cell 44: Download from Kaggle Output: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/06_minilm_tfidf_blending/06_minilm_tfidf_blending_output.zip MB: 35.9

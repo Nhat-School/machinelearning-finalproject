@@ -1,0 +1,11 @@
+{
+  "name": "UPenn",
+  "source_key": "upenn",
+  "provenance": "original research dataset",
+  "raw_sha256": "403301d079abcea1acc318b7a63f766658350dbc0e85eead79f7befc65aa48c3",
+  "processed_sha256": "3268954bb851d7bfed7daf76366314ceb85e24e9392e001fa7a30c79996f8442",
+  "clean_posts": 3493,
+  "original_labels_preserved": true,
+  "binary_label": "priority = int(urgency > 4)",
+  "source_url": "https://raw.githubusercontent.com/pcla-code/forum-posts-urgency/ebf3695f01d2dec197253eb89499f4835bb7d0fa/All_Courses_REDACTED_CODED.csv"
+}

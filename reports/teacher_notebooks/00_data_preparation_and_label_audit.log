@@ -1,0 +1,274 @@
+Cell 2: Project: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/00_data_preparation_and_label_audit
+Mode: LOCAL QA: saved completed training; no fitting
+
+Cell 4: {
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "requirements": [
+    "numpy>=2,<3",
+    "scikit-learn==1.9.1",
+    "matplotlib>=3.10,<4",
+    "joblib>=1.4,<2",
+    "packaging>=24"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "packaging": "26.3"
+  },
+  "device": "cpu",
+  "visible_gpus": 0,
+  "training_gpu_count": 0,
+  "validation_reuse": true,
+  "fresh_training_requested": false
+}
+
+Cell 21: {
+  "prepare_data.py": "f23b27400fd1166272d6a2bce787eedb608063e07433b774ec6bc4464793e42f",
+  "train.py": "cb94a335c4205e4ceff9d99297a9253ec77a25ed96689b1a65075289c13741d0",
+  "organize_datasets.py": "a5aaa7df87679d029601e5142c2cc1365b3c517e3667dbc19fce1ed5cb6f9b51",
+  "build_custom_dataset.py": "a92cc3d1fa764a13a5785d24b50c8fcfcd61a0f4e42126e95f650e71c26f91ca",
+  "prepare_reliability_data.py": "df5132d1f5ceaa35af63058b6b9f46235946c4e870cf5e89aa0fcbd04b2ec57a",
+  "audit_custom_labels_ai.py": "e400ca17a4c7551e2f14794b75b0ef99ccd0b4330da725edc7408f008ab576b9",
+  "teacher_notebook_tools.py": "c1f9bacc5808ed2267a2aee5028d9bbd51a98357dbca6007c5962f68e6c1a603"
+}
+
+Cell 23: upenn: raw=3504, final=3493, priority=298
+
+Cell 23: stanford: raw=29604, final=29070, priority=5524
+Canonical dataset folder: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/00_data_preparation_and_label_audit/Datasets
+Original file hashes verified; legacy training paths remain usable.
+
+Cell 23: {
+  "version": "custom-v2",
+  "rows": 160,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16,
+    "still_blocked_update": 40
+  },
+  "splits": {
+    "validation": 36,
+    "train": 93,
+    "challenge": 31
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "development_history": "40 still-blocked updates added after observing poor resolution handling; not an independent benchmark",
+  "draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991"
+}
+
+Cell 23: {
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 23: {
+  "passed": true,
+  "hashes_and_cleaning_checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "historical_test_membership_preserved": true,
+  "upenn_student_roles_disjoint": true,
+  "custom_scenario_groups_disjoint": true,
+  "rows": 32563,
+  "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}
+{
+  "both_binary_classes_present": true,
+  "labels_in_range": true,
+  "no_exact_duplicates_between_sources": true,
+  "no_exact_duplicates_within_sources": true,
+  "nonempty_text": true,
+  "rows_accounted_for": true
+}
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 25: {
+  "audit_date": "2026-11-17",
+  "reviewer_type": "AI assistant",
+  "rows_semantically_audited": 160,
+  "input_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991",
+  "all_draft_actions_consistent_under_current_support_rubric": true,
+  "binary_label_suggestions": 136,
+  "review_suggestions": 12,
+  "outside_scope_suggestions": 12,
+  "eligible_weak_binary_rows_by_split": {
+    "validation": 30,
+    "train": 82,
+    "challenge": 24
+  },
+  "source_human_approved_rows": 0,
+  "human_worksheet_unchanged": true,
+  "human_worksheet_sha256": "e9ea08d2e7b27f5a7718ea65995ab549ce1c01b8b007992b332f90f91b4d3040",
+  "all_scenario_groups_stay_in_one_split": true,
+  "still_blocked_rows": 40,
+  "distinct_still_blocked_update_suffixes": 1,
+  "new_training_performed": false,
+  "training_reader_uses_this_audit": false,
+  "limitations": [
+    "AI reinspection is not independent human review or validation of actual lecturer priorities.",
+    "Agreement with explicit synthetic labels does not show real-world correctness.",
+    "The custom rubric concerns current support need; real benchmark labels threshold original urgency ratings.",
+    "Only 82 custom binary examples are in training; repeated sampling at a 20 percent loss share can dominate their nominal count.",
+    "All 40 still-blocked updates share one suffix. Many resolved rows append a regular update to the same problem text.",
+    "Scenario-disjoint splits still share generation patterns; synthetic challenge accuracy can be optimistic.",
+    "The 24 ambiguous or unrelated examples do not teach a binary model to detect review or outside scope when excluded from binary training.",
+    "Suggested augmentation must preserve current resolution state and use training-only inputs, with descendants kept in the parent split."
+  ],
+  "reproduction": "Run python Project/scripts/audit_custom_labels_ai.py to regenerate saved AI decisions and integrity checks. This does not conduct a new human or independent model review."
+}
+{
+  "audit_date": "2026-11-17",
+  "reviewer_type": "AI assistant",
+  "rows_semantically_audited": 160,
+  "input_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991",
+  "all_draft_actions_consistent_under_current_support_rubric": true,
+  "binary_label_suggestions": 136,
+  "review_suggestions": 12,
+  "outside_scope_suggestions": 12,
+  "eligible_weak_binary_rows_by_split": {
+    "validation": 30,
+    "train": 82,
+    "challenge": 24
+  },
+  "source_human_approved_rows": 0,
+  "human_worksheet_unchanged": true,
+  "human_worksheet_sha256": "e9ea08d2e7b27f5a7718ea65995ab549ce1c01b8b007992b332f90f91b4d3040",
+  "all_scenario_groups_stay_in_one_split": true,
+  "still_blocked_rows": 40,
+  "distinct_still_blocked_update_suffixes": 1,
+  "new_training_performed": false,
+  "training_reader_uses_this_audit": false,
+  "limitations": [
+    "AI reinspection is not independent human review or validation of actual lecturer priorities.",
+    "Agreement with explicit synthetic labels does not show real-world correctness.",
+    "The custom rubric concerns current support need; real benchmark labels threshold original urgency ratings.",
+    "Only 82 custom binary examples are in training; repeated sampling at a 20 percent loss share can dominate their nominal count.",
+    "All 40 still-blocked updates share one suffix. Many resolved rows append a regular update to the same problem text.",
+    "Scenario-disjoint splits still share generation patterns; synthetic challenge accuracy can be optimistic.",
+    "The 24 ambiguous or unrelated examples do not teach a binary model to detect review or outside scope when excluded from binary training.",
+    "Suggested augmentation must preserve current resolution state and use training-only inputs, with descendants kept in the parent split."
+  ],
+  "reproduction": "Run python Project/scripts/audit_custom_labels_ai.py to regenerate saved AI decisions and integrity checks. This does not conduct a new human or independent model review."
+}
+
+Cell 27: Matplotlib is building the font cache; this may take a moment.
+
+Cell 27: {
+  "profile": "data",
+  "rows": 0,
+  "figures": [
+    "reports/teacher/dataset_labels.png"
+  ],
+  "mode": "SAVED-TRAINING VALIDATION",
+  "checks": "All reported count metrics recomputed; per-post scores checked when available."
+}
+
+Cell 27: Checks: []
+Actual error examples: []
+
+Cell 29: Download from Kaggle Output: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/00_data_preparation_and_label_audit/00_data_preparation_and_label_audit_output.zip MB: 12.1

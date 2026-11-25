@@ -1,0 +1,12 @@
+# Recreate these locally; keep project data, models and reports in Git.
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+~$*
+.ipynb_checkpoints/
+# Local credentials must never be committed.
+.env
+.env.*
+!.env.example

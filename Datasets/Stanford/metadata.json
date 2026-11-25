@@ -1,0 +1,11 @@
+{
+  "name": "Stanford",
+  "source_key": "stanford",
+  "provenance": "original research dataset",
+  "raw_sha256": "31e8885939604a20cd0a903d1e5ebca811b850530b8e9ed5169e1936628142f2",
+  "processed_sha256": "69f99d396d00ed52731fd83d36a2e208adc1b794a411c218ce1fcc8459ac1a59",
+  "clean_posts": 29070,
+  "original_labels_preserved": true,
+  "binary_label": "priority = int(urgency > 4)",
+  "source_url": "https://raw.githubusercontent.com/pcla-code/forum-posts-urgency/ebf3695f01d2dec197253eb89499f4835bb7d0fa/Stanford.csv"
+}

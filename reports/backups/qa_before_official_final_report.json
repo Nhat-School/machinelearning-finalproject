@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "page_count": 46,
+  "document_sha256": "5178b6bad46e0c69f055e1d5c5ef6c3e7cdf26dbb1e4a0f05019e81da96a9a8a",
+  "method": "Pages 44, 45 and 46 visually inspected at full resolution. Earlier 43 page PNGs match the previously inspected render by SHA256.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 32
+}

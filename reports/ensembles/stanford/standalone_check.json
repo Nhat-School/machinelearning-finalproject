@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "offline": true,
+  "examples": [
+    {
+      "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+      "score": 0.9736286113963777,
+      "threshold": 0.3931987027552757,
+      "urgent": true,
+      "label": "URGENT",
+      "minilm_score": 0.9745758175849915,
+      "tfidf_score": 0.9698397866419225
+    },
+    {
+      "text": "Thank you for the helpful explanation. I understand now.",
+      "score": 0.038880963916861085,
+      "threshold": 0.3931987027552757,
+      "urgent": false,
+      "label": "NOT_URGENT",
+      "minilm_score": 0.006960557773709297,
+      "tfidf_score": 0.16656258848946826
+    }
+  ]
+}

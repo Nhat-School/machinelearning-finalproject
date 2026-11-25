@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "page_count": 19,
+  "document_sha256": "e7af9098465b563fb37d44fc1a77319a3dd759a10b8d0429ff8614ae8469c317",
+  "method": "Rendered with the packaged renderer and visually inspected all 19 pages. Checked all 16 exact input texts, labels and both prediction columns against saved probe results. All 83 existing comparison records unchanged.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 8,
+  "comparison_rows": 83,
+  "probe_detail_page": 2,
+  "probe_table_rows": 16,
+  "binary_correct_counts": {
+    "real_only": 14,
+    "custom_pairwise": 13
+  },
+  "web_guide_pages": [
+    17,
+    18
+  ],
+  "page_png_sha256": {
+    "page-1.png": "6ceb073fd9191d067c8fcfa26189394e5ee7131cd8ce15f4cffa18e2c99e080f",
+    "page-2.png": "3e461b7350895bf6b3a135cc80ffecb57e18d87d4f568c7c032ed6a393cef7fb",
+    "page-3.png": "6fc8213839d647b415cbad2b90e1cb02a1f555699e58c90b0ffafc7a0e283263",
+    "page-4.png": "45aede948817cb56316b5747c20501211b0a4ef79739572f805d791061d8b3ce",
+    "page-5.png": "ae2711883b23258a991527a4e1d0959aa697672c57776bc02708a0a86c80cde6",
+    "page-6.png": "64978d9863844746d8b6e1afb528e2fcf6d1340bb7aad70747d4c851537b6dc9",
+    "page-7.png": "21d5b553ca5adba3047519ff03aa95284b0f7f1522ea1932c6f04f90437d6a6c",
+    "page-8.png": "445ab656a37a46b1a8e3fd1236dc6f5faa4ec291241b4129261c686ce4788b1e",
+    "page-9.png": "17c62275161f98a2d0f5ef4cf963944ad73e1072662b584b1ce14be0c573f201",
+    "page-10.png": "0bd165998ad8b7159d13ed4a46b9e30d64ff95c64211927bbf4aa7740ec60f19",
+    "page-11.png": "5e1e785518d934d28b8502efaa142c0a1ce9cfb1e19a7546c7b40f3e841e714d",
+    "page-12.png": "54cdac0830ae7bcc5e132ea26c002cd9b9b2b83c49fffe287227b793279582c3",
+    "page-13.png": "6b752d33bf9808deb84ed5796fc6ed0145e9103166c95035185cbb55b3a59638",
+    "page-14.png": "2275ae3fa370e14e59f3cbc3f3595c703d55679c90d923869defa562e9305921",
+    "page-15.png": "01bf9b87d67822869e4c3a43f32e0cb6ed918afe1279bf3d91b9354397b8ee1e",
+    "page-16.png": "242e5eb334a553f6bcb5851bf3d70c2cc8e5ec1f0077b1801ff4697a73d0eb07",
+    "page-17.png": "1d5c0f174843d8d64e1f4a0a9a895c62cfc5c22a5f5b3f4a1c345104a9bda52e",
+    "page-18.png": "62b6dc95786f6f79f76146c3a19655d28fa2e6aa0a5bdbe59f66f96f20a4de89",
+    "page-19.png": "32fe8cbfd72461d787ba622497f5fee5cb896c75c141691512600162da4359d9"
+  }
+}

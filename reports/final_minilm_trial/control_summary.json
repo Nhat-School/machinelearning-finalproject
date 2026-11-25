@@ -1,0 +1,906 @@
+{
+  "status": "two-source joint MiniLM controls complete; no custom training in these runs",
+  "results": [
+    {
+      "run": "real_only_seed42",
+      "arm": "real_only",
+      "seed": 42,
+      "test_source": "upenn",
+      "threshold": 0.5,
+      "precision": 0.6461538461538462,
+      "recall": 0.6885245901639344,
+      "f1": 0.6666666666666666,
+      "macro_f1": 0.8166135881104033,
+      "accuracy": 0.9392185238784371,
+      "average_precision": 0.6928627650538788,
+      "roc_auc": 0.94087952120739,
+      "precision_at_20": 0.9,
+      "recall_at_20": 0.29508196721311475,
+      "top20_found": 18,
+      "confusion_matrix": [
+        [
+          607,
+          23
+        ],
+        [
+          19,
+          42
+        ]
+      ],
+      "test_size": 691,
+      "positive_count": 61,
+      "brier_score": 0.04748837762313097,
+      "automatic_coverage": 0.8986975397973951,
+      "review_count": 70,
+      "automatic_accuracy": 0.9629629629629629,
+      "automatic_errors": 23,
+      "urgent_automatically_found": 25,
+      "urgent_automatically_missed": 13,
+      "urgent_requiring_review": 23
+    },
+    {
+      "run": "real_only_seed42",
+      "arm": "real_only",
+      "seed": 42,
+      "test_source": "stanford",
+      "threshold": 0.5,
+      "precision": 0.8271604938271605,
+      "recall": 0.7276018099547511,
+      "f1": 0.7741935483870968,
+      "macro_f1": 0.8625443713037986,
+      "accuracy": 0.9193326453388373,
+      "average_precision": 0.849237074705687,
+      "roc_auc": 0.9572677332036756,
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.017194570135746608,
+      "top20_found": 19,
+      "confusion_matrix": [
+        [
+          4541,
+          168
+        ],
+        [
+          301,
+          804
+        ]
+      ],
+      "test_size": 5814,
+      "positive_count": 1105,
+      "brier_score": 0.06062203818324679,
+      "automatic_coverage": 0.8598211214310285,
+      "review_count": 815,
+      "automatic_accuracy": 0.9621924384876975,
+      "automatic_errors": 189,
+      "urgent_automatically_found": 503,
+      "urgent_automatically_missed": 144,
+      "urgent_requiring_review": 458
+    },
+    {
+      "run": "real_only_seed42",
+      "arm": "real_only",
+      "seed": 42,
+      "test_source": "custom_challenge",
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "macro_f1": 0.6307692307692307,
+      "accuracy": 0.7083333333333334,
+      "average_precision": 0.7458882596100642,
+      "roc_auc": 0.7000000000000001,
+      "precision_at_20": 0.65,
+      "recall_at_20": 0.9285714285714286,
+      "top20_found": 13,
+      "confusion_matrix": [
+        [
+          3,
+          7
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      "test_size": 24,
+      "positive_count": 14,
+      "balanced_accuracy": 0.65,
+      "complete_scenario_groups": 7,
+      "all_three_states_correct": 0,
+      "label_origin": [
+        "assistant_draft_weak_label"
+      ],
+      "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+    },
+    {
+      "run": "real_only_seed43",
+      "arm": "real_only",
+      "seed": 43,
+      "test_source": "upenn",
+      "threshold": 0.5,
+      "precision": 0.6176470588235294,
+      "recall": 0.6885245901639344,
+      "f1": 0.6511627906976745,
+      "macro_f1": 0.8076244919170734,
+      "accuracy": 0.934876989869754,
+      "average_precision": 0.6940033589895114,
+      "roc_auc": 0.9331251626333593,
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.3114754098360656,
+      "top20_found": 19,
+      "confusion_matrix": [
+        [
+          604,
+          26
+        ],
+        [
+          19,
+          42
+        ]
+      ],
+      "test_size": 691,
+      "positive_count": 61,
+      "brier_score": 0.05092080920816306,
+      "automatic_coverage": 0.8871201157742402,
+      "review_count": 78,
+      "automatic_accuracy": 0.9706362153344209,
+      "automatic_errors": 18,
+      "urgent_automatically_found": 27,
+      "urgent_automatically_missed": 11,
+      "urgent_requiring_review": 23
+    },
+    {
+      "run": "real_only_seed43",
+      "arm": "real_only",
+      "seed": 43,
+      "test_source": "stanford",
+      "threshold": 0.5,
+      "precision": 0.8180883864337102,
+      "recall": 0.7203619909502262,
+      "f1": 0.766121270452358,
+      "macro_f1": 0.8576156090481686,
+      "accuracy": 0.9164086687306502,
+      "average_precision": 0.8461302571543589,
+      "roc_auc": 0.9565095816329373,
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.017194570135746608,
+      "top20_found": 19,
+      "confusion_matrix": [
+        [
+          4532,
+          177
+        ],
+        [
+          309,
+          796
+        ]
+      ],
+      "test_size": 5814,
+      "positive_count": 1105,
+      "brier_score": 0.060607153760001406,
+      "automatic_coverage": 0.8584451324389405,
+      "review_count": 823,
+      "automatic_accuracy": 0.9629332799038269,
+      "automatic_errors": 185,
+      "urgent_automatically_found": 510,
+      "urgent_automatically_missed": 133,
+      "urgent_requiring_review": 462
+    },
+    {
+      "run": "real_only_seed43",
+      "arm": "real_only",
+      "seed": 43,
+      "test_source": "custom_challenge",
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "macro_f1": 0.6307692307692307,
+      "accuracy": 0.7083333333333334,
+      "average_precision": 0.7422732238521712,
+      "roc_auc": 0.7285714285714285,
+      "precision_at_20": 0.7,
+      "recall_at_20": 1.0,
+      "top20_found": 14,
+      "confusion_matrix": [
+        [
+          3,
+          7
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      "test_size": 24,
+      "positive_count": 14,
+      "balanced_accuracy": 0.65,
+      "complete_scenario_groups": 7,
+      "all_three_states_correct": 0,
+      "label_origin": [
+        "assistant_draft_weak_label"
+      ],
+      "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+    }
+  ],
+  "comparisons": [
+    {
+      "test_source": "upenn",
+      "label": "Previous source MiniLM",
+      "policy": "raw head score >= 0.5",
+      "accuracy": 0.9001447178002895,
+      "average_precision": 0.7059076755021558,
+      "confusion_matrix": [
+        [
+          571,
+          59
+        ],
+        [
+          10,
+          51
+        ]
+      ],
+      "f1": 0.5964912280701754,
+      "macro_f1": 0.7697567618468135,
+      "positive_count": 61,
+      "precision": 0.4636363636363636,
+      "precision_at_20": 0.9,
+      "recall": 0.8360655737704918,
+      "recall_at_20": 0.29508196721311475,
+      "roc_auc": 0.911904761904762,
+      "test_size": 691,
+      "top20_found": 18
+    },
+    {
+      "test_source": "upenn",
+      "label": "Joint DeBERTa",
+      "policy": "calibrated score >= 0.5",
+      "source": "upenn",
+      "threshold": 0.5,
+      "precision": 0.5616438356164384,
+      "recall": 0.6721311475409836,
+      "f1": 0.6119402985074627,
+      "accuracy": 0.9247467438494935,
+      "confusion_matrix": [
+        [
+          598,
+          32
+        ],
+        [
+          20,
+          41
+        ]
+      ],
+      "interpretation": "Fixed 0.5 diagnostic only; not selected by test and not the deployed review policy."
+    },
+    {
+      "run": "real_only_seed42",
+      "arm": "real_only",
+      "seed": 42,
+      "test_source": "upenn",
+      "threshold": 0.5,
+      "precision": 0.6461538461538462,
+      "recall": 0.6885245901639344,
+      "f1": 0.6666666666666666,
+      "macro_f1": 0.8166135881104033,
+      "accuracy": 0.9392185238784371,
+      "average_precision": 0.6928627650538788,
+      "roc_auc": 0.94087952120739,
+      "precision_at_20": 0.9,
+      "recall_at_20": 0.29508196721311475,
+      "top20_found": 18,
+      "confusion_matrix": [
+        [
+          607,
+          23
+        ],
+        [
+          19,
+          42
+        ]
+      ],
+      "test_size": 691,
+      "positive_count": 61,
+      "brier_score": 0.04748837762313097,
+      "automatic_coverage": 0.8986975397973951,
+      "review_count": 70,
+      "automatic_accuracy": 0.9629629629629629,
+      "automatic_errors": 23,
+      "urgent_automatically_found": 25,
+      "urgent_automatically_missed": 13,
+      "urgent_requiring_review": 23,
+      "label": "real_only_seed42",
+      "policy": "calibrated score >= 0.5"
+    },
+    {
+      "run": "real_only_seed43",
+      "arm": "real_only",
+      "seed": 43,
+      "test_source": "upenn",
+      "threshold": 0.5,
+      "precision": 0.6176470588235294,
+      "recall": 0.6885245901639344,
+      "f1": 0.6511627906976745,
+      "macro_f1": 0.8076244919170734,
+      "accuracy": 0.934876989869754,
+      "average_precision": 0.6940033589895114,
+      "roc_auc": 0.9331251626333593,
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.3114754098360656,
+      "top20_found": 19,
+      "confusion_matrix": [
+        [
+          604,
+          26
+        ],
+        [
+          19,
+          42
+        ]
+      ],
+      "test_size": 691,
+      "positive_count": 61,
+      "brier_score": 0.05092080920816306,
+      "automatic_coverage": 0.8871201157742402,
+      "review_count": 78,
+      "automatic_accuracy": 0.9706362153344209,
+      "automatic_errors": 18,
+      "urgent_automatically_found": 27,
+      "urgent_automatically_missed": 11,
+      "urgent_requiring_review": 23,
+      "label": "real_only_seed43",
+      "policy": "calibrated score >= 0.5"
+    },
+    {
+      "test_source": "stanford",
+      "label": "Previous source MiniLM",
+      "policy": "raw head score >= 0.5",
+      "accuracy": 0.9248366013071896,
+      "average_precision": 0.8808811911888398,
+      "confusion_matrix": [
+        [
+          4482,
+          227
+        ],
+        [
+          210,
+          895
+        ]
+      ],
+      "f1": 0.8037718904355635,
+      "macro_f1": 0.8786437369420664,
+      "positive_count": 1105,
+      "precision": 0.7976827094474154,
+      "precision_at_20": 1.0,
+      "recall": 0.8099547511312217,
+      "recall_at_20": 0.01809954751131222,
+      "roc_auc": 0.9639264948510072,
+      "test_size": 5814,
+      "top20_found": 20
+    },
+    {
+      "test_source": "stanford",
+      "label": "Joint DeBERTa",
+      "policy": "calibrated score >= 0.5",
+      "source": "stanford",
+      "threshold": 0.5,
+      "precision": 0.8246124031007752,
+      "recall": 0.7701357466063349,
+      "f1": 0.7964436125409452,
+      "accuracy": 0.9251805985552115,
+      "confusion_matrix": [
+        [
+          4528,
+          181
+        ],
+        [
+          254,
+          851
+        ]
+      ],
+      "interpretation": "Fixed 0.5 diagnostic only; not selected by test and not the deployed review policy."
+    },
+    {
+      "run": "real_only_seed42",
+      "arm": "real_only",
+      "seed": 42,
+      "test_source": "stanford",
+      "threshold": 0.5,
+      "precision": 0.8271604938271605,
+      "recall": 0.7276018099547511,
+      "f1": 0.7741935483870968,
+      "macro_f1": 0.8625443713037986,
+      "accuracy": 0.9193326453388373,
+      "average_precision": 0.849237074705687,
+      "roc_auc": 0.9572677332036756,
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.017194570135746608,
+      "top20_found": 19,
+      "confusion_matrix": [
+        [
+          4541,
+          168
+        ],
+        [
+          301,
+          804
+        ]
+      ],
+      "test_size": 5814,
+      "positive_count": 1105,
+      "brier_score": 0.06062203818324679,
+      "automatic_coverage": 0.8598211214310285,
+      "review_count": 815,
+      "automatic_accuracy": 0.9621924384876975,
+      "automatic_errors": 189,
+      "urgent_automatically_found": 503,
+      "urgent_automatically_missed": 144,
+      "urgent_requiring_review": 458,
+      "label": "real_only_seed42",
+      "policy": "calibrated score >= 0.5"
+    },
+    {
+      "run": "real_only_seed43",
+      "arm": "real_only",
+      "seed": 43,
+      "test_source": "stanford",
+      "threshold": 0.5,
+      "precision": 0.8180883864337102,
+      "recall": 0.7203619909502262,
+      "f1": 0.766121270452358,
+      "macro_f1": 0.8576156090481686,
+      "accuracy": 0.9164086687306502,
+      "average_precision": 0.8461302571543589,
+      "roc_auc": 0.9565095816329373,
+      "precision_at_20": 0.95,
+      "recall_at_20": 0.017194570135746608,
+      "top20_found": 19,
+      "confusion_matrix": [
+        [
+          4532,
+          177
+        ],
+        [
+          309,
+          796
+        ]
+      ],
+      "test_size": 5814,
+      "positive_count": 1105,
+      "brier_score": 0.060607153760001406,
+      "automatic_coverage": 0.8584451324389405,
+      "review_count": 823,
+      "automatic_accuracy": 0.9629332799038269,
+      "automatic_errors": 185,
+      "urgent_automatically_found": 510,
+      "urgent_automatically_missed": 133,
+      "urgent_requiring_review": 462,
+      "label": "real_only_seed43",
+      "policy": "calibrated score >= 0.5"
+    }
+  ],
+  "contexts": {
+    "real_only_seed42": {
+      "train": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "macro_f1": 0.6272727272727273,
+        "accuracy": 0.7073170731707317,
+        "average_precision": 0.6920076711232109,
+        "roc_auc": 0.6844362745098039,
+        "precision_at_20": 0.8,
+        "recall_at_20": 0.3333333333333333,
+        "top20_found": 16,
+        "confusion_matrix": [
+          [
+            10,
+            24
+          ],
+          [
+            0,
+            48
+          ]
+        ],
+        "test_size": 82,
+        "positive_count": 48,
+        "balanced_accuracy": 0.6470588235294118,
+        "complete_scenario_groups": 24,
+        "all_three_states_correct": 0,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "validation": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "macro_f1": 0.6000000000000001,
+        "accuracy": 0.7,
+        "average_precision": 0.7274329101315685,
+        "roc_auc": 0.6527777777777778,
+        "precision_at_20": 0.7,
+        "recall_at_20": 0.7777777777777778,
+        "top20_found": 14,
+        "confusion_matrix": [
+          [
+            3,
+            9
+          ],
+          [
+            0,
+            18
+          ]
+        ],
+        "test_size": 30,
+        "positive_count": 18,
+        "balanced_accuracy": 0.625,
+        "complete_scenario_groups": 9,
+        "all_three_states_correct": 0,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "challenge": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "macro_f1": 0.6307692307692307,
+        "accuracy": 0.7083333333333334,
+        "average_precision": 0.7458882596100642,
+        "roc_auc": 0.7000000000000001,
+        "precision_at_20": 0.65,
+        "recall_at_20": 0.9285714285714286,
+        "top20_found": 13,
+        "confusion_matrix": [
+          [
+            3,
+            7
+          ],
+          [
+            0,
+            14
+          ]
+        ],
+        "test_size": 24,
+        "positive_count": 14,
+        "balanced_accuracy": 0.65,
+        "complete_scenario_groups": 7,
+        "all_three_states_correct": 0,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "submission_examples": [
+        {
+          "post_id": "custom_0001",
+          "scenario_group": "submission_button",
+          "split": "validation",
+          "case_type": "blocked",
+          "text": "The assignment is due tonight, but the submit button does nothing. I have tried two browsers. Could staff help me submit before the deadline?",
+          "draft_priority": "1",
+          "draft_action": "PRIORITY",
+          "provenance": "assistant_authored_synthetic",
+          "label_origin": "assistant_draft",
+          "review_status": "pending",
+          "notes": "Draft: unresolved course blocker or staff action needed promptly.",
+          "raw_score": "0.9664542078971863",
+          "score": "0.8896663994420135",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "label_status": "assistant draft; review worksheet remains separate"
+        },
+        {
+          "post_id": "custom_0002",
+          "scenario_group": "submission_button",
+          "split": "validation",
+          "case_type": "resolved",
+          "text": "The assignment is due tonight, but the submit button does nothing. I have tried two browsers. Could staff help me submit before the deadline? Update: The submit button works now and my assignment has a receipt. Thank you; no further help is needed.",
+          "draft_priority": "0",
+          "draft_action": "NORMAL",
+          "provenance": "assistant_authored_synthetic",
+          "label_origin": "assistant_draft",
+          "review_status": "pending",
+          "notes": "Same reported problem, now explicitly resolved. Read the complete post.",
+          "raw_score": "0.9641225934028625",
+          "score": "0.8846409720796374",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "label_status": "assistant draft; review worksheet remains separate"
+        },
+        {
+          "post_id": "custom_0121",
+          "scenario_group": "submission_button",
+          "split": "validation",
+          "case_type": "still_blocked_update",
+          "text": "The assignment is due tonight, but the submit button does nothing. I have tried two browsers. Could staff help me submit before the deadline? Update: I retried the suggested steps, but the problem is still preventing me from completing the course task. I still need assistance from the teaching team.",
+          "draft_priority": "1",
+          "draft_action": "PRIORITY",
+          "provenance": "assistant_authored_synthetic",
+          "label_origin": "assistant_draft",
+          "review_status": "pending",
+          "notes": "Draft counterexample: an update does not imply resolution. Same scenario group as the resolved variant.",
+          "raw_score": "0.9677661657333374",
+          "score": "0.892553111830808",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "label_status": "assistant draft; review worksheet remains separate"
+        }
+      ]
+    },
+    "real_only_seed43": {
+      "train": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "macro_f1": 0.6272727272727273,
+        "accuracy": 0.7073170731707317,
+        "average_precision": 0.6869318526347411,
+        "roc_auc": 0.6776960784313726,
+        "precision_at_20": 0.7,
+        "recall_at_20": 0.2916666666666667,
+        "top20_found": 14,
+        "confusion_matrix": [
+          [
+            10,
+            24
+          ],
+          [
+            0,
+            48
+          ]
+        ],
+        "test_size": 82,
+        "positive_count": 48,
+        "balanced_accuracy": 0.6470588235294118,
+        "complete_scenario_groups": 24,
+        "all_three_states_correct": 0,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "validation": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "macro_f1": 0.6000000000000001,
+        "accuracy": 0.7,
+        "average_precision": 0.6889195139338161,
+        "roc_auc": 0.6666666666666666,
+        "precision_at_20": 0.7,
+        "recall_at_20": 0.7777777777777778,
+        "top20_found": 14,
+        "confusion_matrix": [
+          [
+            3,
+            9
+          ],
+          [
+            0,
+            18
+          ]
+        ],
+        "test_size": 30,
+        "positive_count": 18,
+        "balanced_accuracy": 0.625,
+        "complete_scenario_groups": 9,
+        "all_three_states_correct": 0,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "challenge": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "macro_f1": 0.6307692307692307,
+        "accuracy": 0.7083333333333334,
+        "average_precision": 0.7422732238521712,
+        "roc_auc": 0.7285714285714285,
+        "precision_at_20": 0.7,
+        "recall_at_20": 1.0,
+        "top20_found": 14,
+        "confusion_matrix": [
+          [
+            3,
+            7
+          ],
+          [
+            0,
+            14
+          ]
+        ],
+        "test_size": 24,
+        "positive_count": 14,
+        "balanced_accuracy": 0.65,
+        "complete_scenario_groups": 7,
+        "all_three_states_correct": 0,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "submission_examples": [
+        {
+          "post_id": "custom_0001",
+          "scenario_group": "submission_button",
+          "split": "validation",
+          "case_type": "blocked",
+          "text": "The assignment is due tonight, but the submit button does nothing. I have tried two browsers. Could staff help me submit before the deadline?",
+          "draft_priority": "1",
+          "draft_action": "PRIORITY",
+          "provenance": "assistant_authored_synthetic",
+          "label_origin": "assistant_draft",
+          "review_status": "pending",
+          "notes": "Draft: unresolved course blocker or staff action needed promptly.",
+          "raw_score": "0.9444234371185303",
+          "score": "0.8945317860580202",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "label_status": "assistant draft; review worksheet remains separate"
+        },
+        {
+          "post_id": "custom_0002",
+          "scenario_group": "submission_button",
+          "split": "validation",
+          "case_type": "resolved",
+          "text": "The assignment is due tonight, but the submit button does nothing. I have tried two browsers. Could staff help me submit before the deadline? Update: The submit button works now and my assignment has a receipt. Thank you; no further help is needed.",
+          "draft_priority": "0",
+          "draft_action": "NORMAL",
+          "provenance": "assistant_authored_synthetic",
+          "label_origin": "assistant_draft",
+          "review_status": "pending",
+          "notes": "Same reported problem, now explicitly resolved. Read the complete post.",
+          "raw_score": "0.9381122589111328",
+          "score": "0.8857313554496028",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "label_status": "assistant draft; review worksheet remains separate"
+        },
+        {
+          "post_id": "custom_0121",
+          "scenario_group": "submission_button",
+          "split": "validation",
+          "case_type": "still_blocked_update",
+          "text": "The assignment is due tonight, but the submit button does nothing. I have tried two browsers. Could staff help me submit before the deadline? Update: I retried the suggested steps, but the problem is still preventing me from completing the course task. I still need assistance from the teaching team.",
+          "draft_priority": "1",
+          "draft_action": "PRIORITY",
+          "provenance": "assistant_authored_synthetic",
+          "label_origin": "assistant_draft",
+          "review_status": "pending",
+          "notes": "Draft counterexample: an update does not imply resolution. Same scenario group as the resolved variant.",
+          "raw_score": "0.9422348737716675",
+          "score": "0.8914493221394512",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "label_status": "assistant draft; review worksheet remains separate"
+        }
+      ]
+    }
+  },
+  "protocols": {
+    "real_only_seed42": {
+      "arm": "real_only",
+      "seed": 42,
+      "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "configuration": {
+        "arm": "real_only",
+        "seed": 42,
+        "epochs": 4,
+        "patience": 2,
+        "batch_size": 64,
+        "max_length": 256,
+        "lr": 2e-05,
+        "custom_share": 0.2,
+        "pairwise_coefficient": 0.25,
+        "allow_synthetic_drafts": false,
+        "bf16": true,
+        "force": false
+      },
+      "real_fit_counts": {
+        "upenn": 2257,
+        "stanford": 18604
+      },
+      "real_weighting": "inverse source count, equal aggregate contributions from UPenn and Stanford",
+      "custom_training_rows": 0,
+      "custom_label_origin": [],
+      "custom_loss_share": 0.0,
+      "pairwise_coefficient_inside_custom_loss": 0.0,
+      "checkpoint_selection": "highest mean real-source validation AP; identical rule for every arm",
+      "calibration": "source-balanced pooled Platt scaling, separate real calibration role, CPU float32",
+      "binary_threshold": 0.5,
+      "review_bounds": [
+        0.2,
+        0.8
+      ],
+      "test_status": "historical tests previously inspected; new test evaluation deferred until candidate selection is frozen",
+      "training_device": "mps",
+      "training_precision": "bfloat16",
+      "evaluation_precision": "CPU float32",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.15.0"
+      },
+      "split_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135",
+      "custom_draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991",
+      "training_script_sha256": "5a7b967d8effff36af411ae757112422fda62515c200f3ef871ec0454be4c65e",
+      "status": "trained and exported; historical test deferred",
+      "best_epoch": 4,
+      "best_mean_validation_ap": 0.7359086022411307,
+      "training_seconds": 178.65872366726398,
+      "optimizer_updates": 1304
+    },
+    "real_only_seed43": {
+      "arm": "real_only",
+      "seed": 43,
+      "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+      "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+      "configuration": {
+        "arm": "real_only",
+        "seed": 43,
+        "epochs": 4,
+        "patience": 2,
+        "batch_size": 64,
+        "max_length": 256,
+        "lr": 2e-05,
+        "custom_share": 0.2,
+        "pairwise_coefficient": 0.25,
+        "allow_synthetic_drafts": false,
+        "bf16": true,
+        "force": false
+      },
+      "real_fit_counts": {
+        "upenn": 2257,
+        "stanford": 18604
+      },
+      "real_weighting": "inverse source count, equal aggregate contributions from UPenn and Stanford",
+      "custom_training_rows": 0,
+      "custom_label_origin": [],
+      "custom_loss_share": 0.0,
+      "pairwise_coefficient_inside_custom_loss": 0.0,
+      "checkpoint_selection": "highest mean real-source validation AP; identical rule for every arm",
+      "calibration": "source-balanced pooled Platt scaling, separate real calibration role, CPU float32",
+      "binary_threshold": 0.5,
+      "review_bounds": [
+        0.2,
+        0.8
+      ],
+      "test_status": "historical tests previously inspected; new test evaluation deferred until candidate selection is frozen",
+      "training_device": "mps",
+      "training_precision": "bfloat16",
+      "evaluation_precision": "CPU float32",
+      "versions": {
+        "python": "3.12.13",
+        "torch": "2.15.0"
+      },
+      "split_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135",
+      "custom_draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991",
+      "training_script_sha256": "5a7b967d8effff36af411ae757112422fda62515c200f3ef871ec0454be4c65e",
+      "status": "trained and exported; historical test deferred",
+      "best_epoch": 3,
+      "best_mean_validation_ap": 0.7335662762301989,
+      "training_seconds": 177.6177848340012,
+      "optimizer_updates": 1304
+    }
+  },
+  "checks": [
+    {
+      "run": "real_only_seed42",
+      "real_test_ids_labels_and_confusion_counts_verified": true,
+      "fit_disjoint_from_real_calibration_validation_test": true,
+      "custom_train_disjoint_from_validation_and_challenge": true
+    },
+    {
+      "run": "real_only_seed43",
+      "real_test_ids_labels_and_confusion_counts_verified": true,
+      "fit_disjoint_from_real_calibration_validation_test": true,
+      "custom_train_disjoint_from_validation_and_challenge": true
+    }
+  ],
+  "historical_tests_are_exploratory": true,
+  "custom_is_synthetic_not_independent_gold": true,
+  "custom_reviewed_count": 0
+}

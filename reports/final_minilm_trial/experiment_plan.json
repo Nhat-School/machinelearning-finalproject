@@ -1,0 +1,32 @@
+{
+  "status": "pre-registered before any new test evaluation",
+  "initialization": "same pinned pretrained MiniLM; previous fine-tuned folders preserved",
+  "arms": [
+    "real_only",
+    "custom_ce",
+    "custom_pairwise"
+  ],
+  "primary_seed": 42,
+  "confirmation_seed": 43,
+  "training": {
+    "max_epochs": 4,
+    "early_stopping_patience": 2,
+    "batch_size": 64,
+    "max_length": 256,
+    "learning_rate": 2e-05,
+    "custom_loss_share": 0.2,
+    "pairwise_coefficient_inside_custom_loss": 0.25
+  },
+  "checkpoint_selection": "maximum mean real-source validation AP for every arm",
+  "custom_configuration_selection": {
+    "allowed_real_mean_validation_ap_drop": 0.03,
+    "primary": "custom-validation draft balanced accuracy if explicitly authorized as weak supervision",
+    "tie_breaker": "higher mean real-source validation AP",
+    "if_no_guard_passes": "retain real-only as recommendation"
+  },
+  "confirmation": "Train the real-only control and the selected custom configuration with seed 43; report both seeds, never choose a seed by test score.",
+  "decision": "source-balanced real calibration; fixed calibrated threshold 0.5; review bounds 0.2 and 0.8; no threshold search on test",
+  "custom_label_use": "pending explicit response or actual reviewed labels; never mark draft labels human approved",
+  "test_status": "historical tests already inspected; exploratory. Custom challenge uses synthetic labels and is not an independent real-world benchmark.",
+  "split_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}

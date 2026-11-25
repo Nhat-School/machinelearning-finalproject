@@ -1,0 +1,29 @@
+{
+  "planned_pages": 21,
+  "page_titles": [
+    "ƯU TIÊN PHẢN HỒI BÀI ĐĂNG SINH VIÊN",
+    "Mục lục",
+    "Tóm tắt kết quả thực nghiệm",
+    "Chi tiết 16 câu kiểm tra bổ sung",
+    "1 Yêu cầu và dữ liệu",
+    "2 Phương pháp và quy tắc đánh giá",
+    "3 Kết quả thực nghiệm với các mô hình cơ sở",
+    "4 Fine tuning blending và các chính sách DeBERTa",
+    "5 Những cấu hình đã thử weighting augmentation và CV",
+    "6 Phiên Kaggle baseline từ log thực thi",
+    "7 Phiên Kaggle fine tuning và tác động của ngưỡng",
+    "8 Vì sao mô hình lớn hơn không luôn thắng",
+    "9 So sánh các phương án bổ sung dữ liệu huấn luyện",
+    "10 Kết quả MiniLM học chung hai nguồn trên dữ liệu thật",
+    "11 Ma trận nhầm lẫn của các phương án huấn luyện",
+    "12 Ngữ cảnh tổng hợp và câu diễn đạt mới",
+    "13 Cùng MiniLM vì sao kết quả khác nhau",
+    "14 Phân tích lỗi thật và chi phí Review",
+    "15 Hướng dẫn web phân loại một bài đăng",
+    "16 Hướng dẫn web danh sách và các trường hợp khác",
+    "17 Tái tạo quyết định cuối và tài liệu tham khảo"
+  ],
+  "printed_comparison_rows": 83,
+  "status": "rendered and visually verified; linked contents and chapter purposes checked",
+  "actual_rendered_pages": 21
+}

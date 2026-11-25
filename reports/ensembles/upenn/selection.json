@@ -1,0 +1,165 @@
+{
+  "selected": {
+    "train_source": "upenn",
+    "minilm_weight": 0.75,
+    "tfidf_weight": 0.25,
+    "threshold": 0.5731890967671966,
+    "oof_f1": 0.6003616636528029,
+    "oof_ap": 0.6416072726358286,
+    "selection": "source OOF F1; tie AP, then higher MiniLM weight",
+    "validation_status": "Development diagnostics: base OOF predictions also participated in model/checkpoint selection; not nested CV.",
+    "input_sha256": {
+      "reports/fine_tuning/upenn/oof.csv": "699617a618ea1efb1ade0516f2959b96bffbcdb1cd21127cbf2d68d91b57e505",
+      "reports/experiments/oof_upenn_tfidf_logreg.csv": "8db31c08df89821f5729bdec80292ebf335633ef0fe29d0cd64aa71d7f8bc44d"
+    }
+  },
+  "candidates": [
+    {
+      "minilm_weight": 0.0,
+      "tfidf_weight": 1.0,
+      "threshold": 0.4225475624901568,
+      "oof_f1": 0.5275590551181103,
+      "oof_ap": 0.5563071227084243
+    },
+    {
+      "minilm_weight": 0.05,
+      "tfidf_weight": 0.95,
+      "threshold": 0.38632768077308605,
+      "oof_f1": 0.5340136054421769,
+      "oof_ap": 0.566575633584684
+    },
+    {
+      "minilm_weight": 0.1,
+      "tfidf_weight": 0.9,
+      "threshold": 0.3995088507613038,
+      "oof_f1": 0.5410122164048865,
+      "oof_ap": 0.5759395248127064
+    },
+    {
+      "minilm_weight": 0.15000000000000002,
+      "tfidf_weight": 0.85,
+      "threshold": 0.42836342117579884,
+      "oof_f1": 0.5559701492537313,
+      "oof_ap": 0.5832971834416903
+    },
+    {
+      "minilm_weight": 0.2,
+      "tfidf_weight": 0.8,
+      "threshold": 0.4160978579324979,
+      "oof_f1": 0.56,
+      "oof_ap": 0.5917079728517699
+    },
+    {
+      "minilm_weight": 0.25,
+      "tfidf_weight": 0.75,
+      "threshold": 0.43528565497161964,
+      "oof_f1": 0.5693950177935942,
+      "oof_ap": 0.599230786708017
+    },
+    {
+      "minilm_weight": 0.30000000000000004,
+      "tfidf_weight": 0.7,
+      "threshold": 0.42140428807596303,
+      "oof_f1": 0.5742251223491028,
+      "oof_ap": 0.6061328906260457
+    },
+    {
+      "minilm_weight": 0.35000000000000003,
+      "tfidf_weight": 0.6499999999999999,
+      "threshold": 0.4314065957721718,
+      "oof_f1": 0.5793780687397709,
+      "oof_ap": 0.6115969129155445
+    },
+    {
+      "minilm_weight": 0.4,
+      "tfidf_weight": 0.6,
+      "threshold": 0.45485945044587345,
+      "oof_f1": 0.5834738617200674,
+      "oof_ap": 0.6176605266916085
+    },
+    {
+      "minilm_weight": 0.45,
+      "tfidf_weight": 0.55,
+      "threshold": 0.4640780690032664,
+      "oof_f1": 0.5838926174496644,
+      "oof_ap": 0.6222069985640013
+    },
+    {
+      "minilm_weight": 0.5,
+      "tfidf_weight": 0.5,
+      "threshold": 0.535919158315475,
+      "oof_f1": 0.5910931174089069,
+      "oof_ap": 0.627171297253994
+    },
+    {
+      "minilm_weight": 0.55,
+      "tfidf_weight": 0.44999999999999996,
+      "threshold": 0.5039732435820985,
+      "oof_f1": 0.5892547660311958,
+      "oof_ap": 0.631298354719513
+    },
+    {
+      "minilm_weight": 0.6000000000000001,
+      "tfidf_weight": 0.3999999999999999,
+      "threshold": 0.5320371224784851,
+      "oof_f1": 0.5952813067150636,
+      "oof_ap": 0.6349484736817974
+    },
+    {
+      "minilm_weight": 0.65,
+      "tfidf_weight": 0.35,
+      "threshold": 0.5336001415855789,
+      "oof_f1": 0.5985915492957746,
+      "oof_ap": 0.6377065127395143
+    },
+    {
+      "minilm_weight": 0.7000000000000001,
+      "tfidf_weight": 0.29999999999999993,
+      "threshold": 0.5489836946915407,
+      "oof_f1": 0.5971731448763251,
+      "oof_ap": 0.6401057735585297
+    },
+    {
+      "minilm_weight": 0.75,
+      "tfidf_weight": 0.25,
+      "threshold": 0.5731890967671966,
+      "oof_f1": 0.6003616636528029,
+      "oof_ap": 0.6416072726358286
+    },
+    {
+      "minilm_weight": 0.8,
+      "tfidf_weight": 0.19999999999999996,
+      "threshold": 0.5870528095949024,
+      "oof_f1": 0.5981981981981982,
+      "oof_ap": 0.6426972905510765
+    },
+    {
+      "minilm_weight": 0.8500000000000001,
+      "tfidf_weight": 0.1499999999999999,
+      "threshold": 0.601318329068956,
+      "oof_f1": 0.5939177101967799,
+      "oof_ap": 0.6423527805427655
+    },
+    {
+      "minilm_weight": 0.9,
+      "tfidf_weight": 0.09999999999999998,
+      "threshold": 0.6232918554933584,
+      "oof_f1": 0.5923217550274222,
+      "oof_ap": 0.6397776046518324
+    },
+    {
+      "minilm_weight": 0.9500000000000001,
+      "tfidf_weight": 0.04999999999999993,
+      "threshold": 0.6683772397198272,
+      "oof_f1": 0.5947046843177191,
+      "oof_ap": 0.6314776573864337
+    },
+    {
+      "minilm_weight": 1.0,
+      "tfidf_weight": 0.0,
+      "threshold": 0.6701767444610596,
+      "oof_f1": 0.5984251968503936,
+      "oof_ap": 0.6134610193534104
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "stanford": {
+    "policy": "Stratified hold-out and 3-fold StratifiedKFold; author/thread IDs unavailable",
+    "processed_sha256": "69f99d396d00ed52731fd83d36a2e208adc1b794a411c218ce1fcc8459ac1a59",
+    "test": 5814,
+    "test_positives": 1105,
+    "train": 23256,
+    "train_positives": 4419
+  },
+  "upenn": {
+    "policy": "GroupShuffleSplit by UPenn student id; 3-fold StratifiedGroupKFold for tuning",
+    "processed_sha256": "3268954bb851d7bfed7daf76366314ceb85e24e9392e001fa7a30c79996f8442",
+    "test": 691,
+    "test_positives": 61,
+    "train": 2802,
+    "train_positives": 237
+  }
+}

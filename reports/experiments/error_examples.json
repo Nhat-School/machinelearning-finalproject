@@ -1,0 +1,158 @@
+{
+  "upenn": {
+    "FN": [
+      {
+        "post_id": "upenn_003275",
+        "source": "upenn",
+        "source_id": "1767",
+        "course_type": "",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you.",
+        "urgency": "5.0",
+        "label": "1",
+        "predicted": "0",
+        "score": "0.10968647328009039",
+        "error": "FN"
+      },
+      {
+        "post_id": "upenn_003317",
+        "source": "upenn",
+        "source_id": "348",
+        "course_type": "",
+        "text": "Being in the medical/pharmaceutical industry, it is easy to understand that Dr. [REDACTED] would lean towards drug-based care, but I didn't know that he was against non-drug approaches to health care. However, I don't see why you have chosen this course to promote a book that is completely off-topic. I think it is completely inappropriate to place an ad in a classroom for a two-year old book that will result in book sales and revenue. I would suggest that either you or Coursera consider removing it as it amounts to nothing more than spam.",
+        "urgency": "5.0",
+        "label": "1",
+        "predicted": "0",
+        "score": "0.15602048291475162",
+        "error": "FN"
+      },
+      {
+        "post_id": "upenn_001129",
+        "source": "upenn",
+        "source_id": "1266",
+        "course_type": "",
+        "text": "Student Site Downtime -Student Posting week 2 while Reviewers work on week 1 - Strategies?Cannot see someone's site to do week 1 evaluation while they have site in edit mode for new posts for week 2.Maybe do these? Reviewer: Print page and look at it offline..Student: Work out week 2 offline, then announce to forum under a Thread like \"Student Site Downtime\"Student: Maybe weebly or other site building tools provide a way to announce downtime and when it will be back up.Reviewer: Anonymously post to forum week that site is down and get anonymous reply for when it will be back up.Other Ideas? if no current standard or solution, maybe this is an gap in the user experience, too.",
+        "urgency": "6.0",
+        "label": "1",
+        "predicted": "0",
+        "score": "0.2661718543849047",
+        "error": "FN"
+      }
+    ],
+    "FP": [
+      {
+        "post_id": "upenn_002353",
+        "source": "upenn",
+        "source_id": "3091",
+        "course_type": "",
+        "text": "Is it possible technical persons?",
+        "urgency": "1.0",
+        "label": "0",
+        "predicted": "1",
+        "score": "0.9957042431389969",
+        "error": "FP"
+      },
+      {
+        "post_id": "upenn_001761",
+        "source": "upenn",
+        "source_id": "904",
+        "course_type": "",
+        "text": "I have a few questions about this lecture. This is a topic I have heard brought up many times in various places, and after a bit of searching I still haven't found some answers to some basic questions.In the past, has there been situations where countries borrow money to have a deficit, or is this a recent phenemonon???What are the consequences of a trade deficit? Is it bad that a country carries a deficit? What are the effects, positie and negative, for the lives of average people in coutries that carry debt? More cheap crap to buy? Less jobs? Whatever. Who is the loser, the country with the deficit, or the country with the surplus? Is there interest paid on these defecits? If not, it looks like a bit of defecit could act like a free loan. Or am I thinking about this the wrong way?What do we mean when we say the US owes money to China? Who exactally? The federal reserve? The US congress? Taxpayers? What part of the government in China (and elsewhere) do they owe the money to???What about Canada? Who in Canada owes money? The taxpayers?A thought experiment, because surely this would never happen, but what would happen in the future if the US pulled an ass move and just says to China, \"nah, we don't want to give you these trillions of dollars, because, say, you stole some intellecutal property form us\", or whatever. Sure, China would be pissed. But who would suffer? Is there an international body that oversees these debts? The world bank???Any reply or links to related resources would be greatly appreciated. I would also like to know if anyone has similar questions in mind.",
+        "urgency": "4.0",
+        "label": "0",
+        "predicted": "1",
+        "score": "0.9916541828819366",
+        "error": "FP"
+      },
+      {
+        "post_id": "upenn_003043",
+        "source": "upenn",
+        "source_id": "510",
+        "course_type": "",
+        "text": "Hello Dr. [REDACTED],? ? ? ? ? ? ? ? ? ? ? ? ? ? ?I did not understand why a machine would make errors in counting a few million votes. ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?Can you please give an example of the source of such an error?Thank you.",
+        "urgency": "4.0",
+        "label": "0",
+        "predicted": "1",
+        "score": "0.985283752905345",
+        "error": "FP"
+      }
+    ]
+  },
+  "stanford": {
+    "FN": [
+      {
+        "post_id": "stanford_022577",
+        "source": "stanford",
+        "source_id": "",
+        "course_type": "Medicine",
+        "text": "translated by google?",
+        "urgency": "5.0",
+        "label": "1",
+        "predicted": "0",
+        "score": "0.015793051078352622",
+        "error": "FN"
+      },
+      {
+        "post_id": "stanford_012670",
+        "source": "stanford",
+        "source_id": "",
+        "course_type": "Humanities",
+        "text": "I think you need to modify your slide no. 16 in \\linear_regression.pdf\\\".\u0007As a teacher you can make a simpler statement at beginning, but it should be such that it allows for a later, stricter, Mathematical definition. The concept of \\\"Null Hypothesis\\\" is tricky and it was not stated clearly enough.\"",
+        "urgency": "6.5",
+        "label": "1",
+        "predicted": "0",
+        "score": "0.02628799945502495",
+        "error": "FN"
+      },
+      {
+        "post_id": "stanford_014978",
+        "source": "stanford",
+        "source_id": "",
+        "course_type": "Humanities",
+        "text": "Question 1: Which goals relate directly to girls' education?\u0007\u0007Well, the infographic helps prove that ALL of these goals are relative to the need of girls' education. The health, societal, and economic benefits of educating girls speak for themselves. If I were to prioritize any of the goals, I would likely place emphasis on primary education, gender equality, and maternal health as they will broadly affect these communities and provide a platform to push for HIV/AIDs prevention, reducing child mortality, and improving environmental conditions. But as I keep repeating in my mind, it ALL starts with education. And here, it all starts with girls.\u0007\u0007Question 2: Which goals are dependent on educating girls for their fulfillment?\u0007\u0007Again, I'd say overall, they are all dependent on educating girls but if I had to prioritize, I'd choose the same three as above. If you start with the girls and their own fulfillment, you'll more easily move toward more general goals like eradicating poverty which affects the broader community. It's the idea of thinking globally, but acting locally. Reaching young girls on a local level by promoting their education at primary levels will empower them and open their eyes to a healthier, happier world in which they, too, will help reach these MDGs.",
+        "urgency": "4.5",
+        "label": "1",
+        "predicted": "0",
+        "score": "0.026976478490713576",
+        "error": "FN"
+      }
+    ],
+    "FP": [
+      {
+        "post_id": "stanford_021480",
+        "source": "stanford",
+        "source_id": "",
+        "course_type": "Medicine",
+        "text": "I am still stuck..can someone help me a bit more? I really am trying.",
+        "urgency": "3.0",
+        "label": "0",
+        "predicted": "1",
+        "score": "0.9899399980985351",
+        "error": "FP"
+      },
+      {
+        "post_id": "stanford_027930",
+        "source": "stanford",
+        "source_id": "",
+        "course_type": "Medicine",
+        "text": "Does anybody have an input about the BELS certification? The Board of Editors in the Life Sciences provides annually exams for this certification. My question is, how valid or helpful is this certification for someone working as a translator/editor of scientific texts? What is the reputation of this organization?",
+        "urgency": "3.0",
+        "label": "0",
+        "predicted": "1",
+        "score": "0.9899227176072889",
+        "error": "FP"
+      },
+      {
+        "post_id": "stanford_025756",
+        "source": "stanford",
+        "source_id": "",
+        "course_type": "Medicine",
+        "text": "Hi, the same problem with my submission. Please, help me.",
+        "urgency": "3.0",
+        "label": "0",
+        "predicted": "1",
+        "score": "0.9849665710907445",
+        "error": "FP"
+      }
+    ]
+  }
+}

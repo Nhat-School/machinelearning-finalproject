@@ -1,0 +1,161 @@
+{
+  "scout_runs": [
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 2,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": false
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 37.59227512497455,
+          "threshold": 0.3849121630191803,
+          "train_loss": 0.3430372778309877,
+          "val_ap": 0.855569235457869,
+          "val_f1_default": 0.782675947409126,
+          "val_f1_tuned": 0.8028880866425994
+        },
+        {
+          "epoch": 2,
+          "seconds": 33.67421824997291,
+          "threshold": 0.5985468626022339,
+          "train_loss": 0.18663363705161684,
+          "val_ap": 0.8652522632307337,
+          "val_f1_default": 0.7962154294032023,
+          "val_f1_tuned": 0.8021472392638036
+        },
+        {
+          "epoch": 3,
+          "seconds": 33.82083670794964,
+          "threshold": 0.5648187398910522,
+          "train_loss": 0.1637757996617074,
+          "val_ap": 0.8636872595262441,
+          "val_f1_default": 0.7979351032448377,
+          "val_f1_tuned": 0.8048595292331056
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_plain",
+      "original_training_posts": 19767,
+      "seconds": 109.7535795411095,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 19767,
+      "validation_ap": 0.8652522632307337,
+      "validation_f1_tuned": 0.8021472392638036,
+      "validation_rows": 3489,
+      "validation_threshold": 0.5985468626022339
+    },
+    {
+      "augmented_posts": 0,
+      "batch_size": 64,
+      "best_epoch": 3,
+      "config": {
+        "augmentation": false,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 34.077947416808456,
+          "threshold": 0.7260372638702393,
+          "train_loss": 0.42224049959268617,
+          "val_ap": 0.8611717441185802,
+          "val_f1_default": 0.7790019442644199,
+          "val_f1_tuned": 0.7956363636363636
+        },
+        {
+          "epoch": 2,
+          "seconds": 33.76860475027934,
+          "threshold": 0.8832359910011292,
+          "train_loss": 0.2431226354611567,
+          "val_ap": 0.8638164936683767,
+          "val_f1_default": 0.7734177215189874,
+          "val_f1_tuned": 0.7972560975609756
+        },
+        {
+          "epoch": 3,
+          "seconds": 33.65528491605073,
+          "threshold": 0.6649755239486694,
+          "train_loss": 0.21310165121932007,
+          "val_ap": 0.8682011202830632,
+          "val_f1_default": 0.7833441769681198,
+          "val_f1_tuned": 0.7980835044490076
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted",
+      "original_training_posts": 19767,
+      "seconds": 106.1686183330603,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 19767,
+      "validation_ap": 0.8682011202830632,
+      "validation_f1_tuned": 0.7980835044490076,
+      "validation_rows": 3489,
+      "validation_threshold": 0.6649755239486694
+    },
+    {
+      "augmented_posts": 5303,
+      "batch_size": 64,
+      "best_epoch": 2,
+      "config": {
+        "augmentation": true,
+        "lr": 2e-05,
+        "weighted": true
+      },
+      "device": "mps",
+      "epochs_run": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "seconds": 46.738699375186116,
+          "threshold": 0.5846269726753235,
+          "train_loss": 0.3938583458354381,
+          "val_ap": 0.8597563517832135,
+          "val_f1_default": 0.7909527073337903,
+          "val_f1_tuned": 0.7946741415557113
+        },
+        {
+          "epoch": 2,
+          "seconds": 46.12954429117963,
+          "threshold": 0.8311430811882019,
+          "train_loss": 0.23194099960690434,
+          "val_ap": 0.8636732122986649,
+          "val_f1_default": 0.7677664974619289,
+          "val_f1_tuned": 0.7973273942093543
+        },
+        {
+          "epoch": 3,
+          "seconds": 46.13395804120228,
+          "threshold": 0.7512834072113037,
+          "train_loss": 0.19797954040549406,
+          "val_ap": 0.8584950763051659,
+          "val_f1_default": 0.7735728030788968,
+          "val_f1_tuned": 0.7991660875608061
+        }
+      ],
+      "max_length": 256,
+      "name": "scout_weighted_aug",
+      "original_training_posts": 19767,
+      "seconds": 143.59535091696307,
+      "seed": 42,
+      "source": "stanford",
+      "training_rows": 25070,
+      "validation_ap": 0.8636732122986649,
+      "validation_f1_tuned": 0.7973273942093543,
+      "validation_rows": 3489,
+      "validation_threshold": 0.8311430811882019
+    }
+  ],
+  "selected": "plain"
+}

@@ -1,0 +1,50 @@
+{
+  "file": "02_tfidf_svm.ipynb",
+  "training_performed": false,
+  "kaggle_gpu_execution_verified": false,
+  "passed": true,
+  "executed_code_cells": 18,
+  "result_rows": 4,
+  "prediction_rows_checked": 4,
+  "figure_count": 3,
+  "data_checks": {
+    "passed": true,
+    "hashes_and_cleaning_checks": {
+      "both_binary_classes_present": true,
+      "labels_in_range": true,
+      "no_exact_duplicates_between_sources": true,
+      "no_exact_duplicates_within_sources": true,
+      "nonempty_text": true,
+      "rows_accounted_for": true
+    },
+    "historical_test_membership_preserved": true,
+    "upenn_student_roles_disjoint": true,
+    "custom_scenario_groups_disjoint": true,
+    "rows": 32563,
+    "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+  },
+  "environment": {
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24"
+    ],
+    "versions": {
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2",
+      "joblib": "1.6.0",
+      "packaging": "26.3"
+    },
+    "device": "cpu",
+    "visible_gpus": 0,
+    "training_gpu_count": 0,
+    "validation_reuse": true,
+    "fresh_training_requested": false
+  },
+  "mode": "Local isolated execution; pinned raw inputs and completed trained artifacts reused; no fitting",
+  "seconds": 15.06
+}

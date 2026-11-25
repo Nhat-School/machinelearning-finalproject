@@ -1,0 +1,106 @@
+[
+  {
+    "accuracy": 0.7814761215629522,
+    "average_precision": 0.48728471743461627,
+    "confusion_matrix": [
+      [
+        487,
+        143
+      ],
+      [
+        8,
+        53
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.804630969609262,
+      "average_precision": 0.48728471743461627,
+      "confusion_matrix": [
+        [
+          508,
+          122
+        ],
+        [
+          13,
+          48
+        ]
+      ],
+      "f1": 0.4155844155844156,
+      "macro_f1": 0.6491475509720515,
+      "positive_count": 61,
+      "precision": 0.2823529411764706,
+      "precision_at_20": 0.55,
+      "recall": 0.7868852459016393,
+      "recall_at_20": 0.18032786885245902,
+      "roc_auc": 0.9036429872495446,
+      "test_size": 691,
+      "top20_found": 11
+    },
+    "f1": 0.41245136186770426,
+    "macro_f1": 0.639114569822741,
+    "model": "finetuned_minilm",
+    "positive_count": 61,
+    "precision": 0.27040816326530615,
+    "precision_at_20": 0.55,
+    "recall": 0.8688524590163934,
+    "recall_at_20": 0.18032786885245902,
+    "roc_auc": 0.9036429872495446,
+    "test_size": 691,
+    "test_source": "upenn",
+    "threshold": 0.34997692704200745,
+    "top20_found": 11,
+    "train_source": "stanford"
+  },
+  {
+    "accuracy": 0.9203646370829034,
+    "average_precision": 0.8808811911888398,
+    "confusion_matrix": [
+      [
+        4404,
+        305
+      ],
+      [
+        158,
+        947
+      ]
+    ],
+    "default_threshold_metrics": {
+      "accuracy": 0.9248366013071896,
+      "average_precision": 0.8808811911888398,
+      "confusion_matrix": [
+        [
+          4482,
+          227
+        ],
+        [
+          210,
+          895
+        ]
+      ],
+      "f1": 0.8037718904355635,
+      "macro_f1": 0.8786437369420664,
+      "positive_count": 1105,
+      "precision": 0.7976827094474154,
+      "precision_at_20": 1.0,
+      "recall": 0.8099547511312217,
+      "recall_at_20": 0.01809954751131222,
+      "roc_auc": 0.9639264948510072,
+      "test_size": 5814,
+      "top20_found": 20
+    },
+    "f1": 0.8035638523546882,
+    "macro_f1": 0.876811588565436,
+    "model": "finetuned_minilm",
+    "positive_count": 1105,
+    "precision": 0.7563897763578274,
+    "precision_at_20": 1.0,
+    "recall": 0.8570135746606334,
+    "recall_at_20": 0.01809954751131222,
+    "roc_auc": 0.9639264948510072,
+    "test_size": 5814,
+    "test_source": "stanford",
+    "threshold": 0.34997692704200745,
+    "top20_found": 20,
+    "train_source": "stanford"
+  }
+]

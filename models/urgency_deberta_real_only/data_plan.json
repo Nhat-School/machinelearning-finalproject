@@ -1,0 +1,47 @@
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}

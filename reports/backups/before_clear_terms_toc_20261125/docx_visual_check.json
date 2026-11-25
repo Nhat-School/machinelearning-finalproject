@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "page_count": 20,
+  "document_sha256": "3eb4bdd5515e8aa7aaf0db4b5c3faca6c02b0d8aaf40213618500ae7b761396e",
+  "method": "Rendered and visually reviewed all 20 pages. Opening page explains the shared MiniLM encoder, supervised fine-tuning, CE, pairwise ranking, optimization, calibration and relation to previous B/C IDs. All 83 comparison records and 16 probe predictions unchanged.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 8,
+  "comparison_rows": 83,
+  "probe_detail_page": 3,
+  "probe_table_rows": 16,
+  "binary_correct_counts": {
+    "real_only": 14,
+    "custom_pairwise": 13
+  },
+  "web_guide_pages": [
+    18,
+    19
+  ],
+  "page_png_sha256": {
+    "page-1.png": "4fda1c5cf76a439162ef395f84fac3d0f117df5f8f2ecb13a09bf010205be0ef",
+    "page-2.png": "a4adb2c5cc2cc0aa1842ceae6861638ce4513c59f92321ac0310e8956a2d78f5",
+    "page-3.png": "cd14987c7d07511b53dc49116e30df1d6311d233bf60142b3238d783c380314b",
+    "page-4.png": "8918cc7ce3a7513999bc419029d983964279f8fd0373cca848ec68e6aac425e7",
+    "page-5.png": "7b317ac7b36a9516f1d32b6f4db47e00cfc262ed29d9e3c750c7fbb27da7c7bb",
+    "page-6.png": "5e92dd420ef44453fcba8d11f25437b7ac231397232e5eea99ce887886119338",
+    "page-7.png": "feaa47f7c4fe6abea0be980153c1baf294d31cce7dd2b92e8ab933a1ff2e4804",
+    "page-8.png": "d5c3546561e32153f0fb363374ec0fea7141645663d9cb483ee3d15c058d89e9",
+    "page-9.png": "89446d360c949fd3cd116e81db551ebd9176274b6976d1c5f757119e997f3843",
+    "page-10.png": "061b16d3bb08d0963f7bba47454605338eb851d9b0d0e3c1697b8c4e56a1c81a",
+    "page-11.png": "98f4aa513c3fb2ddee88a148743c84c9107fe4dc01762056c1c50bae6dbe93c7",
+    "page-12.png": "f252b0acf09f4079f83df1c237c93cb29530ecbdc0e53d130a80697a6bc45162",
+    "page-13.png": "7912844371cbdef9dc53e33a60e5da68326911d77384322e37b0d06b53bfc08c",
+    "page-14.png": "923ad2fce9a62b1b7c3ccb98f2c01d4c690d259f1c2ee933811a73e12faa2965",
+    "page-15.png": "589f9621d8a4b620932209829e2c3ba052438a89aededa3b116d2739aa7473d0",
+    "page-16.png": "e4fd2c79719bbca5a516680a3213c64799b44860d14d0975cd3229c86d5cc81e",
+    "page-17.png": "a1c811fec9abb8062f43fcfc73da06bd47e5757e0b8f8f844b96d60950779bb4",
+    "page-18.png": "fb8cbee8a87e4cd1932912594e25e166326ef00578c76a219b6580e4afc5340c",
+    "page-19.png": "ffa9818103d89de8203809e34acded7bd105da7edba2a668b0caadbe28e17220",
+    "page-20.png": "78459817750df804c5cdc9dcfd212521bc2834f3f256fd2fa728259e51e441b1"
+  },
+  "model_naming": {
+    "MiniLM hai nguồn": "formerly B / real_only; supervised fine-tuning with cross-entropy on UPenn and Stanford",
+    "MiniLM + CE tổng hợp": "formerly C-CE / custom_ce; adds synthetic per-example cross-entropy",
+    "MiniLM + học cặp": "formerly C-Pair / custom_pairwise; adds synthetic cross-entropy and pairwise ranking"
+  }
+}

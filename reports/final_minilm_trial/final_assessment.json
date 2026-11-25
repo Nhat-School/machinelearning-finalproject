@@ -1,0 +1,10 @@
+{
+  "model_key": "joint__minilm_real_control",
+  "arm": "real_only",
+  "seed": 42,
+  "status": "final selected project prototype; not independently validated for deployment",
+  "basis": "Two-source joint MiniLM beat the synthetic custom variant on both real test sets in both seeds and on additional draft wording probes (14/16 versus 13/16). Older Stanford blend retains higher Stanford F1; no universal best-model claim.",
+  "selection_is_post_evaluation_assessment": true,
+  "seed_42_fixed_before_test": true,
+  "teacher_notebook": "kaggle/final_best_model.ipynb"
+}

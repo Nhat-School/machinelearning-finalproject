@@ -1,0 +1,2 @@
+# Model weights exceed normal GitHub file limits; Git LFS preserves their bytes.
+*.safetensors filter=lfs diff=lfs merge=lfs -text

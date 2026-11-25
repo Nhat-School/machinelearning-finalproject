@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "page_count": 19,
+  "document_sha256": "69d24b623acf487915fc1ec52590ed7f53603e417003668364f7296ae4aa884e",
+  "method": "Inspected all 19 report pages for model naming. Visually checked the 11 changed page PNGs after rendering; the other 8 page PNGs exactly match previously inspected images. All 83 saved comparison records and the 16-probe results are unchanged.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 8,
+  "comparison_rows": 83,
+  "probe_detail_page": 2,
+  "probe_table_rows": 16,
+  "binary_correct_counts": {
+    "real_only": 14,
+    "custom_pairwise": 13
+  },
+  "web_guide_pages": [
+    17,
+    18
+  ],
+  "page_png_sha256": {
+    "page-1.png": "046288f9f185e0806f004bd93149ed43a2f961446dc217b5da16706981770fe1",
+    "page-2.png": "4434105cde1e770ed18ee2f7ef9c57d643889e815db930c0194cbbf4328b7af3",
+    "page-3.png": "6fc8213839d647b415cbad2b90e1cb02a1f555699e58c90b0ffafc7a0e283263",
+    "page-4.png": "45aede948817cb56316b5747c20501211b0a4ef79739572f805d791061d8b3ce",
+    "page-5.png": "ae2711883b23258a991527a4e1d0959aa697672c57776bc02708a0a86c80cde6",
+    "page-6.png": "64978d9863844746d8b6e1afb528e2fcf6d1340bb7aad70747d4c851537b6dc9",
+    "page-7.png": "21d5b553ca5adba3047519ff03aa95284b0f7f1522ea1932c6f04f90437d6a6c",
+    "page-8.png": "445ab656a37a46b1a8e3fd1236dc6f5faa4ec291241b4129261c686ce4788b1e",
+    "page-9.png": "f7b98f73c9618541b38a8d12fbc057cb016e1cfd688a7166c8349a57559b5b10",
+    "page-10.png": "0bd165998ad8b7159d13ed4a46b9e30d64ff95c64211927bbf4aa7740ec60f19",
+    "page-11.png": "cead710e85c21266207f32e03e5fe4e3566fe82e177c9a7a9e504970913a5af4",
+    "page-12.png": "049830712b9506eb53413a01c6482fba4855db090f769fbcb71c9848099d8e7a",
+    "page-13.png": "4a53efe8fb9fadceafab09f24847ffbd3470469eee70567bb17170f1d59c2221",
+    "page-14.png": "7e01ef1df80d7a5d907139404784c080ce86942160863a9f270ed73b12227c34",
+    "page-15.png": "6bfdcb6e7d3ea6a7347820e08bf9fa75ddbbcff43e75ba36580c2b19f4680800",
+    "page-16.png": "b5ac469062681ca339b88a154eff03346fa096c1dc9ea2a64f1bfd1282930c35",
+    "page-17.png": "ee97ca9dd2ea2c32466a75a7313a9e7c9dd7346b1012eb697f048179d29a85b7",
+    "page-18.png": "62b6dc95786f6f79f76146c3a19655d28fa2e6aa0a5bdbe59f66f96f20a4de89",
+    "page-19.png": "2644f69ec39cccebc22d4f6e816ec15042962b84f0c023560b84ccf25de0843a"
+  },
+  "model_naming": {
+    "MiniLM-B": "all-MiniLM-L6-v2 fine-tuned jointly on UPenn and Stanford",
+    "MiniLM-C-CE": "same encoder and real sources plus synthetic per-example cross-entropy",
+    "MiniLM-C-Pair": "same encoder and real sources plus synthetic cross-entropy and pairwise ranking"
+  }
+}

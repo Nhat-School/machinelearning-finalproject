@@ -1,0 +1,55 @@
+[
+  {
+    "model": "upenn__tfidf_logreg",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "upenn__tfidf_svm",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "upenn__tfidf_nb",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "stanford__tfidf_logreg",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "stanford__tfidf_svm",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "stanford__tfidf_nb",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "upenn__minilm_logreg",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 2.976225210726824e-09
+  },
+  {
+    "model": "stanford__minilm_logreg",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 3.122223913090694e-08
+  },
+  {
+    "model": "upenn__finetuned_minilm",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "stanford__finetuned_minilm",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "csv_quoted_comma": true
+  }
+]

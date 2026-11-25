@@ -1,0 +1,52 @@
+{
+  "arm": "real_only",
+  "seed": 42,
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "configuration": {
+    "arm": "real_only",
+    "seed": 42,
+    "epochs": 4,
+    "patience": 2,
+    "batch_size": 64,
+    "max_length": 256,
+    "lr": 2e-05,
+    "custom_share": 0.2,
+    "pairwise_coefficient": 0.25,
+    "allow_synthetic_drafts": false,
+    "bf16": true,
+    "force": false
+  },
+  "real_fit_counts": {
+    "upenn": 2257,
+    "stanford": 18604
+  },
+  "real_weighting": "inverse source count, equal aggregate contributions from UPenn and Stanford",
+  "custom_training_rows": 0,
+  "custom_label_origin": [],
+  "custom_loss_share": 0.0,
+  "pairwise_coefficient_inside_custom_loss": 0.0,
+  "checkpoint_selection": "highest mean real-source validation AP; identical rule for every arm",
+  "calibration": "source-balanced pooled Platt scaling, separate real calibration role, CPU float32",
+  "binary_threshold": 0.5,
+  "review_bounds": [
+    0.2,
+    0.8
+  ],
+  "test_status": "historical tests previously inspected; new test evaluation deferred until candidate selection is frozen",
+  "training_device": "mps",
+  "training_precision": "bfloat16",
+  "evaluation_precision": "CPU float32",
+  "versions": {
+    "python": "3.12.13",
+    "torch": "2.15.0"
+  },
+  "split_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135",
+  "custom_draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991",
+  "training_script_sha256": "5a7b967d8effff36af411ae757112422fda62515c200f3ef871ec0454be4c65e",
+  "status": "trained and exported; historical test deferred",
+  "best_epoch": 4,
+  "best_mean_validation_ap": 0.7359086022411307,
+  "training_seconds": 178.65872366726398,
+  "optimizer_updates": 1304
+}

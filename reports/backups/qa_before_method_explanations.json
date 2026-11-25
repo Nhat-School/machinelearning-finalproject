@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "page_count": 16,
+  "document_sha256": "99d34cbe98febe6c783031741f2fbbcf97429b62dab1c632c1060518300cc1ed",
+  "method": "All 16 pages visually inspected at full resolution. Last edits affected pages 14 and 16 only; both re-inspected and other page PNG hashes unchanged.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 8,
+  "comparison_rows": 77,
+  "all_precision_recall_f1_accuracy_recomputed_from_confusions": true,
+  "final_notebook": "kaggle/final_best_model.ipynb"
+}

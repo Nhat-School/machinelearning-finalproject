@@ -1,0 +1,10 @@
+{
+  "user_authorized_synthetic_trial": true,
+  "authorization_basis": "User requested testing the three-dataset MiniLM path, then instructed continue after clarification that CustomForum contains unreviewed synthetic drafts.",
+  "user_request": "ok, test that path so that i can see the results. I think this is the last trial so doing your best",
+  "latest_user_instruction": "continue",
+  "interpretation": "Task authorization to test assistant draft labels as synthetic weak supervision; not a claim that the user reviewed or approved individual labels.",
+  "authorized_at_utc": "2026-11-16T15:22:58.406276+00:00",
+  "human_label_adjudication": false,
+  "review_worksheet_modified": false
+}

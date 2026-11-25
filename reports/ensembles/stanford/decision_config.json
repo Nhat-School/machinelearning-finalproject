@@ -1,0 +1,14 @@
+{
+  "train_source": "stanford",
+  "minilm_weight": 0.8,
+  "tfidf_weight": 0.19999999999999996,
+  "threshold": 0.3931987027552757,
+  "oof_f1": 0.7971014492753623,
+  "oof_ap": 0.8613545448539878,
+  "selection": "source OOF F1; tie AP, then higher MiniLM weight",
+  "validation_status": "Development diagnostics: base OOF predictions also participated in model/checkpoint selection; not nested CV.",
+  "input_sha256": {
+    "reports/fine_tuning/stanford/oof.csv": "d9836721ecbbc16ac2c050d10d5c8feb0517bde4ed10fbc85f5baa5679cf34a7",
+    "reports/experiments/oof_stanford_tfidf_logreg.csv": "55e559f5023a879d7fb836a6d5f2a7e9351a195c09ffc7de9bb3a19059e54f04"
+  }
+}

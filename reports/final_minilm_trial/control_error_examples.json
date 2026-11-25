@@ -1,0 +1,174 @@
+{
+  "real_only_seed42": {
+    "upenn": {
+      "FP": [
+        {
+          "post_id": "upenn_000785",
+          "label": "0",
+          "raw_score": "0.9816074371337891",
+          "score": "0.9263539954627981",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "text": "Hi,Am I still able to participate in this course at the time of writing?Best Regards"
+        },
+        {
+          "post_id": "upenn_002648",
+          "label": "0",
+          "raw_score": "0.964350163936615",
+          "score": "0.8851257956916952",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "text": "I just signed up for the course (a month late), and haven't even ordered any of the books yet, so obviously I'm going to be behind. I'm just planning to enjoy the course (no quizzes, etc.), but since I'll be way behind, I'm wondering how long I can access the lectures after the course officially ends. I suspect I won't ever catch up officially, as I plan to do all the readings. I'm hoping that I'll have at least a few extra months to access the course. Thanks."
+        }
+      ],
+      "FN": [
+        {
+          "post_id": "upenn_000770",
+          "label": "1",
+          "raw_score": "0.005395664367824793",
+          "score": "0.016320033712537464",
+          "predicted": "0",
+          "action": "NORMAL",
+          "text": "Hello [REDACTED], thanks! There's an enroll button which leads to an error. Seems it hasn't gone online yet.Ã‚Â"
+        },
+        {
+          "post_id": "upenn_003275",
+          "label": "1",
+          "raw_score": "0.005745126865804195",
+          "score": "0.017067025506640153",
+          "predicted": "0",
+          "action": "NORMAL",
+          "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+        }
+      ]
+    },
+    "stanford": {
+      "FP": [
+        {
+          "post_id": "stanford_009064",
+          "label": "0",
+          "raw_score": "0.9870554208755493",
+          "score": "0.9420960039649159",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "text": "me too. thought i was finished the course and today i look to see that there are peer submissions to grade! yesterday they said none? How does peer grading fit into the deadline?"
+        },
+        {
+          "post_id": "stanford_027290",
+          "label": "0",
+          "raw_score": "0.9849786162376404",
+          "score": "0.935865290410552",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "text": "I thought I could improve my essay 2 so resubmitted it (around the 9th or 10th); however, the only peer reviews I see are those for my first attempt at this essay and not the second revised one. Is this because new reviews have not been done, or that the first reviews were better so the others were not even shown? My revised essay shows up in the essay box and time to submit has passed, but all reviews show comments on my first attempt. My score was not bad but I was hoping to get it higher.\u0007Thank you for your help with this matter.\u0007-D"
+        }
+      ],
+      "FN": [
+        {
+          "post_id": "stanford_019670",
+          "label": "1",
+          "raw_score": "0.003022590186446905",
+          "score": "0.01078708802120557",
+          "predicted": "0",
+          "action": "NORMAL",
+          "text": "if I asked you how old you are and you give me your age at your last birthday then you aren't telling me how old you ARE\u0007\u0007you're telling me how old you WERE\u0007\u0007how old you ARE is ALWAYS changing, it is CONTINUALLY changing"
+        },
+        {
+          "post_id": "stanford_003056",
+          "label": "1",
+          "raw_score": "0.003156510880216956",
+          "score": "0.011126951935780043",
+          "predicted": "0",
+          "action": "NORMAL",
+          "text": "In my current school we have a ¾Gifted and talented® cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most ¾able® are filtered and ¾extracted® into another class (called ¾Extraction®) during the time at which they would be having a ¾normal® maths lesson.\u0007 - This ¾extraction® lesson is done twice a fortnight and the students are ¾expected® to catch up with the normal curriculum in their own time; if they don®t they can be removed.\u0007 - There are two ¾extraction® classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the ¾Extraction® class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the ¾Extraction® class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the ¾Extraction® class.\u0007 - Reinstating students to the ¾Extraction® class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in ¾Extraction®\u0007 - Labeling of ¾Gifted and Talented® and ¾Extraction®; the latter sounding quite painful!\u0007 - Students who are borderline between ¾normal® class and ¾extraction®.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+        }
+      ]
+    }
+  },
+  "real_only_seed43": {
+    "upenn": {
+      "FP": [
+        {
+          "post_id": "upenn_000785",
+          "label": "0",
+          "raw_score": "0.9580225944519043",
+          "score": "0.9145313735822213",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "text": "Hi,Am I still able to participate in this course at the time of writing?Best Regards"
+        },
+        {
+          "post_id": "upenn_002648",
+          "label": "0",
+          "raw_score": "0.9259999990463257",
+          "score": "0.8695279703516479",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "text": "I just signed up for the course (a month late), and haven't even ordered any of the books yet, so obviously I'm going to be behind. I'm just planning to enjoy the course (no quizzes, etc.), but since I'll be way behind, I'm wondering how long I can access the lectures after the course officially ends. I suspect I won't ever catch up officially, as I plan to do all the readings. I'm hoping that I'll have at least a few extra months to access the course. Thanks."
+        }
+      ],
+      "FN": [
+        {
+          "post_id": "upenn_003275",
+          "label": "1",
+          "raw_score": "0.004901399370282888",
+          "score": "0.013648087222031459",
+          "predicted": "0",
+          "action": "NORMAL",
+          "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+        },
+        {
+          "post_id": "upenn_000738",
+          "label": "1",
+          "raw_score": "0.005694194231182337",
+          "score": "0.015342614732843651",
+          "predicted": "0",
+          "action": "NORMAL",
+          "text": "dear professor [REDACTED].I did all that was required during this course.However since I do not need a Certificate, I did not pay for the course.Nevertheless, I would appreciate knowing how I did on the exam.I am now 58 years old and completed my Bsc in 1984. Ã‚Â I took this course in order to \"get back on track\".You built up a fantastic course!Thanks,[REDACTED]"
+        }
+      ]
+    },
+    "stanford": {
+      "FP": [
+        {
+          "post_id": "stanford_027290",
+          "label": "0",
+          "raw_score": "0.9769245386123657",
+          "score": "0.9456846884605226",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "text": "I thought I could improve my essay 2 so resubmitted it (around the 9th or 10th); however, the only peer reviews I see are those for my first attempt at this essay and not the second revised one. Is this because new reviews have not been done, or that the first reviews were better so the others were not even shown? My revised essay shows up in the essay box and time to submit has passed, but all reviews show comments on my first attempt. My score was not bad but I was hoping to get it higher.\u0007Thank you for your help with this matter.\u0007-D"
+        },
+        {
+          "post_id": "stanford_009064",
+          "label": "0",
+          "raw_score": "0.9740064144134521",
+          "score": "0.9405273049637605",
+          "predicted": "1",
+          "action": "PRIORITY",
+          "text": "me too. thought i was finished the course and today i look to see that there are peer submissions to grade! yesterday they said none? How does peer grading fit into the deadline?"
+        }
+      ],
+      "FN": [
+        {
+          "post_id": "stanford_013394",
+          "label": "1",
+          "raw_score": "0.0041003143414855",
+          "score": "0.011871719752280307",
+          "predicted": "0",
+          "action": "NORMAL",
+          "text": "I am a Canadian working in India and here too I see the Prussian model in the school systems. Access to education is improving and in fact, fairly good here, but it is so much based on rote memorization. I am working in the health field, but experienced this rote learning when I was teaching nursing students. For example, the students had memorized things to write on a patient's chart without really understanding what it meant, in terms of treatment of care. In the nursing school, the focus of the curriculum, the tutors, and all the classes was on ensuring that the students passed the board exams each year. Unfortunately, this resulted in nurses who were good at remembering things, but not as good at applying it, and not good at all at thinking on their own about it. Fortunately, the Board itself recognized the problem and changed the curriculum to introduce more analytical work and exams that did not rely totally on memorization, but on looking at a situation and developing an approach to deal with it. Encouraging, but still a long way to go -- especially since they have to get over the culture that says that women should not question (especially men or even women of higher status).\u0007\u0007On a different track, I very much liked Wu Qinn's approach to education and human rights, and was struck by her comment that \\When you educate a girl, you educate a family.\\\" I have seen this to be so true in the community development work done by the hospitals in the association I am working with. Training women in nutrition or sanitation or malaria prevention meant that the whole family practiced what was taught and the approach was much more effective than training the men. I think we must explore the informal education routes so that many more women and girls can learn what they need to in order to take an active part in their community and society. The formation of self-help groups has made a big difference for the women in some communities, and I think we need to look at doing more things like that.\u0007\u0007My question is this -- how can informal education projects like this for women be made part of a country's education system, so it is mainstream and ongoing, not just project by project?\""
+        },
+        {
+          "post_id": "stanford_003056",
+          "label": "1",
+          "raw_score": "0.004120738711208105",
+          "score": "0.011917922763711675",
+          "predicted": "0",
+          "action": "NORMAL",
+          "text": "In my current school we have a ¾Gifted and talented® cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most ¾able® are filtered and ¾extracted® into another class (called ¾Extraction®) during the time at which they would be having a ¾normal® maths lesson.\u0007 - This ¾extraction® lesson is done twice a fortnight and the students are ¾expected® to catch up with the normal curriculum in their own time; if they don®t they can be removed.\u0007 - There are two ¾extraction® classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the ¾Extraction® class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the ¾Extraction® class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the ¾Extraction® class.\u0007 - Reinstating students to the ¾Extraction® class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in ¾Extraction®\u0007 - Labeling of ¾Gifted and Talented® and ¾Extraction®; the latter sounding quite painful!\u0007 - Students who are borderline between ¾normal® class and ¾extraction®.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+        }
+      ]
+    }
+  }
+}

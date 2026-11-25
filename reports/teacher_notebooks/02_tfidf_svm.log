@@ -1,0 +1,659 @@
+Cell 1: Project: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/02_tfidf_svm
+Mode: LOCAL QA: saved completed training; no fitting
+
+Cell 3: {
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "requirements": [
+    "numpy>=2,<3",
+    "scikit-learn==1.9.1",
+    "matplotlib>=3.10,<4",
+    "joblib>=1.4,<2",
+    "packaging>=24"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "packaging": "26.3"
+  },
+  "device": "cpu",
+  "visible_gpus": 0,
+  "training_gpu_count": 0,
+  "validation_reuse": true,
+  "fresh_training_requested": false
+}
+
+Cell 22: {
+  "prepare_data.py": "f23b27400fd1166272d6a2bce787eedb608063e07433b774ec6bc4464793e42f",
+  "train.py": "cb94a335c4205e4ceff9d99297a9253ec77a25ed96689b1a65075289c13741d0",
+  "organize_datasets.py": "a5aaa7df87679d029601e5142c2cc1365b3c517e3667dbc19fce1ed5cb6f9b51",
+  "build_custom_dataset.py": "a92cc3d1fa764a13a5785d24b50c8fcfcd61a0f4e42126e95f650e71c26f91ca",
+  "prepare_reliability_data.py": "df5132d1f5ceaa35af63058b6b9f46235946c4e870cf5e89aa0fcbd04b2ec57a",
+  "audit_custom_labels_ai.py": "e400ca17a4c7551e2f14794b75b0ef99ccd0b4330da725edc7408f008ab576b9",
+  "teacher_notebook_tools.py": "c1f9bacc5808ed2267a2aee5028d9bbd51a98357dbca6007c5962f68e6c1a603",
+  "teacher_predict_baseline.py": "269e4b3fb5c35c1aa18bfa86c2968f04fdc2aa9b9c6a2a76409de56542f39002"
+}
+
+Cell 24: upenn: raw=3504, final=3493, priority=298
+
+Cell 24: stanford: raw=29604, final=29070, priority=5524
+Canonical dataset folder: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/02_tfidf_svm/Datasets
+Original file hashes verified; legacy training paths remain usable.
+
+Cell 24: {
+  "version": "custom-v2",
+  "rows": 160,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16,
+    "still_blocked_update": 40
+  },
+  "splits": {
+    "validation": 36,
+    "train": 93,
+    "challenge": 31
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "development_history": "40 still-blocked updates added after observing poor resolution handling; not an independent benchmark",
+  "draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991"
+}
+
+Cell 24: {
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 24: {
+  "passed": true,
+  "hashes_and_cleaning_checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "historical_test_membership_preserved": true,
+  "upenn_student_roles_disjoint": true,
+  "custom_scenario_groups_disjoint": true,
+  "rows": 32563,
+  "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}
+{
+  "both_binary_classes_present": true,
+  "labels_in_range": true,
+  "no_exact_duplicates_between_sources": true,
+  "no_exact_duplicates_within_sources": true,
+  "nonempty_text": true,
+  "rows_accounted_for": true
+}
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 27: [
+  {
+    "best_params": {
+      "classifier__C": 0.3
+    },
+    "cv_mean_f1": 0.5055296126132912,
+    "cv_std_f1": 0.06864439732439122,
+    "default_threshold": 0.0,
+    "model": "tfidf_svm",
+    "name": "svm",
+    "oof_tuned_f1": 0.5287769784172661,
+    "representation": "tfidf",
+    "source": "upenn",
+    "threshold": -0.1646198683014054,
+    "training_seconds": 3.032327917404473
+  },
+  {
+    "best_params": {
+      "classifier__C": 0.3
+    },
+    "cv_mean_f1": 0.703507891406795,
+    "cv_std_f1": 0.003077397672292565,
+    "default_threshold": 0.0,
+    "model": "tfidf_svm",
+    "name": "svm",
+    "oof_tuned_f1": 0.7061793436505323,
+    "representation": "tfidf",
+    "source": "stanford",
+    "threshold": 0.08191062228048629,
+    "training_seconds": 14.41557375015691
+  }
+]
+
+Cell 29: Matplotlib is building the font cache; this may take a moment.
+
+Cell 29: {
+  "profile": "baseline",
+  "rows": 4,
+  "figures": [
+    "reports/teacher/metrics_01.png",
+    "reports/teacher/confusions_01.png",
+    "reports/teacher/precision_recall_threshold_01.png"
+  ],
+  "mode": "SAVED-TRAINING VALIDATION",
+  "checks": "All reported count metrics recomputed; per-post scores checked when available."
+}
+
+Cell 29: {
+  "accuracy": 0.914616497829233,
+  "average_precision": 0.6557883130313705,
+  "confusion_matrix": [
+    [
+      598,
+      32
+    ],
+    [
+      27,
+      34
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.9319826338639653,
+    "average_precision": 0.6557883130313705,
+    "confusion_matrix": [
+      [
+        617,
+        13
+      ],
+      [
+        34,
+        27
+      ]
+    ],
+    "f1": 0.5346534653465347,
+    "macro_f1": 0.7489816897380605,
+    "positive_count": 61,
+    "precision": 0.675,
+    "precision_at_20": 0.95,
+    "recall": 0.4426229508196721,
+    "recall_at_20": 0.3114754098360656,
+    "roc_auc": 0.900416341399948,
+    "test_size": 691,
+    "top20_found": 19
+  },
+  "f1": 0.5354330708661418,
+  "inference_seconds": 0.035409582778811455,
+  "macro_f1": 0.7442105593374533,
+  "model": "tfidf_svm",
+  "positive_count": 61,
+  "precision": 0.5151515151515151,
+  "precision_at_20": 0.95,
+  "recall": 0.5573770491803278,
+  "recall_at_20": 0.3114754098360656,
+  "roc_auc": 0.900416341399948,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": -0.1646198683014054,
+  "top20_found": 19,
+  "train_source": "upenn",
+  "training_seconds": 3.032327917404473
+}
+{
+  "accuracy": 0.8362573099415205,
+  "average_precision": 0.5323729667045595,
+  "confusion_matrix": [
+    [
+      4485,
+      224
+    ],
+    [
+      728,
+      377
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.8305813553491572,
+    "average_precision": 0.5323729667045595,
+    "confusion_matrix": [
+      [
+        4608,
+        101
+      ],
+      [
+        884,
+        221
+      ]
+    ],
+    "f1": 0.3097407147862649,
+    "macro_f1": 0.6065907769598416,
+    "positive_count": 1105,
+    "precision": 0.6863354037267081,
+    "precision_at_20": 0.75,
+    "recall": 0.2,
+    "recall_at_20": 0.013574660633484163,
+    "roc_auc": 0.8179686726774281,
+    "test_size": 5814,
+    "top20_found": 15
+  },
+  "f1": 0.44196951934349354,
+  "inference_seconds": 0.160993583034724,
+  "macro_f1": 0.6730105609214948,
+  "model": "tfidf_svm",
+  "positive_count": 1105,
+  "precision": 0.627287853577371,
+  "precision_at_20": 0.75,
+  "recall": 0.3411764705882353,
+  "recall_at_20": 0.013574660633484163,
+  "roc_auc": 0.8179686726774281,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": -0.1646198683014054,
+  "top20_found": 15,
+  "train_source": "upenn",
+  "training_seconds": 3.032327917404473
+}
+{
+  "accuracy": 0.7930535455861071,
+  "average_precision": 0.39095408191644326,
+  "confusion_matrix": [
+    [
+      503,
+      127
+    ],
+    [
+      16,
+      45
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.7814761215629522,
+    "average_precision": 0.39095408191644326,
+    "confusion_matrix": [
+      [
+        494,
+        136
+      ],
+      [
+        15,
+        46
+      ]
+    ],
+    "f1": 0.3786008230452675,
+    "macro_f1": 0.6230141955437049,
+    "positive_count": 61,
+    "precision": 0.25274725274725274,
+    "precision_at_20": 0.55,
+    "recall": 0.7540983606557377,
+    "recall_at_20": 0.18032786885245902,
+    "roc_auc": 0.8712464220660943,
+    "test_size": 691,
+    "top20_found": 11
+  },
+  "f1": 0.38626609442060084,
+  "inference_seconds": 0.03101641684770584,
+  "macro_f1": 0.6309050228412839,
+  "model": "tfidf_svm",
+  "positive_count": 61,
+  "precision": 0.2616279069767442,
+  "precision_at_20": 0.55,
+  "recall": 0.7377049180327869,
+  "recall_at_20": 0.18032786885245902,
+  "roc_auc": 0.8712464220660943,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.08191062228048629,
+  "top20_found": 11,
+  "train_source": "stanford",
+  "training_seconds": 14.41557375015691
+}
+{
+  "accuracy": 0.8857929136566908,
+  "average_precision": 0.7799705791071292,
+  "confusion_matrix": [
+    [
+      4303,
+      406
+    ],
+    [
+      258,
+      847
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.8783969728242174,
+    "average_precision": 0.7799705791071292,
+    "confusion_matrix": [
+      [
+        4222,
+        487
+      ],
+      [
+        220,
+        885
+      ]
+    ],
+    "f1": 0.7145740815502624,
+    "macro_f1": 0.8186573828142526,
+    "positive_count": 1105,
+    "precision": 0.6450437317784257,
+    "precision_at_20": 1.0,
+    "recall": 0.8009049773755657,
+    "recall_at_20": 0.01809954751131222,
+    "roc_auc": 0.9324042052909177,
+    "test_size": 5814,
+    "top20_found": 20
+  },
+  "f1": 0.7184054283290925,
+  "inference_seconds": 0.15573679190129042,
+  "macro_f1": 0.8233882589326154,
+  "model": "tfidf_svm",
+  "positive_count": 1105,
+  "precision": 0.6759776536312849,
+  "precision_at_20": 1.0,
+  "recall": 0.7665158371040725,
+  "recall_at_20": 0.01809954751131222,
+  "roc_auc": 0.9324042052909177,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.08191062228048629,
+  "top20_found": 20,
+  "train_source": "stanford",
+  "training_seconds": 14.41557375015691
+}
+
+Cell 29: Checks: [
+  {
+    "experiment": "tfidf_svm upenn \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_svm upenn \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_svm stanford \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_svm stanford \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  }
+]
+Actual error examples: [
+  {
+    "experiment": "tfidf_svm upenn \u2192 upenn",
+    "all_error_count": 59,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": -1.1124360776475237,
+        "threshold": -0.1646198683014054,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_002737",
+        "true": 1,
+        "predicted": 0,
+        "score": -0.880877654755943,
+        "threshold": -0.1646198683014054,
+        "error": "FN",
+        "text": "I want help with questions. Where should I find reference to \u00c2 contemplate and fathom the relevance and irrevance among the options.\u00c2 Can you describe relationship between conditional probability of disjoint events"
+      },
+      {
+        "post_id": "upenn_003317",
+        "true": 1,
+        "predicted": 0,
+        "score": -0.7993264904430886,
+        "threshold": -0.1646198683014054,
+        "error": "FN",
+        "text": "Being in the medical/pharmaceutical industry, it is easy to understand that Dr. [REDACTED] would lean towards drug-based care, but I didn't know that he was against non-drug approaches to health care. However, I don't see why you have chosen this course to promote a book that is completely off-topic. I think it is completely inappropriate to place an ad in a classroom for a two-year old book that will result in book sales and revenue. I would suggest that either you or Coursera consider removing it as it amounts to nothing more than spam."
+      },
+      {
+        "post_id": "upenn_002443",
+        "true": 1,
+        "predicted": 0,
+        "score": -0.724695844261876,
+        "threshold": -0.1646198683014054,
+        "error": "FN",
+        "text": "hi, good afternoon. My doubt is if the numbers of words that we use for make citations in essay also count for the total numbers of words to make it. Thanks"
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_svm upenn \u2192 stanford",
+    "all_error_count": 952,
+    "examples": [
+      {
+        "post_id": "stanford_022622",
+        "true": 1,
+        "predicted": 0,
+        "score": -1.1386530291587755,
+        "threshold": -0.1646198683014054,
+        "error": "FN",
+        "text": "I know some people interested in enrolling in a new edition of \\Statistics in Medicine\\\"? Any hint?\u0007\u0007Thanks\""
+      },
+      {
+        "post_id": "stanford_014092",
+        "true": 1,
+        "predicted": 0,
+        "score": -1.1073717717500018,
+        "threshold": -0.1646198683014054,
+        "error": "FN",
+        "text": "For years academics have been telling researchers that there is a problem of generalization with regard to all of the \\stress management\\\" or \\\"coping skills training\\\" literature (see below). Unfortunately, assistant professors need publications, and doctoral students need dissertation topics--to manage their own stress. So, what shows up are hundreds of one-time studies with crummy control groups, no data on effect size, no reports of \\\"intention to treat\\\" drop-out rates and, most concerning of all, follow-up data that rarely or never exceeds 30, 60 or 90 days. The QR response (Stroebel's offshoot of Benson's work), TM (multitudes of teachers), mindfulness meditation (in any of its forms), prayer (choose your object), and dozens of other \\\"tools\\\" have a physiological effect: when practiced assiduously and if applied consistently; an \\\"if\\\" that eliminates the majority of would-be practitioners. \u0007\u0007Most people don't bother with those techniques. They just muddle through. And, muddling through is probably about as effective a technique for most people as spending a bunch of time/money learning one of the \\\"tools\\\" suggested in the module. Certainly, that's what Dr. Friedlander did for both her speech and her sky-dive. That is, muddling works best unless you're going to use a specific \\\"tool\\\" to tolerate a very delimited stressor, and you are willing to put in as much time as necessary to get to a point where you can use that \\\"tool\\\" one time for that one event. After that, you might just as well just try repeating the event, and seeing how you do the 2nd time. It probably will go better the next time without a lot of extra \\\"tools.\\\"\u0007\u0007So, I again suggest sticking with understanding the physiology, practicing the situation that you need to become competent at, and ignoring the benedictions of stress-management \\\"tool\\\" promoters. Once you understand the physiology you can devise your own way of getting by. That will almost certainly be far more effective than anything someone gives you to try. \u0007\u0007----\u0007\u0007Generalization effects in coping skills training.\u0007Smith, Ronald E.\u0007Journal of Sport & Exercise Psychology, Vol 21(3), Sep 1999, 189-204.\u0007\u0007Abstract\u0007\u0007An important consideration in coping skills training is the extent to which acquired skills generalize to other life domains. For example, sport-oriented performance enhancement skills are often regarded as life skills that can also facilitate adaptation in other areas of life. Moreover, task-specific increases in self-efficacy pr\""
+      },
+      {
+        "post_id": "stanford_025497",
+        "true": 1,
+        "predicted": 0,
+        "score": -1.051124636360005,
+        "threshold": -0.1646198683014054,
+        "error": "FN",
+        "text": "Hi Cristin\u0007\u0007Do you recommend the use of plagiarism-detecting software as many journals do?\u0007Thanks"
+      },
+      {
+        "post_id": "stanford_026854",
+        "true": 1,
+        "predicted": 0,
+        "score": -1.0503372107460347,
+        "threshold": -0.1646198683014054,
+        "error": "FN",
+        "text": "Dr. Efron truly understands good writing. Thank you for sharing these tips. I enjoyed your interview. \u0007\u0007I've worked in energy industry for about 20 years. My colleagues,scientists and engineers, struggle with concise, clear, and interesting writing. I remember writing a group paper with industry professionals who had more experience and published papers than me. I learned early in my career (actually my first technical writing course in college) to practice good writing - clear, concise, and correct. When editing our paper, I explained to a senior colleague why we should avoid passive voice when possible. He didn't agree. He commented that he didn't believe in that - active voice. Very old school attitude. And he wasn't the only one with attitude. \u0007\u0007Now, more papers in our industry are interesting and easy-to-read. Industry style guides, like Society of Petroleum Engineers (SPE) and American Petroleum Industry (API), encourage the active voice, as well as most of the good writing techniques discussed in this course."
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_svm stanford \u2192 upenn",
+    "all_error_count": 143,
+    "examples": [
+      {
+        "post_id": "upenn_002353",
+        "true": 0,
+        "predicted": 1,
+        "score": 1.8402420581627177,
+        "threshold": 0.08191062228048629,
+        "error": "FP",
+        "text": "Is it possible technical persons?"
+      },
+      {
+        "post_id": "upenn_001761",
+        "true": 0,
+        "predicted": 1,
+        "score": 1.6268206760642063,
+        "threshold": 0.08191062228048629,
+        "error": "FP",
+        "text": "I have a few questions about this lecture. This is a topic I have heard brought up many times in various places, and after a bit of searching I still haven't found some answers to some basic questions.In the past, has there been situations where countries borrow money to have a deficit, or is this a recent phenemonon???What are the consequences of a trade deficit? Is it bad that a country carries a deficit? What are the effects, positie and negative, for the lives of average people in coutries that carry debt? More cheap crap to buy? Less jobs? Whatever. Who is the loser, the country with the deficit, or the country with the surplus? Is there interest paid on these defecits? If not, it looks like a bit of defecit could act like a free loan. Or am I thinking about this the wrong way?What do we mean when we say the US owes money to China? Who exactally? The federal reserve? The US congress? Taxpayers? What part of the government in China (and elsewhere) do they owe the money to???What about Canada? Who in Canada owes money? The taxpayers?A thought experiment, because surely this would never happen, but what would happen in the future if the US pulled an ass move and just says to China, \"nah, we don't want to give you these trillions of dollars, because, say, you stole some intellecutal property form us\", or whatever. Sure, China would be pissed. But who would suffer? Is there an international body that oversees these debts? The world bank???Any reply or links to related resources would be greatly appreciated. I would also like to know if anyone has similar questions in mind."
+      },
+      {
+        "post_id": "upenn_003043",
+        "true": 0,
+        "predicted": 1,
+        "score": 1.3975007635820829,
+        "threshold": 0.08191062228048629,
+        "error": "FP",
+        "text": "Hello Dr. [REDACTED],? ? ? ? ? ? ? ? ? ? ? ? ? ? ?I did not understand why a machine would make errors in counting a few million votes. ? ? ? ? ? ? ? ? ? ? ? ? ? ? ?Can you please give an example of the source of such an error?Thank you."
+      },
+      {
+        "post_id": "upenn_002476",
+        "true": 0,
+        "predicted": 1,
+        "score": 1.359308733744403,
+        "threshold": 0.08191062228048629,
+        "error": "FP",
+        "text": "Hi!! Please, what does IMHO mean? Thank you!!"
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_svm stanford \u2192 stanford",
+    "all_error_count": 664,
+    "examples": [
+      {
+        "post_id": "stanford_022577",
+        "true": 1,
+        "predicted": 0,
+        "score": -1.4771531428343732,
+        "threshold": 0.08191062228048629,
+        "error": "FN",
+        "text": "translated by google?"
+      },
+      {
+        "post_id": "stanford_027930",
+        "true": 0,
+        "predicted": 1,
+        "score": 1.622536073294833,
+        "threshold": 0.08191062228048629,
+        "error": "FP",
+        "text": "Does anybody have an input about the BELS certification? The Board of Editors in the Life Sciences provides annually exams for this certification. My question is, how valid or helpful is this certification for someone working as a translator/editor of scientific texts? What is the reputation of this organization?"
+      },
+      {
+        "post_id": "stanford_021480",
+        "true": 0,
+        "predicted": 1,
+        "score": 1.5051529811370594,
+        "threshold": 0.08191062228048629,
+        "error": "FP",
+        "text": "I am still stuck..can someone help me a bit more? I really am trying."
+      },
+      {
+        "post_id": "stanford_021448",
+        "true": 0,
+        "predicted": 1,
+        "score": 1.4535185125624794,
+        "threshold": 0.08191062228048629,
+        "error": "FP",
+        "text": "When computer does the repetition, can the same person be selected more than one time during different sampling?\u0007Please advise"
+      }
+    ]
+  }
+]
+
+Cell 31: {
+  "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+  "model": "tfidf_svm",
+  "source": "stanford",
+  "score": 1.0434491163148163,
+  "score_type": "decision_margin",
+  "threshold": 0.08191062228048629,
+  "binary_priority": 1,
+  "note": "English student forum posts; a model estimate can be wrong."
+}
+
+Cell 33: Download from Kaggle Output: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/02_tfidf_svm/02_tfidf_svm_output.zip MB: 25.6

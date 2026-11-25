@@ -1,0 +1,199 @@
+{
+  "provenance": "Scores transcribed from log lines 1143–1322; texts match the frozen local probe definition.",
+  "label_status": "assistant-authored draft expectations, not human-adjudicated gold",
+  "correct_binary_probes": 12,
+  "diagnostic_binary_count": 16,
+  "predictions": [
+    {
+      "id": "unresolved_upload",
+      "expected_binary_priority": 1,
+      "text": "My report is finished, but every upload attempt fails. It is due in an hour and I need assistance.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.8766919904553908,
+      "priority": 1,
+      "action": "PRIORITY"
+    },
+    {
+      "id": "resolved_upload",
+      "expected_binary_priority": 0,
+      "text": "The upload failure is fixed. I have checked the receipt and my report was accepted. No action is needed.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.13179294484649998,
+      "priority": 0,
+      "action": "NORMAL"
+    },
+    {
+      "id": "longer_resolution",
+      "expected_binary_priority": 0,
+      "text": "I was unable to enter the quiz and asked for help this morning. Since then the administrator reset my access. I completed it successfully, so please close this request.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.6148195379206594,
+      "priority": 1,
+      "action": "REVIEW"
+    },
+    {
+      "id": "problem_returned",
+      "expected_binary_priority": 1,
+      "text": "The quiz opened briefly after a reset, but now the same error is back. I still cannot start and the timer is running. Please investigate.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.7857819888246814,
+      "priority": 1,
+      "action": "REVIEW"
+    },
+    {
+      "id": "denied_access",
+      "expected_binary_priority": 1,
+      "text": "I paid for the course, yet access is denied. Support has not replied and the assessed activity closes today.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.814495921703542,
+      "priority": 1,
+      "action": "PRIORITY"
+    },
+    {
+      "id": "past_problem",
+      "expected_binary_priority": 0,
+      "text": "Yesterday I was locked out of the course. Today access has been restored and everything works. Thanks for resolving it.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.3473589755041708,
+      "priority": 0,
+      "action": "REVIEW"
+    },
+    {
+      "id": "negative_statement",
+      "expected_binary_priority": 1,
+      "text": "It is not true that my login has been repaired. I remain locked out and need someone to restore access before the exam.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.5774006313339408,
+      "priority": 1,
+      "action": "REVIEW"
+    },
+    {
+      "id": "no_remaining_issue",
+      "expected_binary_priority": 0,
+      "text": "There is no remaining login issue. I tested it again, entered the exam and finished without errors.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.2276811886390194,
+      "priority": 0,
+      "action": "REVIEW"
+    },
+    {
+      "id": "quoted_problem",
+      "expected_binary_priority": 0,
+      "text": "The tutorial uses the sentence \"I cannot log in\" as an example of a support request. I am quoting the tutorial, not reporting a problem with my account.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.8161014841174796,
+      "priority": 1,
+      "action": "PRIORITY"
+    },
+    {
+      "id": "reference_example",
+      "expected_binary_priority": 0,
+      "text": "Here is an example error message for our documentation: \"Submission failed. Contact your instructor.\" My own submission completed correctly.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.1394147352825185,
+      "priority": 0,
+      "action": "NORMAL"
+    },
+    {
+      "id": "still_waiting",
+      "expected_binary_priority": 1,
+      "text": "I followed the suggested workaround. It changed nothing: my answers are still missing and I cannot finish the graded exercise.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.34602651229930526,
+      "priority": 0,
+      "action": "REVIEW"
+    },
+    {
+      "id": "different_failure",
+      "expected_binary_priority": 1,
+      "text": "The original password issue is fixed, but the payment system has charged me twice. I need help recovering the extra charge.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.5682769342136211,
+      "priority": 1,
+      "action": "REVIEW"
+    },
+    {
+      "id": "thank_you",
+      "expected_binary_priority": 0,
+      "text": "Thank you for answering my question. The explanation makes sense and I do not need any additional help.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.024819751218269823,
+      "priority": 0,
+      "action": "NORMAL"
+    },
+    {
+      "id": "sharing_solution",
+      "expected_binary_priority": 0,
+      "text": "For classmates who saw the installation error: restarting the kernel fixed it for me. I am sharing a working solution.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.018711068722138416,
+      "priority": 0,
+      "action": "NORMAL"
+    },
+    {
+      "id": "lost_work",
+      "expected_binary_priority": 1,
+      "text": "My saved project disappeared after the lab crashed. The submission window closes shortly. Can staff help recover it?",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.9069557122971804,
+      "priority": 1,
+      "action": "PRIORITY"
+    },
+    {
+      "id": "received_feedback",
+      "expected_binary_priority": 0,
+      "text": "I have now received the missing feedback and the grade is correct. Please disregard my earlier complaint.",
+      "expected_handling": "binary context diagnostic",
+      "score": 0.5787794723514542,
+      "priority": 1,
+      "action": "REVIEW"
+    },
+    {
+      "id": "vague",
+      "expected_binary_priority": null,
+      "text": "Can someone help me with this?",
+      "expected_handling": "context needed or outside supported scope",
+      "score": 0.15940341968213023,
+      "priority": 0,
+      "action": "NORMAL"
+    },
+    {
+      "id": "missing_reference",
+      "expected_binary_priority": null,
+      "text": "The second one is wrong again.",
+      "expected_handling": "context needed or outside supported scope",
+      "score": 0.14781312289847318,
+      "priority": 0,
+      "action": "NORMAL"
+    },
+    {
+      "id": "outside_weather",
+      "expected_binary_priority": null,
+      "text": "What will the weather be like in Paris next weekend?",
+      "expected_handling": "context needed or outside supported scope",
+      "score": 0.5461510085673381,
+      "priority": 1,
+      "action": "REVIEW"
+    },
+    {
+      "id": "outside_recipe",
+      "expected_binary_priority": null,
+      "text": "Give me a recipe for chocolate cake.",
+      "expected_handling": "context needed or outside supported scope",
+      "score": 0.01148696547893856,
+      "priority": 0,
+      "action": "NORMAL"
+    }
+  ],
+  "binary_errors": [
+    "longer_resolution",
+    "quoted_problem",
+    "still_waiting",
+    "received_feedback"
+  ],
+  "unlabelled_probes_automatically_classified": [
+    "vague",
+    "missing_reference",
+    "outside_recipe"
+  ]
+}

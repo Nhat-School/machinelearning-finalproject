@@ -1,0 +1,7 @@
+{
+  "model_id": "microsoft/deberta-v3-base",
+  "revision": "8ccc9b6f36199bec6961081d44eb72fb3f7353f3",
+  "status": "trained, exported and evaluated",
+  "publisher": "Microsoft",
+  "run": "deberta_real_only"
+}

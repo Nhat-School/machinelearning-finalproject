@@ -1,0 +1,462 @@
+[
+  {
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "tfidf_logreg",
+    "confusion_matrix": [
+      [
+        600,
+        30
+      ],
+      [
+        24,
+        37
+      ]
+    ],
+    "precision": 0.5522388059701493,
+    "recall": 0.6065573770491803,
+    "f1": 0.578125,
+    "accuracy": 0.9218523878437048,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "tfidf_svm",
+    "confusion_matrix": [
+      [
+        602,
+        28
+      ],
+      [
+        29,
+        32
+      ]
+    ],
+    "precision": 0.5333333333333333,
+    "recall": 0.5245901639344263,
+    "f1": 0.5289256198347108,
+    "accuracy": 0.9175108538350217,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "tfidf_nb",
+    "confusion_matrix": [
+      [
+        572,
+        58
+      ],
+      [
+        32,
+        29
+      ]
+    ],
+    "precision": 0.3333333333333333,
+    "recall": 0.47540983606557374,
+    "f1": 0.3918918918918919,
+    "accuracy": 0.869753979739508,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "tfidf_dummy",
+    "confusion_matrix": [
+      [
+        630,
+        0
+      ],
+      [
+        61,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.9117221418234442,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "upenn",
+    "model": "minilm_logreg",
+    "confusion_matrix": [
+      [
+        580,
+        50
+      ],
+      [
+        20,
+        41
+      ]
+    ],
+    "precision": 0.45054945054945056,
+    "recall": 0.6721311475409836,
+    "f1": 0.5394736842105263,
+    "accuracy": 0.8986975397973951,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "tfidf_logreg",
+    "confusion_matrix": [
+      [
+        4352,
+        357
+      ],
+      [
+        280,
+        825
+      ]
+    ],
+    "precision": 0.6979695431472082,
+    "recall": 0.746606334841629,
+    "f1": 0.7214691735898557,
+    "accuracy": 0.8904368765049879,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "tfidf_svm",
+    "confusion_matrix": [
+      [
+        4257,
+        452
+      ],
+      [
+        232,
+        873
+      ]
+    ],
+    "precision": 0.6588679245283019,
+    "recall": 0.7900452488687782,
+    "f1": 0.7185185185185186,
+    "accuracy": 0.8823529411764706,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "tfidf_nb",
+    "confusion_matrix": [
+      [
+        4126,
+        583
+      ],
+      [
+        301,
+        804
+      ]
+    ],
+    "precision": 0.5796683489545782,
+    "recall": 0.7276018099547511,
+    "f1": 0.6452648475120385,
+    "accuracy": 0.847953216374269,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "tfidf_dummy",
+    "confusion_matrix": [
+      [
+        4709,
+        0
+      ],
+      [
+        1105,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.8099415204678363,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "stanford",
+    "model": "minilm_logreg",
+    "confusion_matrix": [
+      [
+        4031,
+        678
+      ],
+      [
+        302,
+        803
+      ]
+    ],
+    "precision": 0.5422012153950033,
+    "recall": 0.7266968325791855,
+    "f1": 0.6210363495746326,
+    "accuracy": 0.8314413484692122,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "tfidf_logreg",
+    "confusion_matrix": [
+      [
+        4425,
+        284
+      ],
+      [
+        698,
+        407
+      ]
+    ],
+    "precision": 0.5890014471780028,
+    "recall": 0.36832579185520364,
+    "f1": 0.4532293986636971,
+    "accuracy": 0.8310973512211902,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "tfidf_svm",
+    "confusion_matrix": [
+      [
+        4502,
+        207
+      ],
+      [
+        750,
+        355
+      ]
+    ],
+    "precision": 0.6316725978647687,
+    "recall": 0.3212669683257919,
+    "f1": 0.4259148170365927,
+    "accuracy": 0.8353973168214655,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "tfidf_nb",
+    "confusion_matrix": [
+      [
+        4215,
+        494
+      ],
+      [
+        728,
+        377
+      ]
+    ],
+    "precision": 0.43283582089552236,
+    "recall": 0.3411764705882353,
+    "f1": 0.3815789473684211,
+    "accuracy": 0.7898176814585484,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "tfidf_dummy",
+    "confusion_matrix": [
+      [
+        4709,
+        0
+      ],
+      [
+        1105,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.8099415204678363,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "upenn",
+    "test_source": "stanford",
+    "model": "minilm_logreg",
+    "confusion_matrix": [
+      [
+        4357,
+        352
+      ],
+      [
+        700,
+        405
+      ]
+    ],
+    "precision": 0.535006605019815,
+    "recall": 0.3665158371040724,
+    "f1": 0.43501611170784105,
+    "accuracy": 0.8190574475404196,
+    "test_size": 5814,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "tfidf_logreg",
+    "confusion_matrix": [
+      [
+        510,
+        120
+      ],
+      [
+        17,
+        44
+      ]
+    ],
+    "precision": 0.2682926829268293,
+    "recall": 0.7213114754098361,
+    "f1": 0.39111111111111113,
+    "accuracy": 0.8017366136034733,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "tfidf_svm",
+    "confusion_matrix": [
+      [
+        500,
+        130
+      ],
+      [
+        15,
+        46
+      ]
+    ],
+    "precision": 0.26136363636363635,
+    "recall": 0.7540983606557377,
+    "f1": 0.3881856540084388,
+    "accuracy": 0.7901591895803184,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "tfidf_nb",
+    "confusion_matrix": [
+      [
+        558,
+        72
+      ],
+      [
+        16,
+        45
+      ]
+    ],
+    "precision": 0.38461538461538464,
+    "recall": 0.7377049180327869,
+    "f1": 0.5056179775280899,
+    "accuracy": 0.8726483357452967,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "tfidf_dummy",
+    "confusion_matrix": [
+      [
+        630,
+        0
+      ],
+      [
+        61,
+        0
+      ]
+    ],
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "accuracy": 0.9117221418234442,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  },
+  {
+    "train_source": "stanford",
+    "test_source": "upenn",
+    "model": "minilm_logreg",
+    "confusion_matrix": [
+      [
+        490,
+        140
+      ],
+      [
+        12,
+        49
+      ]
+    ],
+    "precision": 0.25925925925925924,
+    "recall": 0.8032786885245902,
+    "f1": 0.392,
+    "accuracy": 0.7800289435600579,
+    "test_size": 691,
+    "threshold": null,
+    "provenance": "Confusion counts transcribed from user-supplied Kaggle log lines 1342-1365; metrics recomputed, not a local rerun.",
+    "unavailable": "Per-post predictions, AP/AUC and exact thresholds were not imported for these baseline rows."
+  }
+]

@@ -1,0 +1,85 @@
+[
+  {
+    "model": "upenn__tfidf_logreg",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "upenn__tfidf_svm",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "upenn__tfidf_nb",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "stanford__tfidf_logreg",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "stanford__tfidf_svm",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "stanford__tfidf_nb",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "upenn__minilm_logreg",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 2.976225210726824e-09
+  },
+  {
+    "model": "stanford__minilm_logreg",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 3.122223913090694e-08
+  },
+  {
+    "model": "joint__minilm_real_control",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 3.066746689928124e-08
+  },
+  {
+    "model": "joint__minilm_custom_trial",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 4.7139724679290396e-08
+  },
+  {
+    "model": "joint__reliable_deberta",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 3.018665317711111e-08
+  },
+  {
+    "model": "upenn__minilm_tfidf_blend",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 2.9802322387695312e-08
+  },
+  {
+    "model": "upenn__finetuned_minilm",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "model": "stanford__minilm_tfidf_blend",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 1.1920929021691506e-08
+  },
+  {
+    "model": "stanford__finetuned_minilm",
+    "same_label_as_saved_prediction": true,
+    "score_difference": 0.0
+  },
+  {
+    "deberta_multiple_inference_batches": true,
+    "post_count": 9,
+    "action_preserved": true
+  },
+  {
+    "csv_quoted_comma": true
+  }
+]

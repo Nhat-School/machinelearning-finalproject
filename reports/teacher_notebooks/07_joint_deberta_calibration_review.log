@@ -1,0 +1,746 @@
+Cell 2: Project: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/07_joint_deberta_calibration_review
+Mode: LOCAL QA: saved completed training; no fitting
+
+Cell 4: {
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "requirements": [
+    "numpy>=2,<3",
+    "scikit-learn==1.9.1",
+    "matplotlib>=3.10,<4",
+    "joblib>=1.4,<2",
+    "packaging>=24",
+    "torch>=2.8",
+    "transformers==4.57.6",
+    "sentencepiece==0.2.1",
+    "protobuf==6.33.6"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "packaging": "26.3",
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "sentencepiece": "0.2.1",
+    "protobuf": "6.33.6"
+  },
+  "device": "mps",
+  "visible_gpus": 0,
+  "training_gpu_count": 0,
+  "validation_reuse": true,
+  "fresh_training_requested": false
+}
+
+Cell 31: {
+  "prepare_data.py": "f23b27400fd1166272d6a2bce787eedb608063e07433b774ec6bc4464793e42f",
+  "train.py": "cb94a335c4205e4ceff9d99297a9253ec77a25ed96689b1a65075289c13741d0",
+  "organize_datasets.py": "a5aaa7df87679d029601e5142c2cc1365b3c517e3667dbc19fce1ed5cb6f9b51",
+  "build_custom_dataset.py": "a92cc3d1fa764a13a5785d24b50c8fcfcd61a0f4e42126e95f650e71c26f91ca",
+  "prepare_reliability_data.py": "df5132d1f5ceaa35af63058b6b9f46235946c4e870cf5e89aa0fcbd04b2ec57a",
+  "audit_custom_labels_ai.py": "e400ca17a4c7551e2f14794b75b0ef99ccd0b4330da725edc7408f008ab576b9",
+  "teacher_notebook_tools.py": "c1f9bacc5808ed2267a2aee5028d9bbd51a98357dbca6007c5962f68e6c1a603",
+  "finetune_minilm.py": "0a17a11595dc85673bf55bcdcf52dae158145a4174d5ac24bd4f33b6b13f7042",
+  "train_reliable_deberta.py": "4e86519e46df2613af1a97d5abb2b821edfb372f9b0db8618b396cba4965ece9",
+  "predict_reliable_deberta.py": "94ee55be2574803c8ccc0d6234055e8535591d90bd97d86515e05fd7a5a2a3eb",
+  "summarize_reliability.py": "00e50effd8ce8b7c1f24325a47076fdd3d24e481a351ed77d6f03bdf75685b41",
+  "audit_custom_scenarios.py": "957f73856cb5be6e80bfe727100ab67b37e9d1e3d9a8efc49e96c368cede8a32"
+}
+
+Cell 33: upenn: raw=3504, final=3493, priority=298
+
+Cell 33: stanford: raw=29604, final=29070, priority=5524
+Canonical dataset folder: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/07_joint_deberta_calibration_review/Datasets
+Original file hashes verified; legacy training paths remain usable.
+
+Cell 33: {
+  "version": "custom-v2",
+  "rows": 160,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16,
+    "still_blocked_update": 40
+  },
+  "splits": {
+    "validation": 36,
+    "train": 93,
+    "challenge": 31
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "development_history": "40 still-blocked updates added after observing poor resolution handling; not an independent benchmark",
+  "draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991"
+}
+
+Cell 33: {
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 33: {
+  "passed": true,
+  "hashes_and_cleaning_checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "historical_test_membership_preserved": true,
+  "upenn_student_roles_disjoint": true,
+  "custom_scenario_groups_disjoint": true,
+  "rows": 32563,
+  "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}
+{
+  "both_binary_classes_present": true,
+  "labels_in_range": true,
+  "no_exact_duplicates_between_sources": true,
+  "no_exact_duplicates_within_sources": true,
+  "nonempty_text": true,
+  "rows_accounted_for": true
+}
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 35: {
+  "upenn": {
+    "total": 691,
+    "automatic_count": 542,
+    "review_count": 149,
+    "automatic_coverage": 0.784370477568741,
+    "automatic_errors": 4,
+    "automatic_accuracy": 0.992619926199262,
+    "urgent_automatically_found": 10,
+    "urgent_automatically_missed": 4,
+    "urgent_requiring_review": 47,
+    "false_urgent_automatic": 0,
+    "automatic_urgent_precision": 1.0,
+    "automatic_urgent_recall_of_all_urgent_posts": 0.16393442622950818
+  },
+  "stanford": {
+    "total": 5814,
+    "automatic_count": 4133,
+    "review_count": 1681,
+    "automatic_coverage": 0.7108703130374957,
+    "automatic_errors": 54,
+    "automatic_accuracy": 0.9869344301959836,
+    "urgent_automatically_found": 121,
+    "urgent_automatically_missed": 52,
+    "urgent_requiring_review": 932,
+    "false_urgent_automatic": 2,
+    "automatic_urgent_precision": 0.983739837398374,
+    "automatic_urgent_recall_of_all_urgent_posts": 0.10950226244343891
+  }
+}
+{
+  "deberta": {
+    "paired_scenarios": 40,
+    "score_decreases_after_resolution": 29,
+    "interpretation": "Directional behaviour on drafted scenarios, not accuracy or a fresh benchmark."
+  },
+  "minilm": {
+    "paired_scenarios": 40,
+    "score_decreases_after_resolution": 34,
+    "interpretation": "Directional behaviour on drafted scenarios, not accuracy or a fresh benchmark."
+  }
+}
+
+Cell 37: Matplotlib is building the font cache; this may take a moment.
+
+Cell 37: {
+  "profile": "deberta",
+  "rows": 6,
+  "figures": [
+    "reports/teacher/metrics_01.png",
+    "reports/teacher/confusions_01.png",
+    "reports/teacher/precision_recall_threshold_01.png",
+    "reports/teacher/learning_curves.png"
+  ],
+  "mode": "SAVED-TRAINING VALIDATION",
+  "checks": "All reported count metrics recomputed; per-post scores checked when available."
+}
+
+Cell 37: {
+  "model": "joint_deberta",
+  "train_source": "upenn+stanford",
+  "test_source": "upenn",
+  "policy": "upenn",
+  "threshold": 0.07091147311897518,
+  "precision": 0.3584905660377358,
+  "recall": 0.9344262295081968,
+  "f1": 0.5181818181818182,
+  "macro_f1": 0.7134798936003756,
+  "accuracy": 0.8465991316931982,
+  "average_precision": 0.7152710629783572,
+  "roc_auc": 0.9466042154566745,
+  "precision_at_20": 0.85,
+  "recall_at_20": 0.2786885245901639,
+  "top20_found": 17,
+  "confusion_matrix": [
+    [
+      528,
+      102
+    ],
+    [
+      4,
+      57
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61,
+  "brier_score": 0.04623580148028404,
+  "automatic_coverage": 0.7698986975397974,
+  "review_count": 159,
+  "automatic_accuracy": 0.9924812030075187,
+  "urgent_sent_to_review": 57
+}
+{
+  "model": "joint_deberta",
+  "train_source": "upenn+stanford",
+  "test_source": "upenn",
+  "policy": "mixed",
+  "threshold": 0.07,
+  "precision": 0.3584905660377358,
+  "recall": 0.9344262295081968,
+  "f1": 0.5181818181818182,
+  "macro_f1": 0.7134798936003756,
+  "accuracy": 0.8465991316931982,
+  "average_precision": 0.7152710629783572,
+  "roc_auc": 0.9466042154566745,
+  "precision_at_20": 0.85,
+  "recall_at_20": 0.2786885245901639,
+  "top20_found": 17,
+  "confusion_matrix": [
+    [
+      528,
+      102
+    ],
+    [
+      4,
+      57
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61,
+  "brier_score": 0.05036982546165963,
+  "automatic_coverage": 0.784370477568741,
+  "review_count": 149,
+  "automatic_accuracy": 0.992619926199262,
+  "urgent_sent_to_review": 47
+}
+{
+  "model": "joint_deberta",
+  "train_source": "upenn+stanford",
+  "test_source": "stanford",
+  "policy": "stanford",
+  "threshold": 0.07,
+  "precision": 0.594563986409966,
+  "recall": 0.9502262443438914,
+  "f1": 0.7314524555903866,
+  "macro_f1": 0.821704302478304,
+  "accuracy": 0.8673890608875129,
+  "average_precision": 0.8689890961792827,
+  "roc_auc": 0.9640471841251326,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.017194570135746608,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      3993,
+      716
+    ],
+    [
+      55,
+      1050
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105,
+  "brier_score": 0.05479330739566275,
+  "automatic_coverage": 0.8006535947712419,
+  "review_count": 1159,
+  "automatic_accuracy": 0.9759398496240601,
+  "urgent_sent_to_review": 500
+}
+{
+  "model": "joint_deberta",
+  "train_source": "upenn+stanford",
+  "test_source": "stanford",
+  "policy": "mixed",
+  "threshold": 0.07,
+  "precision": 0.5837028824833703,
+  "recall": 0.9529411764705882,
+  "f1": 0.7239601237538673,
+  "macro_f1": 0.8159312030628495,
+  "accuracy": 0.8618851049191606,
+  "average_precision": 0.8689890961792827,
+  "roc_auc": 0.9640471841251326,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.017194570135746608,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      3958,
+      751
+    ],
+    [
+      52,
+      1053
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105,
+  "brier_score": 0.05590159869592615,
+  "automatic_coverage": 0.7108703130374957,
+  "review_count": 1681,
+  "automatic_accuracy": 0.9869344301959836,
+  "urgent_sent_to_review": 932
+}
+{
+  "source": "upenn",
+  "threshold": 0.5,
+  "precision": 0.5616438356164384,
+  "recall": 0.6721311475409836,
+  "f1": 0.6119402985074627,
+  "accuracy": 0.9247467438494935,
+  "confusion_matrix": [
+    [
+      598,
+      32
+    ],
+    [
+      20,
+      41
+    ]
+  ],
+  "interpretation": "Fixed 0.5 diagnostic only; not selected by test and not the deployed review policy.",
+  "model": "joint_deberta",
+  "train_source": "upenn+stanford",
+  "test_source": "upenn",
+  "policy": "fixed 0.5 diagnostic"
+}
+{
+  "source": "stanford",
+  "threshold": 0.5,
+  "precision": 0.8246124031007752,
+  "recall": 0.7701357466063349,
+  "f1": 0.7964436125409452,
+  "accuracy": 0.9251805985552115,
+  "confusion_matrix": [
+    [
+      4528,
+      181
+    ],
+    [
+      254,
+      851
+    ]
+  ],
+  "interpretation": "Fixed 0.5 diagnostic only; not selected by test and not the deployed review policy.",
+  "model": "joint_deberta",
+  "train_source": "upenn+stanford",
+  "test_source": "stanford",
+  "policy": "fixed 0.5 diagnostic"
+}
+
+Cell 37: Checks: [
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 upenn / upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 upenn / mixed",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 stanford / stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 stanford / mixed",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 upenn / fixed 0.5 diagnostic",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 stanford / fixed 0.5 diagnostic",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  }
+]
+Actual error examples: [
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 upenn / upenn",
+    "all_error_count": 106,
+    "examples": [
+      {
+        "post_id": "upenn_002648",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.693588788077115,
+        "threshold": 0.07091147311897518,
+        "error": "FP",
+        "text": "I just signed up for the course (a month late), and haven't even ordered any of the books yet, so obviously I'm going to be behind. I'm just planning to enjoy the course (no quizzes, etc.), but since I'll be way behind, I'm wondering how long I can access the lectures after the course officially ends. I suspect I won't ever catch up officially, as I plan to do all the readings. I'm hoping that I'll have at least a few extra months to access the course. Thanks."
+      },
+      {
+        "post_id": "upenn_000188",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.6890427949080083,
+        "threshold": 0.07091147311897518,
+        "error": "FP",
+        "text": "Can someone explain this to me? If I complete the course without paying the $49 will I not get a certificate of completion? If you have to buy this to get a signature does it carry over to different courses as well, or do you have to buy one for each course in order to get the certificate? Thanks."
+      },
+      {
+        "post_id": "upenn_001075",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.6875194532389546,
+        "threshold": 0.07091147311897518,
+        "error": "FP",
+        "text": "To Anonymous,Yes, that's how it happened. Does this mean that my Week#3 Assignment can't be evaluated and I won't be able to evaluate other peers and I will lose points?"
+      },
+      {
+        "post_id": "upenn_003138",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.6610179033302563,
+        "threshold": 0.07091147311897518,
+        "error": "FP",
+        "text": "Dear guys,I am curious about the rabies story in the video,it said that rabbit spinal cord can attenuate the rabies virus, so it can induce immune response in human.That means what Pasteur injected in human body was not an antibody, its an antigen.What confused me is: is it safe or perhaps effective to inject antigen when you already have infected by so-called the wild antigen? I thought that vaccine as an active innate immunization should be given prior to pathogen exposure.Please correct me if I'm wrong"
+      }
+    ]
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 upenn / mixed",
+    "all_error_count": 106,
+    "examples": [
+      {
+        "post_id": "upenn_002648",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8431580883721137,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "I just signed up for the course (a month late), and haven't even ordered any of the books yet, so obviously I'm going to be behind. I'm just planning to enjoy the course (no quizzes, etc.), but since I'll be way behind, I'm wondering how long I can access the lectures after the course officially ends. I suspect I won't ever catch up officially, as I plan to do all the readings. I'm hoping that I'll have at least a few extra months to access the course. Thanks."
+      },
+      {
+        "post_id": "upenn_000188",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8395629521551605,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "Can someone explain this to me? If I complete the course without paying the $49 will I not get a certificate of completion? If you have to buy this to get a signature does it carry over to different courses as well, or do you have to buy one for each course in order to get the certificate? Thanks."
+      },
+      {
+        "post_id": "upenn_001075",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8383499994631475,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "To Anonymous,Yes, that's how it happened. Does this mean that my Week#3 Assignment can't be evaluated and I won't be able to evaluate other peers and I will lose points?"
+      },
+      {
+        "post_id": "upenn_003138",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8165832124390703,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "Dear guys,I am curious about the rabies story in the video,it said that rabbit spinal cord can attenuate the rabies virus, so it can induce immune response in human.That means what Pasteur injected in human body was not an antibody, its an antigen.What confused me is: is it safe or perhaps effective to inject antigen when you already have infected by so-called the wild antigen? I thought that vaccine as an active innate immunization should be given prior to pathogen exposure.Please correct me if I'm wrong"
+      }
+    ]
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 stanford / stanford",
+    "all_error_count": 771,
+    "examples": [
+      {
+        "post_id": "stanford_027290",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9251872229248428,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "I thought I could improve my essay 2 so resubmitted it (around the 9th or 10th); however, the only peer reviews I see are those for my first attempt at this essay and not the second revised one. Is this because new reviews have not been done, or that the first reviews were better so the others were not even shown? My revised essay shows up in the essay box and time to submit has passed, but all reviews show comments on my first attempt. My score was not bad but I was hoping to get it higher.\u0007Thank you for your help with this matter.\u0007-D"
+      },
+      {
+        "post_id": "stanford_015534",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9194759670210045,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "I'm a little behind in the course work and I wondered how long I will be able to access the videos. I'm not really worried about receiving credit or completion, but the class is extremely interesting. \u0007Thank you,\u0007<nameRedac_<anon_screen_name_redacted>>"
+      },
+      {
+        "post_id": "stanford_008026",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9154502902167867,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "I went to answer a question in section 6 and my computer died. When I went back in a few hours later, it shows that the questions was answered although there was nothing there. How do I fix this?"
+      },
+      {
+        "post_id": "stanford_019954",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9133695640184378,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "Hi Everyone,\u0007\u0007In the answers to the Homework should we round the answers to the given decimal or rather just give the answer to the given decimal?\u0007\u0007Thank you,\u0007<nameRedac_<anon_screen_name_redacted>>"
+      }
+    ]
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 stanford / mixed",
+    "all_error_count": 803,
+    "examples": [
+      {
+        "post_id": "stanford_027290",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8612333328154927,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "I thought I could improve my essay 2 so resubmitted it (around the 9th or 10th); however, the only peer reviews I see are those for my first attempt at this essay and not the second revised one. Is this because new reviews have not been done, or that the first reviews were better so the others were not even shown? My revised essay shows up in the essay box and time to submit has passed, but all reviews show comments on my first attempt. My score was not bad but I was hoping to get it higher.\u0007Thank you for your help with this matter.\u0007-D"
+      },
+      {
+        "post_id": "stanford_015534",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8529881917237585,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "I'm a little behind in the course work and I wondered how long I will be able to access the videos. I'm not really worried about receiving credit or completion, but the class is extremely interesting. \u0007Thank you,\u0007<nameRedac_<anon_screen_name_redacted>>"
+      },
+      {
+        "post_id": "stanford_008026",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8472691390088765,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "I went to answer a question in section 6 and my computer died. When I went back in a few hours later, it shows that the questions was answered although there was nothing there. How do I fix this?"
+      },
+      {
+        "post_id": "stanford_019954",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8443417314706704,
+        "threshold": 0.07,
+        "error": "FP",
+        "text": "Hi Everyone,\u0007\u0007In the answers to the Homework should we round the answers to the given decimal or rather just give the answer to the given decimal?\u0007\u0007Thank you,\u0007<nameRedac_<anon_screen_name_redacted>>"
+      }
+    ]
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 upenn / fixed 0.5 diagnostic",
+    "all_error_count": 52,
+    "examples": [
+      {
+        "post_id": "upenn_000738",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.015119299938663658,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "dear professor [REDACTED].I did all that was required during this course.However since I do not need a Certificate, I did not pay for the course.Nevertheless, I would appreciate knowing how I did on the exam.I am now 58 years old and completed my Bsc in 1984. \u00c3\u201a\u00c2 I took this course in order to \"get back on track\".You built up a fantastic course!Thanks,[REDACTED]"
+      },
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.019187370595968017,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_000917",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.023691888470340754,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Thanks [REDACTED], I imagine there are more people who feel like we do. I hope the instructors will be understanding in our cases. I really want to work on something good, for my own ease and pleasure and I feel if there is a too strict deadline on it, I'll end up disappointed.Of course, I wouldn't restart by week 7. That would be just plain silly."
+      },
+      {
+        "post_id": "upenn_003317",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.0581465809032513,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Being in the medical/pharmaceutical industry, it is easy to understand that Dr. [REDACTED] would lean towards drug-based care, but I didn't know that he was against non-drug approaches to health care. However, I don't see why you have chosen this course to promote a book that is completely off-topic. I think it is completely inappropriate to place an ad in a classroom for a two-year old book that will result in book sales and revenue. I would suggest that either you or Coursera consider removing it as it amounts to nothing more than spam."
+      }
+    ]
+  },
+  {
+    "experiment": "joint_deberta upenn+stanford \u2192 stanford / fixed 0.5 diagnostic",
+    "all_error_count": 435,
+    "examples": [
+      {
+        "post_id": "stanford_027099",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.013006903490150786,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I agree. I know that this has helped my own writing and I will be better able to edit others' scientific writing using what I've learned here."
+      },
+      {
+        "post_id": "stanford_014978",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.013476112938205434,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Question 1: Which goals relate directly to girls' education?\u0007\u0007Well, the infographic helps prove that ALL of these goals are relative to the need of girls' education. The health, societal, and economic benefits of educating girls speak for themselves. If I were to prioritize any of the goals, I would likely place emphasis on primary education, gender equality, and maternal health as they will broadly affect these communities and provide a platform to push for HIV/AIDs prevention, reducing child mortality, and improving environmental conditions. But as I keep repeating in my mind, it ALL starts with education. And here, it all starts with girls.\u0007\u0007Question 2: Which goals are dependent on educating girls for their fulfillment?\u0007\u0007Again, I'd say overall, they are all dependent on educating girls but if I had to prioritize, I'd choose the same three as above. If you start with the girls and their own fulfillment, you'll more easily move toward more general goals like eradicating poverty which affects the broader community. It's the idea of thinking globally, but acting locally. Reaching young girls on a local level by promoting their education at primary levels will empower them and open their eyes to a healthier, happier world in which they, too, will help reach these MDGs."
+      },
+      {
+        "post_id": "stanford_022492",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.013716939196486522,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I would suggest the excellent Mathematical Statistics Bootcamp I & II at John Hopkins. it covers essentially the same ground as the present course, in a little greater depth. It's a little more hard-going but seems pretty manageable so far (part I started 3 weeks ago)."
+      },
+      {
+        "post_id": "stanford_025437",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.01396200928815905,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "But this is a science writing course so you cannot expect other students to be familiar with the conventions of your specific field."
+      }
+    ]
+  }
+]
+
+Cell 39: /Users/nhaterik/lastyear/machine/Project/.venv/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+
+Cell 39: {
+  "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+  "score": 0.8382900651426315,
+  "raw_score": 0.9445469379425049,
+  "threshold": 0.07,
+  "binary_priority": 1,
+  "action": "REVIEW",
+  "domain": "mixed",
+  "scope": "English student forum posts",
+  "note": "An estimate, not a guarantee of correctness."
+}
+
+Cell 41: Download from Kaggle Output: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/07_joint_deberta_calibration_review/07_joint_deberta_calibration_review_output.zip MB: 15.6

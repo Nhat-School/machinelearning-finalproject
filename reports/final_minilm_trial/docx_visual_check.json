@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "page_count": 21,
+  "document_sha256": "a3ed037d53ae7b02160558e3e0f9026f0ed42dd6358e0c85c01d6419468a9fb1",
+  "method": "Rendered and visually reviewed all 21 pages. Short definitions use one concept per paragraph, CE/pairwise example and exact FINAL file mapping. Verified all 20 internal TOC links, page numbers and 17 chapter purpose lines. All 83 comparison records and 16 probe predictions preserved.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 8,
+  "comparison_rows": 83,
+  "probe_detail_page": 4,
+  "probe_table_rows": 16,
+  "binary_correct_counts": {
+    "real_only": 14,
+    "custom_pairwise": 13
+  },
+  "web_guide_pages": [
+    19,
+    20
+  ],
+  "page_png_sha256": {
+    "page-1.png": "dda006820131339ddeb390e0f4432d12c0ed49110c93fdc85e72d4e90e1f5710",
+    "page-10.png": "e72ec7eae02aef1433d3411831832948c65e5b0fcc359659994a62e8cd7d34ba",
+    "page-11.png": "eb6c75c787b670c7c53601a7036ef657f4712554203248950512eff4510182d5",
+    "page-12.png": "6dcf0a10efcaffabd3fda35544ab4d2413ba5cb4381ef8d1d2ebf2ab2c49a531",
+    "page-13.png": "ff227138ae8eac203b091876bd2c9ccf71df921bea17914faa5cdb5d3701f3f6",
+    "page-14.png": "ed528cb41d5d8a89997b06534cd68e2c5df41e8fe8d44f88d35876ba42815229",
+    "page-15.png": "80aec23328b234f828d26bdf2797b781b0d6046d6c76dfb1181a2e70c88ed65e",
+    "page-16.png": "caf9f019dd40cc8004b0ae382041cf2a29a133734f1de9f003dfcb186fa5ba94",
+    "page-17.png": "d738b69cd1e0f2973c8ceed5f5bbd8f00d34cdae115e22b5a8bedd7022985cbb",
+    "page-18.png": "f21aa2bc8170772eef3fa77442e8d0d540c9ecfc9312081eee27d4571efccbda",
+    "page-19.png": "c2443d82aea25ee3f35480c95df2c9d6aa4d14ae7288d0a7b815a06aea327d77",
+    "page-2.png": "3ed84b37127ff7525189938886e5cc0276fee236590d9114b52145b563ceb459",
+    "page-20.png": "396fe73bf06e5aa445261a0df92331e89e86ceefd43bb198fc79d4528061fd78",
+    "page-21.png": "f2964879804881b633633114d43b0fdb81297b69f4d3975fb0929d06001e35da",
+    "page-3.png": "552f5a9e96f2c7cf0f1cf77ad8a97e7ea6c64bb6693ec9941ea5261c3407b6bf",
+    "page-4.png": "d7a5b332f41582d16251762df471513825614c67acb2fd22c6903fa672f8d878",
+    "page-5.png": "6a3951f050bfd101596d1e2f732683f09f1147b64eae7b3e058084337109895a",
+    "page-6.png": "d17c0936d535d2b0d07c7eb49abc9a385c0997e10be63ff299c0065eb943ae2e",
+    "page-7.png": "cbc4676a725ee1163d8b1f81d9b801ae6b911c38367b01dceb0e22aebaa7ca5f",
+    "page-8.png": "b1ad71efee7a321ff698187e1690fd475a2ab8de3eacfc85ec9b3eb85e9a8654",
+    "page-9.png": "74f05acd3d1b4801d6c4501ffa4a5350f8fba4f3a499178359046ae643d73c60"
+  },
+  "model_naming": {
+    "MiniLM hai nguồn": "formerly B / real_only; supervised fine-tuning with cross-entropy on UPenn and Stanford",
+    "MiniLM + học cặp": "formerly C-Pair / custom_pairwise; adds synthetic cross-entropy and pairwise ranking",
+    "MiniLM + ví dụ tổng hợp": "formerly C-CE / custom_ce; adds synthetic per-example cross-entropy"
+  },
+  "table_of_contents_page": 2,
+  "table_of_contents_links": 20
+}

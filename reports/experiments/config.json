@@ -1,0 +1,22 @@
+{
+  "data_hashes": {
+    "stanford": "69f99d396d00ed52731fd83d36a2e208adc1b794a411c218ce1fcc8459ac1a59",
+    "upenn": "3268954bb851d7bfed7daf76366314ceb85e24e9392e001fa7a30c79996f8442"
+  },
+  "deployment_rule": "Best tuned OOF F1 among Stanford-trained models; independent test scores not used",
+  "encoder_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "folds": 3,
+  "seed": 42,
+  "test_fraction": 0.2,
+  "tfidf": {
+    "max_df": 0.98,
+    "max_features": 40000,
+    "min_df": 2,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "sublinear_tf": true
+  },
+  "threshold_rule": "Maximize positive F1 on source-only out-of-fold predictions; ties use largest threshold"
+}

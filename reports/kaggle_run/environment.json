@@ -1,0 +1,30 @@
+{
+  "provenance": "Extracted from the Kaggle execution log supplied by the user in this conversation. This is a log excerpt, not a downloaded original Kaggle notebook or model export.",
+  "python": "3.13.16",
+  "torch": "2.11.0+cu130",
+  "transformers": "5.20.2",
+  "sklearn": "1.6.1",
+  "numpy": "2.1.3",
+  "device": "cuda",
+  "bf16": false,
+  "cuda_devices_visible": 2,
+  "cuda_device_used": "Tesla T4",
+  "training_gpu_count": 1,
+  "selected": {"upenn": "weighted_aug", "stanford": "weighted_aug"},
+  "total_log_seconds": 3672.1,
+  "frozen_stanford_encoding_seconds": 1008,
+  "zip_megabytes_reported": 171.7,
+  "standalone_exports_passed": ["upenn", "stanford"],
+  "standalone_prediction": {"score": 0.9847021698951721, "threshold": 0.71408611536026, "urgent": true},
+  "code_hashes": {
+    "train.py": "6dee0c655157fe2f17fdf48c3e956cdf91f6651165e035b06fcea265b55c2d74",
+    "finetune_minilm.py": "0a17a11595dc85673bf55bcdcf52dae158145a4174d5ac24bd4f33b6b13f7042"
+  },
+  "stanford_baseline_confusion": {
+    "tfidf_logreg": [[4352,357],[280,825]],
+    "tfidf_svm": [[4257,452],[232,873]],
+    "tfidf_nb": [[4126,583],[301,804]],
+    "tfidf_dummy": [[4709,0],[1105,0]],
+    "minilm_logreg": [[4031,678],[302,803]]
+  }
+}

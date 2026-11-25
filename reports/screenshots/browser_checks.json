@@ -1,0 +1,125 @@
+[
+  {
+    "case": "urgent",
+    "input": "I cannot submit my assignment because the submit button is not working. The deadline is tonight. Please help!",
+    "model": "joint__minilm_real_control",
+    "score": 0.9411421418190002,
+    "label": 1,
+    "threshold": 0.5,
+    "api_matches_ui": true
+  },
+  {
+    "case": "thanks",
+    "input": "Thank you for the helpful explanation. I understand the lesson now.",
+    "model": "joint__minilm_real_control",
+    "score": 0.017691494897007942,
+    "label": 0,
+    "threshold": 0.5,
+    "api_matches_ui": true
+  },
+  {
+    "case": "finetuned_urgent",
+    "model": "stanford__finetuned_minilm",
+    "label": 1,
+    "score": 0.9783006310462952,
+    "threshold": 0.34997692704200745,
+    "api_matches_ui": true
+  },
+  {
+    "case": "empty_input",
+    "rejected": true
+  },
+  {
+    "case": "hybrid_urgent",
+    "model": "stanford__minilm_tfidf_blend",
+    "label": 1,
+    "score": 0.9764324110072182,
+    "threshold": 0.3931987027552757,
+    "api_matches_ui": true
+  },
+  {
+    "case": "deberta_new_post",
+    "model": "joint__reliable_deberta",
+    "action": "REVIEW",
+    "score": 0.8467113375663757,
+    "api_matches_ui": true
+  },
+  {
+    "case": "deberta_review",
+    "input": "And the lectures?!",
+    "model": "joint__reliable_deberta",
+    "action": "REVIEW",
+    "score": 0.3064182996749878,
+    "api_matches_ui": true
+  },
+  {
+    "case": "deberta_csv_has_action",
+    "passed": true
+  },
+  {
+    "case": "final_minilm_blocked",
+    "input": "I cannot submit my assignment and the deadline is tonight. Please help!",
+    "model": "joint__minilm_real_control",
+    "score": 0.9388301372528076,
+    "label": 1,
+    "action": "PRIORITY",
+    "api_matches_ui": true
+  },
+  {
+    "case": "final_minilm_resolved",
+    "input": "The submit button works now and my assignment has a receipt. No further help is needed.",
+    "model": "joint__minilm_real_control",
+    "score": 0.6554526686668396,
+    "label": 1,
+    "action": "REVIEW",
+    "api_matches_ui": true
+  },
+  {
+    "case": "final_minilm_still_blocked",
+    "input": "Update: I tried a different browser, but the assignment still will not upload. I still need help.",
+    "model": "joint__minilm_real_control",
+    "score": 0.8228054642677307,
+    "label": 1,
+    "action": "PRIORITY",
+    "api_matches_ui": true
+  },
+  {
+    "case": "final_minilm_blocked",
+    "input": "I cannot submit my assignment and the deadline is tonight. Please help!",
+    "model": "joint__minilm_custom_trial",
+    "score": 0.9561570882797241,
+    "label": 1,
+    "action": "PRIORITY",
+    "api_matches_ui": true
+  },
+  {
+    "case": "final_minilm_resolved",
+    "input": "The submit button works now and my assignment has a receipt. No further help is needed.",
+    "model": "joint__minilm_custom_trial",
+    "score": 0.4531218111515045,
+    "label": 0,
+    "action": "REVIEW",
+    "api_matches_ui": true
+  },
+  {
+    "case": "final_minilm_still_blocked",
+    "input": "Update: I tried a different browser, but the assignment still will not upload. I still need help.",
+    "model": "joint__minilm_custom_trial",
+    "score": 0.8025428652763367,
+    "label": 1,
+    "action": "PRIORITY",
+    "api_matches_ui": true
+  },
+  {
+    "case": "batch_8_sorted",
+    "passed": true
+  },
+  {
+    "case": "csv_export",
+    "passed": true
+  },
+  {
+    "case": "mobile_390",
+    "no_horizontal_overflow": true
+  }
+]

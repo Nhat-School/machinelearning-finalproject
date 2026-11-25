@@ -1,0 +1,14 @@
+{
+  "base_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "cv_config": "plain",
+  "final_epochs": 3,
+  "labels": {
+    "0": "NOT_URGENT",
+    "1": "URGENT"
+  },
+  "max_length": 256,
+  "preprocessing": "prepare_data.clean_text NFC HTML whitespace",
+  "seed": 42,
+  "source": "stanford",
+  "threshold": 0.34997692704200745
+}

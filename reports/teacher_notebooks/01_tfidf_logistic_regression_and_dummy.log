@@ -1,0 +1,1089 @@
+Cell 1: Project: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/01_tfidf_logistic_regression_and_dummy
+Mode: LOCAL QA: saved completed training; no fitting
+
+Cell 3: {
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "requirements": [
+    "numpy>=2,<3",
+    "scikit-learn==1.9.1",
+    "matplotlib>=3.10,<4",
+    "joblib>=1.4,<2",
+    "packaging>=24"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "packaging": "26.3"
+  },
+  "device": "cpu",
+  "visible_gpus": 0,
+  "training_gpu_count": 0,
+  "validation_reuse": true,
+  "fresh_training_requested": false
+}
+
+Cell 22: {
+  "prepare_data.py": "f23b27400fd1166272d6a2bce787eedb608063e07433b774ec6bc4464793e42f",
+  "train.py": "cb94a335c4205e4ceff9d99297a9253ec77a25ed96689b1a65075289c13741d0",
+  "organize_datasets.py": "a5aaa7df87679d029601e5142c2cc1365b3c517e3667dbc19fce1ed5cb6f9b51",
+  "build_custom_dataset.py": "a92cc3d1fa764a13a5785d24b50c8fcfcd61a0f4e42126e95f650e71c26f91ca",
+  "prepare_reliability_data.py": "df5132d1f5ceaa35af63058b6b9f46235946c4e870cf5e89aa0fcbd04b2ec57a",
+  "audit_custom_labels_ai.py": "e400ca17a4c7551e2f14794b75b0ef99ccd0b4330da725edc7408f008ab576b9",
+  "teacher_notebook_tools.py": "c1f9bacc5808ed2267a2aee5028d9bbd51a98357dbca6007c5962f68e6c1a603",
+  "teacher_predict_baseline.py": "269e4b3fb5c35c1aa18bfa86c2968f04fdc2aa9b9c6a2a76409de56542f39002"
+}
+
+Cell 24: upenn: raw=3504, final=3493, priority=298
+
+Cell 24: stanford: raw=29604, final=29070, priority=5524
+Canonical dataset folder: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/01_tfidf_logistic_regression_and_dummy/Datasets
+Original file hashes verified; legacy training paths remain usable.
+
+Cell 24: {
+  "version": "custom-v2",
+  "rows": 160,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16,
+    "still_blocked_update": 40
+  },
+  "splits": {
+    "validation": 36,
+    "train": 93,
+    "challenge": 31
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "development_history": "40 still-blocked updates added after observing poor resolution handling; not an independent benchmark",
+  "draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991"
+}
+
+Cell 24: {
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 24: {
+  "passed": true,
+  "hashes_and_cleaning_checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "historical_test_membership_preserved": true,
+  "upenn_student_roles_disjoint": true,
+  "custom_scenario_groups_disjoint": true,
+  "rows": 32563,
+  "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}
+{
+  "both_binary_classes_present": true,
+  "labels_in_range": true,
+  "no_exact_duplicates_between_sources": true,
+  "no_exact_duplicates_within_sources": true,
+  "nonempty_text": true,
+  "rows_accounted_for": true
+}
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 27: [
+  {
+    "best_params": {
+      "classifier__C": 3.0
+    },
+    "cv_mean_f1": 0.5169910069290874,
+    "cv_std_f1": 0.07847654728188408,
+    "default_threshold": 0.5,
+    "model": "tfidf_logreg",
+    "name": "logreg",
+    "oof_tuned_f1": 0.5275590551181103,
+    "representation": "tfidf",
+    "source": "upenn",
+    "threshold": 0.4225475624901568,
+    "training_seconds": 2.5021156668663025
+  },
+  {
+    "best_params": {},
+    "cv_mean_f1": 0.0,
+    "cv_std_f1": 0.0,
+    "default_threshold": 0.5,
+    "model": "tfidf_dummy",
+    "name": "dummy",
+    "oof_tuned_f1": 0.0,
+    "representation": "tfidf",
+    "source": "upenn",
+    "threshold": 0.5,
+    "training_seconds": 1.3289369158446789
+  },
+  {
+    "best_params": {
+      "classifier__C": 3.0
+    },
+    "cv_mean_f1": 0.702472563869225,
+    "cv_std_f1": 0.0007998583571908701,
+    "default_threshold": 0.5,
+    "model": "tfidf_logreg",
+    "name": "logreg",
+    "oof_tuned_f1": 0.7082063438311321,
+    "representation": "tfidf",
+    "source": "stanford",
+    "threshold": 0.5886726433816505,
+    "training_seconds": 13.989018082618713
+  },
+  {
+    "best_params": {},
+    "cv_mean_f1": 0.0,
+    "cv_std_f1": 0.0,
+    "default_threshold": 0.5,
+    "model": "tfidf_dummy",
+    "name": "dummy",
+    "oof_tuned_f1": 0.0,
+    "representation": "tfidf",
+    "source": "stanford",
+    "threshold": 0.5,
+    "training_seconds": 7.809000458102673
+  }
+]
+
+Cell 29: Matplotlib is building the font cache; this may take a moment.
+
+Cell 29: {
+  "profile": "baseline",
+  "rows": 8,
+  "figures": [
+    "reports/teacher/metrics_01.png",
+    "reports/teacher/confusions_01.png",
+    "reports/teacher/precision_recall_threshold_01.png"
+  ],
+  "mode": "SAVED-TRAINING VALIDATION",
+  "checks": "All reported count metrics recomputed; per-post scores checked when available."
+}
+
+Cell 29: {
+  "accuracy": 0.9204052098408104,
+  "average_precision": 0.6595937758457739,
+  "confusion_matrix": [
+    [
+      605,
+      25
+    ],
+    [
+      30,
+      31
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.9319826338639653,
+    "average_precision": 0.6595937758457739,
+    "confusion_matrix": [
+      [
+        616,
+        14
+      ],
+      [
+        33,
+        28
+      ]
+    ],
+    "f1": 0.5436893203883495,
+    "macro_f1": 0.7534709307180215,
+    "positive_count": 61,
+    "precision": 0.6666666666666666,
+    "precision_at_20": 0.95,
+    "recall": 0.45901639344262296,
+    "recall_at_20": 0.3114754098360656,
+    "roc_auc": 0.9043195420244601,
+    "test_size": 691,
+    "top20_found": 19
+  },
+  "f1": 0.5299145299145299,
+  "inference_seconds": 0.030501333065330982,
+  "macro_f1": 0.7432181345224824,
+  "model": "tfidf_logreg",
+  "positive_count": 61,
+  "precision": 0.5535714285714286,
+  "precision_at_20": 0.95,
+  "recall": 0.5081967213114754,
+  "recall_at_20": 0.3114754098360656,
+  "roc_auc": 0.9043195420244601,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.4225475624901568,
+  "top20_found": 19,
+  "train_source": "upenn",
+  "training_seconds": 2.5021156668663025
+}
+{
+  "accuracy": 0.8348813209494325,
+  "average_precision": 0.5323111973045145,
+  "confusion_matrix": [
+    [
+      4517,
+      192
+    ],
+    [
+      768,
+      337
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.8314413484692122,
+    "average_precision": 0.5323111973045145,
+    "confusion_matrix": [
+      [
+        4599,
+        110
+      ],
+      [
+        870,
+        235
+      ]
+    ],
+    "f1": 0.32413793103448274,
+    "macro_f1": 0.6139259118721245,
+    "positive_count": 1105,
+    "precision": 0.6811594202898551,
+    "precision_at_20": 0.7,
+    "recall": 0.21266968325791855,
+    "recall_at_20": 0.012669683257918552,
+    "roc_auc": 0.8202325574691383,
+    "test_size": 5814,
+    "top20_found": 14
+  },
+  "f1": 0.412484700122399,
+  "inference_seconds": 0.1567400828935206,
+  "macro_f1": 0.6582135327708253,
+  "model": "tfidf_logreg",
+  "positive_count": 1105,
+  "precision": 0.6370510396975425,
+  "precision_at_20": 0.7,
+  "recall": 0.3049773755656109,
+  "recall_at_20": 0.012669683257918552,
+  "roc_auc": 0.8202325574691383,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.4225475624901568,
+  "top20_found": 14,
+  "train_source": "upenn",
+  "training_seconds": 2.5021156668663025
+}
+{
+  "accuracy": 0.9117221418234442,
+  "average_precision": 0.08827785817655572,
+  "confusion_matrix": [
+    [
+      630,
+      0
+    ],
+    [
+      61,
+      0
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.9117221418234442,
+    "average_precision": 0.08827785817655572,
+    "confusion_matrix": [
+      [
+        630,
+        0
+      ],
+      [
+        61,
+        0
+      ]
+    ],
+    "f1": 0.0,
+    "macro_f1": 0.4769114307342922,
+    "positive_count": 61,
+    "precision": 0.0,
+    "precision_at_20": 0.0,
+    "recall": 0.0,
+    "recall_at_20": 0.0,
+    "roc_auc": 0.5,
+    "test_size": 691,
+    "top20_found": 0
+  },
+  "f1": 0.0,
+  "inference_seconds": 0.02927629230543971,
+  "macro_f1": 0.4769114307342922,
+  "model": "tfidf_dummy",
+  "positive_count": 61,
+  "precision": 0.0,
+  "precision_at_20": 0.0,
+  "recall": 0.0,
+  "recall_at_20": 0.0,
+  "roc_auc": 0.5,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.5,
+  "top20_found": 0,
+  "train_source": "upenn",
+  "training_seconds": 1.3289369158446789
+}
+{
+  "accuracy": 0.8099415204678363,
+  "average_precision": 0.19005847953216373,
+  "confusion_matrix": [
+    [
+      4709,
+      0
+    ],
+    [
+      1105,
+      0
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.8099415204678363,
+    "average_precision": 0.19005847953216373,
+    "confusion_matrix": [
+      [
+        4709,
+        0
+      ],
+      [
+        1105,
+        0
+      ]
+    ],
+    "f1": 0.0,
+    "macro_f1": 0.44749596122778673,
+    "positive_count": 1105,
+    "precision": 0.0,
+    "precision_at_20": 0.1,
+    "recall": 0.0,
+    "recall_at_20": 0.0018099547511312218,
+    "roc_auc": 0.5,
+    "test_size": 5814,
+    "top20_found": 2
+  },
+  "f1": 0.0,
+  "inference_seconds": 0.14476962480694056,
+  "macro_f1": 0.44749596122778673,
+  "model": "tfidf_dummy",
+  "positive_count": 1105,
+  "precision": 0.0,
+  "precision_at_20": 0.1,
+  "recall": 0.0,
+  "recall_at_20": 0.0018099547511312218,
+  "roc_auc": 0.5,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.5,
+  "top20_found": 2,
+  "train_source": "upenn",
+  "training_seconds": 1.3289369158446789
+}
+{
+  "accuracy": 0.8031837916063675,
+  "average_precision": 0.38028528614395307,
+  "confusion_matrix": [
+    [
+      511,
+      119
+    ],
+    [
+      17,
+      44
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.7800289435600579,
+    "average_precision": 0.38028528614395307,
+    "confusion_matrix": [
+      [
+        492,
+        138
+      ],
+      [
+        14,
+        47
+      ]
+    ],
+    "f1": 0.3821138211382114,
+    "macro_f1": 0.6241555021184014,
+    "positive_count": 61,
+    "precision": 0.25405405405405407,
+    "precision_at_20": 0.45,
+    "recall": 0.7704918032786885,
+    "recall_at_20": 0.14754098360655737,
+    "roc_auc": 0.8719229768410096,
+    "test_size": 691,
+    "top20_found": 9
+  },
+  "f1": 0.39285714285714285,
+  "inference_seconds": 0.031366124749183655,
+  "macro_f1": 0.6377066370589687,
+  "model": "tfidf_logreg",
+  "positive_count": 61,
+  "precision": 0.26993865030674846,
+  "precision_at_20": 0.45,
+  "recall": 0.7213114754098361,
+  "recall_at_20": 0.14754098360655737,
+  "roc_auc": 0.8719229768410096,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.5886726433816505,
+  "top20_found": 9,
+  "train_source": "stanford",
+  "training_seconds": 13.989018082618713
+}
+{
+  "accuracy": 0.890264877880977,
+  "average_precision": 0.7817367526767178,
+  "confusion_matrix": [
+    [
+      4357,
+      352
+    ],
+    [
+      286,
+      819
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.8796009631922944,
+    "average_precision": 0.7817367526767178,
+    "confusion_matrix": [
+      [
+        4223,
+        486
+      ],
+      [
+        214,
+        891
+      ]
+    ],
+    "f1": 0.717969379532635,
+    "macro_f1": 0.8207165944240914,
+    "positive_count": 1105,
+    "precision": 0.6470588235294118,
+    "precision_at_20": 1.0,
+    "recall": 0.8063348416289593,
+    "recall_at_20": 0.01809954751131222,
+    "roc_auc": 0.9332177048090256,
+    "test_size": 5814,
+    "top20_found": 20
+  },
+  "f1": 0.7196836555360281,
+  "inference_seconds": 0.15985354175791144,
+  "macro_f1": 0.8257314770408968,
+  "model": "tfidf_logreg",
+  "positive_count": 1105,
+  "precision": 0.6994022203245089,
+  "precision_at_20": 1.0,
+  "recall": 0.7411764705882353,
+  "recall_at_20": 0.01809954751131222,
+  "roc_auc": 0.9332177048090256,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.5886726433816505,
+  "top20_found": 20,
+  "train_source": "stanford",
+  "training_seconds": 13.989018082618713
+}
+{
+  "accuracy": 0.9117221418234442,
+  "average_precision": 0.08827785817655572,
+  "confusion_matrix": [
+    [
+      630,
+      0
+    ],
+    [
+      61,
+      0
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.9117221418234442,
+    "average_precision": 0.08827785817655572,
+    "confusion_matrix": [
+      [
+        630,
+        0
+      ],
+      [
+        61,
+        0
+      ]
+    ],
+    "f1": 0.0,
+    "macro_f1": 0.4769114307342922,
+    "positive_count": 61,
+    "precision": 0.0,
+    "precision_at_20": 0.0,
+    "recall": 0.0,
+    "recall_at_20": 0.0,
+    "roc_auc": 0.5,
+    "test_size": 691,
+    "top20_found": 0
+  },
+  "f1": 0.0,
+  "inference_seconds": 0.03465550020337105,
+  "macro_f1": 0.4769114307342922,
+  "model": "tfidf_dummy",
+  "positive_count": 61,
+  "precision": 0.0,
+  "precision_at_20": 0.0,
+  "recall": 0.0,
+  "recall_at_20": 0.0,
+  "roc_auc": 0.5,
+  "test_size": 691,
+  "test_source": "upenn",
+  "threshold": 0.5,
+  "top20_found": 0,
+  "train_source": "stanford",
+  "training_seconds": 7.809000458102673
+}
+{
+  "accuracy": 0.8099415204678363,
+  "average_precision": 0.19005847953216373,
+  "confusion_matrix": [
+    [
+      4709,
+      0
+    ],
+    [
+      1105,
+      0
+    ]
+  ],
+  "default_threshold_metrics": {
+    "accuracy": 0.8099415204678363,
+    "average_precision": 0.19005847953216373,
+    "confusion_matrix": [
+      [
+        4709,
+        0
+      ],
+      [
+        1105,
+        0
+      ]
+    ],
+    "f1": 0.0,
+    "macro_f1": 0.44749596122778673,
+    "positive_count": 1105,
+    "precision": 0.0,
+    "precision_at_20": 0.1,
+    "recall": 0.0,
+    "recall_at_20": 0.0018099547511312218,
+    "roc_auc": 0.5,
+    "test_size": 5814,
+    "top20_found": 2
+  },
+  "f1": 0.0,
+  "inference_seconds": 0.18033399991691113,
+  "macro_f1": 0.44749596122778673,
+  "model": "tfidf_dummy",
+  "positive_count": 1105,
+  "precision": 0.0,
+  "precision_at_20": 0.1,
+  "recall": 0.0,
+  "recall_at_20": 0.0018099547511312218,
+  "roc_auc": 0.5,
+  "test_size": 5814,
+  "test_source": "stanford",
+  "threshold": 0.5,
+  "top20_found": 2,
+  "train_source": "stanford",
+  "training_seconds": 7.809000458102673
+}
+
+Cell 29: Checks: [
+  {
+    "experiment": "tfidf_logreg upenn \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_logreg upenn \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_dummy upenn \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_dummy upenn \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_logreg stanford \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_logreg stanford \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_dummy stanford \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "tfidf_dummy stanford \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  }
+]
+Actual error examples: [
+  {
+    "experiment": "tfidf_logreg upenn \u2192 upenn",
+    "all_error_count": 55,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.04217293349106089,
+        "threshold": 0.4225475624901568,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_002737",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08871967743127515,
+        "threshold": 0.4225475624901568,
+        "error": "FN",
+        "text": "I want help with questions. Where should I find reference to \u00c2 contemplate and fathom the relevance and irrevance among the options.\u00c2 Can you describe relationship between conditional probability of disjoint events"
+      },
+      {
+        "post_id": "upenn_003317",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.09935509159277077,
+        "threshold": 0.4225475624901568,
+        "error": "FN",
+        "text": "Being in the medical/pharmaceutical industry, it is easy to understand that Dr. [REDACTED] would lean towards drug-based care, but I didn't know that he was against non-drug approaches to health care. However, I don't see why you have chosen this course to promote a book that is completely off-topic. I think it is completely inappropriate to place an ad in a classroom for a two-year old book that will result in book sales and revenue. I would suggest that either you or Coursera consider removing it as it amounts to nothing more than spam."
+      },
+      {
+        "post_id": "upenn_002443",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.1174597749213475,
+        "threshold": 0.4225475624901568,
+        "error": "FN",
+        "text": "hi, good afternoon. My doubt is if the numbers of words that we use for make citations in essay also count for the total numbers of words to make it. Thanks"
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_logreg upenn \u2192 stanford",
+    "all_error_count": 960,
+    "examples": [
+      {
+        "post_id": "stanford_019865",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8855564689050619,
+        "threshold": 0.4225475624901568,
+        "error": "FP",
+        "text": "There is a discussion that I have lost track on but YES I asm one of those who can't get things to work on IE (IE 10). Firefox os working so far in terms of submitting a quiz answer and getting feedback. However it still was not obvious if the quiz fo rmodule 1 had only one quiz question. I am assumingh yes since I got the one question right and my current quiz score is 100%."
+      },
+      {
+        "post_id": "stanford_024117",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8727171656030863,
+        "threshold": 0.4225475624901568,
+        "error": "FP",
+        "text": "J,\u0007\u0007I did not miss the deadline. I was submitting my h.w. at 10:00 a.m. PST, which was well within time for it not to be late. My posting does not reflect the actual time I submitted my comment either. The system appears to have a 6-hour delay.\u0007\u0007So be it,\u0007<nameRedac_<anon_screen_name_redacted>>"
+      },
+      {
+        "post_id": "stanford_020858",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.8398900693398246,
+        "threshold": 0.4225475624901568,
+        "error": "FP",
+        "text": "The right answer in the quiz in my understanding is wrong\u0007Since i understand that this must be the specificity\u0007I see that there is 2 right answers not the chosen correct one \u0007\u0007Please clarify more to me why this was the bestanswer and why the otjers are wrong"
+      },
+      {
+        "post_id": "stanford_023440",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.837898235911846,
+        "threshold": 0.4225475624901568,
+        "error": "FP",
+        "text": "You should now be able to access the lecture pdfs by clicking on the \\Lecture Slides\\\" link on the top of the course web page!\u0007\u0007Raj\""
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_dummy upenn \u2192 upenn",
+    "all_error_count": 61,
+    "examples": [
+      {
+        "post_id": "upenn_000245",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08458244111349036,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "The last two weeks I feel I'm missing something ...\u00c2 I had taken the pace of the course as part of my routine.\u00c2 Professor [REDACTED]\u00c2 questions: When have available the next level of this course, for example: Advanced Accounting?"
+      },
+      {
+        "post_id": "upenn_000252",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08458244111349036,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I feel like this is a trick question/option:\u00c2 Which of the following transactions violates the balance sheet equation? (check all that apply)> Reduce cash and reduce an expenseYou know, i'm doing the assignment right now. and intuitively this should make sense, because on both sides of the Super T-account there is a reduction. BUT IS THIS A TRICK QUESTION? Can you reduce an expense? I mean, don't expenses just add, how does expense reduce? Or I haven't seen an example yet, where okay you pay for something and it lessens an expense?"
+      },
+      {
+        "post_id": "upenn_000303",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08458244111349036,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Thank you [REDACTED] for your quick reply and explanation. Two questions though :1- What is the difference between Inventory(materials) and Supplies? I would consider oranges, water, sugar as supplies . Never knew about Inventory(materials)...2- I m kind of lost with the 2nd and 3rd journal entries. Production costs as an account is not intuitive to me. From my understanding it is not an expense because that would be double counting (Expenses are accounted for in the COGS (last journal Entry)). Then What does it mean an how to interpret it?\u00c2 \u00c2 \u00c2 It is more intuitive to me to combine the 2nd and 3rd journal entries, directly transforming Inventory(materials) in Inventory(finish goods) as such :\u00c2 \u00c2 Dr Inventory (finished goods) $1300\u00c2 \u00c2 \u00c2 \u00c2 Cr Inventory (materials) $1300Is it POSSIBLE and OK to do that and bypass the Production costs ?Thanks"
+      },
+      {
+        "post_id": "upenn_000336",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08458244111349036,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Question:\u00c2 Must exchange difference be always added back to net profit under operating activity. Anyway to do a quick operating activity figure, so that we know what is the figures.Thanks."
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_dummy upenn \u2192 stanford",
+    "all_error_count": 1105,
+    "examples": [
+      {
+        "post_id": "stanford_013111",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08458244111349036,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Sorry to post here but I tried the technical help and had no answer by email.\u0007I don't seem able to access all things this week. Initially I could not see anything, now I am seeing almost all but can't access \\From Outrage to Courage\\\" contents, not in the online version nor in the downloadable version. When trying to access the downloadable part the system asks for a username and password but mine don't work on it. Does anybody else experience problems? Am I doing something wrong?\""
+      },
+      {
+        "post_id": "stanford_015492",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08458244111349036,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I would be so grateful if Professor Trevor and Professor Bob would please make clear in all use of logs whether they refer to log or ln, so that we do not have to guess what is their intent. \u0007\u0007I have had quite a few graduate courses in math, engineering, and finance and have yet to run across the use of log to indicate either log or ln. \u0007\u0007Professor Trevor and Professor Bob, please eliminate this possible source of error!\u0007\u0007Thank you very much. Great course."
+      },
+      {
+        "post_id": "stanford_022840",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08458244111349036,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hi,\u0007\u0007I have still have problem downloading unit 8 Solutions.Is the problem resolved?"
+      },
+      {
+        "post_id": "stanford_027814",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.08458244111349036,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "OK, so I have a similar probelem. My scores for Essay 3 are:\u00071+1+1+1+1 = 5\u00072+3+3+2+3 = 13\u00072+2+2+2+2 = 10\u0007\u0007Now, the interesting part is that in the feedback box for the third review I got the following:\u0007\u0007???????? ?????? ????????? ?????? ???????????. ????????????? ??????: (1) ?????????? ??????? ???????, (2)\u0007??????????? ????? ????????, (3) ???? ?? ???????? ???????, ? (4) ?????? ????? ??????????? ?????????.\u0007\u0007Which is my essay, BUT after translation using Google Translate (I suppose). \u0007\u0007What should I do?"
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_logreg stanford \u2192 upenn",
+    "all_error_count": 136,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.10968647328009039,
+        "threshold": 0.5886726433816505,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_003317",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.15602048291475162,
+        "threshold": 0.5886726433816505,
+        "error": "FN",
+        "text": "Being in the medical/pharmaceutical industry, it is easy to understand that Dr. [REDACTED] would lean towards drug-based care, but I didn't know that he was against non-drug approaches to health care. However, I don't see why you have chosen this course to promote a book that is completely off-topic. I think it is completely inappropriate to place an ad in a classroom for a two-year old book that will result in book sales and revenue. I would suggest that either you or Coursera consider removing it as it amounts to nothing more than spam."
+      },
+      {
+        "post_id": "upenn_002353",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9957042431389969,
+        "threshold": 0.5886726433816505,
+        "error": "FP",
+        "text": "Is it possible technical persons?"
+      },
+      {
+        "post_id": "upenn_001761",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9916541828819366,
+        "threshold": 0.5886726433816505,
+        "error": "FP",
+        "text": "I have a few questions about this lecture. This is a topic I have heard brought up many times in various places, and after a bit of searching I still haven't found some answers to some basic questions.In the past, has there been situations where countries borrow money to have a deficit, or is this a recent phenemonon???What are the consequences of a trade deficit? Is it bad that a country carries a deficit? What are the effects, positie and negative, for the lives of average people in coutries that carry debt? More cheap crap to buy? Less jobs? Whatever. Who is the loser, the country with the deficit, or the country with the surplus? Is there interest paid on these defecits? If not, it looks like a bit of defecit could act like a free loan. Or am I thinking about this the wrong way?What do we mean when we say the US owes money to China? Who exactally? The federal reserve? The US congress? Taxpayers? What part of the government in China (and elsewhere) do they owe the money to???What about Canada? Who in Canada owes money? The taxpayers?A thought experiment, because surely this would never happen, but what would happen in the future if the US pulled an ass move and just says to China, \"nah, we don't want to give you these trillions of dollars, because, say, you stole some intellecutal property form us\", or whatever. Sure, China would be pissed. But who would suffer? Is there an international body that oversees these debts? The world bank???Any reply or links to related resources would be greatly appreciated. I would also like to know if anyone has similar questions in mind."
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_logreg stanford \u2192 stanford",
+    "all_error_count": 638,
+    "examples": [
+      {
+        "post_id": "stanford_022577",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.015793051078352622,
+        "threshold": 0.5886726433816505,
+        "error": "FN",
+        "text": "translated by google?"
+      },
+      {
+        "post_id": "stanford_012670",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.02628799945502495,
+        "threshold": 0.5886726433816505,
+        "error": "FN",
+        "text": "I think you need to modify your slide no. 16 in \\linear_regression.pdf\\\".\u0007As a teacher you can make a simpler statement at beginning, but it should be such that it allows for a later, stricter, Mathematical definition. The concept of \\\"Null Hypothesis\\\" is tricky and it was not stated clearly enough.\""
+      },
+      {
+        "post_id": "stanford_014978",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.026976478490713576,
+        "threshold": 0.5886726433816505,
+        "error": "FN",
+        "text": "Question 1: Which goals relate directly to girls' education?\u0007\u0007Well, the infographic helps prove that ALL of these goals are relative to the need of girls' education. The health, societal, and economic benefits of educating girls speak for themselves. If I were to prioritize any of the goals, I would likely place emphasis on primary education, gender equality, and maternal health as they will broadly affect these communities and provide a platform to push for HIV/AIDs prevention, reducing child mortality, and improving environmental conditions. But as I keep repeating in my mind, it ALL starts with education. And here, it all starts with girls.\u0007\u0007Question 2: Which goals are dependent on educating girls for their fulfillment?\u0007\u0007Again, I'd say overall, they are all dependent on educating girls but if I had to prioritize, I'd choose the same three as above. If you start with the girls and their own fulfillment, you'll more easily move toward more general goals like eradicating poverty which affects the broader community. It's the idea of thinking globally, but acting locally. Reaching young girls on a local level by promoting their education at primary levels will empower them and open their eyes to a healthier, happier world in which they, too, will help reach these MDGs."
+      },
+      {
+        "post_id": "stanford_003056",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.02973807940630715,
+        "threshold": 0.5886726433816505,
+        "error": "FN",
+        "text": "In my current school we have a \u00beGifted and talented\u00ae cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most \u00beable\u00ae are filtered and \u00beextracted\u00ae into another class (called \u00beExtraction\u00ae) during the time at which they would be having a \u00benormal\u00ae maths lesson.\u0007 - This \u00beextraction\u00ae lesson is done twice a fortnight and the students are \u00beexpected\u00ae to catch up with the normal curriculum in their own time; if they don\u00aet they can be removed.\u0007 - There are two \u00beextraction\u00ae classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the \u00beExtraction\u00ae class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the \u00beExtraction\u00ae class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the \u00beExtraction\u00ae class.\u0007 - Reinstating students to the \u00beExtraction\u00ae class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in \u00beExtraction\u00ae\u0007 - Labeling of \u00beGifted and Talented\u00ae and \u00beExtraction\u00ae; the latter sounding quite painful!\u0007 - Students who are borderline between \u00benormal\u00ae class and \u00beextraction\u00ae.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_dummy stanford \u2192 upenn",
+    "all_error_count": 61,
+    "examples": [
+      {
+        "post_id": "upenn_000245",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.190015479876161,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "The last two weeks I feel I'm missing something ...\u00c2 I had taken the pace of the course as part of my routine.\u00c2 Professor [REDACTED]\u00c2 questions: When have available the next level of this course, for example: Advanced Accounting?"
+      },
+      {
+        "post_id": "upenn_000252",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.190015479876161,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I feel like this is a trick question/option:\u00c2 Which of the following transactions violates the balance sheet equation? (check all that apply)> Reduce cash and reduce an expenseYou know, i'm doing the assignment right now. and intuitively this should make sense, because on both sides of the Super T-account there is a reduction. BUT IS THIS A TRICK QUESTION? Can you reduce an expense? I mean, don't expenses just add, how does expense reduce? Or I haven't seen an example yet, where okay you pay for something and it lessens an expense?"
+      },
+      {
+        "post_id": "upenn_000303",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.190015479876161,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Thank you [REDACTED] for your quick reply and explanation. Two questions though :1- What is the difference between Inventory(materials) and Supplies? I would consider oranges, water, sugar as supplies . Never knew about Inventory(materials)...2- I m kind of lost with the 2nd and 3rd journal entries. Production costs as an account is not intuitive to me. From my understanding it is not an expense because that would be double counting (Expenses are accounted for in the COGS (last journal Entry)). Then What does it mean an how to interpret it?\u00c2 \u00c2 \u00c2 It is more intuitive to me to combine the 2nd and 3rd journal entries, directly transforming Inventory(materials) in Inventory(finish goods) as such :\u00c2 \u00c2 Dr Inventory (finished goods) $1300\u00c2 \u00c2 \u00c2 \u00c2 Cr Inventory (materials) $1300Is it POSSIBLE and OK to do that and bypass the Production costs ?Thanks"
+      },
+      {
+        "post_id": "upenn_000336",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.190015479876161,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Question:\u00c2 Must exchange difference be always added back to net profit under operating activity. Anyway to do a quick operating activity figure, so that we know what is the figures.Thanks."
+      }
+    ]
+  },
+  {
+    "experiment": "tfidf_dummy stanford \u2192 stanford",
+    "all_error_count": 1105,
+    "examples": [
+      {
+        "post_id": "stanford_013111",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.190015479876161,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Sorry to post here but I tried the technical help and had no answer by email.\u0007I don't seem able to access all things this week. Initially I could not see anything, now I am seeing almost all but can't access \\From Outrage to Courage\\\" contents, not in the online version nor in the downloadable version. When trying to access the downloadable part the system asks for a username and password but mine don't work on it. Does anybody else experience problems? Am I doing something wrong?\""
+      },
+      {
+        "post_id": "stanford_015492",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.190015479876161,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I would be so grateful if Professor Trevor and Professor Bob would please make clear in all use of logs whether they refer to log or ln, so that we do not have to guess what is their intent. \u0007\u0007I have had quite a few graduate courses in math, engineering, and finance and have yet to run across the use of log to indicate either log or ln. \u0007\u0007Professor Trevor and Professor Bob, please eliminate this possible source of error!\u0007\u0007Thank you very much. Great course."
+      },
+      {
+        "post_id": "stanford_022840",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.190015479876161,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hi,\u0007\u0007I have still have problem downloading unit 8 Solutions.Is the problem resolved?"
+      },
+      {
+        "post_id": "stanford_027814",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.190015479876161,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "OK, so I have a similar probelem. My scores for Essay 3 are:\u00071+1+1+1+1 = 5\u00072+3+3+2+3 = 13\u00072+2+2+2+2 = 10\u0007\u0007Now, the interesting part is that in the feedback box for the third review I got the following:\u0007\u0007???????? ?????? ????????? ?????? ???????????. ????????????? ??????: (1) ?????????? ??????? ???????, (2)\u0007??????????? ????? ????????, (3) ???? ?? ???????? ???????, ? (4) ?????? ????? ??????????? ?????????.\u0007\u0007Which is my essay, BUT after translation using Google Translate (I suppose). \u0007\u0007What should I do?"
+      }
+    ]
+  }
+]
+
+Cell 31: {
+  "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+  "model": "tfidf_logreg",
+  "source": "stanford",
+  "score": 0.9698397866419225,
+  "score_type": "model_probability_estimate",
+  "threshold": 0.5886726433816505,
+  "binary_priority": 1,
+  "note": "English student forum posts; a model estimate can be wrong."
+}
+
+Cell 33: Download from Kaggle Output: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/01_tfidf_logistic_regression_and_dummy/01_tfidf_logistic_regression_and_dummy_output.zip MB: 26.5

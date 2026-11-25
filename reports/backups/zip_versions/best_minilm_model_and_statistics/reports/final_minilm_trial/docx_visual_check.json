@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "page_count": 18,
+  "document_sha256": "de2d326c93b9f1c5611bf0c9a8275cc70378548f5719fb8e071a17979368bc0b",
+  "method": "Rendered with the packaged DOCX renderer. All 18 final page PNGs inspected at full resolution after the final edit. Verified one intended section per page, no clipping, overflow, broken tables or title border.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 8,
+  "comparison_rows": 77,
+  "all_precision_recall_f1_accuracy_recomputed_from_confusions": true,
+  "web_guide_pages": [
+    16,
+    17
+  ],
+  "final_notebook": "kaggle/final_best_model.ipynb",
+  "page_png_sha256": {
+    "page-1.png": "54c8751f85c850e6452e55c63a93fd9f1ea748bc3f681fc88cfbb6a34150f6ee",
+    "page-2.png": "a9e1d73f92e195b3439949c9a736aa8abc4febc7c0689fbc47e4beb0cc181c90",
+    "page-3.png": "3c7279b213a45d81c83a1cb358c20e823ef96fff5305db11b12327cc5772a8fb",
+    "page-4.png": "c1cfeb846ca01be611bf399169f31c7fad51a00eda1222d1fc7bf5c58e2aa698",
+    "page-5.png": "919f972303071aae2ba9a91757dd85daed1141d3bbf5e1ce300feb818978b36f",
+    "page-6.png": "42bf64ec756b1e14655d23796cec088c50176ae74f63660af2a18a6a74a79752",
+    "page-7.png": "7fb49a8806631be73d546121f66d69f84c04c7744045096f54c1da2034bff89f",
+    "page-8.png": "d6dcbf235cf1c28ac1d000dc3caeb9ad121662d9d4724cf63a19f957874b81a5",
+    "page-9.png": "103950b61195d728b1eb542f3c9f95389aed323da0ef41b96b73f2bc3d08c2b8",
+    "page-10.png": "d3bfe340a02faec548a8db8b4a2e26fe69c1f0584031fda08cfb63f84f2c90f2",
+    "page-11.png": "15b0cf5b1c30573bfc49fe8be89ed8f854f19317106f6f1d2d2f21b316d14a09",
+    "page-12.png": "256bc2be05609115abec567bb4e24a99c47abe0da4050014dc3e9fa3e9310536",
+    "page-13.png": "b4487a5bdd4f3f3f764e71aba7ffda0be192c02db48cf207aed62a4d830cefdc",
+    "page-14.png": "bc8a46836c0b98fa3e3ca45703ff8390b76e36913849534ccdacf83b6f7d9d28",
+    "page-15.png": "260609fe64705479c644270089db77fc173e72427a5885c328e6821c488b3d67",
+    "page-16.png": "b7462df0111a37accdedd35a0020c6fdcb76ed4602ac2bd9330b4c5c248977f5",
+    "page-17.png": "25c77f278282f3c886a46585232a0e9af8d20386047c1a222293dc3a8da003aa",
+    "page-18.png": "d8d038cf35c349d4b63d1970e247410c0d885e303809c0e1a5eb428f6435f5af"
+  }
+}

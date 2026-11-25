@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "experiments": 20,
+  "split_ids_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "maximum_metric_difference": 0.0,
+  "tolerance": 1e-08,
+  "embedding_cache_reused": true,
+  "timings_excluded": true
+}

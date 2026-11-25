@@ -1,0 +1,35 @@
+{
+  "file": "10_archived_logs_and_interrupted_attempt.ipynb",
+  "training_performed": false,
+  "kaggle_gpu_execution_verified": false,
+  "passed": true,
+  "executed_code_cells": 8,
+  "result_rows": 83,
+  "prediction_rows_checked": 0,
+  "figure_count": 22,
+  "data_checks": null,
+  "environment": {
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "requirements": [
+      "numpy>=2,<3",
+      "scikit-learn==1.9.1",
+      "matplotlib>=3.10,<4",
+      "joblib>=1.4,<2",
+      "packaging>=24"
+    ],
+    "versions": {
+      "numpy": "2.5.4",
+      "scikit-learn": "1.9.1",
+      "matplotlib": "3.11.2",
+      "joblib": "1.6.0",
+      "packaging": "26.3"
+    },
+    "device": "cpu",
+    "visible_gpus": 0,
+    "training_gpu_count": 0,
+    "validation_reuse": true,
+    "fresh_training_requested": false
+  },
+  "mode": "Local isolated execution; pinned raw inputs and completed trained artifacts reused; no fitting",
+  "seconds": 12.01
+}

@@ -1,0 +1,30 @@
+{
+  "augmented_posts": 0,
+  "batch_size": 64,
+  "best_epoch": 1,
+  "config": {
+    "augmentation": false,
+    "lr": 2e-05,
+    "weighted": false
+  },
+  "device": "mps",
+  "epochs_run": 1,
+  "history": [
+    {
+      "epoch": 1,
+      "seconds": 2.4291155417449772,
+      "train_loss": 0.6682586669921875
+    }
+  ],
+  "max_length": 256,
+  "name": "benchmark",
+  "original_training_posts": 512,
+  "seconds": 2.4312638752162457,
+  "seed": 42,
+  "source": "stanford",
+  "training_rows": 512,
+  "validation_ap": null,
+  "validation_f1_tuned": null,
+  "validation_rows": 0,
+  "validation_threshold": 0.5
+}

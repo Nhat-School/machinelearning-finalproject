@@ -1,0 +1,54 @@
+[
+  {
+    "source": "upenn",
+    "precision": 0.56,
+    "recall": 0.6086956521739131,
+    "f1": 0.5833333333333334,
+    "macro_f1": 0.7713414634146342,
+    "accuracy": 0.9259259259259259,
+    "average_precision": 0.629540660426096,
+    "roc_auc": 0.9193803907762718,
+    "precision_at_20": 0.55,
+    "recall_at_20": 0.4782608695652174,
+    "top20_found": 11,
+    "confusion_matrix": [
+      [
+        236,
+        11
+      ],
+      [
+        9,
+        14
+      ]
+    ],
+    "test_size": 270,
+    "positive_count": 23,
+    "balanced_accuracy": 0.7820806196092238
+  },
+  {
+    "source": "stanford",
+    "precision": 0.7893401015228426,
+    "recall": 0.7036199095022625,
+    "f1": 0.7440191387559809,
+    "macro_f1": 0.8439697370928751,
+    "accuracy": 0.9079965606190885,
+    "average_precision": 0.8367997212950044,
+    "roc_auc": 0.954561393396163,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.042986425339366516,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        1801,
+        83
+      ],
+      [
+        131,
+        311
+      ]
+    ],
+    "test_size": 2326,
+    "positive_count": 442,
+    "balanced_accuracy": 0.8297823539018743
+  }
+]

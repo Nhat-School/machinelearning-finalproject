@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "page_count": 18,
+  "document_sha256": "008f9c46b83d5a1cfaf5f1dec87885bb19bb89b46888171f0adb69d2a5efd860",
+  "method": "Final page 18 visually inspected at full resolution after adding the numbered notebook guide. Other 17 page PNGs are byte-identical to the previously inspected report.",
+  "layout_defects_observed": false,
+  "figures_and_screenshots": 8,
+  "comparison_rows": 83,
+  "all_precision_recall_f1_accuracy_recomputed_from_confusions": true,
+  "web_guide_pages": [
+    16,
+    17
+  ],
+  "final_notebook": "kaggle/final_best_model.ipynb",
+  "page_png_sha256": {
+    "page-15.png": "260609fe64705479c644270089db77fc173e72427a5885c328e6821c488b3d67",
+    "page-14.png": "bc8a46836c0b98fa3e3ca45703ff8390b76e36913849534ccdacf83b6f7d9d28",
+    "page-16.png": "b7462df0111a37accdedd35a0020c6fdcb76ed4602ac2bd9330b4c5c248977f5",
+    "page-17.png": "25c77f278282f3c886a46585232a0e9af8d20386047c1a222293dc3a8da003aa",
+    "page-13.png": "6108b6360cd36878164f3f0aa6cb39d3574cc804d9f3a7c20db487119a240db6",
+    "page-12.png": "256bc2be05609115abec567bb4e24a99c47abe0da4050014dc3e9fa3e9310536",
+    "page-10.png": "d3bfe340a02faec548a8db8b4a2e26fe69c1f0584031fda08cfb63f84f2c90f2",
+    "page-11.png": "15b0cf5b1c30573bfc49fe8be89ed8f854f19317106f6f1d2d2f21b316d14a09",
+    "page-1.png": "42a69e842f58683cc1975e6863fc86505ea2d90da1ecdbb02dbac4045d194ab4",
+    "page-3.png": "3c7279b213a45d81c83a1cb358c20e823ef96fff5305db11b12327cc5772a8fb",
+    "page-2.png": "a9e1d73f92e195b3439949c9a736aa8abc4febc7c0689fbc47e4beb0cc181c90",
+    "page-6.png": "c12f6fff12b61d08d2b31d240137c8d0189832159c98dafd1bd0851ac9a55750",
+    "page-7.png": "7fb49a8806631be73d546121f66d69f84c04c7744045096f54c1da2034bff89f",
+    "page-5.png": "919f972303071aae2ba9a91757dd85daed1141d3bbf5e1ce300feb818978b36f",
+    "page-4.png": "c1cfeb846ca01be611bf399169f31c7fad51a00eda1222d1fc7bf5c58e2aa698",
+    "page-9.png": "103950b61195d728b1eb542f3c9f95389aed323da0ef41b96b73f2bc3d08c2b8",
+    "page-8.png": "d1fc7376c9baca2bb9ad2036bc58ddf404d244adfbeea977a99f4c83ee7e8353",
+    "page-18.png": "25dc5b29dd1bf61971941aa7004c2634bfd13940dfde54c208861805db97371c"
+  },
+  "teacher_notebook_collection": "kaggle/teacher_experiments.zip"
+}

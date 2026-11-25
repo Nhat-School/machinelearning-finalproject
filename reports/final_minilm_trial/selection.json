@@ -1,0 +1,284 @@
+{
+  "status": "frozen before new historical test evaluation",
+  "primary_seed": 42,
+  "confirmation_seed": 43,
+  "reference": {
+    "arm": "real_only",
+    "seed": 42,
+    "mean_real_validation_ap": 0.7350095640747224,
+    "real_validation": [
+      {
+        "source": "upenn",
+        "precision": 0.5652173913043478,
+        "recall": 0.5652173913043478,
+        "f1": 0.5652173913043478,
+        "macro_f1": 0.7623657806724168,
+        "accuracy": 0.9259259259259259,
+        "average_precision": 0.6321053588328719,
+        "roc_auc": 0.9183242386903714,
+        "precision_at_20": 0.65,
+        "recall_at_20": 0.5652173913043478,
+        "top20_found": 13,
+        "confusion_matrix": [
+          [
+            237,
+            10
+          ],
+          [
+            10,
+            13
+          ]
+        ],
+        "test_size": 270,
+        "positive_count": 23,
+        "balanced_accuracy": 0.7623657806724168
+      },
+      {
+        "source": "stanford",
+        "precision": 0.8,
+        "recall": 0.6968325791855203,
+        "f1": 0.7448609431680774,
+        "macro_f1": 0.8448487722376334,
+        "accuracy": 0.9092863284608771,
+        "average_precision": 0.8379137693165729,
+        "roc_auc": 0.9541879221066182,
+        "precision_at_20": 0.95,
+        "recall_at_20": 0.042986425339366516,
+        "top20_found": 19,
+        "confusion_matrix": [
+          [
+            1807,
+            77
+          ],
+          [
+            134,
+            308
+          ]
+        ],
+        "test_size": 2326,
+        "positive_count": 442,
+        "balanced_accuracy": 0.8279810454314014
+      }
+    ],
+    "context_validation": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "macro_f1": 0.6000000000000001,
+      "accuracy": 0.7,
+      "average_precision": 0.7274329101315685,
+      "roc_auc": 0.6527777777777778,
+      "precision_at_20": 0.7,
+      "recall_at_20": 0.7777777777777778,
+      "top20_found": 14,
+      "confusion_matrix": [
+        [
+          3,
+          9
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "test_size": 30,
+      "positive_count": 18,
+      "balanced_accuracy": 0.625,
+      "complete_scenario_groups": 9,
+      "all_three_states_correct": 0,
+      "label_origin": [
+        "assistant_draft_weak_label"
+      ],
+      "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+    }
+  },
+  "candidates": [
+    {
+      "arm": "custom_ce",
+      "seed": 42,
+      "mean_real_validation_ap": 0.717972730155268,
+      "real_validation": [
+        {
+          "source": "upenn",
+          "precision": 0.6666666666666666,
+          "recall": 0.5217391304347826,
+          "f1": 0.5853658536585366,
+          "macro_f1": 0.7756488586929957,
+          "accuracy": 0.937037037037037,
+          "average_precision": 0.6033268072910732,
+          "roc_auc": 0.9081147685266677,
+          "precision_at_20": 0.6,
+          "recall_at_20": 0.5217391304347826,
+          "top20_found": 12,
+          "confusion_matrix": [
+            [
+              241,
+              6
+            ],
+            [
+              11,
+              12
+            ]
+          ],
+          "test_size": 270,
+          "positive_count": 23,
+          "balanced_accuracy": 0.7487238162295371
+        },
+        {
+          "source": "stanford",
+          "precision": 0.8114754098360656,
+          "recall": 0.6719457013574661,
+          "f1": 0.7351485148514851,
+          "macro_f1": 0.8397386694965021,
+          "accuracy": 0.9079965606190885,
+          "average_precision": 0.8326186530194627,
+          "roc_auc": 0.9540041886426301,
+          "precision_at_20": 0.95,
+          "recall_at_20": 0.042986425339366516,
+          "top20_found": 19,
+          "confusion_matrix": [
+            [
+              1815,
+              69
+            ],
+            [
+              145,
+              297
+            ]
+          ],
+          "test_size": 2326,
+          "positive_count": 442,
+          "balanced_accuracy": 0.8176607487679051
+        }
+      ],
+      "context_validation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "average_precision": 1.0000000000000002,
+        "roc_auc": 1.0,
+        "precision_at_20": 0.9,
+        "recall_at_20": 1.0,
+        "top20_found": 18,
+        "confusion_matrix": [
+          [
+            12,
+            0
+          ],
+          [
+            0,
+            18
+          ]
+        ],
+        "test_size": 30,
+        "positive_count": 18,
+        "balanced_accuracy": 1.0,
+        "complete_scenario_groups": 9,
+        "all_three_states_correct": 9,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "passes_real_ap_guard": true
+    },
+    {
+      "arm": "custom_pairwise",
+      "seed": 42,
+      "mean_real_validation_ap": 0.745791375864022,
+      "real_validation": [
+        {
+          "source": "upenn",
+          "precision": 0.6190476190476191,
+          "recall": 0.5652173913043478,
+          "f1": 0.5909090909090909,
+          "macro_f1": 0.7773093841642229,
+          "accuracy": 0.9333333333333333,
+          "average_precision": 0.653646471399625,
+          "roc_auc": 0.9126914275655694,
+          "precision_at_20": 0.65,
+          "recall_at_20": 0.5652173913043478,
+          "top20_found": 13,
+          "confusion_matrix": [
+            [
+              239,
+              8
+            ],
+            [
+              10,
+              13
+            ]
+          ],
+          "test_size": 270,
+          "positive_count": 23,
+          "balanced_accuracy": 0.7664143636683682
+        },
+        {
+          "source": "stanford",
+          "precision": 0.8053333333333333,
+          "recall": 0.6832579185520362,
+          "f1": 0.7392900856793145,
+          "macro_f1": 0.8418745082894616,
+          "accuracy": 0.9084264832330181,
+          "average_precision": 0.8379362803284189,
+          "roc_auc": 0.9534349751659605,
+          "precision_at_20": 0.95,
+          "recall_at_20": 0.042986425339366516,
+          "top20_found": 19,
+          "confusion_matrix": [
+            [
+              1811,
+              73
+            ],
+            [
+              140,
+              302
+            ]
+          ],
+          "test_size": 2326,
+          "positive_count": 442,
+          "balanced_accuracy": 0.8222552862399246
+        }
+      ],
+      "context_validation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "average_precision": 1.0000000000000002,
+        "roc_auc": 1.0,
+        "precision_at_20": 0.9,
+        "recall_at_20": 1.0,
+        "top20_found": 18,
+        "confusion_matrix": [
+          [
+            12,
+            0
+          ],
+          [
+            0,
+            18
+          ]
+        ],
+        "test_size": 30,
+        "positive_count": 18,
+        "balanced_accuracy": 1.0,
+        "complete_scenario_groups": 9,
+        "all_three_states_correct": 9,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "passes_real_ap_guard": true
+    }
+  ],
+  "selected_custom_configuration": "custom_pairwise",
+  "recommendation_eligible_on_primary_validation": true,
+  "selection_rule": "Require mean real validation AP >= control minus 0.03; maximize custom validation balanced accuracy, tie real AP. If guard fails, keep real-only recommendation.",
+  "custom_label_use": "explicitly authorized assistant-draft weak supervision",
+  "test_metrics_used_for_selection": false
+}

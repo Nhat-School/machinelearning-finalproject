@@ -1,0 +1,39 @@
+{
+  "attention": "sdpa",
+  "augmentation": "one contraction-expanded variant when text changes; training rows only",
+  "base_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "batch_size": 64,
+  "bf16": true,
+  "configs": {
+    "plain": {
+      "augmentation": false,
+      "lr": 2e-05,
+      "weighted": false
+    },
+    "weighted": {
+      "augmentation": false,
+      "lr": 2e-05,
+      "weighted": true
+    },
+    "weighted_aug": {
+      "augmentation": true,
+      "lr": 2e-05,
+      "weighted": true
+    }
+  },
+  "data_hashes": {
+    "stanford": "69f99d396d00ed52731fd83d36a2e208adc1b794a411c218ce1fcc8459ac1a59",
+    "upenn": "3268954bb851d7bfed7daf76366314ceb85e24e9392e001fa7a30c79996f8442"
+  },
+  "early_stopping_metric": "validation AP",
+  "final_epochs": "rounded median of selected-config CV best epochs",
+  "folds": 5,
+  "max_epochs": 3,
+  "max_length": 256,
+  "patience": 1,
+  "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "seed": 42,
+  "selection": "source scout validation tuned F1; tie AP",
+  "tests": "same previously inspected hold-outs; exploratory comparisons, no test-based tuning",
+  "threshold": "source OOF F1 maximum"
+}

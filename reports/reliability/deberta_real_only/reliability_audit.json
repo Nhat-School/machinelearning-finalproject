@@ -1,0 +1,30 @@
+{
+  "upenn": {
+    "total": 691,
+    "automatic_count": 542,
+    "review_count": 149,
+    "automatic_coverage": 0.784370477568741,
+    "automatic_errors": 4,
+    "automatic_accuracy": 0.992619926199262,
+    "urgent_automatically_found": 10,
+    "urgent_automatically_missed": 4,
+    "urgent_requiring_review": 47,
+    "false_urgent_automatic": 0,
+    "automatic_urgent_precision": 1.0,
+    "automatic_urgent_recall_of_all_urgent_posts": 0.16393442622950818
+  },
+  "stanford": {
+    "total": 5814,
+    "automatic_count": 4133,
+    "review_count": 1681,
+    "automatic_coverage": 0.7108703130374957,
+    "automatic_errors": 54,
+    "automatic_accuracy": 0.9869344301959836,
+    "urgent_automatically_found": 121,
+    "urgent_automatically_missed": 52,
+    "urgent_requiring_review": 932,
+    "false_urgent_automatic": 2,
+    "automatic_urgent_precision": 0.983739837398374,
+    "automatic_urgent_recall_of_all_urgent_posts": 0.10950226244343891
+  }
+}

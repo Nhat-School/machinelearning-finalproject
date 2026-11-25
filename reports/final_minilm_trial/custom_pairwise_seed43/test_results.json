@@ -1,0 +1,111 @@
+[
+  {
+    "run": "custom_pairwise_seed43",
+    "arm": "custom_pairwise",
+    "seed": 43,
+    "test_source": "upenn",
+    "threshold": 0.5,
+    "precision": 0.6129032258064516,
+    "recall": 0.6229508196721312,
+    "f1": 0.6178861788617886,
+    "macro_f1": 0.790277481805795,
+    "accuracy": 0.9319826338639653,
+    "average_precision": 0.7048647237820834,
+    "roc_auc": 0.9381472807702316,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.3114754098360656,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        606,
+        24
+      ],
+      [
+        23,
+        38
+      ]
+    ],
+    "test_size": 691,
+    "positive_count": 61,
+    "brier_score": 0.04919691926038603,
+    "automatic_coverage": 0.8827785817655571,
+    "review_count": 81,
+    "automatic_accuracy": 0.9704918032786886,
+    "automatic_errors": 18,
+    "urgent_automatically_found": 26,
+    "urgent_automatically_missed": 12,
+    "urgent_requiring_review": 23
+  },
+  {
+    "run": "custom_pairwise_seed43",
+    "arm": "custom_pairwise",
+    "seed": 43,
+    "test_source": "stanford",
+    "threshold": 0.5,
+    "precision": 0.8313767342582711,
+    "recall": 0.7049773755656109,
+    "f1": 0.7629774730656219,
+    "macro_f1": 0.8562435873569294,
+    "accuracy": 0.9167526659786722,
+    "average_precision": 0.849331505098406,
+    "roc_auc": 0.9569386243152372,
+    "precision_at_20": 0.95,
+    "recall_at_20": 0.017194570135746608,
+    "top20_found": 19,
+    "confusion_matrix": [
+      [
+        4551,
+        158
+      ],
+      [
+        326,
+        779
+      ]
+    ],
+    "test_size": 5814,
+    "positive_count": 1105,
+    "brier_score": 0.06098139342971956,
+    "automatic_coverage": 0.8455452356381149,
+    "review_count": 898,
+    "automatic_accuracy": 0.9637917005695688,
+    "automatic_errors": 178,
+    "urgent_automatically_found": 456,
+    "urgent_automatically_missed": 138,
+    "urgent_requiring_review": 511
+  },
+  {
+    "run": "custom_pairwise_seed43",
+    "arm": "custom_pairwise",
+    "seed": 43,
+    "test_source": "custom_challenge",
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "macro_f1": 1.0,
+    "accuracy": 1.0,
+    "average_precision": 1.0,
+    "roc_auc": 1.0,
+    "precision_at_20": 0.7,
+    "recall_at_20": 1.0,
+    "top20_found": 14,
+    "confusion_matrix": [
+      [
+        10,
+        0
+      ],
+      [
+        0,
+        14
+      ]
+    ],
+    "test_size": 24,
+    "positive_count": 14,
+    "balanced_accuracy": 1.0,
+    "complete_scenario_groups": 7,
+    "all_three_states_correct": 7,
+    "label_origin": [
+      "assistant_draft_weak_label"
+    ],
+    "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+  }
+]

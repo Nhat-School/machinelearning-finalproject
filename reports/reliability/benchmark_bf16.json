@@ -1,0 +1,20 @@
+{
+  "status": "training smoke test only; discarded weights; no classifier evaluation",
+  "device": "mps",
+  "batch_size": 4,
+  "sequence_length": 512,
+  "step_seconds": [
+    2.1092064171098173,
+    0.8414116660133004,
+    0.8383766249753535
+  ],
+  "loss": [
+    0.6798927187919617,
+    0.6547418236732483,
+    0.6299075484275818
+  ],
+  "parameters": 184423682,
+  "elapsed_seconds": 4.836919333785772,
+  "bf16": true,
+  "driver_memory_gb": 7.0486907958984375
+}

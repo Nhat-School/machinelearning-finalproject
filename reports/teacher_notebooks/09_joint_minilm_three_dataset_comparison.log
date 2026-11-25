@@ -1,0 +1,2588 @@
+Cell 2: Project: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/09_joint_minilm_three_dataset_comparison
+Mode: LOCAL QA: saved completed training; no fitting
+
+Cell 4: {
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "requirements": [
+    "numpy>=2,<3",
+    "scikit-learn==1.9.1",
+    "matplotlib>=3.10,<4",
+    "joblib>=1.4,<2",
+    "packaging>=24",
+    "torch>=2.8",
+    "transformers==4.57.6",
+    "sentencepiece==0.2.1"
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0",
+    "packaging": "26.3",
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "sentencepiece": "0.2.1"
+  },
+  "device": "mps",
+  "visible_gpus": 0,
+  "training_gpu_count": 0,
+  "validation_reuse": true,
+  "fresh_training_requested": false
+}
+
+Cell 35: {
+  "prepare_data.py": "f23b27400fd1166272d6a2bce787eedb608063e07433b774ec6bc4464793e42f",
+  "train.py": "cb94a335c4205e4ceff9d99297a9253ec77a25ed96689b1a65075289c13741d0",
+  "organize_datasets.py": "a5aaa7df87679d029601e5142c2cc1365b3c517e3667dbc19fce1ed5cb6f9b51",
+  "build_custom_dataset.py": "a92cc3d1fa764a13a5785d24b50c8fcfcd61a0f4e42126e95f650e71c26f91ca",
+  "prepare_reliability_data.py": "df5132d1f5ceaa35af63058b6b9f46235946c4e870cf5e89aa0fcbd04b2ec57a",
+  "audit_custom_labels_ai.py": "e400ca17a4c7551e2f14794b75b0ef99ccd0b4330da725edc7408f008ab576b9",
+  "teacher_notebook_tools.py": "c1f9bacc5808ed2267a2aee5028d9bbd51a98357dbca6007c5962f68e6c1a603",
+  "finetune_minilm.py": "0a17a11595dc85673bf55bcdcf52dae158145a4174d5ac24bd4f33b6b13f7042",
+  "predict_reliable_deberta.py": "94ee55be2574803c8ccc0d6234055e8535591d90bd97d86515e05fd7a5a2a3eb",
+  "final_minilm_trial.py": "5a7b967d8effff36af411ae757112422fda62515c200f3ef871ec0454be4c65e",
+  "evaluate_final_minilm_trial.py": "1e00870caacb8c5d21ce8c0b383c20f2a69649ea3459a1af640b8c803af899b1",
+  "summarize_final_minilm_trial.py": "89c818e4fa2176210599b42723eb3453cdc3a13cd2ec68f8d36266831915dc6d",
+  "run_final_minilm_trial.py": "aec70206cd9f4745a4409b940f2e298eb920044d18517b7e07c98d998a901733",
+  "check_final_behavior.py": "3b1ca8bd744ca66a2459dec3ab614446ba7c35e85c520cceb6d0fe67298758bf"
+}
+
+Cell 37: upenn: raw=3504, final=3493, priority=298
+
+Cell 37: stanford: raw=29604, final=29070, priority=5524
+Canonical dataset folder: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/09_joint_minilm_three_dataset_comparison/Datasets
+Original file hashes verified; legacy training paths remain usable.
+
+Cell 37: {
+  "version": "custom-v2",
+  "rows": 160,
+  "scenario_groups": 80,
+  "provenance": "assistant-authored synthetic examples, not collected student records",
+  "label_status": "draft with separate human-review worksheet",
+  "human_approved_rows": 0,
+  "case_types": {
+    "blocked": 40,
+    "resolved": 40,
+    "missing_context": 12,
+    "outside_scope": 12,
+    "neutral_or_quoted": 16,
+    "still_blocked_update": 40
+  },
+  "splits": {
+    "validation": 36,
+    "train": 93,
+    "challenge": 31
+  },
+  "exact_overlap_with_real_sources": 0,
+  "training_default": "exclude all unreviewed examples",
+  "split_policy": "deterministic scenario-group split; blocked/resolved pair cannot cross splits",
+  "development_history": "40 still-blocked updates added after observing poor resolution handling; not an independent benchmark",
+  "draft_sha256": "7e9f2553b79d5fec18a300b0edd684daf37ee9ec036a77df233ab937479a0991"
+}
+
+Cell 37: {
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 37: {
+  "passed": true,
+  "hashes_and_cleaning_checks": {
+    "both_binary_classes_present": true,
+    "labels_in_range": true,
+    "no_exact_duplicates_between_sources": true,
+    "no_exact_duplicates_within_sources": true,
+    "nonempty_text": true,
+    "rows_accounted_for": true
+  },
+  "historical_test_membership_preserved": true,
+  "upenn_student_roles_disjoint": true,
+  "custom_scenario_groups_disjoint": true,
+  "rows": 32563,
+  "split_plan_sha256": "ebc3cfdcbe47db302be2da05335babc6fcd28eb568bcae916d5844bdcce59135"
+}
+{
+  "both_binary_classes_present": true,
+  "labels_in_range": true,
+  "no_exact_duplicates_between_sources": true,
+  "no_exact_duplicates_within_sources": true,
+  "nonempty_text": true,
+  "rows_accounted_for": true
+}
+{
+  "seed": 42,
+  "source_splits": {
+    "upenn": {
+      "fit": {
+        "posts": 2257,
+        "urgent": 189
+      },
+      "calibration": {
+        "posts": 275,
+        "urgent": 25
+      },
+      "validation": {
+        "posts": 270,
+        "urgent": 23
+      },
+      "test": {
+        "posts": 691,
+        "urgent": 61
+      }
+    },
+    "stanford": {
+      "fit": {
+        "posts": 18604,
+        "urgent": 3535
+      },
+      "calibration": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "validation": {
+        "posts": 2326,
+        "urgent": 442
+      },
+      "test": {
+        "posts": 5814,
+        "urgent": 1105
+      }
+    }
+  },
+  "approved_custom_train_rows": 0,
+  "historical_test_sets_preserved": true,
+  "upenn_students_disjoint_across_roles": true,
+  "input_split_sha256": "7592ffb5bdab5a5f6e3fe2f088ab0ac7e2ffe77d66f586e92a882c2b58bf5fa0",
+  "custom_default": "unreviewed drafts excluded",
+  "test_status": "previously inspected historical tests; exploratory, not a fresh external test"
+}
+
+Cell 41: Matplotlib is building the font cache; this may take a moment.
+
+Cell 41: three-arm trial evaluated
+[
+  {
+    "run": "real_only_seed42",
+    "real_test_ids_labels_and_confusion_counts_verified": true,
+    "fit_disjoint_from_real_calibration_validation_test": true,
+    "custom_train_disjoint_from_validation_and_challenge": true
+  },
+  {
+    "run": "custom_ce_seed42",
+    "real_test_ids_labels_and_confusion_counts_verified": true,
+    "fit_disjoint_from_real_calibration_validation_test": true,
+    "custom_train_disjoint_from_validation_and_challenge": true
+  },
+  {
+    "run": "custom_pairwise_seed42",
+    "real_test_ids_labels_and_confusion_counts_verified": true,
+    "fit_disjoint_from_real_calibration_validation_test": true,
+    "custom_train_disjoint_from_validation_and_challenge": true
+  },
+  {
+    "run": "real_only_seed43",
+    "real_test_ids_labels_and_confusion_counts_verified": true,
+    "fit_disjoint_from_real_calibration_validation_test": true,
+    "custom_train_disjoint_from_validation_and_challenge": true
+  },
+  {
+    "run": "custom_pairwise_seed43",
+    "real_test_ids_labels_and_confusion_counts_verified": true,
+    "fit_disjoint_from_real_calibration_validation_test": true,
+    "custom_train_disjoint_from_validation_and_challenge": true
+  }
+]
+
+Cell 41: selection.json {
+  "status": "frozen before new historical test evaluation",
+  "primary_seed": 42,
+  "confirmation_seed": 43,
+  "reference": {
+    "arm": "real_only",
+    "seed": 42,
+    "mean_real_validation_ap": 0.7350095640747224,
+    "real_validation": [
+      {
+        "source": "upenn",
+        "precision": 0.5652173913043478,
+        "recall": 0.5652173913043478,
+        "f1": 0.5652173913043478,
+        "macro_f1": 0.7623657806724168,
+        "accuracy": 0.9259259259259259,
+        "average_precision": 0.6321053588328719,
+        "roc_auc": 0.9183242386903714,
+        "precision_at_20": 0.65,
+        "recall_at_20": 0.5652173913043478,
+        "top20_found": 13,
+        "confusion_matrix": [
+          [
+            237,
+            10
+          ],
+          [
+            10,
+            13
+          ]
+        ],
+        "test_size": 270,
+        "positive_count": 23,
+        "balanced_accuracy": 0.7623657806724168
+      },
+      {
+        "source": "stanford",
+        "precision": 0.8,
+        "recall": 0.6968325791855203,
+        "f1": 0.7448609431680774,
+        "macro_f1": 0.8448487722376334,
+        "accuracy": 0.9092863284608771,
+        "average_precision": 0.8379137693165729,
+        "roc_auc": 0.9541879221066182,
+        "precision_at_20": 0.95,
+        "recall_at_20": 0.042986425339366516,
+        "top20_found": 19,
+        "confusion_matrix": [
+          [
+            1807,
+            77
+          ],
+          [
+            134,
+            308
+          ]
+        ],
+        "test_size": 2326,
+        "positive_count": 442,
+        "balanced_accuracy": 0.8279810454314014
+      }
+    ],
+    "context_validation": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "macro_f1": 0.6000000000000001,
+      "accuracy": 0.7,
+      "average_precision": 0.7274329101315685,
+      "roc_auc": 0.6527777777777778,
+      "precision_at_20": 0.7,
+      "recall_at_20": 0.7777777777777778,
+      "top20_found": 14,
+      "confusion_matrix": [
+        [
+          3,
+          9
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "test_size": 30,
+      "positive_count": 18,
+      "balanced_accuracy": 0.625,
+      "complete_scenario_groups": 9,
+      "all_three_states_correct": 0,
+      "label_origin": [
+        "assistant_draft_weak_label"
+      ],
+      "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+    }
+  },
+  "candidates": [
+    {
+      "arm": "custom_ce",
+      "seed": 42,
+      "mean_real_validation_ap": 0.717972730155268,
+      "real_validation": [
+        {
+          "source": "upenn",
+          "precision": 0.6666666666666666,
+          "recall": 0.5217391304347826,
+          "f1": 0.5853658536585366,
+          "macro_f1": 0.7756488586929957,
+          "accuracy": 0.937037037037037,
+          "average_precision": 0.6033268072910732,
+          "roc_auc": 0.9081147685266677,
+          "precision_at_20": 0.6,
+          "recall_at_20": 0.5217391304347826,
+          "top20_found": 12,
+          "confusion_matrix": [
+            [
+              241,
+              6
+            ],
+            [
+              11,
+              12
+            ]
+          ],
+          "test_size": 270,
+          "positive_count": 23,
+          "balanced_accuracy": 0.7487238162295371
+        },
+        {
+          "source": "stanford",
+          "precision": 0.8114754098360656,
+          "recall": 0.6719457013574661,
+          "f1": 0.7351485148514851,
+          "macro_f1": 0.8397386694965021,
+          "accuracy": 0.9079965606190885,
+          "average_precision": 0.8326186530194627,
+          "roc_auc": 0.9540041886426301,
+          "precision_at_20": 0.95,
+          "recall_at_20": 0.042986425339366516,
+          "top20_found": 19,
+          "confusion_matrix": [
+            [
+              1815,
+              69
+            ],
+            [
+              145,
+              297
+            ]
+          ],
+          "test_size": 2326,
+          "positive_count": 442,
+          "balanced_accuracy": 0.8176607487679051
+        }
+      ],
+      "context_validation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "average_precision": 1.0000000000000002,
+        "roc_auc": 1.0,
+        "precision_at_20": 0.9,
+        "recall_at_20": 1.0,
+        "top20_found": 18,
+        "confusion_matrix": [
+          [
+            12,
+            0
+          ],
+          [
+            0,
+            18
+          ]
+        ],
+        "test_size": 30,
+        "positive_count": 18,
+        "balanced_accuracy": 1.0,
+        "complete_scenario_groups": 9,
+        "all_three_states_correct": 9,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "passes_real_ap_guard": true
+    },
+    {
+      "arm": "custom_pairwise",
+      "seed": 42,
+      "mean_real_validation_ap": 0.745791375864022,
+      "real_validation": [
+        {
+          "source": "upenn",
+          "precision": 0.6190476190476191,
+          "recall": 0.5652173913043478,
+          "f1": 0.5909090909090909,
+          "macro_f1": 0.7773093841642229,
+          "accuracy": 0.9333333333333333,
+          "average_precision": 0.653646471399625,
+          "roc_auc": 0.9126914275655694,
+          "precision_at_20": 0.65,
+          "recall_at_20": 0.5652173913043478,
+          "top20_found": 13,
+          "confusion_matrix": [
+            [
+              239,
+              8
+            ],
+            [
+              10,
+              13
+            ]
+          ],
+          "test_size": 270,
+          "positive_count": 23,
+          "balanced_accuracy": 0.7664143636683682
+        },
+        {
+          "source": "stanford",
+          "precision": 0.8053333333333333,
+          "recall": 0.6832579185520362,
+          "f1": 0.7392900856793145,
+          "macro_f1": 0.8418745082894616,
+          "accuracy": 0.9084264832330181,
+          "average_precision": 0.8379362803284189,
+          "roc_auc": 0.9534349751659605,
+          "precision_at_20": 0.95,
+          "recall_at_20": 0.042986425339366516,
+          "top20_found": 19,
+          "confusion_matrix": [
+            [
+              1811,
+              73
+            ],
+            [
+              140,
+              302
+            ]
+          ],
+          "test_size": 2326,
+          "positive_count": 442,
+          "balanced_accuracy": 0.8222552862399246
+        }
+      ],
+      "context_validation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "average_precision": 1.0000000000000002,
+        "roc_auc": 1.0,
+        "precision_at_20": 0.9,
+        "recall_at_20": 1.0,
+        "top20_found": 18,
+        "confusion_matrix": [
+          [
+            12,
+            0
+          ],
+          [
+            0,
+            18
+          ]
+        ],
+        "test_size": 30,
+        "positive_count": 18,
+        "balanced_accuracy": 1.0,
+        "complete_scenario_groups": 9,
+        "all_three_states_correct": 9,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      },
+      "passes_real_ap_guard": true
+    }
+  ],
+  "selected_custom_configuration": "custom_pairwise",
+  "recommendation_eligible_on_primary_validation": true,
+  "selection_rule": "Require mean real validation AP >= control minus 0.03; maximize custom validation balanced accuracy, tie real AP. If guard fails, keep real-only recommendation.",
+  "custom_label_use": "explicitly authorized assistant-draft weak supervision",
+  "test_metrics_used_for_selection": false
+}
+
+frozen_recommendation.json {
+  "selected_custom_configuration": "custom_pairwise",
+  "preferred_trial_arm": "custom_pairwise",
+  "deployment_seed": 42,
+  "basis": "validation only; both seeds must pass the real AP guard and improve context validation for a custom recommendation",
+  "second_seed": {
+    "real_only": {
+      "arm": "real_only",
+      "seed": 43,
+      "mean_real_validation_ap": 0.7331701908605501,
+      "real_validation": [
+        {
+          "source": "upenn",
+          "precision": 0.56,
+          "recall": 0.6086956521739131,
+          "f1": 0.5833333333333334,
+          "macro_f1": 0.7713414634146342,
+          "accuracy": 0.9259259259259259,
+          "average_precision": 0.629540660426096,
+          "roc_auc": 0.9193803907762718,
+          "precision_at_20": 0.55,
+          "recall_at_20": 0.4782608695652174,
+          "top20_found": 11,
+          "confusion_matrix": [
+            [
+              236,
+              11
+            ],
+            [
+              9,
+              14
+            ]
+          ],
+          "test_size": 270,
+          "positive_count": 23,
+          "balanced_accuracy": 0.7820806196092238
+        },
+        {
+          "source": "stanford",
+          "precision": 0.7893401015228426,
+          "recall": 0.7036199095022625,
+          "f1": 0.7440191387559809,
+          "macro_f1": 0.8439697370928751,
+          "accuracy": 0.9079965606190885,
+          "average_precision": 0.8367997212950044,
+          "roc_auc": 0.954561393396163,
+          "precision_at_20": 0.95,
+          "recall_at_20": 0.042986425339366516,
+          "top20_found": 19,
+          "confusion_matrix": [
+            [
+              1801,
+              83
+            ],
+            [
+              131,
+              311
+            ]
+          ],
+          "test_size": 2326,
+          "positive_count": 442,
+          "balanced_accuracy": 0.8297823539018743
+        }
+      ],
+      "context_validation": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "macro_f1": 0.6000000000000001,
+        "accuracy": 0.7,
+        "average_precision": 0.6889195139338161,
+        "roc_auc": 0.6666666666666666,
+        "precision_at_20": 0.7,
+        "recall_at_20": 0.7777777777777778,
+        "top20_found": 14,
+        "confusion_matrix": [
+          [
+            3,
+            9
+          ],
+          [
+            0,
+            18
+          ]
+        ],
+        "test_size": 30,
+        "positive_count": 18,
+        "balanced_accuracy": 0.625,
+        "complete_scenario_groups": 9,
+        "all_three_states_correct": 0,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      }
+    },
+    "custom_pairwise": {
+      "arm": "custom_pairwise",
+      "seed": 43,
+      "mean_real_validation_ap": 0.7390888701515167,
+      "real_validation": [
+        {
+          "source": "upenn",
+          "precision": 0.5,
+          "recall": 0.5217391304347826,
+          "f1": 0.5106382978723404,
+          "macro_f1": 0.7319925769280566,
+          "accuracy": 0.9148148148148149,
+          "average_precision": 0.6397516553581568,
+          "roc_auc": 0.9190283400809717,
+          "precision_at_20": 0.6,
+          "recall_at_20": 0.5217391304347826,
+          "top20_found": 12,
+          "confusion_matrix": [
+            [
+              235,
+              12
+            ],
+            [
+              11,
+              12
+            ]
+          ],
+          "test_size": 270,
+          "positive_count": 23,
+          "balanced_accuracy": 0.7365780672416828
+        },
+        {
+          "source": "stanford",
+          "precision": 0.8059299191374663,
+          "recall": 0.6764705882352942,
+          "f1": 0.7355473554735548,
+          "macro_f1": 0.8397715938607679,
+          "accuracy": 0.907566638005159,
+          "average_precision": 0.8384260849448766,
+          "roc_auc": 0.954748729477092,
+          "precision_at_20": 0.95,
+          "recall_at_20": 0.042986425339366516,
+          "top20_found": 19,
+          "confusion_matrix": [
+            [
+              1812,
+              72
+            ],
+            [
+              143,
+              299
+            ]
+          ],
+          "test_size": 2326,
+          "positive_count": 442,
+          "balanced_accuracy": 0.81912701386287
+        }
+      ],
+      "context_validation": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "macro_f1": 1.0,
+        "accuracy": 1.0,
+        "average_precision": 1.0000000000000002,
+        "roc_auc": 1.0,
+        "precision_at_20": 0.9,
+        "recall_at_20": 1.0,
+        "top20_found": 18,
+        "confusion_matrix": [
+          [
+            12,
+            0
+          ],
+          [
+            0,
+            18
+          ]
+        ],
+        "test_size": 30,
+        "positive_count": 18,
+        "balanced_accuracy": 1.0,
+        "complete_scenario_groups": 9,
+        "all_three_states_correct": 9,
+        "label_origin": [
+          "assistant_draft_weak_label"
+        ],
+        "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy."
+      }
+    }
+  },
+  "confirmation_guard_passed": true,
+  "context_improved_on_both_seeds": true,
+  "test_metrics_used": false,
+  "custom_label_use": "explicitly authorized assistant-draft weak supervision"
+}
+
+two_seed_summary.json {
+  "real_only": {
+    "upenn": {
+      "precision": {
+        "mean": 0.6319004524886878,
+        "std_across_two_seeds": 0.014253393665158376,
+        "values_by_seed": {
+          "42": 0.6461538461538462,
+          "43": 0.6176470588235294
+        }
+      },
+      "recall": {
+        "mean": 0.6885245901639344,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 0.6885245901639344,
+          "43": 0.6885245901639344
+        }
+      },
+      "f1": {
+        "mean": 0.6589147286821706,
+        "std_across_two_seeds": 0.007751937984496082,
+        "values_by_seed": {
+          "42": 0.6666666666666666,
+          "43": 0.6511627906976745
+        }
+      },
+      "accuracy": {
+        "mean": 0.9370477568740956,
+        "std_across_two_seeds": 0.002170767004341545,
+        "values_by_seed": {
+          "42": 0.9392185238784371,
+          "43": 0.934876989869754
+        }
+      }
+    },
+    "stanford": {
+      "precision": {
+        "mean": 0.8226244401304353,
+        "std_across_two_seeds": 0.004536053696725162,
+        "values_by_seed": {
+          "42": 0.8271604938271605,
+          "43": 0.8180883864337102
+        }
+      },
+      "recall": {
+        "mean": 0.7239819004524887,
+        "std_across_two_seeds": 0.0036199095022624306,
+        "values_by_seed": {
+          "42": 0.7276018099547511,
+          "43": 0.7203619909502262
+        }
+      },
+      "f1": {
+        "mean": 0.7701574094197274,
+        "std_across_two_seeds": 0.004036138967369374,
+        "values_by_seed": {
+          "42": 0.7741935483870968,
+          "43": 0.766121270452358
+        }
+      },
+      "accuracy": {
+        "mean": 0.9178706570347437,
+        "std_across_two_seeds": 0.0014619883040935533,
+        "values_by_seed": {
+          "42": 0.9193326453388373,
+          "43": 0.9164086687306502
+        }
+      }
+    },
+    "custom_challenge": {
+      "precision": {
+        "mean": 0.6666666666666666,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 0.6666666666666666,
+          "43": 0.6666666666666666
+        }
+      },
+      "recall": {
+        "mean": 1.0,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 1.0,
+          "43": 1.0
+        }
+      },
+      "f1": {
+        "mean": 0.8,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 0.8,
+          "43": 0.8
+        }
+      },
+      "accuracy": {
+        "mean": 0.7083333333333334,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 0.7083333333333334,
+          "43": 0.7083333333333334
+        }
+      }
+    }
+  },
+  "custom_pairwise": {
+    "upenn": {
+      "precision": {
+        "mean": 0.6397849462365591,
+        "std_across_two_seeds": 0.026881720430107503,
+        "values_by_seed": {
+          "42": 0.6666666666666666,
+          "43": 0.6129032258064516
+        }
+      },
+      "recall": {
+        "mean": 0.639344262295082,
+        "std_across_two_seeds": 0.016393442622950782,
+        "values_by_seed": {
+          "42": 0.6557377049180327,
+          "43": 0.6229508196721312
+        }
+      },
+      "f1": {
+        "mean": 0.6395216018275885,
+        "std_across_two_seeds": 0.0216354229657999,
+        "values_by_seed": {
+          "42": 0.6611570247933884,
+          "43": 0.6178861788617886
+        }
+      },
+      "accuracy": {
+        "mean": 0.9363241678726484,
+        "std_across_two_seeds": 0.0043415340086830345,
+        "values_by_seed": {
+          "42": 0.9406657018813314,
+          "43": 0.9319826338639653
+        }
+      }
+    },
+    "stanford": {
+      "precision": {
+        "mean": 0.824968867650512,
+        "std_across_two_seeds": 0.006407866607759105,
+        "values_by_seed": {
+          "42": 0.8185610010427529,
+          "43": 0.8313767342582711
+        }
+      },
+      "recall": {
+        "mean": 0.7076923076923077,
+        "std_across_two_seeds": 0.002714932126696823,
+        "values_by_seed": {
+          "42": 0.7104072398190046,
+          "43": 0.7049773755656109
+        }
+      },
+      "f1": {
+        "mean": 0.761818193897152,
+        "std_across_two_seeds": 0.0011592791684698622,
+        "values_by_seed": {
+          "42": 0.7606589147286822,
+          "43": 0.7629774730656219
+        }
+      },
+      "accuracy": {
+        "mean": 0.9158926728586172,
+        "std_across_two_seeds": 0.0008599931200550803,
+        "values_by_seed": {
+          "42": 0.9150326797385621,
+          "43": 0.9167526659786722
+        }
+      }
+    },
+    "custom_challenge": {
+      "precision": {
+        "mean": 1.0,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 1.0,
+          "43": 1.0
+        }
+      },
+      "recall": {
+        "mean": 1.0,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 1.0,
+          "43": 1.0
+        }
+      },
+      "f1": {
+        "mean": 1.0,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 1.0,
+          "43": 1.0
+        }
+      },
+      "accuracy": {
+        "mean": 1.0,
+        "std_across_two_seeds": 0.0,
+        "values_by_seed": {
+          "42": 1.0,
+          "43": 1.0
+        }
+      }
+    }
+  }
+}
+
+
+Cell 41: You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+
+Cell 41: [
+  {
+    "model_key": "joint__minilm_real_control",
+    "correct_binary_probes": 14,
+    "diagnostic_binary_count": 16,
+    "binary_errors": [
+      "quoted_problem",
+      "still_waiting"
+    ],
+    "unlabelled_probes_automatically_classified": [
+      "vague",
+      "missing_reference",
+      "outside_recipe"
+    ]
+  },
+  {
+    "model_key": "joint__minilm_custom_trial",
+    "correct_binary_probes": 13,
+    "diagnostic_binary_count": 16,
+    "binary_errors": [
+      "longer_resolution",
+      "quoted_problem",
+      "still_waiting"
+    ],
+    "unlabelled_probes_automatically_classified": [
+      "missing_reference",
+      "outside_recipe"
+    ]
+  }
+]
+
+Cell 41: Extra draft diagnostics: [
+  {
+    "model_key": "joint__minilm_real_control",
+    "label_status": "assistant-authored draft expectations, not human-adjudicated gold",
+    "diagnostic_binary_count": 16,
+    "diagnostic_accuracy": 0.875,
+    "diagnostic_f1": 0.8571428571428571,
+    "confusion_matrix": [
+      [
+        8,
+        1
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "correct_binary_probes": 14,
+    "binary_errors": [
+      "quoted_problem",
+      "still_waiting"
+    ],
+    "unlabelled_probes_automatically_classified": [
+      "vague",
+      "missing_reference",
+      "outside_recipe"
+    ],
+    "predictions": [
+      {
+        "id": "unresolved_upload",
+        "expected_binary_priority": 1,
+        "text": "My report is finished, but every upload attempt fails. It is due in an hour and I need assistance.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.8594827039446526,
+        "action": "PRIORITY"
+      },
+      {
+        "id": "resolved_upload",
+        "expected_binary_priority": 0,
+        "text": "The upload failure is fixed. I have checked the receipt and my report was accepted. No action is needed.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.08233659796204913,
+        "action": "NORMAL"
+      },
+      {
+        "id": "longer_resolution",
+        "expected_binary_priority": 0,
+        "text": "I was unable to enter the quiz and asked for help this morning. Since then the administrator reset my access. I completed it successfully, so please close this request.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.4980066612005254,
+        "action": "REVIEW"
+      },
+      {
+        "id": "problem_returned",
+        "expected_binary_priority": 1,
+        "text": "The quiz opened briefly after a reset, but now the same error is back. I still cannot start and the timer is running. Please investigate.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.7643138925968973,
+        "action": "REVIEW"
+      },
+      {
+        "id": "denied_access",
+        "expected_binary_priority": 1,
+        "text": "I paid for the course, yet access is denied. Support has not replied and the assessed activity closes today.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.7320365514113538,
+        "action": "REVIEW"
+      },
+      {
+        "id": "past_problem",
+        "expected_binary_priority": 0,
+        "text": "Yesterday I was locked out of the course. Today access has been restored and everything works. Thanks for resolving it.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.3233222298462977,
+        "action": "REVIEW"
+      },
+      {
+        "id": "negative_statement",
+        "expected_binary_priority": 1,
+        "text": "It is not true that my login has been repaired. I remain locked out and need someone to restore access before the exam.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.5301796289246664,
+        "action": "REVIEW"
+      },
+      {
+        "id": "no_remaining_issue",
+        "expected_binary_priority": 0,
+        "text": "There is no remaining login issue. I tested it again, entered the exam and finished without errors.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.1568059108460238,
+        "action": "NORMAL"
+      },
+      {
+        "id": "quoted_problem",
+        "expected_binary_priority": 0,
+        "text": "The tutorial uses the sentence \"I cannot log in\" as an example of a support request. I am quoting the tutorial, not reporting a problem with my account.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.788294341102237,
+        "action": "REVIEW"
+      },
+      {
+        "id": "reference_example",
+        "expected_binary_priority": 0,
+        "text": "Here is an example error message for our documentation: \"Submission failed. Contact your instructor.\" My own submission completed correctly.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.06057712290307561,
+        "action": "NORMAL"
+      },
+      {
+        "id": "still_waiting",
+        "expected_binary_priority": 1,
+        "text": "I followed the suggested workaround. It changed nothing: my answers are still missing and I cannot finish the graded exercise.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.31120757662808096,
+        "action": "REVIEW"
+      },
+      {
+        "id": "different_failure",
+        "expected_binary_priority": 1,
+        "text": "The original password issue is fixed, but the payment system has charged me twice. I need help recovering the extra charge.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.5026686431597448,
+        "action": "REVIEW"
+      },
+      {
+        "id": "thank_you",
+        "expected_binary_priority": 0,
+        "text": "Thank you for answering my question. The explanation makes sense and I do not need any additional help.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.02257049145220509,
+        "action": "NORMAL"
+      },
+      {
+        "id": "sharing_solution",
+        "expected_binary_priority": 0,
+        "text": "For classmates who saw the installation error: restarting the kernel fixed it for me. I am sharing a working solution.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.018971205891485612,
+        "action": "NORMAL"
+      },
+      {
+        "id": "lost_work",
+        "expected_binary_priority": 1,
+        "text": "My saved project disappeared after the lab crashed. The submission window closes shortly. Can staff help recover it?",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.9113568807639991,
+        "action": "PRIORITY"
+      },
+      {
+        "id": "received_feedback",
+        "expected_binary_priority": 0,
+        "text": "I have now received the missing feedback and the grade is correct. Please disregard my earlier complaint.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.4541397539842937,
+        "action": "REVIEW"
+      },
+      {
+        "id": "vague",
+        "expected_binary_priority": null,
+        "text": "Can someone help me with this?",
+        "expected_handling": "context needed or outside supported scope",
+        "priority": 0,
+        "score": 0.18620683178313505,
+        "action": "NORMAL"
+      },
+      {
+        "id": "missing_reference",
+        "expected_binary_priority": null,
+        "text": "The second one is wrong again.",
+        "expected_handling": "context needed or outside supported scope",
+        "priority": 0,
+        "score": 0.12483006887761329,
+        "action": "NORMAL"
+      },
+      {
+        "id": "outside_weather",
+        "expected_binary_priority": null,
+        "text": "What will the weather be like in Paris next weekend?",
+        "expected_handling": "context needed or outside supported scope",
+        "priority": 1,
+        "score": 0.5501508821841683,
+        "action": "REVIEW"
+      },
+      {
+        "id": "outside_recipe",
+        "expected_binary_priority": null,
+        "text": "Give me a recipe for chocolate cake.",
+        "expected_handling": "context needed or outside supported scope",
+        "priority": 0,
+        "score": 0.012828407416253218,
+        "action": "NORMAL"
+      }
+    ]
+  },
+  {
+    "model_key": "joint__minilm_custom_trial",
+    "label_status": "assistant-authored draft expectations, not human-adjudicated gold",
+    "diagnostic_binary_count": 16,
+    "diagnostic_accuracy": 0.8125,
+    "diagnostic_f1": 0.8,
+    "confusion_matrix": [
+      [
+        7,
+        2
+      ],
+      [
+        1,
+        6
+      ]
+    ],
+    "correct_binary_probes": 13,
+    "binary_errors": [
+      "longer_resolution",
+      "quoted_problem",
+      "still_waiting"
+    ],
+    "unlabelled_probes_automatically_classified": [
+      "missing_reference",
+      "outside_recipe"
+    ],
+    "predictions": [
+      {
+        "id": "unresolved_upload",
+        "expected_binary_priority": 1,
+        "text": "My report is finished, but every upload attempt fails. It is due in an hour and I need assistance.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.865841191235809,
+        "action": "PRIORITY"
+      },
+      {
+        "id": "resolved_upload",
+        "expected_binary_priority": 0,
+        "text": "The upload failure is fixed. I have checked the receipt and my report was accepted. No action is needed.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.017734980567615116,
+        "action": "NORMAL"
+      },
+      {
+        "id": "longer_resolution",
+        "expected_binary_priority": 0,
+        "text": "I was unable to enter the quiz and asked for help this morning. Since then the administrator reset my access. I completed it successfully, so please close this request.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.548600622685842,
+        "action": "REVIEW"
+      },
+      {
+        "id": "problem_returned",
+        "expected_binary_priority": 1,
+        "text": "The quiz opened briefly after a reset, but now the same error is back. I still cannot start and the timer is running. Please investigate.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.9326827967652646,
+        "action": "PRIORITY"
+      },
+      {
+        "id": "denied_access",
+        "expected_binary_priority": 1,
+        "text": "I paid for the course, yet access is denied. Support has not replied and the assessed activity closes today.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.9370993450021153,
+        "action": "PRIORITY"
+      },
+      {
+        "id": "past_problem",
+        "expected_binary_priority": 0,
+        "text": "Yesterday I was locked out of the course. Today access has been restored and everything works. Thanks for resolving it.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.20896481022979194,
+        "action": "REVIEW"
+      },
+      {
+        "id": "negative_statement",
+        "expected_binary_priority": 1,
+        "text": "It is not true that my login has been repaired. I remain locked out and need someone to restore access before the exam.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.665818647172963,
+        "action": "REVIEW"
+      },
+      {
+        "id": "no_remaining_issue",
+        "expected_binary_priority": 0,
+        "text": "There is no remaining login issue. I tested it again, entered the exam and finished without errors.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.0797169682430947,
+        "action": "NORMAL"
+      },
+      {
+        "id": "quoted_problem",
+        "expected_binary_priority": 0,
+        "text": "The tutorial uses the sentence \"I cannot log in\" as an example of a support request. I am quoting the tutorial, not reporting a problem with my account.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.6217370733133276,
+        "action": "REVIEW"
+      },
+      {
+        "id": "reference_example",
+        "expected_binary_priority": 0,
+        "text": "Here is an example error message for our documentation: \"Submission failed. Contact your instructor.\" My own submission completed correctly.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.01689363639016085,
+        "action": "NORMAL"
+      },
+      {
+        "id": "still_waiting",
+        "expected_binary_priority": 1,
+        "text": "I followed the suggested workaround. It changed nothing: my answers are still missing and I cannot finish the graded exercise.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.4271696448242898,
+        "action": "REVIEW"
+      },
+      {
+        "id": "different_failure",
+        "expected_binary_priority": 1,
+        "text": "The original password issue is fixed, but the payment system has charged me twice. I need help recovering the extra charge.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.86855574571231,
+        "action": "PRIORITY"
+      },
+      {
+        "id": "thank_you",
+        "expected_binary_priority": 0,
+        "text": "Thank you for answering my question. The explanation makes sense and I do not need any additional help.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.01599639435487239,
+        "action": "NORMAL"
+      },
+      {
+        "id": "sharing_solution",
+        "expected_binary_priority": 0,
+        "text": "For classmates who saw the installation error: restarting the kernel fixed it for me. I am sharing a working solution.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.013881141618927156,
+        "action": "NORMAL"
+      },
+      {
+        "id": "lost_work",
+        "expected_binary_priority": 1,
+        "text": "My saved project disappeared after the lab crashed. The submission window closes shortly. Can staff help recover it?",
+        "expected_handling": "binary context diagnostic",
+        "priority": 1,
+        "score": 0.9721883330029597,
+        "action": "PRIORITY"
+      },
+      {
+        "id": "received_feedback",
+        "expected_binary_priority": 0,
+        "text": "I have now received the missing feedback and the grade is correct. Please disregard my earlier complaint.",
+        "expected_handling": "binary context diagnostic",
+        "priority": 0,
+        "score": 0.4599281402707015,
+        "action": "REVIEW"
+      },
+      {
+        "id": "vague",
+        "expected_binary_priority": null,
+        "text": "Can someone help me with this?",
+        "expected_handling": "context needed or outside supported scope",
+        "priority": 0,
+        "score": 0.23583263608729768,
+        "action": "REVIEW"
+      },
+      {
+        "id": "missing_reference",
+        "expected_binary_priority": null,
+        "text": "The second one is wrong again.",
+        "expected_handling": "context needed or outside supported scope",
+        "priority": 0,
+        "score": 0.16025216747585885,
+        "action": "NORMAL"
+      },
+      {
+        "id": "outside_weather",
+        "expected_binary_priority": null,
+        "text": "What will the weather be like in Paris next weekend?",
+        "expected_handling": "context needed or outside supported scope",
+        "priority": 0,
+        "score": 0.3644952151365191,
+        "action": "REVIEW"
+      },
+      {
+        "id": "outside_recipe",
+        "expected_binary_priority": null,
+        "text": "Give me a recipe for chocolate cake.",
+        "expected_handling": "context needed or outside supported scope",
+        "priority": 0,
+        "score": 0.01684315300609992,
+        "action": "NORMAL"
+      }
+    ]
+  }
+]
+
+
+Cell 43: {
+  "profile": "joint_custom",
+  "rows": 15,
+  "figures": [
+    "reports/teacher/metrics_01.png",
+    "reports/teacher/confusions_01.png",
+    "reports/teacher/metrics_02.png",
+    "reports/teacher/confusions_02.png",
+    "reports/teacher/precision_recall_threshold_01.png",
+    "reports/teacher/precision_recall_threshold_02.png",
+    "reports/teacher/learning_curves.png"
+  ],
+  "mode": "SAVED-TRAINING VALIDATION",
+  "checks": "All reported count metrics recomputed; per-post scores checked when available."
+}
+
+Cell 43: {
+  "run": "real_only_seed42",
+  "arm": "real_only",
+  "seed": 42,
+  "test_source": "upenn",
+  "threshold": 0.5,
+  "precision": 0.6461538461538462,
+  "recall": 0.6885245901639344,
+  "f1": 0.6666666666666666,
+  "macro_f1": 0.8166135881104033,
+  "accuracy": 0.9392185238784371,
+  "average_precision": 0.6928627650538788,
+  "roc_auc": 0.94087952120739,
+  "precision_at_20": 0.9,
+  "recall_at_20": 0.29508196721311475,
+  "top20_found": 18,
+  "confusion_matrix": [
+    [
+      607,
+      23
+    ],
+    [
+      19,
+      42
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61,
+  "brier_score": 0.04748837762313097,
+  "automatic_coverage": 0.8986975397973951,
+  "review_count": 70,
+  "automatic_accuracy": 0.9629629629629629,
+  "automatic_errors": 23,
+  "urgent_automatically_found": 25,
+  "urgent_automatically_missed": 13,
+  "urgent_requiring_review": 23,
+  "model": "joint_minilm_real_only",
+  "train_source": "joint"
+}
+{
+  "run": "real_only_seed42",
+  "arm": "real_only",
+  "seed": 42,
+  "test_source": "stanford",
+  "threshold": 0.5,
+  "precision": 0.8271604938271605,
+  "recall": 0.7276018099547511,
+  "f1": 0.7741935483870968,
+  "macro_f1": 0.8625443713037986,
+  "accuracy": 0.9193326453388373,
+  "average_precision": 0.849237074705687,
+  "roc_auc": 0.9572677332036756,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.017194570135746608,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      4541,
+      168
+    ],
+    [
+      301,
+      804
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105,
+  "brier_score": 0.06062203818324679,
+  "automatic_coverage": 0.8598211214310285,
+  "review_count": 815,
+  "automatic_accuracy": 0.9621924384876975,
+  "automatic_errors": 189,
+  "urgent_automatically_found": 503,
+  "urgent_automatically_missed": 144,
+  "urgent_requiring_review": 458,
+  "model": "joint_minilm_real_only",
+  "train_source": "joint"
+}
+{
+  "run": "real_only_seed42",
+  "arm": "real_only",
+  "seed": 42,
+  "test_source": "custom_challenge",
+  "precision": 0.6666666666666666,
+  "recall": 1.0,
+  "f1": 0.8,
+  "macro_f1": 0.6307692307692307,
+  "accuracy": 0.7083333333333334,
+  "average_precision": 0.7458882596100642,
+  "roc_auc": 0.7000000000000001,
+  "precision_at_20": 0.65,
+  "recall_at_20": 0.9285714285714286,
+  "top20_found": 13,
+  "confusion_matrix": [
+    [
+      3,
+      7
+    ],
+    [
+      0,
+      14
+    ]
+  ],
+  "test_size": 24,
+  "positive_count": 14,
+  "balanced_accuracy": 0.65,
+  "complete_scenario_groups": 7,
+  "all_three_states_correct": 0,
+  "label_origin": [
+    "assistant_draft_weak_label"
+  ],
+  "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy.",
+  "model": "joint_minilm_real_only",
+  "train_source": "joint"
+}
+{
+  "run": "custom_ce_seed42",
+  "arm": "custom_ce",
+  "seed": 42,
+  "test_source": "upenn",
+  "threshold": 0.5,
+  "precision": 0.6779661016949152,
+  "recall": 0.6557377049180327,
+  "f1": 0.6666666666666666,
+  "macro_f1": 0.817485472794506,
+  "accuracy": 0.9421128798842258,
+  "average_precision": 0.6380588312986369,
+  "roc_auc": 0.9369763205828779,
+  "precision_at_20": 0.8,
+  "recall_at_20": 0.26229508196721313,
+  "top20_found": 16,
+  "confusion_matrix": [
+    [
+      611,
+      19
+    ],
+    [
+      21,
+      40
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61,
+  "brier_score": 0.04918899814603047,
+  "automatic_coverage": 0.894356005788712,
+  "review_count": 73,
+  "automatic_accuracy": 0.9660194174757282,
+  "automatic_errors": 21,
+  "urgent_automatically_found": 24,
+  "urgent_automatically_missed": 15,
+  "urgent_requiring_review": 22,
+  "model": "joint_minilm_custom_ce",
+  "train_source": "joint"
+}
+{
+  "run": "custom_ce_seed42",
+  "arm": "custom_ce",
+  "seed": 42,
+  "test_source": "stanford",
+  "threshold": 0.5,
+  "precision": 0.8288770053475936,
+  "recall": 0.7013574660633484,
+  "f1": 0.7598039215686274,
+  "macro_f1": 0.8543491864831039,
+  "accuracy": 0.9157206742346061,
+  "average_precision": 0.8496586633277959,
+  "roc_auc": 0.9571968186461084,
+  "precision_at_20": 1.0,
+  "recall_at_20": 0.01809954751131222,
+  "top20_found": 20,
+  "confusion_matrix": [
+    [
+      4549,
+      160
+    ],
+    [
+      330,
+      775
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105,
+  "brier_score": 0.061160004583760114,
+  "automatic_coverage": 0.8596491228070176,
+  "review_count": 816,
+  "automatic_accuracy": 0.9605842336934773,
+  "automatic_errors": 197,
+  "urgent_automatically_found": 471,
+  "urgent_automatically_missed": 152,
+  "urgent_requiring_review": 482,
+  "model": "joint_minilm_custom_ce",
+  "train_source": "joint"
+}
+{
+  "run": "custom_ce_seed42",
+  "arm": "custom_ce",
+  "seed": 42,
+  "test_source": "custom_challenge",
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "macro_f1": 1.0,
+  "accuracy": 1.0,
+  "average_precision": 1.0,
+  "roc_auc": 1.0,
+  "precision_at_20": 0.7,
+  "recall_at_20": 1.0,
+  "top20_found": 14,
+  "confusion_matrix": [
+    [
+      10,
+      0
+    ],
+    [
+      0,
+      14
+    ]
+  ],
+  "test_size": 24,
+  "positive_count": 14,
+  "balanced_accuracy": 1.0,
+  "complete_scenario_groups": 7,
+  "all_three_states_correct": 7,
+  "label_origin": [
+    "assistant_draft_weak_label"
+  ],
+  "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy.",
+  "model": "joint_minilm_custom_ce",
+  "train_source": "joint"
+}
+{
+  "run": "custom_pairwise_seed42",
+  "arm": "custom_pairwise",
+  "seed": 42,
+  "test_source": "upenn",
+  "threshold": 0.5,
+  "precision": 0.6666666666666666,
+  "recall": 0.6557377049180327,
+  "f1": 0.6611570247933884,
+  "macro_f1": 0.814321573459343,
+  "accuracy": 0.9406657018813314,
+  "average_precision": 0.6773297374687065,
+  "roc_auc": 0.9378090033827738,
+  "precision_at_20": 0.8,
+  "recall_at_20": 0.26229508196721313,
+  "top20_found": 16,
+  "confusion_matrix": [
+    [
+      610,
+      20
+    ],
+    [
+      21,
+      40
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61,
+  "brier_score": 0.048800132881756136,
+  "automatic_coverage": 0.894356005788712,
+  "review_count": 73,
+  "automatic_accuracy": 0.9611650485436893,
+  "automatic_errors": 24,
+  "urgent_automatically_found": 25,
+  "urgent_automatically_missed": 15,
+  "urgent_requiring_review": 21,
+  "model": "joint_minilm_custom_pairwise",
+  "train_source": "joint"
+}
+{
+  "run": "custom_pairwise_seed42",
+  "arm": "custom_pairwise",
+  "seed": 42,
+  "test_source": "stanford",
+  "threshold": 0.5,
+  "precision": 0.8185610010427529,
+  "recall": 0.7104072398190046,
+  "f1": 0.7606589147286822,
+  "macro_f1": 0.8545034431443495,
+  "accuracy": 0.9150326797385621,
+  "average_precision": 0.845067416089319,
+  "roc_auc": 0.9560018410879717,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.017194570135746608,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      4535,
+      174
+    ],
+    [
+      320,
+      785
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105,
+  "brier_score": 0.06169190416769915,
+  "automatic_coverage": 0.8565531475748194,
+  "review_count": 834,
+  "automatic_accuracy": 0.9612449799196787,
+  "automatic_errors": 193,
+  "urgent_automatically_found": 467,
+  "urgent_automatically_missed": 150,
+  "urgent_requiring_review": 488,
+  "model": "joint_minilm_custom_pairwise",
+  "train_source": "joint"
+}
+{
+  "run": "custom_pairwise_seed42",
+  "arm": "custom_pairwise",
+  "seed": 42,
+  "test_source": "custom_challenge",
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "macro_f1": 1.0,
+  "accuracy": 1.0,
+  "average_precision": 1.0,
+  "roc_auc": 1.0,
+  "precision_at_20": 0.7,
+  "recall_at_20": 1.0,
+  "top20_found": 14,
+  "confusion_matrix": [
+    [
+      10,
+      0
+    ],
+    [
+      0,
+      14
+    ]
+  ],
+  "test_size": 24,
+  "positive_count": 14,
+  "balanced_accuracy": 1.0,
+  "complete_scenario_groups": 7,
+  "all_three_states_correct": 7,
+  "label_origin": [
+    "assistant_draft_weak_label"
+  ],
+  "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy.",
+  "model": "joint_minilm_custom_pairwise",
+  "train_source": "joint"
+}
+{
+  "run": "real_only_seed43",
+  "arm": "real_only",
+  "seed": 43,
+  "test_source": "upenn",
+  "threshold": 0.5,
+  "precision": 0.6176470588235294,
+  "recall": 0.6885245901639344,
+  "f1": 0.6511627906976745,
+  "macro_f1": 0.8076244919170734,
+  "accuracy": 0.934876989869754,
+  "average_precision": 0.6940033589895114,
+  "roc_auc": 0.9331251626333593,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.3114754098360656,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      604,
+      26
+    ],
+    [
+      19,
+      42
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61,
+  "brier_score": 0.05092080920816306,
+  "automatic_coverage": 0.8871201157742402,
+  "review_count": 78,
+  "automatic_accuracy": 0.9706362153344209,
+  "automatic_errors": 18,
+  "urgent_automatically_found": 27,
+  "urgent_automatically_missed": 11,
+  "urgent_requiring_review": 23,
+  "model": "joint_minilm_real_only",
+  "train_source": "joint"
+}
+{
+  "run": "real_only_seed43",
+  "arm": "real_only",
+  "seed": 43,
+  "test_source": "stanford",
+  "threshold": 0.5,
+  "precision": 0.8180883864337102,
+  "recall": 0.7203619909502262,
+  "f1": 0.766121270452358,
+  "macro_f1": 0.8576156090481686,
+  "accuracy": 0.9164086687306502,
+  "average_precision": 0.8461302571543589,
+  "roc_auc": 0.9565095816329373,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.017194570135746608,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      4532,
+      177
+    ],
+    [
+      309,
+      796
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105,
+  "brier_score": 0.060607153760001406,
+  "automatic_coverage": 0.8584451324389405,
+  "review_count": 823,
+  "automatic_accuracy": 0.9629332799038269,
+  "automatic_errors": 185,
+  "urgent_automatically_found": 510,
+  "urgent_automatically_missed": 133,
+  "urgent_requiring_review": 462,
+  "model": "joint_minilm_real_only",
+  "train_source": "joint"
+}
+{
+  "run": "real_only_seed43",
+  "arm": "real_only",
+  "seed": 43,
+  "test_source": "custom_challenge",
+  "precision": 0.6666666666666666,
+  "recall": 1.0,
+  "f1": 0.8,
+  "macro_f1": 0.6307692307692307,
+  "accuracy": 0.7083333333333334,
+  "average_precision": 0.7422732238521712,
+  "roc_auc": 0.7285714285714285,
+  "precision_at_20": 0.7,
+  "recall_at_20": 1.0,
+  "top20_found": 14,
+  "confusion_matrix": [
+    [
+      3,
+      7
+    ],
+    [
+      0,
+      14
+    ]
+  ],
+  "test_size": 24,
+  "positive_count": 14,
+  "balanced_accuracy": 0.65,
+  "complete_scenario_groups": 7,
+  "all_three_states_correct": 0,
+  "label_origin": [
+    "assistant_draft_weak_label"
+  ],
+  "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy.",
+  "model": "joint_minilm_real_only",
+  "train_source": "joint"
+}
+{
+  "run": "custom_pairwise_seed43",
+  "arm": "custom_pairwise",
+  "seed": 43,
+  "test_source": "upenn",
+  "threshold": 0.5,
+  "precision": 0.6129032258064516,
+  "recall": 0.6229508196721312,
+  "f1": 0.6178861788617886,
+  "macro_f1": 0.790277481805795,
+  "accuracy": 0.9319826338639653,
+  "average_precision": 0.7048647237820834,
+  "roc_auc": 0.9381472807702316,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.3114754098360656,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      606,
+      24
+    ],
+    [
+      23,
+      38
+    ]
+  ],
+  "test_size": 691,
+  "positive_count": 61,
+  "brier_score": 0.04919691926038603,
+  "automatic_coverage": 0.8827785817655571,
+  "review_count": 81,
+  "automatic_accuracy": 0.9704918032786886,
+  "automatic_errors": 18,
+  "urgent_automatically_found": 26,
+  "urgent_automatically_missed": 12,
+  "urgent_requiring_review": 23,
+  "model": "joint_minilm_custom_pairwise",
+  "train_source": "joint"
+}
+{
+  "run": "custom_pairwise_seed43",
+  "arm": "custom_pairwise",
+  "seed": 43,
+  "test_source": "stanford",
+  "threshold": 0.5,
+  "precision": 0.8313767342582711,
+  "recall": 0.7049773755656109,
+  "f1": 0.7629774730656219,
+  "macro_f1": 0.8562435873569294,
+  "accuracy": 0.9167526659786722,
+  "average_precision": 0.849331505098406,
+  "roc_auc": 0.9569386243152372,
+  "precision_at_20": 0.95,
+  "recall_at_20": 0.017194570135746608,
+  "top20_found": 19,
+  "confusion_matrix": [
+    [
+      4551,
+      158
+    ],
+    [
+      326,
+      779
+    ]
+  ],
+  "test_size": 5814,
+  "positive_count": 1105,
+  "brier_score": 0.06098139342971956,
+  "automatic_coverage": 0.8455452356381149,
+  "review_count": 898,
+  "automatic_accuracy": 0.9637917005695688,
+  "automatic_errors": 178,
+  "urgent_automatically_found": 456,
+  "urgent_automatically_missed": 138,
+  "urgent_requiring_review": 511,
+  "model": "joint_minilm_custom_pairwise",
+  "train_source": "joint"
+}
+{
+  "run": "custom_pairwise_seed43",
+  "arm": "custom_pairwise",
+  "seed": 43,
+  "test_source": "custom_challenge",
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "macro_f1": 1.0,
+  "accuracy": 1.0,
+  "average_precision": 1.0,
+  "roc_auc": 1.0,
+  "precision_at_20": 0.7,
+  "recall_at_20": 1.0,
+  "top20_found": 14,
+  "confusion_matrix": [
+    [
+      10,
+      0
+    ],
+    [
+      0,
+      14
+    ]
+  ],
+  "test_size": 24,
+  "positive_count": 14,
+  "balanced_accuracy": 1.0,
+  "complete_scenario_groups": 7,
+  "all_three_states_correct": 7,
+  "label_origin": [
+    "assistant_draft_weak_label"
+  ],
+  "interpretation": "Synthetic scenario diagnostic, not independently verified real-world accuracy.",
+  "model": "joint_minilm_custom_pairwise",
+  "train_source": "joint"
+}
+
+Cell 43: Checks: [
+  {
+    "experiment": "real_only_seed42 joint \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "real_only_seed42 joint \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "real_only_seed42 joint \u2192 custom_challenge",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_ce_seed42 joint \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_ce_seed42 joint \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_ce_seed42 joint \u2192 custom_challenge",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_pairwise_seed42 joint \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_pairwise_seed42 joint \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_pairwise_seed42 joint \u2192 custom_challenge",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "real_only_seed43 joint \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "real_only_seed43 joint \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "real_only_seed43 joint \u2192 custom_challenge",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_pairwise_seed43 joint \u2192 upenn",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_pairwise_seed43 joint \u2192 stanford",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  },
+  {
+    "experiment": "custom_pairwise_seed43 joint \u2192 custom_challenge",
+    "count_metrics_match": true,
+    "per_post_predictions_checked": true
+  }
+]
+Actual error examples: [
+  {
+    "experiment": "real_only_seed42 joint \u2192 upenn",
+    "all_error_count": 42,
+    "examples": [
+      {
+        "post_id": "upenn_000770",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.016320033712537464,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hello [REDACTED], thanks! There's an enroll button which leads to an error. Seems it hasn't gone online yet.\u00c3\u201a\u00c2"
+      },
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.017067025506640153,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_000738",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.018604264439145944,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "dear professor [REDACTED].I did all that was required during this course.However since I do not need a Certificate, I did not pay for the course.Nevertheless, I would appreciate knowing how I did on the exam.I am now 58 years old and completed my Bsc in 1984. \u00c3\u201a\u00c2 I took this course in order to \"get back on track\".You built up a fantastic course!Thanks,[REDACTED]"
+      },
+      {
+        "post_id": "upenn_000917",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.024115739334921418,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Thanks [REDACTED], I imagine there are more people who feel like we do. I hope the instructors will be understanding in our cases. I really want to work on something good, for my own ease and pleasure and I feel if there is a too strict deadline on it, I'll end up disappointed.Of course, I wouldn't restart by week 7. That would be just plain silly."
+      }
+    ]
+  },
+  {
+    "experiment": "real_only_seed42 joint \u2192 stanford",
+    "all_error_count": 469,
+    "examples": [
+      {
+        "post_id": "stanford_019670",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.01078708802120557,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "if I asked you how old you are and you give me your age at your last birthday then you aren't telling me how old you ARE\u0007\u0007you're telling me how old you WERE\u0007\u0007how old you ARE is ALWAYS changing, it is CONTINUALLY changing"
+      },
+      {
+        "post_id": "stanford_003056",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.011126951935780043,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "In my current school we have a \u00beGifted and talented\u00ae cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most \u00beable\u00ae are filtered and \u00beextracted\u00ae into another class (called \u00beExtraction\u00ae) during the time at which they would be having a \u00benormal\u00ae maths lesson.\u0007 - This \u00beextraction\u00ae lesson is done twice a fortnight and the students are \u00beexpected\u00ae to catch up with the normal curriculum in their own time; if they don\u00aet they can be removed.\u0007 - There are two \u00beextraction\u00ae classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the \u00beExtraction\u00ae class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the \u00beExtraction\u00ae class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the \u00beExtraction\u00ae class.\u0007 - Reinstating students to the \u00beExtraction\u00ae class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in \u00beExtraction\u00ae\u0007 - Labeling of \u00beGifted and Talented\u00ae and \u00beExtraction\u00ae; the latter sounding quite painful!\u0007 - Students who are borderline between \u00benormal\u00ae class and \u00beextraction\u00ae.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+      },
+      {
+        "post_id": "stanford_010190",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.01131100139955836,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "ok, now I see, thanks. Maybe it's worth indicating the scale in the quiz."
+      },
+      {
+        "post_id": "stanford_025437",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.011333969545071309,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "But this is a science writing course so you cannot expect other students to be familiar with the conventions of your specific field."
+      }
+    ]
+  },
+  {
+    "experiment": "real_only_seed42 joint \u2192 custom_challenge",
+    "all_error_count": 7,
+    "examples": [
+      {
+        "post_id": "custom_0040",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9411751507351573,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "My scheduled oral exam begins shortly, but the meeting link in my appointment is missing. Could the examiner send the correct joining information? Update: The examiner sent the working meeting link and I joined my oral exam. The missing-link problem has been resolved."
+      },
+      {
+        "post_id": "custom_0022",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9341738112071453,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "The exam timetable and course announcement give different dates for the final exam. One date is tomorrow. Could the instructor confirm which is correct? Update: The instructor has confirmed the exam date and updated the conflicting announcement. I understand the schedule now."
+      },
+      {
+        "post_id": "custom_0016",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9252791496402346,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "The only copy of the instructions for tonight's assessment is an unreadable PDF. Could the teaching team provide a readable version? Update: A readable copy of the assessment instructions is now available and I downloaded it successfully. This problem is resolved."
+      },
+      {
+        "post_id": "custom_0030",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9061767844770505,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "Our group assignment portal rejects the designated submitter and nobody else can upload. The project is due tonight. Could staff enable submission? Update: Our designated submitter can upload now and the group project has a valid receipt. Thank you; the group is no longer blocked."
+      }
+    ]
+  },
+  {
+    "experiment": "custom_ce_seed42 joint \u2192 upenn",
+    "all_error_count": 40,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.024203917027331243,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_000917",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.026496698115750707,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Thanks [REDACTED], I imagine there are more people who feel like we do. I hope the instructors will be understanding in our cases. I really want to work on something good, for my own ease and pleasure and I feel if there is a too strict deadline on it, I'll end up disappointed.Of course, I wouldn't restart by week 7. That would be just plain silly."
+      },
+      {
+        "post_id": "upenn_000770",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.029804131663456957,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hello [REDACTED], thanks! There's an enroll button which leads to an error. Seems it hasn't gone online yet.\u00c3\u201a\u00c2"
+      },
+      {
+        "post_id": "upenn_000738",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.04250827796068892,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "dear professor [REDACTED].I did all that was required during this course.However since I do not need a Certificate, I did not pay for the course.Nevertheless, I would appreciate knowing how I did on the exam.I am now 58 years old and completed my Bsc in 1984. \u00c3\u201a\u00c2 I took this course in order to \"get back on track\".You built up a fantastic course!Thanks,[REDACTED]"
+      }
+    ]
+  },
+  {
+    "experiment": "custom_ce_seed42 joint \u2192 stanford",
+    "all_error_count": 490,
+    "examples": [
+      {
+        "post_id": "stanford_003056",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.013557853399068408,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "In my current school we have a \u00beGifted and talented\u00ae cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most \u00beable\u00ae are filtered and \u00beextracted\u00ae into another class (called \u00beExtraction\u00ae) during the time at which they would be having a \u00benormal\u00ae maths lesson.\u0007 - This \u00beextraction\u00ae lesson is done twice a fortnight and the students are \u00beexpected\u00ae to catch up with the normal curriculum in their own time; if they don\u00aet they can be removed.\u0007 - There are two \u00beextraction\u00ae classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the \u00beExtraction\u00ae class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the \u00beExtraction\u00ae class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the \u00beExtraction\u00ae class.\u0007 - Reinstating students to the \u00beExtraction\u00ae class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in \u00beExtraction\u00ae\u0007 - Labeling of \u00beGifted and Talented\u00ae and \u00beExtraction\u00ae; the latter sounding quite painful!\u0007 - Students who are borderline between \u00benormal\u00ae class and \u00beextraction\u00ae.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+      },
+      {
+        "post_id": "stanford_019670",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.013959997345576484,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "if I asked you how old you are and you give me your age at your last birthday then you aren't telling me how old you ARE\u0007\u0007you're telling me how old you WERE\u0007\u0007how old you ARE is ALWAYS changing, it is CONTINUALLY changing"
+      },
+      {
+        "post_id": "stanford_025437",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.015026361599587644,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "But this is a science writing course so you cannot expect other students to be familiar with the conventions of your specific field."
+      },
+      {
+        "post_id": "stanford_019708",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.01509999169838751,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hey, don't forget to divide by (n-1) so that you're kind of getting an average."
+      }
+    ]
+  },
+  {
+    "experiment": "custom_ce_seed42 joint \u2192 custom_challenge",
+    "all_error_count": 0,
+    "examples": []
+  },
+  {
+    "experiment": "custom_pairwise_seed42 joint \u2192 upenn",
+    "all_error_count": 41,
+    "examples": [
+      {
+        "post_id": "upenn_000917",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.02319764230903856,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Thanks [REDACTED], I imagine there are more people who feel like we do. I hope the instructors will be understanding in our cases. I really want to work on something good, for my own ease and pleasure and I feel if there is a too strict deadline on it, I'll end up disappointed.Of course, I wouldn't restart by week 7. That would be just plain silly."
+      },
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.027365026091584775,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_000770",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.03106135937275405,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hello [REDACTED], thanks! There's an enroll button which leads to an error. Seems it hasn't gone online yet.\u00c3\u201a\u00c2"
+      },
+      {
+        "post_id": "upenn_000738",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.036418999861822864,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "dear professor [REDACTED].I did all that was required during this course.However since I do not need a Certificate, I did not pay for the course.Nevertheless, I would appreciate knowing how I did on the exam.I am now 58 years old and completed my Bsc in 1984. \u00c3\u201a\u00c2 I took this course in order to \"get back on track\".You built up a fantastic course!Thanks,[REDACTED]"
+      }
+    ]
+  },
+  {
+    "experiment": "custom_pairwise_seed42 joint \u2192 stanford",
+    "all_error_count": 494,
+    "examples": [
+      {
+        "post_id": "stanford_003056",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.011940186617492096,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "In my current school we have a \u00beGifted and talented\u00ae cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most \u00beable\u00ae are filtered and \u00beextracted\u00ae into another class (called \u00beExtraction\u00ae) during the time at which they would be having a \u00benormal\u00ae maths lesson.\u0007 - This \u00beextraction\u00ae lesson is done twice a fortnight and the students are \u00beexpected\u00ae to catch up with the normal curriculum in their own time; if they don\u00aet they can be removed.\u0007 - There are two \u00beextraction\u00ae classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the \u00beExtraction\u00ae class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the \u00beExtraction\u00ae class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the \u00beExtraction\u00ae class.\u0007 - Reinstating students to the \u00beExtraction\u00ae class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in \u00beExtraction\u00ae\u0007 - Labeling of \u00beGifted and Talented\u00ae and \u00beExtraction\u00ae; the latter sounding quite painful!\u0007 - Students who are borderline between \u00benormal\u00ae class and \u00beextraction\u00ae.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+      },
+      {
+        "post_id": "stanford_019670",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.012257971345252453,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "if I asked you how old you are and you give me your age at your last birthday then you aren't telling me how old you ARE\u0007\u0007you're telling me how old you WERE\u0007\u0007how old you ARE is ALWAYS changing, it is CONTINUALLY changing"
+      },
+      {
+        "post_id": "stanford_025437",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.012912751157023443,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "But this is a science writing course so you cannot expect other students to be familiar with the conventions of your specific field."
+      },
+      {
+        "post_id": "stanford_027099",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.013687543305944233,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I agree. I know that this has helped my own writing and I will be better able to edit others' scientific writing using what I've learned here."
+      }
+    ]
+  },
+  {
+    "experiment": "custom_pairwise_seed42 joint \u2192 custom_challenge",
+    "all_error_count": 0,
+    "examples": []
+  },
+  {
+    "experiment": "real_only_seed43 joint \u2192 upenn",
+    "all_error_count": 45,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.013648087222031459,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_000738",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.015342614732843651,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "dear professor [REDACTED].I did all that was required during this course.However since I do not need a Certificate, I did not pay for the course.Nevertheless, I would appreciate knowing how I did on the exam.I am now 58 years old and completed my Bsc in 1984. \u00c3\u201a\u00c2 I took this course in order to \"get back on track\".You built up a fantastic course!Thanks,[REDACTED]"
+      },
+      {
+        "post_id": "upenn_000917",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.01662602352195268,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Thanks [REDACTED], I imagine there are more people who feel like we do. I hope the instructors will be understanding in our cases. I really want to work on something good, for my own ease and pleasure and I feel if there is a too strict deadline on it, I'll end up disappointed.Of course, I wouldn't restart by week 7. That would be just plain silly."
+      },
+      {
+        "post_id": "upenn_000770",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.01741331203564838,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hello [REDACTED], thanks! There's an enroll button which leads to an error. Seems it hasn't gone online yet.\u00c3\u201a\u00c2"
+      }
+    ]
+  },
+  {
+    "experiment": "real_only_seed43 joint \u2192 stanford",
+    "all_error_count": 486,
+    "examples": [
+      {
+        "post_id": "stanford_013394",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.011871719752280307,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "I am a Canadian working in India and here too I see the Prussian model in the school systems. Access to education is improving and in fact, fairly good here, but it is so much based on rote memorization. I am working in the health field, but experienced this rote learning when I was teaching nursing students. For example, the students had memorized things to write on a patient's chart without really understanding what it meant, in terms of treatment of care. In the nursing school, the focus of the curriculum, the tutors, and all the classes was on ensuring that the students passed the board exams each year. Unfortunately, this resulted in nurses who were good at remembering things, but not as good at applying it, and not good at all at thinking on their own about it. Fortunately, the Board itself recognized the problem and changed the curriculum to introduce more analytical work and exams that did not rely totally on memorization, but on looking at a situation and developing an approach to deal with it. Encouraging, but still a long way to go -- especially since they have to get over the culture that says that women should not question (especially men or even women of higher status).\u0007\u0007On a different track, I very much liked Wu Qinn's approach to education and human rights, and was struck by her comment that \\When you educate a girl, you educate a family.\\\" I have seen this to be so true in the community development work done by the hospitals in the association I am working with. Training women in nutrition or sanitation or malaria prevention meant that the whole family practiced what was taught and the approach was much more effective than training the men. I think we must explore the informal education routes so that many more women and girls can learn what they need to in order to take an active part in their community and society. The formation of self-help groups has made a big difference for the women in some communities, and I think we need to look at doing more things like that.\u0007\u0007My question is this -- how can informal education projects like this for women be made part of a country's education system, so it is mainstream and ongoing, not just project by project?\""
+      },
+      {
+        "post_id": "stanford_003056",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.011917922763711675,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "In my current school we have a \u00beGifted and talented\u00ae cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most \u00beable\u00ae are filtered and \u00beextracted\u00ae into another class (called \u00beExtraction\u00ae) during the time at which they would be having a \u00benormal\u00ae maths lesson.\u0007 - This \u00beextraction\u00ae lesson is done twice a fortnight and the students are \u00beexpected\u00ae to catch up with the normal curriculum in their own time; if they don\u00aet they can be removed.\u0007 - There are two \u00beextraction\u00ae classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the \u00beExtraction\u00ae class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the \u00beExtraction\u00ae class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the \u00beExtraction\u00ae class.\u0007 - Reinstating students to the \u00beExtraction\u00ae class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in \u00beExtraction\u00ae\u0007 - Labeling of \u00beGifted and Talented\u00ae and \u00beExtraction\u00ae; the latter sounding quite painful!\u0007 - Students who are borderline between \u00benormal\u00ae class and \u00beextraction\u00ae.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+      },
+      {
+        "post_id": "stanford_025437",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.01205325833636634,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "But this is a science writing course so you cannot expect other students to be familiar with the conventions of your specific field."
+      },
+      {
+        "post_id": "stanford_019670",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.012109593259048132,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "if I asked you how old you are and you give me your age at your last birthday then you aren't telling me how old you ARE\u0007\u0007you're telling me how old you WERE\u0007\u0007how old you ARE is ALWAYS changing, it is CONTINUALLY changing"
+      }
+    ]
+  },
+  {
+    "experiment": "real_only_seed43 joint \u2192 custom_challenge",
+    "all_error_count": 7,
+    "examples": [
+      {
+        "post_id": "custom_0016",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9333894180891444,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "The only copy of the instructions for tonight's assessment is an unreadable PDF. Could the teaching team provide a readable version? Update: A readable copy of the assessment instructions is now available and I downloaded it successfully. This problem is resolved."
+      },
+      {
+        "post_id": "custom_0040",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9304874480148363,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "My scheduled oral exam begins shortly, but the meeting link in my appointment is missing. Could the examiner send the correct joining information? Update: The examiner sent the working meeting link and I joined my oral exam. The missing-link problem has been resolved."
+      },
+      {
+        "post_id": "custom_0022",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9170449103568021,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "The exam timetable and course announcement give different dates for the final exam. One date is tomorrow. Could the instructor confirm which is correct? Update: The instructor has confirmed the exam date and updated the conflicting announcement. I understand the schedule now."
+      },
+      {
+        "post_id": "custom_0066",
+        "true": 0,
+        "predicted": 1,
+        "score": 0.9071276198864251,
+        "threshold": 0.5,
+        "error": "FP",
+        "text": "The provided starter files require a package version that is unavailable in the mandatory lab environment. Could staff correct the environment before tomorrow's practical exam? Update: The lab environment has been updated and the starter files now run correctly. The version mismatch is resolved."
+      }
+    ]
+  },
+  {
+    "experiment": "custom_pairwise_seed43 joint \u2192 upenn",
+    "all_error_count": 47,
+    "examples": [
+      {
+        "post_id": "upenn_003275",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.018020926593140488,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "What the hell? I posted this thread simply to inform the staff of a small error, that occurred during Dr. [REDACTED]'s lecture, that might be misconstrued as being true. There is no point in arguing, or even trying to rationally discuss, vaccine immunology with anti-vaxers. They are suffering from a delusion. Their certainty and incorrigibility are pathological. No one and nothing is ever going to wake them up from their insanity. You are wasting your precious time, energy and intelligence engaging them in conversation. I share your frustration and heartbreak at seeing children and communities placed at unnecessary risk by fear and ignorance, but most people are stupid, and given that there are just so many people, a lot of innocent bystanders get taken out, one way or another, by the stupidity of others. I encourage all of you to use the talent I've seen displayed on this thread and others, to reach out to those in your communities who are willing to listen with open minds. Teach those who can be taught. Don't waste your efforts on those who are already lost to you.Pap smears are effective in preventing cervical cancer?!?!?! [REDACTED], that statement alone proves you are stupid and insane . Everything else you posted proves your conceit. I pity you."
+      },
+      {
+        "post_id": "upenn_000738",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.025649208765147515,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "dear professor [REDACTED].I did all that was required during this course.However since I do not need a Certificate, I did not pay for the course.Nevertheless, I would appreciate knowing how I did on the exam.I am now 58 years old and completed my Bsc in 1984. \u00c3\u201a\u00c2 I took this course in order to \"get back on track\".You built up a fantastic course!Thanks,[REDACTED]"
+      },
+      {
+        "post_id": "upenn_000770",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.029261756238479056,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hello [REDACTED], thanks! There's an enroll button which leads to an error. Seems it hasn't gone online yet.\u00c3\u201a\u00c2"
+      },
+      {
+        "post_id": "upenn_002162",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.0363146059029546,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "This link on the main syllabus doesn't workread/listen to Kerouac's \"October in the Railroad Earth\" as text-audio alignment: link to PennSound"
+      }
+    ]
+  },
+  {
+    "experiment": "custom_pairwise_seed43 joint \u2192 stanford",
+    "all_error_count": 484,
+    "examples": [
+      {
+        "post_id": "stanford_003056",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.008784777236415636,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "In my current school we have a \u00beGifted and talented\u00ae cohort. Maths has been recognised as making a particularly good attempt at teaching these students by the National Association for Able Children in Education (NACE). I think it works well, although there are problems. I will try to describe what the department does:\u0007\u0007 - The school has 2200 students.\u0007 - There are approximately 300 students in each year group.\u0007 - Each year group has two parallel cohorts.\u0007 - In Years 7 to 9, each student has six 1 hour and 10 minute lessons per fortnight.\u0007 - The most \u00beable\u00ae are filtered and \u00beextracted\u00ae into another class (called \u00beExtraction\u00ae) during the time at which they would be having a \u00benormal\u00ae maths lesson.\u0007 - This \u00beextraction\u00ae lesson is done twice a fortnight and the students are \u00beexpected\u00ae to catch up with the normal curriculum in their own time; if they don\u00aet they can be removed.\u0007 - There are two \u00beextraction\u00ae classes: one extraction class in each parallel cohort.\u0007 - Each class has no more than 12 students.\u0007 - In the 'Extraction' class the teacher teaches the maths that they are interested in and usually not on the curriculum (unless it is needed). As an example, the two veteran teachers (25 years) at my school have two styles:\u0007\u0007 o Problem solving using maths UKMT Olympiad Mentoring papers and geometers sketch pad.\u0007\u0007 o Everything to do with Geometry (Usually not using geometers sketch pad)\u0007\u0007 - All students in Set 1 including the \u00beExtraction\u00ae class are expected to take part in UKMT maths challenges.\u0007\u0007Some Problems that arise:\u0007\u0007 - Selecting students for the \u00beExtraction\u00ae class in year 7.\u0007 - Motivation of students of both genders but particularly girls.\u0007 - Deselecting students from the \u00beExtraction\u00ae class.\u0007 - Reinstating students to the \u00beExtraction\u00ae class.\u0007 - Students keeping up with course\u0007 - Students attainment to be at top of class to remain in \u00beExtraction\u00ae\u0007 - Labeling of \u00beGifted and Talented\u00ae and \u00beExtraction\u00ae; the latter sounding quite painful!\u0007 - Students who are borderline between \u00benormal\u00ae class and \u00beextraction\u00ae.\u0007 - Many parental complaints especially about non-traditional teaching techniques (I try to use formative assessment in and with every class and every lesson).\u0007\u0007A question for Jo Boaler:\u0007Hi Jo, my current Head of Department doesn't accept the need for equalising learning opportunities and has told me that students who are recognised to be higher ability students in the top set, need to be given independent work very quickly rather than allowi"
+      },
+      {
+        "post_id": "stanford_025437",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.009838617084690821,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "But this is a science writing course so you cannot expect other students to be familiar with the conventions of your specific field."
+      },
+      {
+        "post_id": "stanford_019670",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.011187883580982607,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "if I asked you how old you are and you give me your age at your last birthday then you aren't telling me how old you ARE\u0007\u0007you're telling me how old you WERE\u0007\u0007how old you ARE is ALWAYS changing, it is CONTINUALLY changing"
+      },
+      {
+        "post_id": "stanford_019708",
+        "true": 1,
+        "predicted": 0,
+        "score": 0.011265081786590511,
+        "threshold": 0.5,
+        "error": "FN",
+        "text": "Hey, don't forget to divide by (n-1) so that you're kind of getting an average."
+      }
+    ]
+  },
+  {
+    "experiment": "custom_pairwise_seed43 joint \u2192 custom_challenge",
+    "all_error_count": 0,
+    "examples": []
+  }
+]
+
+Cell 45: {
+  "text": "I cannot submit my assignment and the deadline is tonight. Please help!",
+  "score": 0.9388301679202745,
+  "raw_score": 0.9859800934791565,
+  "threshold": 0.5,
+  "binary_priority": 1,
+  "action": "PRIORITY",
+  "domain": "mixed",
+  "scope": "English student forum posts",
+  "note": "An estimate, not a guarantee of correctness."
+}
+
+Cell 47: Download from Kaggle Output: /Users/nhaterik/lastyear/machine/Project/.cache/teacher-notebooks-validation/09_joint_minilm_three_dataset_comparison/09_joint_minilm_three_dataset_comparison_output.zip MB: 22.8
