@@ -5,7 +5,7 @@ Toàn bộ thư viện mới, dữ liệu, mô hình và cache nằm trong `Proj
 
 ## Đồng đội tải và chạy dự án
 
-Repository chứa mã nguồn, dữ liệu, báo cáo, kết quả thí nghiệm và các model đã huấn luyện. Không cần train lại để chạy ứng dụng. Cần Git LFS để tải đủ trọng số; `.venv` và cache được tạo riêng trên từng máy.
+Repository chứa mã nguồn, dữ liệu, báo cáo, kết quả thí nghiệm và các model đã huấn luyện. Không cần train lại để chạy ứng dụng. Bộ mã hóa gốc cho MiniLM frozen + LR cũng có sẵn trong `models/pretrained_minilm`.  Cần Git LFS để tải đủ trọng số; `.venv` và cache được tạo riêng trên từng máy.
 
 1. Cài Git LFS và Python 3.12 trên máy của bạn. Chạy `git lfs install` một lần.
 2. Tải repository vào thư mục tên `Project` để khớp các ví dụ lệnh trong báo cáo:

@@ -115,7 +115,9 @@ def predict(texts,key):
         if card['representation']=='minilm':
             if key not in encoder_cache:
                 from sentence_transformers import SentenceTransformer
-                encoder_cache[key]=SentenceTransformer(str(ROOT/card['encoder']['snapshot']),device='cpu',local_files_only=True)
+                encoder_path=ROOT/card['encoder']['snapshot']
+                if not encoder_path.is_dir():encoder_path=ROOT/'models/pretrained_minilm'
+                encoder_cache[key]=SentenceTransformer(str(encoder_path),device='cpu',local_files_only=True)
             x=encoder_cache[key].encode(cleaned,normalize_embeddings=True,show_progress_bar=False)
         else:x=cleaned
         values=model.predict_proba(x)[:,1] if hasattr(model,'predict_proba') else model.decision_function(x)
